@@ -1,0 +1,966 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+/* 導覽列 */
+.navbar {
+  width: 1320px;
+  height: 6rem;
+  position: relative;
+  margin: auto;
+}
+
+.navbar-brand {
+  display: inline-block;
+  margin: 1rem 0 0 1.5rem;
+  padding: 0.3125rem 0;
+}
+
+.navbar-logo {
+  width: 12.5rem;
+}
+
+.navbar-line {
+  width: 13rem;
+  margin-left: 1.5rem;
+  border-top: 2px solid #000;
+  opacity: .3;
+}
+
+.navbar-line::before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  transform: rotate(35deg);
+  width: 2px;
+  height: 43px;
+  background: currentColor;
+  border-radius: 3px;
+  position: absolute;
+  left: 15rem;
+  bottom: .55rem;
+}
+
+.navbar-line::after {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: currentColor;
+  position: absolute;
+  left: 15.55rem;
+  bottom: 2.45rem;
+}
+
+#menu-control {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+/* 768px以下裝置的選單控制 */
+#menu-control:checked ~ .navbar-option {
+  top: 6rem;
+  opacity: 1;
+}
+
+.navbar-option {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 2rem;
+}
+
+.navbar-option a{
+  color: #000;
+  padding: 0 1rem;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 1px #ccc;
+}
+
+
+/* 大圖開始 */
+.about,
+.solution,
+.product,
+.development {
+  padding-top: 4rem;
+  margin: auto;
+  width: 66rem;
+}
+
+.container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #0d6188;
+}
+
+.container img {
+  width: 20rem;
+  position: absolute;
+  top: 0;
+}
+
+.container .slash{
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.container .slash::before{
+  content: '';
+  display: block;
+  color: #93cddd;
+  width: 1.5rem;
+  border-bottom: 1px solid #93cddd;
+  transform: rotate(110deg);
+  position: absolute;
+  right: 5rem;
+  top: 1.6rem;
+}
+
+.container .slash::after{
+  content: '';
+  display: block;
+  color: #93cddd;
+  width: 2.45rem;
+  border-bottom: 1px solid #93cddd;
+  transform: rotate(250deg);
+  position: absolute;
+  right: 3.85rem;
+  top: 2rem;
+}
+
+.container .slash h2{
+  width: 68%;
+  text-align: right;
+  color: #fff;
+  border-bottom: 1px solid #93cddd;
+  padding: 0 1rem 0.3rem 0;
+  position: absolute;
+  right: 6rem;
+}
+
+.container .slash h2::before{
+  content: '';
+  display: block;
+  color: #93cddd;
+  width: 0.9rem;
+  border-bottom: 1px solid #93cddd;
+  transform: rotate(110deg);
+  position: absolute;
+  right: -1.95rem;
+  top: 2.7rem;
+}
+
+.container .slash h2::after{
+  content: '';
+  display: block;
+  color: #93cddd;
+  width: 3rem;
+  border-bottom: 1px solid #93cddd;
+  position: absolute;
+  right: -4.65rem;
+  top: 2.3rem;
+}
+
+
+
+/* 解決方案 */
+.solution .container .elevator {
+  position: absolute;
+  right: 7rem;
+  bottom: 1.5rem;
+}
+
+.solution .container .elevator ul {
+  font-weight: 600;
+  font-size: .8em;
+  line-height: 1.9;
+}
+
+.solution .container .elevator ul li{
+  color: #c26bff;
+}
+
+.solution .container .elevator ul li::before {
+  content: '∎';
+  color: #5d157f;
+  display: inline-block;
+  width: .8rem;
+  height: 0.8rem;
+  font-size: .8em;
+}
+
+.solution .solution-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  object-fit: cover;
+}
+
+
+/* 產品資訊 */
+.product .product-img {
+  width: 12rem;
+}
+
+
+/* 內容 */
+.content-title {
+  height: 20vh;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-title .wrap {
+  width: 90%;
+  text-align: center;
+}
+
+.content-title .wrap h2{
+  display: inline-block;
+  color: #1017a9;
+  position: relative;
+  margin: 0 auto 2rem;
+}
+
+.content-title .wrap h2::before{
+  content: '';
+  display: block;
+  border-bottom: 3px solid #a3defc;
+  width: 10rem;
+  position: absolute;
+  bottom: 7px;
+  right: -10.5rem;
+}
+
+.content-title .wrap h2::after{
+  content: '';
+  display: block;
+  border-bottom: 3px solid #a3defc;
+  width: 10rem;
+  position: absolute;
+  bottom: 7px;
+  left: -10.5rem;
+}
+
+
+.content-title .wrap .decoraction {
+  height: 20px;
+  width: 100%;
+  background-color: #88ddec;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.content-title .wrap .decoraction::before {
+  content: '';
+  background-color: #0bcf67;
+  height: 20px;
+  width: 13px;
+  position: absolute;
+  left: 15%;
+}
+
+.content-title .wrap .decoraction::after {
+  content: '';
+  background-color: #0bcf67;
+  height: 20px;
+  width: 13px;
+  position: absolute;
+  left: 85%;
+  top: 0;
+}
+
+.content-title .wrap .decoraction .square {
+  width: 100%;
+  height: 20px;
+}
+
+.content-title .wrap .decoraction .square::before {
+  content: '';
+  display: block;
+  background-color: #0bcf67;
+  height: 20px;
+  width: 13px;
+  position: absolute;
+  left: 5%;
+}
+
+.content-title .wrap .decoraction .square::after {
+  content: '';
+  display: block;
+  background-color: #0bcf67;
+  height: 20px;
+  width: 13px;
+  position: absolute;
+  left: 95%;
+}
+
+
+/* 內容 */
+.content {
+  display: flex;
+}
+
+.content .content-img {
+  width: 10rem;
+  margin-left: 3.2rem;
+}
+
+.content p {
+  width: 40.8rem;
+  margin-left: 4rem;
+}
+
+
+/* 頁尾 */
+.footer {
+  width: 1188px;
+  height: 40vh;
+  margin: 15% auto 0;
+  background: linear-gradient(135deg, transparent 130px, #88ddec 0);
+}
+
+.footer h2 {
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 4rem 0 0 10rem;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  text-align: justify;
+  line-height: 2.5;
+  margin-top: 1rem;
+}
+
+
+/* ********************************************************************************************************* */
+
+/* RWD */
+@media screen and (max-width: 1400px) {
+  /* 導覽列 */
+  .navbar {
+    width: 62rem;
+  }
+
+  /* 大圖 */
+  .about,
+  .solution,
+  .product,
+  .development {
+    width: 62rem;
+  }
+
+  .container .slash h2{
+    width: 66%;
+  }
+
+  /* 頁尾 */
+  .footer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  /* 導覽列 */
+  .navbar {
+    width: 57rem;
+  }
+  
+  .navbar-option a{
+    font-size: 1.4em;
+  }
+
+  /* 大圖 */
+  .about,
+  .solution,
+  .product,
+  .development {
+    width: 57rem;
+  }
+  
+  .container .slash h2{
+    width: 63%;
+  }
+
+  /* 內容左圖 */
+  .content .content-img {
+    width: 9rem;
+    margin-left: 2.8rem;
+  }
+
+  .content p {
+    width: 37rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* 導覽列 */
+  .navbar {
+    width: 48rem;
+  }
+
+  .navbar-option {
+    margin: 0 0 0 10rem;
+  }
+
+  .navbar-option a{
+    font-size: 1.2em;
+  }
+
+  /* 大圖 */
+  .about,
+  .solution,
+  .product,
+  .development {
+    width: 48rem;
+  }
+
+  .container .slash h2{
+    width: 54%;
+  }
+
+  /* 內容左圖 */
+  .content .content-img {
+    width: 8.5rem;
+    margin-left: 2.4rem;
+  }
+
+  .content p {
+    width: 30rem;
+  }
+
+  /* 頁尾 */
+  .footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* 導覽列 */
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar-logo {
+    width: 10rem;
+  }
+
+  .navbar-line {
+    width: 10.5rem;
+  }
+  
+  .navbar-line::before {
+    width: 2px;
+    height: 1.75rem;
+    position: absolute;
+    left: 12.4rem;
+    bottom: 1.3rem;
+  }
+  
+  .navbar-line::after {
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    left: 12.9rem;
+    bottom: 2.85rem;
+  }
+
+  .navbar-option {
+    margin: 0 0 0 7rem;
+  }
+
+  .navbar-option a {
+    padding: 0 .75rem;
+    font-size: 1.2em;
+  }
+
+  /* 大圖 */
+  .about,
+  .solution,
+  .product,
+  .development {
+    width: 100%;
+  }
+
+  .container img {
+    width: 18rem;
+  }
+
+  .container .slash h2{
+    width: 54%;
+  }
+
+  .solution .container .elevator {
+    bottom: 2rem;
+  }
+
+  /* 內容左圖 */
+  .content .content-img {
+    width: 7.5rem;
+    margin-left: 2.4rem;
+  }
+
+  .content p {
+    width: 25rem;
+    
+  }
+
+  /* 頁尾 */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .footer h2 {
+    font-size: 1.5em;
+    display: block;
+  }
+
+  .footer p {
+    margin-left: 10rem;
+    justify-content: start;
+    text-align: left;
+  }
+
+}
+
+@media screen and (max-width: 770px) {
+  /* 導覽列 */
+  .navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+  }
+
+  .navbar-brand {
+    margin: 1rem 0 0 1.5rem;
+  }
+  
+  .navbar-logo {
+    width: 9rem;
+  }
+
+  .navbar-line {
+    width: 9.5rem;
+    margin-left: 1.5rem;
+    border-top: 1px solid #000;
+    opacity: .3;
+  }
+  
+  .navbar-line::before {
+    width: 1px;
+    height: 1.75rem;
+    position: absolute;
+    left: 11.45rem;
+    bottom: 1.55rem;
+  }
+  
+  .navbar-line::after {
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    left: 11.925rem;
+    bottom: 3.1rem;
+  }
+
+  /* 768px以下選單 */
+  .menu-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #f7f7f7;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .menu-btn span {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .menu-btn::before {
+    content: '';
+    height: 3px;
+    width: 1.8rem;
+    position: absolute;
+    left: 0.35rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #000;
+    box-shadow: 0 10px 0 #000,
+                0 -10px 0 #000;
+  }
+
+  .navbar-option {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: -12rem;
+    opacity: 0;
+    transition: .4s;
+  }
+  
+  .navbar-option a{
+    width: 100%;
+    height: 3rem;
+    display: block;
+    background-color: #fff;
+    line-height: 1.75;
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+  }
+
+  .navbar-option a:hover{
+    color: #aaa;
+  }
+
+  /* 大圖 */
+  .about,
+  .solution,
+  .product,
+  .development {
+    padding: 6rem 0 0;
+  }
+
+  .container img {
+    width: 16rem;
+  }
+  
+  .container .slash{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .container .slash::before {
+    width: 1.2rem;
+    right: 5.2rem;
+    top: 1.3rem;
+  }
+
+  .container .slash::after {
+    right: 3.95rem;
+    top: 1.9rem;
+  }
+
+  .container .slash h2{
+    width: 52%;
+    font-size: 1.2rem;
+  }
+
+  .container .slash h2::before{
+    right: -1.85rem;
+    top: 2.66rem;
+  }
+
+  .container .slash h2::after{
+    right: -4.55rem;
+    top: 2.2rem;
+  }
+
+  /* 產品資訊 */
+  .product .product-img {
+    width: 9rem;
+  }
+
+  /* 內容左圖 */
+  .content .content-img {
+    width: 6.4rem;
+    margin-left: 1.8rem;
+  }
+
+  .content p {
+    width: 21rem;
+    margin-left: 2.5rem;
+    font-size: 18px;
+  }
+
+  /* 頁尾 */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, transparent 100px, #88ddec 0);
+  }
+
+  .footer h2,
+  .footer p {
+    margin-left: 7rem;
+  }
+
+  .footer h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* 導覽列 */
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar-logo {
+    width: 7rem;
+  }
+
+  .navbar-line {
+    width: 8rem;
+  }
+
+  .navbar-line::before {
+    height: 1.5rem;
+    left: 9.9rem;
+    bottom: 2.15rem;
+  }
+
+  .navbar-line::after {
+    width: 45%;
+    left: 10.35rem;
+    bottom: 3.5rem;
+  }
+
+  .menu-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+  .menu-btn::before {
+    left: 0.2rem;
+  }
+
+  /* 大圖 */
+  .about,
+  .solution,
+  .product,
+  .development {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    height: 40vh;
+  }
+
+  .container img {
+    width: 13rem;
+  }
+
+  .container .slash::before {
+    width: 1rem;
+    right: 5.3rem;
+    top: 1.05rem;
+  }
+
+  .container .slash::after {
+    width: 2rem;
+    right: 4.3rem;
+    top: 1.55rem;
+  }
+
+  .container .slash h2{
+    font-size: .9em;
+    width: 47%;
+  }
+
+  .container .slash h2::before{
+    right: -1.63rem;
+    top: 2.06rem;
+  }
+
+  .container .slash h2::after{
+    right: -4.35rem;
+    top: 1.65rem;
+  }
+
+  .solution .container .elevator {
+    bottom: 1rem;
+  }
+
+  /* 解決方案 */  
+  .solution .container .elevator ul {
+    font-size: .5em;
+  }
+  
+  .solution .container .elevator ul li{
+    color: #c26bff;
+  }
+
+  .content-title .wrap h2{
+    font-size: 1.3em;
+  }
+
+  .content-title .wrap .decoraction::before {
+    width: 9px;
+  }
+  
+  .content-title .wrap .decoraction::after {
+    width: 9px;
+    left: 83%;
+  }
+  
+  .content-title .wrap .decoraction .square::before {
+    width: 9px;
+  }
+  
+  .content-title .wrap .decoraction .square::after {
+    width: 9px;
+    left: 93%;
+  }
+
+  /* 產品資訊 */
+  .product .product-img {
+    width: 8rem;
+  }
+
+  /* 內容左圖 */
+  .content .content-img {
+    width: 4.3rem;
+    margin-left: 1rem;
+  }
+
+  .content p {
+    width: 12rem;
+    font-size: 14px;
+    margin-left: 2rem;
+  }
+
+  /* 頁尾 */
+  .footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+ 
+  .navbar-line::before {
+    height: 1.5rem;
+    left: 9.85rem;
+    bottom: 2.08rem;
+  }
+
+  .navbar-line::after {
+    width: 35%;
+    left: 10.3rem;
+    bottom: 3.4rem;
+  }
+
+  .menu-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .menu-btn::before {
+    width: 1.5rem;
+    left: 0.5rem;
+  }
+
+  .container {
+    height: 35vh;
+  }
+
+  .container img {
+    width: 11rem;
+  }
+
+  .container .slash::before {
+    right: 4.35rem;
+    top: 1.08rem;
+  }
+
+  .container .slash::after {
+    right: 3.35rem;
+  }
+
+  .container .slash h2{
+    width: 40%;
+    right: 5rem;
+  }
+
+  .container .slash h2::before {
+    right: -1.6rem;
+  }
+
+  .container .slash h2::after {
+    right: -4.28rem;
+  }
+
+  .solution .container .elevator {
+    right: 6.2rem;
+  }
+
+  .solution .container .elevator ul {
+    line-height: 1.7;
+  }
+
+  /* 內容左圖 */
+  .content .content-img {
+    width: 3.5rem;
+  }
+
+  .content p {
+    width: 10rem;
+    margin-left: 1.5rem;
+    font-size: 12px;
+  }
+
+  /* 頁尾 */
+  .footer {
+    height: 30vh;
+    margin: 15% 0 0;
+    background: linear-gradient(135deg, transparent 50px, #88ddec 0);
+  }
+  
+  .footer h2 {
+    margin: 2rem 0 0 4rem;
+  }
+  
+  .footer p {
+    line-height: 1.5;
+    margin-left: 4rem;
+  }
+
+}
