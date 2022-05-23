@@ -13,10 +13,8 @@ function App() {
     <BrowserRouter basename="/etica-sample">
       <Navbar />
 
-      <AboutUs />
-
       <Routes>
-        <Route exact path="/etica-sample" element={<AboutUs />} />
+        <Route path="/" element={<AboutUs />} />
         <Route path="solution" element={<Solution />} />
         <Route path="product" element={<Product />} />
         <Route path="development" element={<Development />} />
