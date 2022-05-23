@@ -633,7 +633,7 @@
     position: absolute;
     top: -12rem;
     opacity: 0;
-    transition: .4s;
+    transition: .3s;
   }
   
   .navbar-option a{
