@@ -14,11 +14,7 @@
     <div id="root"></div>
 
     <script type="text/javascript">
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-
-      var segmentCount = 1;
-
+      var segmentCount = 0;
       var l = window.location;
       l.replace(
         l.protocol +
@@ -39,6 +35,9 @@
           (l.search ? "&q=" + l.search.slice(1).replace(/&/g, "~and~") : "") +
           l.hash
       );
+
+      // Single Page Apps for GitHub Pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
     </script>
   </body>
 </html>
