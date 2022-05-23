@@ -22,7 +22,10 @@ const navs = [
 const Navbar = () => {
   return (
     <div className="navbar">
-      <a href="/" className="navbar-brand">
+      <a
+        href="https://october9818.github.io/etica-sample/"
+        className="navbar-brand"
+      >
         <img
           className="navbar-logo"
           src={process.env.PUBLIC_URL + "/img/logo.png"}

@@ -10,15 +10,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/etica-sample">
       <Navbar />
 
       <AboutUs />
 
       <Routes>
-        <Route path="/solution" element={<Solution />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/development" element={<Development />} />
+        <Route exact path="/etica-sample" element={<AboutUs />} />
+        <Route path="solution" element={<Solution />} />
+        <Route path="product" element={<Product />} />
+        <Route path="development" element={<Development />} />
       </Routes>
 
       <Footer />
