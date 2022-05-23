@@ -41,6 +41,7 @@ const AboutUs = () => {
     <div className="about">
       <div className="container">
         <img src={data.aboutus.image} alt={data.aboutus.alt} />
+
         <div className="slash">
           <h2>{data.aboutus.title}</h2>
         </div>
