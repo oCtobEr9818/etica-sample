@@ -1,4 +1,4 @@
-import Content from "../Components/content";
+import ContentTitle from "../Components/content-title";
 
 const Solution = () => {
   const data = {
@@ -53,35 +53,35 @@ const Solution = () => {
       </div>
 
       {/* 商業設施 */}
-      <Content title={data.commercialFacility.title} />
+      <ContentTitle title={data.commercialFacility.title} />
       <img
         className="solution-img"
         src={data.commercialFacility.image}
         alt={data.commercialFacility.alt}
       />
       {/* 交通應用 */}
-      <Content title={data.trsportationApplication.title} />
+      <ContentTitle title={data.trsportationApplication.title} />
       <img
         className="solution-img"
         src={data.trsportationApplication.image}
         alt={data.trsportationApplication.alt}
       />
       {/* 公設住宅 */}
-      <Content title={data.publicHouse.title} />
+      <ContentTitle title={data.publicHouse.title} />
       <img
         className="solution-img"
         src={data.publicHouse.image}
         alt={data.publicHouse.alt}
       />
       {/* 工業應用 */}
-      <Content title={data.industryApplication.title} />
+      <ContentTitle title={data.industryApplication.title} />
       <img
         className="solution-img"
         src={data.industryApplication.image}
         alt={data.industryApplication.alt}
       />
       {/* 綠能產業 */}
-      <Content title={data.greenEnergyIndustry.title} />
+      <ContentTitle title={data.greenEnergyIndustry.title} />
       <img
         className="solution-img"
         src={data.greenEnergyIndustry.image}

@@ -1,13 +1,8 @@
-const Content = ({ title }) => {
+const Content = ({ image, content, alt }) => {
   return (
-    <div className="content-title">
-      <div className="wrap">
-        <h2>{title}</h2>
-
-        <div className="decoraction">
-          <div className="square"></div>
-        </div>
-      </div>
+    <div className="content">
+      <img className="content-img" src={image} alt={alt} />
+      <p>{content}</p>
     </div>
   );
 };

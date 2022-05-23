@@ -1,5 +1,5 @@
+import ContentTitle from "../Components/content-title";
 import Content from "../Components/content";
-import ContentImg from "../Components/content-img";
 
 const AboutUs = () => {
   const data = {
@@ -48,29 +48,29 @@ const AboutUs = () => {
       </div>
 
       {/* 公司簡介 */}
-      <Content title={data.introduction.title} />
-      <ContentImg
+      <ContentTitle title={data.introduction.title} />
+      <Content
         image={data.introduction.image}
         alt={data.introduction.alt}
         content={data.introduction.content}
       />
       {/* 歷史沿革 */}
-      <Content title={data.history.title} />
-      <ContentImg
+      <ContentTitle title={data.history.title} />
+      <Content
         image={data.history.image}
         alt={data.history.alt}
         content={data.history.content}
       />
       {/* 經營理念 */}
-      <Content title={data.business.title} />
-      <ContentImg
+      <ContentTitle title={data.business.title} />
+      <Content
         image={data.business.image}
         alt={data.business.alt}
         content={data.business.content}
       />
       {/* 未來展望 */}
-      <Content title={data.feature.title} />
-      <ContentImg
+      <ContentTitle title={data.feature.title} />
+      <Content
         image={data.feature.image}
         alt={data.feature.alt}
         content={data.feature.content}

@@ -1,4 +1,4 @@
-import Content from "../Components/content";
+import ContentTitle from "../Components/content-title";
 
 const Product = () => {
   const data = {
@@ -31,14 +31,14 @@ const Product = () => {
         </div>
       </div>
 
-      <Content title={data.industrialBattery.title} />
+      <ContentTitle title={data.industrialBattery.title} />
       <img
         className="product-img"
         src={data.industrialBattery.image}
         alt={data.industrialBattery.alt}
       />
-      <Content title={data.eBikeLEV.title} />
-      <Content title={data.energyStorageBattery.title} />
+      <ContentTitle title={data.eBikeLEV.title} />
+      <ContentTitle title={data.energyStorageBattery.title} />
     </div>
   );
 };
