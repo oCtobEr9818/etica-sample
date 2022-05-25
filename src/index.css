@@ -4,6 +4,9 @@
   list-style: none;
 }
 
+body {
+  font-family: "Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
 
 /* 導覽列 */
 .navbar {
@@ -223,10 +226,61 @@
 
 
 /* 產品資訊 */
-.product .product-img {
-  width: 12rem;
+.product .industrialBattery-img {
+  display: flex;
+  width: 90%;
 }
 
+/* 工控電池 */
+.product .hexegon {
+  width: 12rem;
+  margin: 0 .5rem 0 0;
+  object-fit: contain;
+}
+.product .handheld {
+  object-fit: contain;
+  width: 75%;
+}
+.product p {
+  width: 90%;
+  letter-spacing: .4px;
+  margin: 1.5rem auto 0;
+}
+
+/* e-bike */
+/* ESS儲能電池 */
+.product .ebike-img,
+.product .ESS-img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+/* 產品資訊表格 */
+.product .table {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  display: block;
+  margin: 3rem auto 0;
+  overflow-x: auto;
+}
+.product .table table {
+  line-height: 3;
+  border-collapse: collapse;
+  width: 100%;
+}
+.product .table thead th {
+  background-color: #ddd;
+  border: 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
+}
+.product .table th,
+.product .table td {
+  padding-left: 10px;
+  border: 1px solid #ddd;
+  padding-right: .7rem;
+}
 
 /* 內容 */
 .content-title {
@@ -323,19 +377,24 @@
 }
 
 
-/* 內容 */
+/* 關於我們的內容 */
 .content {
   display: flex;
 }
 
-.content .content-img {
+.content .contentLeft-img {
   width: 10rem;
+  height: 20rem;
   margin-left: 3.2rem;
 }
-
-.content p {
-  width: 40.8rem;
+.content .contentRight-img {
+  height: 22rem;
   margin-left: 4rem;
+}
+.content p {
+  width: 44rem;
+  font-size: 1.2em;
+  white-space: pre-line;
 }
 
 
@@ -413,12 +472,18 @@
     width: 63%;
   }
 
-  /* 內容左圖 */
-  .content .content-img {
+  /* 關於我們左圖 */
+  .content .contentLeft-img {
     width: 9rem;
+    height: 18rem;
     margin-left: 2.8rem;
   }
-
+  .content .contentRight-img {
+    height: 18rem;
+    width: auto;
+    margin-left: 2.8rem;
+    object-fit: contain;
+  }
   .content p {
     width: 37rem;
   }
@@ -450,13 +515,29 @@
     width: 54%;
   }
 
-  /* 內容左圖 */
-  .content .content-img {
-    width: 8.5rem;
-    margin-left: 2.4rem;
+  /* e-bike圖片 */
+  .product .ebike-img,
+  .product .ESS-img {
+    width: 80%;
   }
 
+  /* 產品資訊表格 */
+  .product .table table{
+    line-height: 2.5;
+  }
+  
+  /* 關於我們左圖 */
+  .content .contentLeft-img {
+    width: 8.5rem;
+    height: 17rem;
+    margin-left: 2.4rem;
+  }
+  .content .contentRight-img {
+    height: 15rem;
+    margin-left: 2.8rem;
+  }
   .content p {
+    font-size: 1em;
     width: 30rem;
   }
 
@@ -525,15 +606,25 @@
     bottom: 2rem;
   }
 
-  /* 內容左圖 */
-  .content .content-img {
-    width: 7.5rem;
-    margin-left: 2.4rem;
+  /* 產品資訊表格 */
+  .product .table {
+    width: 90%;
   }
 
+  /* 關於我們左圖 */
+  .content .contentLeft-img {
+    width: 7.5rem;
+    height: 15rem;
+    margin-left: 2.4rem;
+  }
+  .content .contentRight-img {
+    height: 12rem;
+    width: auto;
+    margin: 0 2.5rem;
+  }
   .content p {
-    width: 25rem;
-    
+    margin-right: 2.5rem;
+    width: 27rem;
   }
 
   /* 頁尾 */
@@ -660,7 +751,6 @@
   }
 
   
-
   /* 大圖 */
   .about,
   .solution,
@@ -706,20 +796,33 @@
   }
 
   /* 產品資訊 */
-  .product .product-img {
+  .product .hexegon {
     width: 9rem;
   }
-
-  /* 內容左圖 */
-  .content .content-img {
-    width: 6.4rem;
-    margin-left: 1.8rem;
+      /* e-bike圖片 */
+  .product .ebike-img,
+  .product .ESS-img {
+    width: 95%;
+  }
+      /* 產品資訊表格 */
+  .product .table table{
+    line-height: 2;
+    font-size: 18px;
   }
 
+  /* 關於我們左圖 */
+  .content .contentLeft-img {
+    width: 6.4rem;
+    height: 12.8rem;
+    margin-left: 1.8rem;
+  }
+  .content .contentRight-img {
+    height: 12rem;
+    width: auto;
+    margin: 0 2rem;
+  }
   .content p {
-    width: 21rem;
-    margin-left: 2.5rem;
-    font-size: 18px;
+    width: 23rem;
   }
 
   /* 頁尾 */
@@ -859,20 +962,32 @@
   }
 
   /* 產品資訊 */
-  .product .product-img {
+  .product .hexegon {
     width: 8rem;
   }
-
-  /* 內容左圖 */
-  .content .content-img {
-    width: 4.3rem;
-    margin-left: 1rem;
+  
+  .product .handheld {
+    width: 70%;
+  }
+        /* 產品資訊表格 */
+  .product .table table{
+    font-size: 16px;
   }
 
+  /* 關於我們左圖 */
+  .content .contentLeft-img {
+    width: 4.3rem;
+    height: 8.6rem;
+    margin-left: 1.3rem;
+  }
+  .content .contentRight-img {
+    height: 9.5rem;
+    margin: 0 1.2rem;
+  }
   .content p {
-    width: 12rem;
-    font-size: 14px;
-    margin-left: 2rem;
+    width: 18rem;
+    font-size: .9em;
+    margin-right: 1.8rem;
   }
 
   /* 頁尾 */
@@ -945,15 +1060,27 @@
     line-height: 1.7;
   }
 
-  /* 內容左圖 */
-  .content .content-img {
-    width: 3.5rem;
+  /* 產品資訊 */
+  .product .hexegon {
+    width: 7rem;
+  }
+      /* 產品資訊表格 */
+  .product .table table{
+    font-size: 14px;
   }
 
+  /* 關於我們左圖 */
+  .content .contentLeft-img {
+    width: 3.5rem;
+    height: 7rem;
+  }
+  .content .contentRight-img {
+    height: 8rem;
+    margin: 0 1rem;
+  }
   .content p {
-    width: 10rem;
-    margin-left: 1.5rem;
-    font-size: 12px;
+    width: 15rem;
+    margin-right: 1.5rem;
   }
 
   /* 頁尾 */

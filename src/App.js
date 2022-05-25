@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import "c3/c3.css";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import AboutUs from "./Pages/aboutUs";

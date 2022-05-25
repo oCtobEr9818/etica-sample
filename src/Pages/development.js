@@ -1,10 +1,18 @@
 const Development = () => {
+  const data = {
+    development: {
+      title: "研發",
+      image: process.env.PUBLIC_URL + "/img/development.png",
+      alt: "暫無圖片",
+    },
+  };
+
   return (
     <div className="development">
       <div className="container">
-        <img src={process.env.PUBLIC_URL + ""} alt="test" />
+        <img src={data.development.image} alt={data.development.alt} />
         <div className="slash">
-          <h2>研發</h2>
+          <h2>{data.development.title}</h2>
         </div>
       </div>
     </div>

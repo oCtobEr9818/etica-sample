@@ -10,18 +10,34 @@ const AboutUs = () => {
     },
     introduction: {
       title: "公司簡介",
-      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-      atque facilis, assumenda architecto fugit beatae nostrum nesciunt
-      dolor! Soluta asperiores consectetur amet minus, sint accusamus illum
-      ullam at animi eius.`,
+      content: `Since its founding in 2002, ETICA BATTERY INC. has experienced incredible growth. With its customer base in the rapidly evolving notebook computer, cellular phone, and handheld device markets.
+        
+        Etica has dedicated its considerable energies and resources to developing products in its current core markets, as well as new battery technologies for emerging applications such as automotive, ESS,and robot sector.
+        
+        These are the deliverables and tools Etica is using to be an enterprise affording energy of substitute and next generation for protection of earth environment.
+
+        The principles that guided the company in its energetic pursuit of growth are honesty and pragmatism-Always putting customers first, emphasizing standards-based quality.`,
       image: process.env.PUBLIC_URL + "/img/company.png",
       alt: "淺藍色為底的圖片，裡面有一棟房子，房子旁邊有一棵樹",
     },
     history: {
       title: "歷史沿革",
       content: "",
-      image: process.env.PUBLIC_URL + "/img/book.png",
-      alt: "淺藍色為底的圖片，一本書和一支筆",
+      book: {
+        image: process.env.PUBLIC_URL + "/img/book.png",
+        alt: "淺藍色為底的圖片，一本書和一支筆",
+      },
+      milestone: {
+        image: process.env.PUBLIC_URL + "/img/milestone.png",
+        alt: `2002 - ETICA Battery INC. was founded
+              2022 - UL Certification
+              2003 - ISO 9001 Certification
+              2008 - TUV Certification
+              2018 - RTICA expanded to 3000 m^2
+              2020 - ISO 16949 Certification
+              2021 - Production base expanded to 8000 m^2
+        `,
+      },
     },
     business: {
       title: "經營理念",
@@ -50,29 +66,39 @@ const AboutUs = () => {
       {/* 公司簡介 */}
       <ContentTitle title={data.introduction.title} />
       <Content
-        image={data.introduction.image}
-        alt={data.introduction.alt}
+        imageL={data.introduction.image}
+        altL={data.introduction.alt}
+        imageR=""
+        altR=""
         content={data.introduction.content}
       />
+
       {/* 歷史沿革 */}
       <ContentTitle title={data.history.title} />
       <Content
-        image={data.history.image}
-        alt={data.history.alt}
+        imageL={data.history.book.image}
+        altL={data.history.book.alt}
+        imageR={data.history.milestone.image}
+        altR={data.history.milestone.alt}
         content={data.history.content}
       />
+
       {/* 經營理念 */}
       <ContentTitle title={data.business.title} />
       <Content
-        image={data.business.image}
-        alt={data.business.alt}
+        imageL={data.business.image}
+        altL={data.business.alt}
+        imageR=""
+        altR=""
         content={data.business.content}
       />
       {/* 未來展望 */}
       <ContentTitle title={data.feature.title} />
       <Content
-        image={data.feature.image}
-        alt={data.feature.alt}
+        imageL={data.feature.image}
+        altL={data.feature.alt}
+        imageR=""
+        altR=""
         content={data.feature.content}
       />
     </div>

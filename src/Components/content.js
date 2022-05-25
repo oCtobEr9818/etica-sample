@@ -1,7 +1,8 @@
-const Content = ({ image, content, alt }) => {
+const Content = ({ imageL, imageR, altL, altR, content }) => {
   return (
     <div className="content">
-      <img className="content-img" src={image} alt={alt} />
+      <img className="contentLeft-img" src={imageL} alt={altL} />
+      <img className="contentRight-img" src={imageR} alt={altR} />
       <p>{content}</p>
     </div>
   );
