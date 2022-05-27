@@ -1,0 +1,139 @@
+.navbar {
+  width: 1320px;
+  height: 6rem;
+  position: relative;
+  margin: auto;
+
+  .navbar-brand {
+    display: inline-block;
+    margin: 1rem 0 0 1.5rem;
+    padding: 0.3125rem 0;
+
+    .navbar-logo {
+      width: 12.5rem;
+    }
+  }
+
+  .navbar-line {
+    width: 13rem;
+    margin-left: 1.5rem;
+    border-top: 2px solid #000;
+    opacity: 0.3;
+
+    ::before {
+      content: "";
+      box-sizing: border-box;
+      display: inline-block;
+      transform: rotate(35deg);
+      width: 2px;
+      height: 43px;
+      background: currentColor;
+      border-radius: 3px;
+      position: absolute;
+      left: 15rem;
+      bottom: 0.55rem;
+    }
+    ::after {
+      content: "";
+      box-sizing: border-box;
+      display: block;
+      width: 60%;
+      height: 2px;
+      background: currentColor;
+      position: absolute;
+      left: 15.55rem;
+      bottom: 2.45rem;
+    }
+  }
+
+  #menu-control {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    /* 768px以下裝置的選單控制 */
+    :checked ~ .navbar-option {
+      top: 6rem;
+      opacity: 1;
+    }
+  }
+
+  /* 導覽列選項 */
+  .navbar-option {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 2rem;
+
+    li {
+      position: relative;
+
+      ::before {
+        content: "";
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: #000;
+        opacity: 0.2;
+        position: absolute;
+        bottom: 0.1rem;
+        left: 0.7rem;
+      }
+      ::after {
+        content: "";
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: #000;
+        opacity: 0.2;
+        position: absolute;
+        bottom: 0.1rem;
+        right: 0.7rem;
+      }
+
+      a {
+        color: #343875;
+        padding: 0 1rem;
+        font-size: 1.6em;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 2px 1px #ccc;
+        position: relative;
+
+        ::before {
+          content: "";
+          display: inline-block;
+          width: 0.4rem;
+          height: 0.4rem;
+          background-color: #000;
+          opacity: 0.2;
+          position: absolute;
+          bottom: 0.1rem;
+          left: 1.4rem;
+        }
+        ::after {
+          content: "";
+          display: inline-block;
+          width: 0.4rem;
+          height: 0.4rem;
+          background-color: #000;
+          opacity: 0.2;
+          position: absolute;
+          bottom: 0.1rem;
+          right: 1.4rem;
+        }
+        .active,
+        > a::after {
+          color: rgb(250, 60, 60);
+        }
+      }
+
+      :hover::before,
+      :hover::after,
+      a:hover::before,
+      a:hover::after {
+        background-color: #029be2;
+        opacity: 0.6;
+      }
+    }
+  }
+}

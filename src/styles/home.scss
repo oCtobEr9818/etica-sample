@@ -1,0 +1,213 @@
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+$primary-color: #93cddd;
+
+.home {
+  padding-top: 4rem;
+  margin: auto;
+  width: 66rem;
+
+  .container {
+    height: 100vh;
+  }
+
+  // 橫幅
+  .banner-home {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-color;
+    position: relative;
+
+    .hexagon {
+      span {
+        @include user-select-none;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+        cursor: default;
+        color: #66e0ff;
+        background-color: #2a2f5f;
+        -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        position: absolute;
+      }
+      span:nth-child(1) {
+        right: 1rem;
+        top: -4rem;
+      }
+      span:nth-child(2) {
+        right: 6rem;
+        top: -1rem;
+      }
+      span:nth-child(3) {
+        right: 1rem;
+        top: 2rem;
+      }
+    }
+
+    h1 {
+      @include user-select-none;
+      width: 100%;
+      height: 40%;
+      padding-left: 2.5em;
+      font: {
+        size: 4.5em;
+        family: "Noto Sans Lisu";
+      }
+      color: #fff;
+      cursor: default;
+    }
+    h1::first-letter {
+      font-size: 200%;
+    }
+
+    .imgWrap {
+      width: 90%;
+      height: 60%;
+      margin-bottom: 1rem;
+      border-radius: 100px;
+      background-color: #dff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 9rem;
+        height: 9rem;
+        padding: 0 30px;
+        border-radius: 10px;
+      }
+      img:nth-child(n + 3) {
+        width: 13rem;
+      }
+    }
+  }
+
+  // 內容
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .wrap {
+      width: 100%;
+      height: 60vh;
+      position: relative;
+
+      .topline {
+        height: 2px;
+        width: 80%;
+        background-color: $primary-color;
+        position: absolute;
+        top: 1.7rem;
+        left: 1.5rem;
+      }
+      .topline::before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 2rem;
+        background-color: $primary-color;
+        position: absolute;
+        bottom: 0;
+      }
+      .trapezoid {
+        width: 9rem;
+        border-bottom: 50px solid $primary-color;
+        border-left: 60px solid transparent;
+        border-right: 40px solid transparent;
+        transform: rotate(40deg);
+        position: absolute;
+        top: 4rem;
+        right: -1rem;
+      }
+
+      .underline {
+        width: 85.2%;
+        height: 2px;
+        background-color: $primary-color;
+        position: absolute;
+        right: 1.5rem;
+        bottom: 0;
+      }
+      .underline::after {
+        content: "";
+        width: 2px;
+        height: 20rem;
+        display: inline-block;
+        background-color: $primary-color;
+        position: absolute;
+        right: -1px;
+        bottom: 0;
+      }
+      .underline::before {
+        content: "";
+        width: 2px;
+        height: 2rem;
+        display: inline-block;
+        background-color: $primary-color;
+        position: absolute;
+        top: 0;
+      }
+
+      h2 {
+        @include user-select-none;
+        color: #0a489d;
+        font-weight: 500;
+        font-size: 2.1em;
+        letter-spacing: 1.9rem;
+        writing-mode: vertical-rl;
+        position: absolute;
+        top: 4rem;
+        right: 6.5rem;
+      }
+      h2:last-child {
+        right: 4.5rem;
+        top: 6rem;
+      }
+    }
+    .wrap:nth-child(2) {
+      transform: scaleX(-1);
+
+      .topline::before {
+        display: none;
+      }
+
+      h2 {
+        transform: scaleX(-1);
+        top: 5rem;
+        right: 4.5rem;
+      }
+      h2:last-child {
+        top: 7rem;
+        right: 6.5rem;
+      }
+    }
+    .wrap:nth-child(3) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      .topline::before {
+        display: none;
+      }
+
+      .underline,
+      .underline::before {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}

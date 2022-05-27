@@ -10,6 +10,7 @@ const AboutUs = () => {
     },
     introduction: {
       title: "公司簡介",
+      id: "introduction",
       content: `Since its founding in 2002, ETICA BATTERY INC. has experienced incredible growth. With its customer base in the rapidly evolving notebook computer, cellular phone, and handheld device markets.
         
         Etica has dedicated its considerable energies and resources to developing products in its current core markets, as well as new battery technologies for emerging applications such as automotive, ESS,and robot sector.
@@ -22,6 +23,7 @@ const AboutUs = () => {
     },
     history: {
       title: "歷史沿革",
+      id: "history",
       content: "",
       book: {
         image: process.env.PUBLIC_URL + "/img/book.png",
@@ -41,12 +43,14 @@ const AboutUs = () => {
     },
     business: {
       title: "經營理念",
+      id: "business",
       content: "",
       image: process.env.PUBLIC_URL + "/img/peopleMoney.png",
       alt: "淺藍色為底的圖片，一個人被鈔票圍著",
     },
     feature: {
       title: "未來展望",
+      id: "feature",
       content: "",
       image: process.env.PUBLIC_URL + "/img/earth.png",
       alt: "淺藍色為底的圖片，一架飛機繞著地球飛",
@@ -54,8 +58,8 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="about">
-      <div className="container">
+    <div className="container">
+      <div className="banner">
         <img src={data.aboutus.image} alt={data.aboutus.alt} />
 
         <div className="slash">
@@ -64,7 +68,7 @@ const AboutUs = () => {
       </div>
 
       {/* 公司簡介 */}
-      <ContentTitle title={data.introduction.title} />
+      <ContentTitle title={data.introduction.title} id={data.introduction.id} />
       <Content
         imageL={data.introduction.image}
         altL={data.introduction.alt}
@@ -74,7 +78,7 @@ const AboutUs = () => {
       />
 
       {/* 歷史沿革 */}
-      <ContentTitle title={data.history.title} />
+      <ContentTitle title={data.history.title} id={data.history.id} />
       <Content
         imageL={data.history.book.image}
         altL={data.history.book.alt}
@@ -84,7 +88,7 @@ const AboutUs = () => {
       />
 
       {/* 經營理念 */}
-      <ContentTitle title={data.business.title} />
+      <ContentTitle title={data.business.title} id={data.business.id} />
       <Content
         imageL={data.business.image}
         altL={data.business.alt}
@@ -93,7 +97,7 @@ const AboutUs = () => {
         content={data.business.content}
       />
       {/* 未來展望 */}
-      <ContentTitle title={data.feature.title} />
+      <ContentTitle title={data.feature.title} id={data.feature.id} />
       <Content
         imageL={data.feature.image}
         altL={data.feature.alt}

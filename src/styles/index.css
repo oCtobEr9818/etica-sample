@@ -1,3 +1,4 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 *{
   padding: 0;
   margin: 0;
@@ -5,7 +6,9 @@
 }
 
 body {
-  font-family: "Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
 }
 
 /* 導覽列 */
@@ -67,70 +70,235 @@ body {
 
 /* 768px以下裝置的選單控制 */
 #menu-control:checked ~ .navbar-option {
-  top: 6rem;
+  top: 10.5rem;
   opacity: 1;
 }
 
+/* 導覽列選項 */
 .navbar-option {
   display: flex;
   justify-content: center;
   margin: 0 0 0 2rem;
+  position: relative;
 }
 
-.navbar-option a {
-  color: #000;
+.navbar-option li {
+  position: relative;
+}
+
+.navbar-option li::before {
+  content: '';
+  display: inline-block;
+  width: .7rem;
+  height: .7rem;
+  background-color: #000;
+  opacity: .2;
+  position: absolute;
+  bottom: .1rem;
+  left: .6rem;
+}
+
+.navbar-option li::after {
+  content: '';
+  display: inline-block;
+  width: .7rem;
+  height: .7rem;
+  background-color: #000;
+  opacity: .2;
+  position: absolute;
+  bottom: .1rem;
+  right: .6rem;
+}
+
+.navbar-option li a {
+  color: #343875;
   padding: 0 1rem;
-  font-size: 1.6em;
-  font-weight: bold;
+  font-size: 1.5em;
   text-decoration: none;
   text-shadow: 2px 1px #ccc;
+  position: relative;
 }
 
-.navbar-option a.active,
-.navbar-option > a {
-  color: #fa0;
-  text-shadow: 1px 1px #000;
+.navbar-option li a::before {
+  content: '';
+  display: inline-block;
+  width: .4rem;
+  height: .35rem;
+  background-color: #000;
+  opacity: .2;
+  position: absolute;
+  bottom: .1rem;
+  left: 1.5rem;
 }
 
-.navbar-option a:hover {
-  color: #fa0;
-  text-shadow: 1px 1px #000;
+.navbar-option li a::after {
+  content: '';
+  display: inline-block;
+  width: .4rem;
+  height: .35rem;
+  background-color: #000;
+  opacity: .2;
+  position: absolute;
+  bottom: .1rem;
+  right: 1.5rem;
 }
+
+.navbar-option li a.active,
+.navbar-option > a::after {
+  color: #f00;
+}
+
+.navbar-option li:hover::before,
+.navbar-option li:hover::after,
+.navbar-option li a:hover::before,
+.navbar-option li a:hover::after {
+  background-color: #029be2;
+  opacity: .6;
+}
+
+.navbar-option li:nth-child(2):hover ~ .subNavbar {
+  display: flex;
+}
+
+/* 關於我們子標題 */
+.navbar .navbar-option .subNavbar {
+  width: 250px;
+  height: 300px;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  background-color: #75c2d3;
+  border-radius: 50px;
+  position: absolute;
+  top: 3rem;
+  left: 6rem;
+}
+
+.navbar .navbar-option .subNavbar li {
+  margin-bottom: 1.3rem;
+  padding-left: .5rem;
+  transform: translateY(0px);
+  transition: .3s;
+  position: relative;
+}
+
+.navbar .navbar-option .subNavbar li:first-child {
+  margin-top: 1.5rem;
+}
+
+.navbar .navbar-option .subNavbar li:hover {
+  transform: translateY(-10px);
+}
+/* 插頭黃色前端 */
+.navbar .navbar-option .subNavbar li::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+  position: absolute;
+  bottom: -7px;
+  left: 85.5%;
+  transition: .2s;
+}
+
+.navbar .navbar-option .subNavbar li:hover::before {
+  width: 6px;
+  transition: .2s .4s;
+}
+
+.navbar .navbar-option .subNavbar li::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+  position: absolute;
+  bottom: -3px;
+  left: 85.5%;
+  transition: .2s;
+}
+
+.navbar .navbar-option .subNavbar li:hover::after {
+  width: 6px;
+  transition: .2s .4s;
+}
+
+.navbar .navbar-option .subNavbar li a {
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: .5em;
+  color: #fff;
+  position: relative;
+}
+/* 插頭藍色線 */
+.navbar .navbar-option .subNavbar li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  height: 0;
+  border-bottom: 2px solid #172a88;
+  transition: .2s .25s;
+  z-index: -1;
+}
+
+.navbar .navbar-option .subNavbar li a:hover::after {
+  left: 0;
+  right: 0;
+  transition: .2s;
+}
+/* 插頭藍色頭部 */
+.navbar .navbar-option .subNavbar li a::before {
+  content: '';
+  position: absolute;
+  left: 95%;
+  bottom: -9px;
+  width: 0;
+  height: 10px;
+  background-color: #172a88;
+  transition: .2s .1s;
+  z-index: -1;
+}
+
+.navbar .navbar-option .subNavbar li a:hover::before {
+  width: 5px;
+  transition: .2s .2s;
+}
+
+
 
 
 
 /* 大圖開始 */
-.about,
-.solution,
-.product,
-.development {
+.container {
   padding-top: 4rem;
   margin: auto;
   width: 66rem;
 }
 
-.container {
+.banner {
   width: 100%;
   height: 50vh;
   display: flex;
   align-items: center;
   position: relative;
-  background-color: #0d6188;
+  background: linear-gradient(0deg, #0c3e4c, #195e8d,  #75bccd);
+  z-index: -1;
 }
 
-.container img {
+.banner img {
   width: 20rem;
   position: absolute;
   top: 0;
 }
 
-.container .slash{
+.banner .slash{
   width: 100%;
   position: relative;
   margin-bottom: 2rem;
 }
 
-.container .slash::before{
+.banner .slash::before{
   content: '';
   display: block;
   color: #93cddd;
@@ -142,7 +310,7 @@ body {
   top: 1.6rem;
 }
 
-.container .slash::after{
+.banner .slash::after{
   content: '';
   display: block;
   color: #93cddd;
@@ -154,7 +322,7 @@ body {
   top: 2rem;
 }
 
-.container .slash h2{
+.banner .slash h2{
   width: 68%;
   text-align: right;
   color: #fff;
@@ -164,7 +332,7 @@ body {
   right: 6rem;
 }
 
-.container .slash h2::before{
+.banner .slash h2::before{
   content: '';
   display: block;
   color: #93cddd;
@@ -176,7 +344,7 @@ body {
   top: 2.7rem;
 }
 
-.container .slash h2::after{
+.banner .slash h2::after{
   content: '';
   display: block;
   color: #93cddd;
@@ -190,23 +358,23 @@ body {
 
 
 /* 解決方案 */
-.solution .container .elevator {
+.solution .banner .elevator {
   position: absolute;
   right: 7rem;
   bottom: 1.5rem;
 }
 
-.solution .container .elevator ul {
-  font-weight: 600;
-  font-size: .8em;
-  line-height: 1.9;
+.solution .banner .elevator ul {
+  font-weight: bold;
+  font-size: .9em;
+  line-height: 1.5;
 }
 
-.solution .container .elevator ul li{
+.solution .banner .elevator ul li{
   color: #c26bff;
 }
 
-.solution .container .elevator ul li::before {
+.solution .banner .elevator ul li::before {
   content: '∎';
   color: #5d157f;
   display: inline-block;
@@ -215,13 +383,53 @@ body {
   font-size: .8em;
 }
 
+/* 解決方案內容 */
 .solution .solution-img {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  object-fit: cover;
+}
+
+.solution .solution-img .blueImg {
+  width: 30%;
+}
+
+.solution .solution-img .wrap {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution .solution-img .wrap .imgWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 2rem;
+}
+
+.solution .solution-img .wrap .imgWrap img {
+  margin: 0 .7rem;
+}
+
+.solution .solution-img .wrap .imgWrap p {
+  width: 12.5rem;
+  line-height: 1.7;
+  font-size: .9em;
+  white-space: pre-line;
+  color: #4b93a0;
+}
+
+.solution .solution-img .wrap .imgWrap p::first-line {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.solution .solution-img .wrap .threeImg {
+  width: 700px;
+  padding-bottom: 2.2rem;
 }
 
 
@@ -400,9 +608,9 @@ body {
 
 /* 頁尾 */
 .footer {
-  width: 1188px;
+  width: 1261px;
   height: 40vh;
-  margin: 15% auto 0;
+  margin: 0 auto;
   background: linear-gradient(135deg, transparent 130px, #88ddec 0);
 }
 
@@ -412,16 +620,18 @@ body {
   margin: 4rem 0 0 10rem;
 }
 
-.footer p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer .footer-wrap {
+  width: 500px;
+  text-align: left;
   font-size: 1em;
-  text-align: justify;
-  line-height: 2.5;
-  margin-top: 1rem;
+  line-height: 2;
+  margin: 1rem auto 0;
 }
 
+.footer .footer-wrap p .fa {
+  width: 2rem;
+  padding-right: .5rem;
+}
 
 /* ********************************************************************************************************* */
 
@@ -440,13 +650,17 @@ body {
     width: 62rem;
   }
 
-  .container .slash h2{
+  .banner .slash h2{
     width: 66%;
+  }
+
+  .solution .solution-img .wrap .imgWrap p {
+    font-size: .7em;
   }
 
   /* 頁尾 */
   .footer {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -456,7 +670,7 @@ body {
     width: 57rem;
   }
   
-  .navbar-option a{
+  .navbar-option li a{
     font-size: 1.4em;
   }
 
@@ -468,9 +682,10 @@ body {
     width: 57rem;
   }
   
-  .container .slash h2{
+  .banner .slash h2{
     width: 63%;
   }
+    
 
   /* 關於我們左圖 */
   .content .contentLeft-img {
@@ -479,9 +694,7 @@ body {
     margin-left: 2.8rem;
   }
   .content .contentRight-img {
-    height: 18rem;
-    width: auto;
-    margin-left: 2.8rem;
+    height: 20rem;
     object-fit: contain;
   }
   .content p {
@@ -499,7 +712,7 @@ body {
     margin: 0 0 0 10rem;
   }
 
-  .navbar-option a{
+  .navbar-option li a {
     font-size: 1.2em;
   }
 
@@ -511,7 +724,7 @@ body {
     width: 48rem;
   }
 
-  .container .slash h2{
+  .banner .slash h2{
     width: 54%;
   }
 
@@ -581,7 +794,7 @@ body {
     margin: 0 0 0 7rem;
   }
 
-  .navbar-option a {
+  .navbar-option li a {
     padding: 0 .75rem;
     font-size: 1.2em;
   }
@@ -594,15 +807,15 @@ body {
     width: 100%;
   }
 
-  .container img {
+  .banner img {
     width: 18rem;
   }
 
-  .container .slash h2{
+  .banner .slash h2{
     width: 54%;
   }
 
-  .solution .container .elevator {
+  .solution .banner .elevator {
     bottom: 2rem;
   }
 
@@ -733,12 +946,12 @@ body {
     justify-content: center;
     margin: 0 auto;
     position: absolute;
-    top: -12rem;
+    top: -17rem;
     opacity: 0;
     transition: .3s;
   }  
 
-  .navbar-option li a{
+  .navbar-option li a {
     width: 100%;
     height: 3rem;
     display: block;
@@ -759,38 +972,38 @@ body {
     padding: 6rem 0 0;
   }
 
-  .container img {
+  .banner img {
     width: 16rem;
   }
   
-  .container .slash{
+  .banner .slash{
     width: 100%;
     position: relative;
     margin-bottom: 2rem;
   }
   
-  .container .slash::before {
+  .banner .slash::before {
     width: 1.2rem;
     right: 5.2rem;
     top: 1.3rem;
   }
 
-  .container .slash::after {
+  .banner .slash::after {
     right: 3.95rem;
     top: 1.9rem;
   }
 
-  .container .slash h2{
+  .banner .slash h2{
     width: 52%;
     font-size: 1.2rem;
   }
 
-  .container .slash h2::before{
+  .banner .slash h2::before{
     right: -1.85rem;
     top: 2.66rem;
   }
 
-  .container .slash h2::after{
+  .banner .slash h2::after{
     right: -4.55rem;
     top: 2.2rem;
   }
@@ -891,51 +1104,51 @@ body {
     overflow-x: hidden;
   }
 
-  .container {
+  .banner {
     height: 40vh;
   }
 
-  .container img {
+  .banner img {
     width: 13rem;
   }
 
-  .container .slash::before {
+  .banner .slash::before {
     width: 1rem;
     right: 5.3rem;
     top: 1.05rem;
   }
 
-  .container .slash::after {
+  .banner .slash::after {
     width: 2rem;
     right: 4.3rem;
     top: 1.55rem;
   }
 
-  .container .slash h2{
+  .banner .slash h2{
     font-size: .9em;
     width: 47%;
   }
 
-  .container .slash h2::before{
+  .banner .slash h2::before{
     right: -1.63rem;
     top: 2.06rem;
   }
 
-  .container .slash h2::after{
+  .banner .slash h2::after{
     right: -4.35rem;
     top: 1.65rem;
   }
 
-  .solution .container .elevator {
+  .solution .banner .elevator {
     bottom: 1rem;
   }
 
   /* 解決方案 */  
-  .solution .container .elevator ul {
+  .solution .banner .elevator ul {
     font-size: .5em;
   }
   
-  .solution .container .elevator ul li{
+  .solution .banner .elevator ul li{
     color: #c26bff;
   }
 
@@ -1022,41 +1235,41 @@ body {
     left: 0.5rem;
   }
 
-  .container {
+  .banner {
     height: 35vh;
   }
 
-  .container img {
+  .banner img {
     width: 11rem;
   }
 
-  .container .slash::before {
+  .banner .slash::before {
     right: 4.35rem;
     top: 1.08rem;
   }
 
-  .container .slash::after {
+  .banner .slash::after {
     right: 3.35rem;
   }
 
-  .container .slash h2{
+  .banner .slash h2{
     width: 40%;
     right: 5rem;
   }
 
-  .container .slash h2::before {
+  .banner .slash h2::before {
     right: -1.6rem;
   }
 
-  .container .slash h2::after {
+  .banner .slash h2::after {
     right: -4.28rem;
   }
 
-  .solution .container .elevator {
+  .solution .banner .elevator {
     right: 6.2rem;
   }
 
-  .solution .container .elevator ul {
+  .solution .banner .elevator ul {
     line-height: 1.7;
   }
 

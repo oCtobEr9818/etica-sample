@@ -35,8 +35,8 @@ const Product = () => {
   };
 
   return (
-    <div className="product">
-      <div className="container">
+    <div className="container">
+      <div className="banner">
         <img src={data.product_img.image} alt={data.product_img.alt} />
         <div className="slash">
           <h2>產品資訊</h2>

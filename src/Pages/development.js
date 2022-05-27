@@ -8,8 +8,8 @@ const Development = () => {
   };
 
   return (
-    <div className="development">
-      <div className="container">
+    <div className="container">
+      <div className="banner">
         <img src={data.development.image} alt={data.development.alt} />
         <div className="slash">
           <h2>{data.development.title}</h2>
