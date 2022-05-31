@@ -1,3 +1,45 @@
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mini-pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@keyframes bordershow {
+  50% {
+    box-shadow: 0 0 10px 0 #001eb4;
+  }
+}
+@keyframes borderM {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @mixin user-select-none {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7,13 +49,141 @@
 $primary-color: #93cddd;
 
 .home {
-  padding-top: 4rem;
   margin: auto;
   width: 66rem;
+  // overflow-x: hidden;
+  // overflow-y: visible;
 
-  .container {
-    height: 100vh;
-  }
+  .container-home {
+    height: 120vh;
+    position: relative;
+
+    img {
+      @include user-select-none;
+      width: 100%;
+    }
+
+    .imgOption {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .point {
+        position: absolute;
+        z-index: 1;
+
+        // 藍色原點
+        .point_a {
+          cursor: pointer;
+          display: block;
+          position: relative;
+          text-decoration: none;
+
+          // 白色原點
+          .point_span {
+            display: block;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border: 7px solid #001eb4;
+            border-radius: 50%;
+            animation: bordershow 3s infinite;
+
+            &::before {
+              content: "";
+              width: 25px;
+              height: 25px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: -1;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              background: rgba(0, 30, 180, 0.4);
+              animation: borderM 3s 0.75s infinite;
+            }
+            &::after {
+              content: "";
+              width: 25px;
+              height: 25px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: -1;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              background: rgba(0, 30, 180, 0.4);
+              animation: borderM 3s infinite;
+            }
+          }
+
+          // 右邊欄
+          .point_wrap {
+            height: 50px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+            visibility: hidden;
+            transform: translateY(-50%);
+            position: absolute;
+            top: 50%;
+            left: 40px;
+
+            &::before {
+              content: "";
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+              background: rgba(0, 30, 180, 0.77);
+              border-radius: 30px;
+            }
+            &::after {
+              content: "";
+              height: 100%;
+              width: 30px;
+              position: absolute;
+              right: 95%;
+              z-index: -1;
+            }
+
+            span {
+              color: #fff;
+            }
+          }
+
+          &:hover > .point_wrap {
+            visibility: visible;
+          }
+        } // point_a
+      } // point
+      .point1 {
+        top: 45%;
+        left: 25%;
+      }
+      .point2 {
+        top: 20%;
+        left: 39%;
+      }
+      .point3 {
+        top: 17%;
+        left: 69%;
+      }
+      .point4 {
+        top: 40%;
+        left: 55.5%;
+      }
+    } // imgOption
+  } // container-home
 
   // 橫幅
   .banner-home {
@@ -60,15 +230,20 @@ $primary-color: #93cddd;
       width: 100%;
       height: 40%;
       padding-left: 2.5em;
+      @include desktop {
+        margin: -1rem 0 1rem 0;
+      }
+
+      &::first-letter {
+        font-size: 200%;
+      }
+
       font: {
         size: 4.5em;
         family: "Noto Sans Lisu";
       }
       color: #fff;
       cursor: default;
-    }
-    h1::first-letter {
-      font-size: 200%;
     }
 
     .imgWrap {
@@ -95,9 +270,11 @@ $primary-color: #93cddd;
 
   // 內容
   .content {
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: auto;
 
     .wrap {
       width: 100%;
@@ -111,15 +288,16 @@ $primary-color: #93cddd;
         position: absolute;
         top: 1.7rem;
         left: 1.5rem;
-      }
-      .topline::before {
-        content: "";
-        display: inline-block;
-        width: 2px;
-        height: 2rem;
-        background-color: $primary-color;
-        position: absolute;
-        bottom: 0;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 2px;
+          height: 2rem;
+          background-color: $primary-color;
+          position: absolute;
+          bottom: 0;
+        }
       }
       .trapezoid {
         width: 9rem;
@@ -139,25 +317,30 @@ $primary-color: #93cddd;
         position: absolute;
         right: 1.5rem;
         bottom: 0;
-      }
-      .underline::after {
-        content: "";
-        width: 2px;
-        height: 20rem;
-        display: inline-block;
-        background-color: $primary-color;
-        position: absolute;
-        right: -1px;
-        bottom: 0;
-      }
-      .underline::before {
-        content: "";
-        width: 2px;
-        height: 2rem;
-        display: inline-block;
-        background-color: $primary-color;
-        position: absolute;
-        top: 0;
+
+        &::after {
+          content: "";
+          width: 2px;
+          height: 19rem;
+          display: inline-block;
+          background-color: $primary-color;
+          position: absolute;
+          right: -1px;
+          bottom: 0;
+
+          @include desktop {
+            height: 17rem;
+          }
+        }
+        &::before {
+          content: "";
+          width: 2px;
+          height: 2rem;
+          display: inline-block;
+          background-color: $primary-color;
+          position: absolute;
+          top: 0;
+        }
       }
 
       h2 {
@@ -203,10 +386,14 @@ $primary-color: #93cddd;
         display: none;
       }
 
-      .underline,
-      .underline::before {
+      .underline {
         width: 0;
         height: 0;
+
+        &::before {
+          width: 0;
+          height: 0;
+        }
       }
     }
   }

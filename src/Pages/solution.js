@@ -50,6 +50,7 @@ const Solution = () => {
     },
     commercialFacility: {
       title: "商業設施",
+      id: "commercialFacility",
       image: {
         blueImg: process.env.PUBLIC_URL + "/img/commercialFacility1.png",
         threeImg: process.env.PUBLIC_URL + "/img/commercialFacility2.png",
@@ -58,6 +59,7 @@ const Solution = () => {
     },
     trsportationApplication: {
       title: "交通應用",
+      id: "trsportationApplication",
       image: {
         blueImg: process.env.PUBLIC_URL + "/img/trsportationApplication1.png",
         threeImg: process.env.PUBLIC_URL + "/img/trsportationApplication2.png",
@@ -68,6 +70,7 @@ const Solution = () => {
     },
     publicHouse: {
       title: "公設住宅",
+      id: "publicHouse",
       image: {
         blueImg: process.env.PUBLIC_URL + "/img/publicHouse1.png",
         threeImg: process.env.PUBLIC_URL + "/img/publicHouse2.png",
@@ -76,6 +79,7 @@ const Solution = () => {
     },
     industryApplication: {
       title: "工業應用",
+      id: "industryApplication",
       image: {
         blueImg: process.env.PUBLIC_URL + "/img/industryApplication1.png",
         threeImg: process.env.PUBLIC_URL + "/img/industryApplication2.png",
@@ -84,6 +88,7 @@ const Solution = () => {
     },
     greenEnergyIndustry: {
       title: "綠能產業",
+      id: "greenEnergyIndustry",
       image: {
         blueImg: process.env.PUBLIC_URL + "/img/greenEnergyIndustry1.png",
         threeImg: process.env.PUBLIC_URL + "/img/greenEnergyIndustry2.png",
@@ -101,17 +106,30 @@ const Solution = () => {
         </div>
         <div className="elevator">
           <ul>
-            <li>商業設施</li>
-            <li>交通應用</li>
-            <li>公設住宅</li>
-            <li>工業應用</li>
-            <li>綠能產業</li>
+            <li>
+              <a href="#commercialFacility">商業設施</a>
+            </li>
+            <li>
+              <a href="#trsportationApplication">交通應用</a>
+            </li>
+            <li>
+              <a href="#publicHouse">公設住宅</a>
+            </li>
+            <li>
+              <a href="#industryApplication">工業應用</a>
+            </li>
+            <li>
+              <a href="#greenEnergyIndustry">綠能產業</a>
+            </li>
           </ul>
         </div>
       </div>
 
       {/* 商業設施 */}
-      <ContentTitle title={data.commercialFacility.title} />
+      <ContentTitle
+        title={data.commercialFacility.title}
+        id={data.commercialFacility.id}
+      />
       <div className="solution-img">
         <img
           className="blueImg"
@@ -144,7 +162,10 @@ const Solution = () => {
       </div>
 
       {/* 交通應用 */}
-      <ContentTitle title={data.trsportationApplication.title} />
+      <ContentTitle
+        title={data.trsportationApplication.title}
+        id={data.trsportationApplication.id}
+      />
       <div className="solution-img">
         <img
           className="blueImg"
@@ -188,7 +209,7 @@ const Solution = () => {
       </div>
 
       {/* 公設住宅 */}
-      <ContentTitle title={data.publicHouse.title} />
+      <ContentTitle title={data.publicHouse.title} id={data.publicHouse.id} />
       <div className="solution-img">
         <img
           className="blueImg"
@@ -226,7 +247,10 @@ const Solution = () => {
       </div>
 
       {/* 工業應用 */}
-      <ContentTitle title={data.industryApplication.title} />
+      <ContentTitle
+        title={data.industryApplication.title}
+        id={data.industryApplication.id}
+      />
       <div className="solution-img">
         <img
           className="blueImg"
@@ -258,13 +282,16 @@ const Solution = () => {
               src={data.public.image.energyStorageBoxImg}
               alt={data.public.alt.energyStorageBoxAlt}
             />
-            <p>{data.public.content.energyStorageBox}</p>
+            <p>{data.public.content.energyStorageBoxContent}</p>
           </div>
         </div>
       </div>
 
       {/* 綠能產業 */}
-      <ContentTitle title={data.greenEnergyIndustry.title} />
+      <ContentTitle
+        title={data.greenEnergyIndustry.title}
+        id={data.greenEnergyIndustry.id}
+      />
       <div className="solution-img">
         <img
           className="blueImg"

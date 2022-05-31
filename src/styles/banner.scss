@@ -1,0 +1,217 @@
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mini-pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+.container {
+  padding-top: 4rem;
+  margin: auto;
+  width: 66rem;
+  @include desktop {
+    width: 48rem;
+  }
+  @include pad {
+    width: 100%;
+  }
+  @include mini-pad {
+    width: 100%;
+    padding: 6rem 0 0;
+  }
+  @include mobile {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .banner {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(0deg, #0c3e4c, #195e8d, #75bccd);
+    z-index: -1;
+    @include mobile {
+      height: 40vh;
+    }
+
+    img {
+      width: 20rem;
+      position: absolute;
+      top: 0;
+      @include pad {
+        width: 18em;
+      }
+      @include mini-pad {
+        width: 16rem;
+      }
+      @include mobile {
+        width: 13re;
+      }
+    }
+
+    .slash {
+      width: 100%;
+      position: relative;
+      margin-bottom: 2rem;
+      @include mini-pad {
+        width: 100%;
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        color: #93cddd;
+        width: 1.5rem;
+        border-bottom: 1px solid #93cddd;
+        transform: rotate(110deg);
+        position: absolute;
+        right: 5rem;
+        top: 1.6rem;
+        @include mini-pad {
+          width: 1.2rem;
+          right: 5.2rem;
+          top: 1.3rem;
+        }
+        @include mobile {
+          width: 1rem;
+          right: 5.3rem;
+          top: 1.05rem;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        color: #93cddd;
+        width: 2.45rem;
+        border-bottom: 1px solid #93cddd;
+        transform: rotate(250deg);
+        position: absolute;
+        right: 3.85rem;
+        top: 2rem;
+        @include mini-pad {
+          right: 3.95rem;
+          top: 1.9rem;
+        }
+        @include mobile {
+          width: 2rem;
+          right: 4.3rem;
+          top: 1.55rem;
+        }
+      }
+
+      h2 {
+        width: 68%;
+        text-align: right;
+        color: #fff;
+        border-bottom: 1px solid #93cddd;
+        padding: 0 1rem 0.3rem 0;
+        position: absolute;
+        right: 6rem;
+        @include desktop {
+          width: 54%;
+        }
+        @include pad {
+          width: 54%;
+        }
+        @include mini-pad {
+          width: 52%;
+          font-size: 1.2rem;
+        }
+        @include mobile {
+          width: 47%;
+          font-size: 0.9rem;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          color: #93cddd;
+          width: 0.9rem;
+          border-bottom: 1px solid #93cddd;
+          transform: rotate(110deg);
+          position: absolute;
+          right: -1.95rem;
+          top: 2.7rem;
+          @include mini-pad {
+            right: -1.85rem;
+            top: 2.66rem;
+          }
+          @include mobile {
+            right: -1.63rem;
+            top: 2.06rem;
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          color: #93cddd;
+          width: 3rem;
+          border-bottom: 1px solid #93cddd;
+          position: absolute;
+          right: -4.65rem;
+          top: 2.3rem;
+          @include mini-pad {
+            right: -4.55rem;
+            top: 2.2rem;
+          }
+          @include mobile {
+            right: -4.35rem;
+            top: 1.65rem;
+          }
+        }
+      }
+    } // slash
+
+    .elevator {
+      position: absolute;
+      right: 7rem;
+      bottom: 1.5rem;
+      @include pad {
+        bottom: 2rem;
+      }
+      @include mobile {
+        bottom: 1rem;
+      }
+
+      ul {
+        font-weight: bold;
+        font-size: 0.9em;
+        line-height: 1.5;
+        @include mobile {
+          font-size: 0.5em;
+        }
+
+        li {
+          color: #c26bff;
+
+          &::before {
+            content: "∎";
+            color: #5d157f;
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  } // banner
+} //container

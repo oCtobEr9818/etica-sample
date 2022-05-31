@@ -19,7 +19,7 @@ const Product = () => {
       alt: "手持式，行動電話，醫療",
     },
     eBikeLEV: {
-      title: "e-bile.LEV",
+      title: "e-bike.LEV",
       image: process.env.PUBLIC_URL + "/img/e-bike.png",
       alt: "e-Bike,e-bike,Etica Battery",
     },

@@ -35,7 +35,43 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="container"></div>
+      <div className="container-home">
+        <img src={process.env.PUBLIC_URL + "/img/home/18765.jpg"} alt="test" />
+        <ul className="imgOption">
+          <li className="point point1">
+            <a href="" className="point_a">
+              <span className="point_span"></span>
+              <div className="point_wrap">
+                <span>工控電池</span>
+              </div>
+            </a>
+          </li>
+          <li className="point point2">
+            <a href="" className="point_a">
+              <span className="point_span"></span>
+              <div className="point_wrap">
+                <span>e-bike</span>
+              </div>
+            </a>
+          </li>
+          <li className="point point3">
+            <a href="" className="point_a">
+              <span className="point_span"></span>
+              <div className="point_wrap">
+                <span>ESS儲能電池</span>
+              </div>
+            </a>
+          </li>
+          <li className="point point4">
+            <a href="" className="point_a">
+              <span className="point_span"></span>
+              <div className="point_wrap">
+                <span>40呎集裝箱</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <div className="banner-home">
         <div className="hexagon">

@@ -21,6 +21,9 @@ const Footer = () => {
           886-2-26689564
         </p>
       </div>
+      <a href="http://www.freepik.com" rel="noreferrer" target="_blank">
+        Designed by macrovector / Freepik
+      </a>
     </div>
   );
 };

@@ -15,22 +15,25 @@ body {
 .navbar {
   width: 1320px;
   height: 6rem;
+  display: block;
   position: relative;
   margin: auto;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .navbar-brand {
   display: inline-block;
   margin: 1rem 0 0 1.5rem;
-  padding: 0.3125rem 0;
+  padding: 1.15rem 0 0;
 }
 
 .navbar-logo {
-  width: 12.5rem;
+  width: 9rem;
 }
 
 .navbar-line {
-  width: 13rem;
+  width: 10rem;
   margin-left: 1.5rem;
   border-top: 2px solid #000;
   opacity: .3;
@@ -40,26 +43,26 @@ body {
   content: '';
   box-sizing: border-box;
   display: inline-block;
-  transform: rotate(35deg);
+  transform: rotate(30deg);
   width: 2px;
   height: 43px;
   background: currentColor;
   border-radius: 3px;
   position: absolute;
-  left: 15rem;
-  bottom: .55rem;
+  left: 12rem;
+  bottom: 1rem;
 }
 
 .navbar-line::after {
   content: '';
   box-sizing: border-box;
   display: block;
-  width: 60%;
+  width: 65%;
   height: 2px;
   background: currentColor;
   position: absolute;
-  left: 15.55rem;
-  bottom: 2.45rem;
+  left: 12.5rem;
+  bottom: 2.9rem;
 }
 
 #menu-control {
@@ -78,8 +81,7 @@ body {
 .navbar-option {
   display: flex;
   justify-content: center;
-  margin: 0 0 0 2rem;
-  position: relative;
+  margin: -1.3rem 0 -1.3rem 2rem;
 }
 
 .navbar-option li {
@@ -89,31 +91,32 @@ body {
 .navbar-option li::before {
   content: '';
   display: inline-block;
-  width: .7rem;
-  height: .7rem;
+  width: .45rem;
+  height: .45rem;
   background-color: #000;
   opacity: .2;
   position: absolute;
   bottom: .1rem;
-  left: .6rem;
+  left: .75rem;
 }
 
 .navbar-option li::after {
   content: '';
   display: inline-block;
-  width: .7rem;
-  height: .7rem;
+  width: .45rem;
+  height: .45rem;
   background-color: #000;
   opacity: .2;
   position: absolute;
   bottom: .1rem;
-  right: .6rem;
+  right: .75rem;
 }
 
 .navbar-option li a {
   color: #343875;
   padding: 0 1rem;
-  font-size: 1.5em;
+  font-size: 1em;
+  font-weight: bold;
   text-decoration: none;
   text-shadow: 2px 1px #ccc;
   position: relative;
@@ -122,31 +125,31 @@ body {
 .navbar-option li a::before {
   content: '';
   display: inline-block;
-  width: .4rem;
-  height: .35rem;
+  width: .25rem;
+  height: .25rem;
   background-color: #000;
   opacity: .2;
   position: absolute;
   bottom: .1rem;
-  left: 1.5rem;
+  left: 1.4rem;
 }
 
 .navbar-option li a::after {
   content: '';
   display: inline-block;
-  width: .4rem;
-  height: .35rem;
+  width: .25rem;
+  height: .25rem;
   background-color: #000;
   opacity: .2;
   position: absolute;
   bottom: .1rem;
-  right: 1.5rem;
+  right: 1.4rem;
 }
 
-.navbar-option li a.active,
+/* .navbar-option li a.active,
 .navbar-option > a::after {
   color: #f00;
-}
+} */
 
 .navbar-option li:hover::before,
 .navbar-option li:hover::after,
@@ -156,117 +159,126 @@ body {
   opacity: .6;
 }
 
-.navbar-option li:nth-child(2):hover ~ .subNavbar {
-  display: flex;
-}
 
 /* 關於我們子標題 */
-.navbar .navbar-option .subNavbar {
-  width: 250px;
-  height: 300px;
+.navbar .navbar-option .dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.navbar .navbar-option .dropdown .subNavbar {
+  width: 150px;
+  height: 220px;
   display: none;
-  flex-direction: column;
   text-align: center;
   background-color: #75c2d3;
-  border-radius: 50px;
+  border-radius: 40px;
   position: absolute;
-  top: 3rem;
-  left: 6rem;
+  top: .2rem;
+  left: -6.8rem;
+}
+.navbar .navbar-option li:nth-child(2):hover > .dropdown .subNavbar{
+  display: block;
 }
 
-.navbar .navbar-option .subNavbar li {
-  margin-bottom: 1.3rem;
+.navbar .navbar-option .dropdown .subNavbar li {
+  margin-bottom: 1rem;
   padding-left: .5rem;
   transform: translateY(0px);
   transition: .3s;
   position: relative;
 }
 
-.navbar .navbar-option .subNavbar li:first-child {
-  margin-top: 1.5rem;
+.navbar .navbar-option .dropdown .subNavbar li:first-child {
+  margin-top: 1rem;
 }
 
-.navbar .navbar-option .subNavbar li:hover {
-  transform: translateY(-10px);
+.navbar .navbar-option .dropdown .subNavbar li:hover {
+  transform: translateY(-5px);
 }
-/* 插頭黃色前端 */
-.navbar .navbar-option .subNavbar li::before {
+/* 插頭線身 */
+.navbar .navbar-option .dropdown .subNavbar li::before {
   content: '';
-  width: 0;
-  height: 2px;
-  background-color: yellow;
+  opacity: 1;
+  border-bottom: 1px solid #172a88;
   position: absolute;
-  bottom: -7px;
-  left: 85.5%;
-  transition: .2s;
-}
-
-.navbar .navbar-option .subNavbar li:hover::before {
-  width: 6px;
-  transition: .2s .4s;
-}
-
-.navbar .navbar-option .subNavbar li::after {
-  content: '';
-  width: 0;
-  height: 2px;
-  background-color: yellow;
-  position: absolute;
-  bottom: -3px;
-  left: 85.5%;
-  transition: .2s;
-}
-
-.navbar .navbar-option .subNavbar li:hover::after {
-  width: 6px;
-  transition: .2s .4s;
-}
-
-.navbar .navbar-option .subNavbar li a {
-  text-decoration: none;
-  font-size: 1.5em;
-  letter-spacing: .5em;
-  color: #fff;
-  position: relative;
-}
-/* 插頭藍色線 */
-.navbar .navbar-option .subNavbar li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: -5px;
-  height: 0;
-  border-bottom: 2px solid #172a88;
-  transition: .2s .25s;
-  z-index: -1;
-}
-
-.navbar .navbar-option .subNavbar li a:hover::after {
-  left: 0;
+  left: 10%;
   right: 0;
+  bottom: -5px;
+  width: 0;
+  height: 0;
+  transition: .2s .25s;
+}
+
+.navbar .navbar-option .dropdown .subNavbar li:hover::before {
+  left: 15%;
+  right: 0;
+  width: 70%;
   transition: .2s;
 }
-/* 插頭藍色頭部 */
-.navbar .navbar-option .subNavbar li a::before {
+/* 插頭頭部 */
+.navbar .navbar-option .dropdown .subNavbar li::after {
   content: '';
-  position: absolute;
-  left: 95%;
-  bottom: -9px;
   width: 0;
   height: 10px;
+  opacity: 1;
   background-color: #172a88;
+  position: absolute;
+  left: 85%;
+  bottom: -10px;
   transition: .2s .1s;
-  z-index: -1;
 }
 
-.navbar .navbar-option .subNavbar li a:hover::before {
-  width: 5px;
+.navbar .navbar-option .dropdown .subNavbar li:hover::after {
+  width: 6px;
   transition: .2s .2s;
 }
 
+.navbar .navbar-option .dropdown .subNavbar li a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: normal;
+  letter-spacing: .2em;
+  color: #fff;
+  position: relative;
+  display: block;
+}
+/* 插頭黃色前端 */
+.navbar .navbar-option .dropdown .subNavbar li a::before {
+  content: '';
+  width: 0;
+  height: 1px;
+  opacity: 1;
+  background-color: yellow;
+  position: absolute;
+  bottom: -7px;
+  left: 86%;
+  transition: .2s;
+  z-index: 1;
+}
 
+.navbar .navbar-option .dropdown .subNavbar li a:hover::before {
+  width: 6px;
+  transition: .2s .4s;
+}
 
+.navbar .navbar-option .dropdown .subNavbar li a::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  opacity: 1;
+  background-color: yellow;
+  position: absolute;
+  bottom: -3px;
+  left: 86%;
+  transition: .2s;
+  z-index: 1;
+}
+
+.navbar .navbar-option .dropdown .subNavbar li a:hover::after {
+  width: 6px;
+  transition: .2s .4s;
+}
 
 
 /* 大圖開始 */
@@ -358,51 +370,59 @@ body {
 
 
 /* 解決方案 */
-.solution .banner .elevator {
+.container .banner .elevator {
   position: absolute;
   right: 7rem;
   bottom: 1.5rem;
 }
 
-.solution .banner .elevator ul {
+.container .banner .elevator ul {
   font-weight: bold;
   font-size: .9em;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
-.solution .banner .elevator ul li{
+.container .banner .elevator ul li a {
+  text-decoration: none;
   color: #c26bff;
+  cursor: pointer;
 }
 
-.solution .banner .elevator ul li::before {
+.container .banner .elevator ul li a::before {
   content: '∎';
   color: #5d157f;
   display: inline-block;
   width: .8rem;
   height: 0.8rem;
   font-size: .8em;
+  transform: translateY(-2px);
 }
 
 /* 解決方案內容 */
-.solution .solution-img {
+.container .solution-img {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding-left: 5rem;
 }
 
-.solution .solution-img .blueImg {
+.container .solution-img:last-child {
+  margin-bottom: 5rem;
+}
+
+.container .solution-img .blueImg {
   width: 30%;
 }
 
-.solution .solution-img .wrap {
+.container .solution-img .wrap {
   width: 70%;
   display: flex;
   flex-direction: column;
 }
 
-.solution .solution-img .wrap .imgWrap {
+.container .solution-img .wrap .imgWrap {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -410,62 +430,67 @@ body {
   margin: 0 auto 2rem;
 }
 
-.solution .solution-img .wrap .imgWrap img {
-  margin: 0 .7rem;
+.container .solution-img .wrap .imgWrap img {
+  width: 120px;
+  margin: 0 3rem 0 -3rem;
 }
 
-.solution .solution-img .wrap .imgWrap p {
+.container .solution-img .wrap .imgWrap p {
   width: 12.5rem;
+  margin: 0 2rem 0 -2rem;
   line-height: 1.7;
   font-size: .9em;
   white-space: pre-line;
   color: #4b93a0;
 }
 
-.solution .solution-img .wrap .imgWrap p::first-line {
+.container .solution-img .wrap .imgWrap p::first-line {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-.solution .solution-img .wrap .threeImg {
+.container .solution-img .wrap .threeImg {
   width: 700px;
   padding-bottom: 2.2rem;
 }
 
 
 /* 產品資訊 */
-.product .industrialBattery-img {
+.container .industrialBattery-img {
   display: flex;
   width: 90%;
 }
 
 /* 工控電池 */
-.product .hexegon {
+.container .hexegon {
   width: 12rem;
   margin: 0 .5rem 0 0;
   object-fit: contain;
 }
-.product .handheld {
+.container .handheld {
   object-fit: contain;
   width: 75%;
 }
-.product p {
+.container p {
   width: 90%;
   letter-spacing: .4px;
   margin: 1.5rem auto 0;
 }
+.container p:last-child {
+  margin-bottom: 5rem;
+}
 
 /* e-bike */
 /* ESS儲能電池 */
-.product .ebike-img,
-.product .ESS-img {
+.container .ebike-img,
+.container .ESS-img {
   display: flex;
   justify-content: center;
   margin: auto;
 }
 
 /* 產品資訊表格 */
-.product .table {
+.container .table {
   width: 100%;
   cursor: default;
   text-align: left;
@@ -473,18 +498,18 @@ body {
   margin: 3rem auto 0;
   overflow-x: auto;
 }
-.product .table table {
+.container .table table {
   line-height: 3;
   border-collapse: collapse;
   width: 100%;
 }
-.product .table thead th {
+.container .table thead th {
   background-color: #ddd;
   border: 1px solid #aaa;
   border-bottom: 2px solid #aaa;
 }
-.product .table th,
-.product .table td {
+.container .table th,
+.container .table td {
   padding-left: 10px;
   border: 1px solid #ddd;
   padding-right: .7rem;
@@ -604,20 +629,26 @@ body {
   font-size: 1.2em;
   white-space: pre-line;
 }
+.content:last-child {
+  margin-bottom: 5rem;
+}
 
 
 /* 頁尾 */
 .footer {
-  width: 1261px;
+  width: 63.05rem;
   height: 40vh;
   margin: 0 auto;
   background: linear-gradient(135deg, transparent 130px, #88ddec 0);
+  position: relative;
 }
 
 .footer h2 {
   display: inline-block;
-  font-size: 1.7em;
   margin: 4rem 0 0 10rem;
+  font-size: 1.7em;
+  font-weight: normal;
+  color: #666;
 }
 
 .footer .footer-wrap {
@@ -628,9 +659,23 @@ body {
   margin: 1rem auto 0;
 }
 
+.footer .footer-wrap p {
+  font-family: 'BankGothic Md BT';
+  color: #666;
+}
 .footer .footer-wrap p .fa {
   width: 2rem;
   padding-right: .5rem;
+  text-align: center;
+}
+
+.footer a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #666;
+  position: absolute;
+  bottom: 5px;
 }
 
 /* ********************************************************************************************************* */
@@ -643,10 +688,7 @@ body {
   }
 
   /* 大圖 */
-  .about,
-  .solution,
-  .product,
-  .development {
+  .container  {
     width: 62rem;
   }
 
@@ -654,7 +696,7 @@ body {
     width: 66%;
   }
 
-  .solution .solution-img .wrap .imgWrap p {
+  .container .solution-img .wrap .imgWrap p {
     font-size: .7em;
   }
 
@@ -675,10 +717,7 @@ body {
   }
 
   /* 大圖 */
-  .about,
-  .solution,
-  .product,
-  .development {
+  .container  {
     width: 57rem;
   }
   
@@ -717,10 +756,7 @@ body {
   }
 
   /* 大圖 */
-  .about,
-  .solution,
-  .product,
-  .development {
+  .container  {
     width: 48rem;
   }
 
@@ -729,13 +765,13 @@ body {
   }
 
   /* e-bike圖片 */
-  .product .ebike-img,
-  .product .ESS-img {
+  .container .ebike-img,
+  .container .ESS-img {
     width: 80%;
   }
 
   /* 產品資訊表格 */
-  .product .table table{
+  .container .table table{
     line-height: 2.5;
   }
   
@@ -800,10 +836,7 @@ body {
   }
 
   /* 大圖 */
-  .about,
-  .solution,
-  .product,
-  .development {
+  .container  {
     width: 100%;
   }
 
@@ -815,12 +848,12 @@ body {
     width: 54%;
   }
 
-  .solution .banner .elevator {
+  .container .banner .elevator {
     bottom: 2rem;
   }
 
   /* 產品資訊表格 */
-  .product .table {
+  .container .table {
     width: 90%;
   }
 
@@ -965,10 +998,7 @@ body {
 
   
   /* 大圖 */
-  .about,
-  .solution,
-  .product,
-  .development {
+  .container  {
     padding: 6rem 0 0;
   }
 
@@ -1009,16 +1039,16 @@ body {
   }
 
   /* 產品資訊 */
-  .product .hexegon {
+  .container .hexegon {
     width: 9rem;
   }
       /* e-bike圖片 */
-  .product .ebike-img,
-  .product .ESS-img {
+  .container .ebike-img,
+  .container .ESS-img {
     width: 95%;
   }
       /* 產品資訊表格 */
-  .product .table table{
+  .container .table table{
     line-height: 2;
     font-size: 18px;
   }
@@ -1096,12 +1126,8 @@ body {
   }
 
   /* 大圖 */
-  .about,
-  .solution,
-  .product,
-  .development {
+  .container  {
     width: 100%;
-    overflow-x: hidden;
   }
 
   .banner {
@@ -1139,16 +1165,16 @@ body {
     top: 1.65rem;
   }
 
-  .solution .banner .elevator {
+  .container .banner .elevator {
     bottom: 1rem;
   }
 
   /* 解決方案 */  
-  .solution .banner .elevator ul {
+  .container .banner .elevator ul {
     font-size: .5em;
   }
   
-  .solution .banner .elevator ul li{
+  .container .banner .elevator ul li{
     color: #c26bff;
   }
 
@@ -1175,15 +1201,15 @@ body {
   }
 
   /* 產品資訊 */
-  .product .hexegon {
+  .container .hexegon {
     width: 8rem;
   }
   
-  .product .handheld {
+  .container .handheld {
     width: 70%;
   }
         /* 產品資訊表格 */
-  .product .table table{
+  .container .table table{
     font-size: 16px;
   }
 
@@ -1210,7 +1236,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
- 
+
   .navbar-line::before {
     height: 1.5rem;
     left: 9.85rem;
@@ -1265,20 +1291,20 @@ body {
     right: -4.28rem;
   }
 
-  .solution .banner .elevator {
+  .container .banner .elevator {
     right: 6.2rem;
   }
 
-  .solution .banner .elevator ul {
+  .container .banner .elevator ul {
     line-height: 1.7;
   }
 
   /* 產品資訊 */
-  .product .hexegon {
+  .container .hexegon {
     width: 7rem;
   }
       /* 產品資訊表格 */
-  .product .table table{
+  .container .table table{
     font-size: 14px;
   }
 
@@ -1308,6 +1334,7 @@ body {
   }
   
   .footer p {
+    font-size: 12px;
     line-height: 1.5;
     margin-left: 4rem;
   }
