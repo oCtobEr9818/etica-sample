@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="container-home">
-        <img src={process.env.PUBLIC_URL + "/img/home/18765.jpg"} alt="test" />
+        <img src={process.env.PUBLIC_URL + "/img/home/test.png"} alt="test" />
         <ul className="imgOption">
           <li className="point point1">
             <a href="" className="point_a">

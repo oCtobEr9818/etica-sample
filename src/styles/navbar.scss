@@ -23,9 +23,12 @@
   width: 66rem;
   height: 6rem;
   position: relative;
+  display: block;
   margin: auto;
+  z-index: 1;
+
   @include desktop {
-    width: 48rem;
+    // width: 100%;
   }
   @include pad {
     width: 100%;
@@ -45,13 +48,13 @@
   .navbar-brand {
     display: inline-block;
     margin: 1rem 0 0 1.5rem;
-    padding: 0.3125rem 0;
+    padding: 1.15rem 0 0;
     @include mini-pad {
       margin: 1rem 0 0 1.5rem;
     }
 
     .navbar-logo {
-      width: 12.5rem;
+      width: 9rem;
       @include pad {
         width: 10rem;
       }
@@ -65,7 +68,7 @@
   }
 
   .navbar-line {
-    width: 13rem;
+    width: 10rem;
     margin-left: 1.5rem;
     border-top: 2px solid #000;
     opacity: 0.3;
@@ -86,14 +89,14 @@
       content: "";
       box-sizing: border-box;
       display: inline-block;
-      transform: rotate(35deg);
+      transform: rotate(30deg);
       width: 2px;
       height: 43px;
       background: currentColor;
       border-radius: 3px;
       position: absolute;
-      left: 15rem;
-      bottom: 0.55rem;
+      left: 12rem;
+      bottom: 1rem;
       @include pad {
         width: 2px;
         height: 1.75rem;
@@ -118,12 +121,12 @@
       content: "";
       box-sizing: border-box;
       display: block;
-      width: 60%;
+      width: 65%;
       height: 2px;
       background: currentColor;
       position: absolute;
-      left: 15.55rem;
-      bottom: 2.45rem;
+      left: 12.5rem;
+      bottom: 2.9rem;
       @include pad {
         width: 60%;
         height: 2px;
@@ -210,8 +213,7 @@
   .navbar-option {
     display: flex;
     justify-content: center;
-    padding-top: 1rem;
-    margin: 0 auto;
+    margin: -1.3rem 0 -1.3rem 2rem;
     @include desktop {
       // margin: 0 0 0 10rem;
     }
@@ -238,36 +240,36 @@
       &::before {
         content: "";
         display: inline-block;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 0.45rem;
+        height: 0.45rem;
         background-color: #000;
         opacity: 0.2;
         position: absolute;
         bottom: 0.1rem;
-        left: 0.6rem;
+        left: 0.75rem;
       }
       &::after {
         content: "";
         display: inline-block;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 0.45rem;
+        height: 0.45rem;
         background-color: #000;
         opacity: 0.2;
         position: absolute;
         bottom: 0.1rem;
-        right: 0.6rem;
+        right: 0.75rem;
       }
 
       a {
         color: #343875;
         padding: 0 1rem;
-        font-size: 1.5em;
+        font-size: 1em;
         font-weight: bold;
         text-decoration: none;
         text-shadow: 2px 1px #ccc;
         position: relative;
-        @include desktop {
-          font-size: 1.2em;
+        @include pad {
+          font-size: 0.8em;
         }
         @include mini-pad {
           width: 100%;
@@ -284,8 +286,8 @@
         &::before {
           content: "";
           display: inline-block;
-          width: 0.3rem;
-          height: 0.3rem;
+          width: 0.25rem;
+          height: 0.25rem;
           background-color: #000;
           opacity: 0.2;
           position: absolute;
@@ -295,17 +297,13 @@
         &::after {
           content: "";
           display: inline-block;
-          width: 0.3rem;
-          height: 0.3rem;
+          width: 0.25rem;
+          height: 0.25rem;
           background-color: #000;
           opacity: 0.2;
           position: absolute;
           bottom: 0.1rem;
           right: 1.4rem;
-        }
-        &.active,
-        > a::after {
-          color: red;
         }
       }
 
@@ -316,103 +314,121 @@
         background-color: #029be2;
         opacity: 0.6;
       }
+      &:nth-child(2):hover > .dropdown .subNavbar {
+        display: block;
+      }
     } //li
 
-    .subNavbar {
-      width: 250px;
-      height: 300px;
-      display: none;
-      flex-direction: column;
-      text-align: center;
-      background-color: #75c2d3;
-      border-radius: 50px;
-      position: absolute;
-      top: 3rem;
-      left: 6rem;
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
 
-      li {
-        margin-bottom: 1.3rem;
-        padding-left: 0.5rem;
-        transform: translateY(0px);
-        transition: 0.3s;
-        position: relative;
+      .subNavbar {
+        width: 150px;
+        height: 220px;
+        display: none;
+        text-align: center;
+        background-color: #75c2d3;
+        border-radius: 40px;
+        position: absolute;
+        top: 0.2rem;
+        left: -6.8rem;
 
-        :first-child {
-          margin-top: 1.5rem;
-        }
-        // 插頭前端
-        &::before {
-          content: "";
-          width: 0;
-          height: 2px;
-          background-color: yellow;
-          position: absolute;
-          bottom: -7px;
-          left: 85.5%;
-          transition: 0.2s;
-        }
-        &::after {
-          content: "";
-          width: 0;
-          height: 2px;
-          background-color: yellow;
-          position: absolute;
-          bottom: -3px;
-          left: 85.5%;
-          transition: 0.2s;
-        }
-        :hover {
-          transform: translateY(-10px);
-        }
-        :hover::before {
-          width: 6px;
-          transition: 0.2s 0.4s;
-        }
-        :hover::after {
-          width: 6px;
-          transition: 0.2s 0.4;
-        }
-        a {
-          text-decoration: none;
-          font-size: 1.5em;
-          letter-spacing: 0.5em;
-          color: #fff;
+        li {
+          margin-bottom: 1rem;
+          padding-left: 0.5rem;
+          transform: translateY(0px);
+          transition: 0.3s;
           position: relative;
 
-          // 插頭線段
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 100%;
-            bottom: -5px;
-            height: 0;
-            border-bottom: 2px solid #172a88;
-            transition: 0.2s 0.25s;
-            z-index: -1;
+          &:first-child {
+            margin-top: 1rem;
           }
+          &:hover {
+            transform: translateY(-5px);
+          }
+          // 插頭線身
           &::before {
             content: "";
+            opacity: 1;
+            border-bottom: 1px solid #172a88;
             position: absolute;
-            left: 95%;
-            bottom: -9px;
-            width: 0;
-            height: 10px;
-            background-color: #172a88;
-            transition: 0.2s 0.1s;
-            z-index: -1;
-          }
-          :hover::after {
-            left: 0;
+            left: 10%;
             right: 0;
+            bottom: -5px;
+            width: 0;
+            height: 0;
+            transition: 0.2s 0.25s;
+          }
+          &:hover::before {
+            left: 15%;
+            right: 0;
+            width: 70%;
             transition: 0.2s;
           }
-          :hover::before {
-            width: 5px;
+          // 插頭頭部
+          &::after {
+            content: "";
+            width: 0;
+            height: 10px;
+            opacity: 1;
+            background-color: #172a88;
+            position: absolute;
+            left: 85%;
+            bottom: -10px;
+            transition: 0.2s 0.1s;
+          }
+          &:hover::after {
+            width: 6px;
             transition: 0.2s 0.2s;
           }
-        }
-      } //li
-    } //subNavbar
+
+          a {
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: normal;
+            letter-spacing: 0.2em;
+            color: #fff;
+            position: relative;
+            display: block;
+
+            // 插頭黃色前端
+            &::before {
+              content: "";
+              width: 0;
+              height: 1px;
+              opacity: 1;
+              background-color: yellow;
+              position: absolute;
+              bottom: -7px;
+              left: 86%;
+              transition: 0.2s;
+              z-index: 1;
+            }
+            &:hover::before {
+              width: 6px;
+              transition: 0.2s 0.4s;
+            }
+            &::after {
+              content: "";
+              width: 0;
+              height: 1px;
+              opacity: 1;
+              background-color: yellow;
+              position: absolute;
+              bottom: -3px;
+              left: 86%;
+              transition: 0.2s;
+              z-index: 1;
+            }
+            &:hover::after {
+              width: 6px;
+              transition: 0.2s 0.4s;
+            }
+          }
+        } //li
+      } //subNavbar
+    } // dropdown
   } //navbar-option
 } //navbar

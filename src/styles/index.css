@@ -17,9 +17,9 @@ body {
   height: 6rem;
   display: block;
   position: relative;
+  padding-left: 5rem;
   margin: auto;
   z-index: 1;
-  background-color: #fff;
 }
 
 .navbar-brand {
@@ -49,20 +49,20 @@ body {
   background: currentColor;
   border-radius: 3px;
   position: absolute;
-  left: 12rem;
+  left: 17rem;
   bottom: 1rem;
 }
 
 .navbar-line::after {
   content: '';
   box-sizing: border-box;
-  display: block;
+  display: inline-block;
   width: 65%;
   height: 2px;
   background: currentColor;
   position: absolute;
-  left: 12.5rem;
-  bottom: 2.9rem;
+  left: 17.7rem;
+  bottom: 3.4rem;
 }
 
 #menu-control {
@@ -82,6 +82,8 @@ body {
   display: flex;
   justify-content: center;
   margin: -1.3rem 0 -1.3rem 2rem;
+  padding-right: 5rem;
+  position: relative;
 }
 
 .navbar-option li {
@@ -115,10 +117,9 @@ body {
 .navbar-option li a {
   color: #343875;
   padding: 0 1rem;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 2px 1px #ccc;
   position: relative;
 }
 
@@ -159,26 +160,35 @@ body {
   opacity: .6;
 }
 
+.navbar .navbar-option li:nth-child(2):hover > .dropdown .subNavbar{
+  display: inline-block;
+}
 
 /* 關於我們子標題 */
 .navbar .navbar-option .dropdown {
-  position: relative;
   display: inline-block;
   z-index: 1;
 }
 .navbar .navbar-option .dropdown .subNavbar {
   width: 150px;
-  height: 220px;
+  height: 180px;
   display: none;
   text-align: center;
   background-color: #75c2d3;
   border-radius: 40px;
   position: absolute;
-  top: .2rem;
-  left: -6.8rem;
+  top: 2.5rem;
+  left: -1.4rem;
 }
-.navbar .navbar-option li:nth-child(2):hover > .dropdown .subNavbar{
-  display: block;
+
+.navbar .navbar-option .dropdown .subNavbar::before {
+  content: '';
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  top: -1rem;
+  left: 0;
 }
 
 .navbar .navbar-option .dropdown .subNavbar li {
@@ -638,31 +648,36 @@ body {
 .footer {
   width: 63.05rem;
   height: 40vh;
-  margin: 0 auto;
-  background: linear-gradient(135deg, transparent 130px, #88ddec 0);
+  margin: auto;
+  background: linear-gradient(140deg, transparent 110px, #88ddec 0);
   position: relative;
+  color: #666;
 }
 
 .footer h2 {
   display: inline-block;
-  margin: 4rem 0 0 10rem;
   font-size: 1.7em;
   font-weight: normal;
-  color: #666;
+  position: absolute;
+  top: 20%;
+  left: 18%;
 }
 
 .footer .footer-wrap {
   width: 500px;
-  text-align: left;
-  font-size: 1em;
+  display: inline-block;
+  font-size: 1.2em;
   line-height: 2;
-  margin: 1rem auto 0;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  margin: auto;
 }
 
 .footer .footer-wrap p {
   font-family: 'BankGothic Md BT';
-  color: #666;
 }
+
 .footer .footer-wrap p .fa {
   width: 2rem;
   padding-right: .5rem;

@@ -56,8 +56,7 @@ $primary-color: #93cddd;
 
   .container-home {
     width: 100%;
-    height: 120vh;
-    margin: 0 auto;
+    height: auto;
     position: relative;
 
     img {
@@ -170,19 +169,19 @@ $primary-color: #93cddd;
         } // point_a
       } // point
       .point1 {
-        top: 45%;
+        top: 52%;
         left: 25%;
       }
       .point2 {
-        top: 20%;
+        top: 25%;
         left: 39%;
       }
       .point3 {
-        top: 17%;
+        top: 22%;
         left: 69%;
       }
       .point4 {
-        top: 40%;
+        top: 47%;
         left: 55.5%;
       }
     } // imgOption
@@ -201,12 +200,12 @@ $primary-color: #93cddd;
     .hexagon {
       span {
         @include user-select-none;
-        width: 5rem;
-        height: 5rem;
+        width: 7rem;
+        height: 7rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0.9em;
+        font-size: 1.1em;
         cursor: default;
         color: #66e0ff;
         background-color: #2a2f5f;
@@ -216,15 +215,15 @@ $primary-color: #93cddd;
       }
       span:nth-child(1) {
         right: 1rem;
-        top: -4rem;
+        top: -5rem;
       }
       span:nth-child(2) {
-        right: 6rem;
+        right: 7.5rem;
         top: -1rem;
       }
       span:nth-child(3) {
         right: 1rem;
-        top: 2rem;
+        top: 3rem;
       }
     }
 
@@ -232,9 +231,10 @@ $primary-color: #93cddd;
       @include user-select-none;
       width: 100%;
       height: 40%;
-      padding-left: 2.5em;
+      padding-left: 2em;
+      margin: 0.5rem 0 -0.5rem 0;
       @include desktop {
-        margin: -1rem 0 1rem 0;
+        // margin: -1rem 0 1rem 0;
       }
 
       &::first-letter {
@@ -242,7 +242,7 @@ $primary-color: #93cddd;
       }
 
       font: {
-        size: 4.5em;
+        size: 5.5em;
         family: "Noto Sans Lisu";
       }
       color: #fff;
@@ -260,9 +260,9 @@ $primary-color: #93cddd;
       align-items: center;
 
       img {
-        width: 9rem;
-        height: 9rem;
-        padding: 0 30px;
+        width: 10rem;
+        height: 10rem;
+        padding: 0 1rem;
         border-radius: 10px;
       }
       img:nth-child(n + 3) {
@@ -309,8 +309,8 @@ $primary-color: #93cddd;
         border-right: 40px solid transparent;
         transform: rotate(40deg);
         position: absolute;
-        top: 4rem;
-        right: -1rem;
+        top: 3.8rem;
+        right: -1.3rem;
       }
 
       .underline {
@@ -324,11 +324,11 @@ $primary-color: #93cddd;
         &::after {
           content: "";
           width: 2px;
-          height: 19rem;
+          height: 27rem;
           display: inline-block;
           background-color: $primary-color;
           position: absolute;
-          right: -1px;
+          right: 0;
           bottom: 0;
 
           @include desktop {
