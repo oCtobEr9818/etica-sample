@@ -55,12 +55,15 @@ $primary-color: #93cddd;
   // overflow-y: visible;
 
   .container-home {
+    width: 100%;
     height: 120vh;
+    margin: 0 auto;
     position: relative;
 
     img {
-      @include user-select-none;
       width: 100%;
+      height: auto;
+      @include user-select-none;
     }
 
     .imgOption {
