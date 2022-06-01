@@ -43,10 +43,12 @@ const Navbar = () => {
       </a>
       <div className="navbar-line"></div>
 
-      <input type="checkbox" id="menu-control" />
-      <label htmlFor="menu-control" className="menu-btn">
-        <span></span>
-      </label>
+      <div className="dropMenu">
+        <input type="checkbox" id="menu-control" />
+        <label htmlFor="menu-control" className="menu-btn">
+          <span></span>
+        </label>
+      </div>
       <ul className="navbar-option">
         <li>
           <NavLink to={navs.home.path}>{navs.home.name}</NavLink>
@@ -72,6 +74,25 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to={navs.solution.path}>{navs.solution.name}</NavLink>
+          <div className="dropdown">
+            <ul className="subNavbar">
+              <li>
+                <a href="#commercialFacility">商業設施</a>
+              </li>
+              <li>
+                <a href="#trsportationApplication">交通應用</a>
+              </li>
+              <li>
+                <a href="#publicHouse">公設住宅</a>
+              </li>
+              <li>
+                <a href="#industryApplication">工業應用</a>
+              </li>
+              <li>
+                <a href="#greenEnergyIndustry">綠能產業</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li>
           <NavLink to={navs.product.path}>{navs.product.name}</NavLink>

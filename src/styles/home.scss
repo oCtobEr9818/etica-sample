@@ -126,13 +126,14 @@ $primary-color: #93cddd;
           // 右邊欄
           .point_wrap {
             height: 50px;
-            width: 180px;
+            width: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             white-space: nowrap;
-            visibility: hidden;
+            visibility: visible;
+            transition: 0.5s;
             transform: translateY(-50%);
             position: absolute;
             top: 50%;
@@ -159,12 +160,18 @@ $primary-color: #93cddd;
             }
 
             span {
-              color: #fff;
+              color: transparent;
             }
           }
 
           &:hover > .point_wrap {
             visibility: visible;
+            transition: 0.4s;
+            width: 180px;
+          }
+          &:hover > .point_wrap span {
+            color: #fff;
+            transition: 0.4s 0.4s;
           }
         } // point_a
       } // point
@@ -196,13 +203,15 @@ $primary-color: #93cddd;
     align-items: center;
     background: $primary-color;
     position: relative;
+    @include desktop {
+    }
 
     .hexagon {
       filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.9));
       position: absolute;
       right: 0;
 
-      span {
+      a {
         @include user-select-none;
         width: 7rem;
         height: 7rem;
@@ -210,9 +219,9 @@ $primary-color: #93cddd;
         justify-content: center;
         align-items: center;
         font-size: 1.1em;
-        cursor: default;
         color: #66e0ff;
         background: #2a2f5f;
+        text-decoration: none;
         -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
         clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
         position: absolute;
@@ -251,6 +260,10 @@ $primary-color: #93cddd;
           top: 27%;
           left: -12%;
         }
+        &:hover {
+          color: #f7f7f7;
+          background: #434ca2;
+        }
       }
     }
 
@@ -259,21 +272,16 @@ $primary-color: #93cddd;
       width: 100%;
       height: 40%;
       padding-left: 2em;
-      margin: 0.5rem 0 -0.5rem 0;
+      font-size: 5.5em;
+      font-family: "Noto Sans Lisu";
+      color: #fff;
+
       @include desktop {
-        // margin: -1rem 0 1rem 0;
       }
 
       &::first-letter {
         font-size: 200%;
       }
-
-      font: {
-        size: 5.5em;
-        family: "Noto Sans Lisu";
-      }
-      color: #fff;
-      cursor: default;
     }
 
     .imgWrap {
@@ -287,10 +295,10 @@ $primary-color: #93cddd;
       align-items: center;
 
       img {
+        @include user-select-none;
         width: 10rem;
         height: 10rem;
         padding: 0 1rem;
-        border-radius: 10px;
       }
       img:nth-child(n + 3) {
         width: 13rem;

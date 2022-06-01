@@ -104,25 +104,6 @@ const Solution = () => {
         <div className="slash">
           <h2>{data.solution_img.title}</h2>
         </div>
-        <div className="elevator">
-          <ul>
-            <li>
-              <a href="#commercialFacility">商業設施</a>
-            </li>
-            <li>
-              <a href="#trsportationApplication">交通應用</a>
-            </li>
-            <li>
-              <a href="#publicHouse">公設住宅</a>
-            </li>
-            <li>
-              <a href="#industryApplication">工業應用</a>
-            </li>
-            <li>
-              <a href="#greenEnergyIndustry">綠能產業</a>
-            </li>
-          </ul>
-        </div>
       </div>
 
       {/* 商業設施 */}

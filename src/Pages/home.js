@@ -1,35 +1,46 @@
+import { imgHandler } from "../Components/imgHandler";
+import { v4 } from "uuid";
+
 const Home = () => {
   const data = {
-    image: {
-      img01: process.env.PUBLIC_URL + "/img/home/img01.png",
-      img02: process.env.PUBLIC_URL + "/img/home/img02.png",
-      img03: process.env.PUBLIC_URL + "/img/home/img03.png",
-      img04: process.env.PUBLIC_URL + "/img/home/img04.png",
-      globalClient: process.env.PUBLIC_URL + "/img/home/globalclient.png",
-    },
-    alt: {
-      alt01: "公司外觀",
-      alt02: "公司Logo牆面",
-      alt03: "公司Logo牆面",
-      alt04: "公司大廳",
-      globalClientAlt: `美國和歐洲
-                        DATALOGIC
-                        HONEYWELL
-                        IBM
-                        UBIQCONN
-                        ZONAR
-                        ASIA
-                        ACBEL
-                        ASKEY
-                        MOLICEL
-                        OLYMPUS
-                        中華電信
-                        卡西歐
-                        電裝 WAVE
-                        JVCKENWOOD
-                        LAWSON
-                        SEVEN-ELEVEN
-                        手機 `,
+    bannerImage: [
+      {
+        img: "/img/home/img01.png",
+        alt: "公司外觀",
+      },
+      {
+        img: "/img/home/img02.png",
+        alt: "公司Logo牆面",
+      },
+      {
+        img: "/img/home/img03.png",
+        alt: "公司Logo牆面",
+      },
+      {
+        img: "/img/home/img04.png",
+        alt: "公司大廳",
+      },
+    ],
+    globalClient: {
+      img: "/img/home/globalclient.png",
+      alt: `美國和歐洲
+            DATALOGIC
+            HONEYWELL
+            IBM
+            UBIQCONN
+            ZONAR
+            ASIA
+            ACBEL
+            ASKEY
+            MOLICEL
+            OLYMPUS
+            中華電信
+            卡西歐
+            電裝 WAVE
+            JVCKENWOOD
+            LAWSON
+            SEVEN-ELEVEN
+            手機 `,
     },
     news: [
       {
@@ -56,7 +67,7 @@ const Home = () => {
         <img src={process.env.PUBLIC_URL + "/img/home/test.png"} alt="test" />
         <ul className="imgOption">
           <li className="point point1">
-            <a href="" className="point_a">
+            <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>工控電池</span>
@@ -64,7 +75,7 @@ const Home = () => {
             </a>
           </li>
           <li className="point point2">
-            <a href="" className="point_a">
+            <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>e-bike</span>
@@ -72,7 +83,7 @@ const Home = () => {
             </a>
           </li>
           <li className="point point3">
-            <a href="" className="point_a">
+            <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>ESS儲能電池</span>
@@ -80,7 +91,7 @@ const Home = () => {
             </a>
           </li>
           <li className="point point4">
-            <a href="" className="point_a">
+            <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>40呎集裝箱</span>
@@ -92,29 +103,34 @@ const Home = () => {
 
       <div className="banner-home">
         <div className="hexagon">
-          <span>相關新聞</span>
-          <span>國際認證</span>
-          <span>全球客戶</span>
+          <a href="#news">相關新聞</a>
+          <a href="#international">國際認證</a>
+          <a href="#client">全球客戶</a>
         </div>
         <h1>ETICA</h1>
         <div className="imgWrap">
-          <img src={data.image.img01} alt={data.alt.alt01} />
-          <img src={data.image.img02} alt={data.alt.alt02} />
-          <img src={data.image.img03} alt={data.alt.alt03} />
-          <img src={data.image.img04} alt={data.alt.alt04} />
+          {data.bannerImage.map((imageItem) => (
+            <img
+              src={imgHandler(imageItem.img)}
+              alt={imageItem.alt}
+              key={v4()}
+            />
+          ))}
         </div>
       </div>
 
       <div className="content">
         <div className="wrap">
-          <div className="topline"></div>
+          <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
           <div className="news">
             {data.news.map((newsItem) => (
-              <div className="news-wrap">
-                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                <a href={newsItem.url}>{newsItem.title}</a>
+              <div className="news-wrap" key={v4()}>
+                <i className="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href={newsItem.url} target="_blank">
+                  {newsItem.title}
+                </a>
                 <span>{newsItem.date}</span>
               </div>
             ))}
@@ -124,7 +140,7 @@ const Home = () => {
         </div>
 
         <div className="wrap">
-          <div className="topline"></div>
+          <div className="topline" id="international"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
           <h2>國認</h2>
@@ -132,10 +148,13 @@ const Home = () => {
         </div>
 
         <div className="wrap">
-          <div className="topline"></div>
+          <div className="topline" id="client"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <img src={data.image.globalClient} alt={data.alt.globalClientAlt} />
+          <img
+            src={imgHandler(data.globalClient.img)}
+            alt={data.globalClient.alt}
+          />
           <h2>全客</h2>
           <h2>球戶</h2>
         </div>

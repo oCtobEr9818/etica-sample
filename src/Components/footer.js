@@ -5,19 +5,19 @@ const Footer = () => {
 
       <div className="footer-wrap">
         <p>
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <i className="fa fa-map-marker" aria-hidden="true"></i>
           新北市樹林區柑園街二段122巷3號10樓(巨人科技)
         </p>
         <p>
-          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <i className="fa fa-envelope-o" aria-hidden="true"></i>
           SERVICE@ETICABATTERY.COM
         </p>
         <p>
-          <i class="fa fa-phone" aria-hidden="true"></i>
+          <i className="fa fa-phone" aria-hidden="true"></i>
           886-2-26801603
         </p>
         <p>
-          <i class="fa fa-fax" aria-hidden="true"></i>
+          <i className="fa fa-fax" aria-hidden="true"></i>
           886-2-26689564
         </p>
       </div>

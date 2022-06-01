@@ -22,8 +22,9 @@
 .navbar {
   width: 66rem;
   height: 6rem;
-  position: relative;
   display: block;
+  position: relative;
+  padding-left: 5rem;
   margin: auto;
   z-index: 1;
 
@@ -49,12 +50,14 @@
     display: inline-block;
     margin: 1rem 0 0 1.5rem;
     padding: 1.15rem 0 0;
+
     @include mini-pad {
       margin: 1rem 0 0 1.5rem;
     }
 
     .navbar-logo {
       width: 9rem;
+
       @include pad {
         width: 10rem;
       }
@@ -72,6 +75,7 @@
     margin-left: 1.5rem;
     border-top: 2px solid #000;
     opacity: 0.3;
+
     @include pad {
       width: 10.5em;
     }
@@ -95,8 +99,9 @@
       background: currentColor;
       border-radius: 3px;
       position: absolute;
-      left: 12rem;
+      left: 17rem;
       bottom: 1rem;
+
       @include pad {
         width: 2px;
         height: 1.75rem;
@@ -125,8 +130,9 @@
       height: 2px;
       background: currentColor;
       position: absolute;
-      left: 12.5rem;
-      bottom: 2.9rem;
+      left: 17.7rem;
+      bottom: 3.4rem;
+
       @include pad {
         width: 60%;
         height: 2px;
@@ -214,6 +220,9 @@
     display: flex;
     justify-content: center;
     margin: -1.3rem 0 -1.3rem 2rem;
+    padding-right: 5rem;
+    position: relative;
+
     @include desktop {
       // margin: 0 0 0 10rem;
     }
@@ -263,11 +272,11 @@
       a {
         color: #343875;
         padding: 0 1rem;
-        font-size: 1em;
+        font-size: 1.5em;
         font-weight: bold;
         text-decoration: none;
-        text-shadow: 2px 1px #ccc;
         position: relative;
+
         @include pad {
           font-size: 0.8em;
         }
@@ -320,20 +329,29 @@
     } //li
 
     .dropdown {
-      position: relative;
       display: inline-block;
       z-index: 1;
 
       .subNavbar {
         width: 150px;
-        height: 220px;
+        height: 200px;
         display: none;
         text-align: center;
         background-color: #75c2d3;
         border-radius: 40px;
         position: absolute;
-        top: 0.2rem;
-        left: -6.8rem;
+        top: 2.5rem;
+        left: -1rem;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 150px;
+          height: 30px;
+          position: absolute;
+          top: -1rem;
+          left: 0;
+        }
 
         li {
           margin-bottom: 1rem;
@@ -386,7 +404,7 @@
 
           a {
             text-decoration: none;
-            font-size: 1em;
+            font-size: 1.2em;
             font-weight: normal;
             letter-spacing: 0.2em;
             color: #fff;
