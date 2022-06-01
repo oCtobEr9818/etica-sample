@@ -31,6 +31,23 @@ const Home = () => {
                         SEVEN-ELEVEN
                         手機 `,
     },
+    news: [
+      {
+        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
+        title: "明曜異業結盟展企圖心 今年營收上看10億",
+        date: "2022/03/01",
+      },
+      {
+        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
+        title: "Lorem ipsum dolor sit amet consectetur Sapiente, enim!",
+        date: "2022/03/14",
+      },
+      {
+        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
+        title: "Lorem ipsum dolor sit amet consectetur.",
+        date: "2022/03/16",
+      },
+    ],
   };
 
   return (
@@ -93,6 +110,15 @@ const Home = () => {
           <div className="topline"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
+          <div className="news">
+            {data.news.map((newsItem) => (
+              <div className="news-wrap">
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href={newsItem.url}>{newsItem.title}</a>
+                <span>{newsItem.date}</span>
+              </div>
+            ))}
+          </div>
           <h2>相新</h2>
           <h2>關聞</h2>
         </div>

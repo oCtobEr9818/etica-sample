@@ -117,7 +117,7 @@ body {
 .navbar-option li a {
   color: #343875;
   padding: 0 1rem;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
   position: relative;
@@ -171,14 +171,14 @@ body {
 }
 .navbar .navbar-option .dropdown .subNavbar {
   width: 150px;
-  height: 180px;
+  height: 200px;
   display: none;
   text-align: center;
   background-color: #75c2d3;
   border-radius: 40px;
   position: absolute;
   top: 2.5rem;
-  left: -1.4rem;
+  left: -1rem;
 }
 
 .navbar .navbar-option .dropdown .subNavbar::before {
@@ -246,7 +246,7 @@ body {
 
 .navbar .navbar-option .dropdown .subNavbar li a {
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
   letter-spacing: .2em;
   color: #fff;
@@ -309,7 +309,8 @@ body {
 }
 
 .banner img {
-  width: 20rem;
+  width: 25rem;
+  z-index: 1;
   position: absolute;
   top: 0;
 }
@@ -345,7 +346,7 @@ body {
 }
 
 .banner .slash h2{
-  width: 68%;
+  width: 80%;
   text-align: right;
   color: #fff;
   border-bottom: 1px solid #93cddd;
@@ -383,13 +384,12 @@ body {
 .container .banner .elevator {
   position: absolute;
   right: 7rem;
-  bottom: 1.5rem;
+  bottom: 2rem;
 }
 
 .container .banner .elevator ul {
   font-weight: bold;
-  font-size: .9em;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 .container .banner .elevator ul li a {
@@ -646,7 +646,7 @@ body {
 
 /* 頁尾 */
 .footer {
-  width: 63.05rem;
+  width: 1440px;
   height: 40vh;
   margin: auto;
   background: linear-gradient(140deg, transparent 110px, #88ddec 0);

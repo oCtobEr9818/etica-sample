@@ -88,7 +88,7 @@ $primary-color: #93cddd;
             display: block;
             width: 5px;
             height: 5px;
-            background-color: #fff;
+            background: #fff;
             border: 7px solid #001eb4;
             border-radius: 50%;
             animation: bordershow 3s infinite;
@@ -194,10 +194,14 @@ $primary-color: #93cddd;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $primary-color;
+    background: $primary-color;
     position: relative;
 
     .hexagon {
+      filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.9));
+      position: absolute;
+      right: 0;
+
       span {
         @include user-select-none;
         width: 7rem;
@@ -208,22 +212,45 @@ $primary-color: #93cddd;
         font-size: 1.1em;
         cursor: default;
         color: #66e0ff;
-        background-color: #2a2f5f;
+        background: #2a2f5f;
         -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
         clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
         position: absolute;
-      }
-      span:nth-child(1) {
-        right: 1rem;
-        top: -5rem;
-      }
-      span:nth-child(2) {
-        right: 7.5rem;
-        top: -1rem;
-      }
-      span:nth-child(3) {
-        right: 1rem;
-        top: 3rem;
+
+        &:nth-child(1) {
+          right: 1rem;
+          top: -5rem;
+        }
+        &:nth-child(2) {
+          right: 7.5rem;
+          top: -1rem;
+        }
+        &:nth-child(3) {
+          right: 1rem;
+          top: 3rem;
+        }
+        &::before {
+          content: "";
+          opacity: 0.8;
+          border-left: 3.6rem solid #aaacbf;
+          border-top: 3px solid #aaacbf;
+          box-shadow: 0 0 3px #fff;
+          border-radius: 3px;
+          position: absolute;
+          top: 5%;
+        }
+        &::after {
+          content: "";
+          opacity: 0.8;
+          border-right: 3.6rem solid #aaacbf;
+          border-bottom: 3px solid #aaacbf;
+          border-radius: 3px;
+          box-shadow: 0 0 3px #fff;
+          transform: rotate(-61deg);
+          position: absolute;
+          top: 27%;
+          left: -12%;
+        }
       }
     }
 
@@ -254,7 +281,7 @@ $primary-color: #93cddd;
       height: 60%;
       margin-bottom: 1rem;
       border-radius: 100px;
-      background-color: #dff0f5;
+      background: #dff0f5;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -287,7 +314,7 @@ $primary-color: #93cddd;
       .topline {
         height: 2px;
         width: 80%;
-        background-color: $primary-color;
+        background: $primary-color;
         position: absolute;
         top: 1.7rem;
         left: 1.5rem;
@@ -297,7 +324,7 @@ $primary-color: #93cddd;
           display: inline-block;
           width: 2px;
           height: 2rem;
-          background-color: $primary-color;
+          background: $primary-color;
           position: absolute;
           bottom: 0;
         }
@@ -316,7 +343,7 @@ $primary-color: #93cddd;
       .underline {
         width: 85.2%;
         height: 2px;
-        background-color: $primary-color;
+        background: $primary-color;
         position: absolute;
         right: 1.5rem;
         bottom: 0;
@@ -326,7 +353,7 @@ $primary-color: #93cddd;
           width: 2px;
           height: 27rem;
           display: inline-block;
-          background-color: $primary-color;
+          background: $primary-color;
           position: absolute;
           right: 0;
           bottom: 0;
@@ -340,9 +367,47 @@ $primary-color: #93cddd;
           width: 2px;
           height: 2rem;
           display: inline-block;
-          background-color: $primary-color;
+          background: $primary-color;
           position: absolute;
           top: 0;
+        }
+      }
+
+      .news {
+        width: 60%;
+        height: 80%;
+        margin: auto;
+        padding: 1rem;
+        border-radius: 10px;
+        position: absolute;
+        left: 15%;
+        top: 0;
+        bottom: 0;
+
+        .news-wrap {
+          width: 100%;
+          display: inline-block;
+          padding: 0.7rem;
+          // border-bottom: 1px dashed #000;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          position: relative;
+
+          .fa-newspaper-o {
+            padding-right: 5px;
+          }
+
+          a {
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-right: 4rem;
+          }
+
+          span {
+            line-height: 1.5;
+            padding-right: 5px;
+            position: absolute;
+            right: 0;
+          }
         }
       }
 
