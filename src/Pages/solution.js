@@ -1,19 +1,19 @@
 import ContentTitle from "../Components/content-title";
+import { imgHandler } from "../Components/imgHandler";
 
 const Solution = () => {
   const data = {
     solution_img: {
       title: "解決方案",
-      image: process.env.PUBLIC_URL + "/img/solution.png",
+      image: imgHandler("/img/solution.png"),
       alt: "一大塊太陽能板架設在停車場",
     },
     public: {
       image: {
-        indoorImg: process.env.PUBLIC_URL + "/img/indoor.png",
-        outdoorImg: process.env.PUBLIC_URL + "/img/outdoor.png",
-        wallMountedImg: process.env.PUBLIC_URL + "/img/wallmounted.png",
-        energyStorageBoxImg:
-          process.env.PUBLIC_URL + "/img/energyStorageBox.png",
+        indoorImg: imgHandler("/img/indoor.png"),
+        outdoorImg: imgHandler("/img/outdoor.png"),
+        wallMountedImg: imgHandler("/img/wallmounted.png"),
+        energyStorageBoxImg: imgHandler("/img/energyStorageBox.png"),
       },
       content: {
         indoorContent: `微電網儲能櫃-室內型
@@ -52,8 +52,8 @@ const Solution = () => {
       title: "商業設施",
       id: "commercialFacility",
       image: {
-        blueImg: process.env.PUBLIC_URL + "/img/commercialFacility1.png",
-        threeImg: process.env.PUBLIC_URL + "/img/commercialFacility2.png",
+        blueImg: imgHandler("/img/commercialFacility1.png"),
+        threeImg: imgHandler("/img/commercialFacility2.png"),
       },
       alt: "商辦，商場，飯店，微電網儲能櫃-室內型，微電網儲能櫃-戶外型，Pack Bank，額定電流",
     },
@@ -61,10 +61,10 @@ const Solution = () => {
       title: "交通應用",
       id: "trsportationApplication",
       image: {
-        blueImg: process.env.PUBLIC_URL + "/img/trsportationApplication1.png",
-        threeImg: process.env.PUBLIC_URL + "/img/trsportationApplication2.png",
-        batteryImg1: process.env.PUBLIC_URL + "/img/battery1.png",
-        batteryImg2: process.env.PUBLIC_URL + "/img/battery2.png",
+        blueImg: imgHandler("/img/trsportationApplication1.png"),
+        threeImg: imgHandler("/img/trsportationApplication2.png"),
+        batteryImg1: imgHandler("/img/battery1.png"),
+        batteryImg2: imgHandler("/img/battery2.png"),
       },
       alt: "停車場EV，充電站，交通工具:腳踏車，微電網儲能櫃-室內型，微電網儲能櫃-戶外型，Pack Bank，額定電流",
     },
@@ -72,8 +72,8 @@ const Solution = () => {
       title: "公設住宅",
       id: "publicHouse",
       image: {
-        blueImg: process.env.PUBLIC_URL + "/img/publicHouse1.png",
-        threeImg: process.env.PUBLIC_URL + "/img/publicHouse2.png",
+        blueImg: imgHandler("/img/publicHouse1.png"),
+        threeImg: imgHandler("/img/publicHouse2.png"),
       },
       alt: "公設，社區住宅，微電網儲能櫃-室內型，微電網儲能櫃-戶外型，壁掛式儲能櫃，Pack Bank，額定電流",
     },
@@ -81,8 +81,8 @@ const Solution = () => {
       title: "工業應用",
       id: "industryApplication",
       image: {
-        blueImg: process.env.PUBLIC_URL + "/img/industryApplication1.png",
-        threeImg: process.env.PUBLIC_URL + "/img/industryApplication2.png",
+        blueImg: imgHandler("/img/industryApplication1.png"),
+        threeImg: imgHandler("/img/industryApplication2.png"),
       },
       alt: "太陽能電廠用電大戶，微電網儲能櫃-室內型，微電網儲能櫃-戶外型，40呎集裝箱儲能櫃，Pack Bank，額定電流",
     },
@@ -90,8 +90,8 @@ const Solution = () => {
       title: "綠能產業",
       id: "greenEnergyIndustry",
       image: {
-        blueImg: process.env.PUBLIC_URL + "/img/greenEnergyIndustry1.png",
-        threeImg: process.env.PUBLIC_URL + "/img/greenEnergyIndustry2.png",
+        blueImg: imgHandler("/img/greenEnergyIndustry1.png"),
+        threeImg: imgHandler("/img/greenEnergyIndustry2.png"),
       },
       alt: "魚電共生，魚菜共生，科技植栽，40呎集裝箱儲能櫃，微電網儲能櫃-戶外型，Pack Bank，額定電流",
     },

@@ -44,11 +44,12 @@ const Navbar = () => {
       <div className="navbar-line"></div>
 
       <div className="dropMenu">
-        <input type="checkbox" id="menu-control" />
         <label htmlFor="menu-control" className="menu-btn">
           <span></span>
         </label>
       </div>
+      <input type="checkbox" id="menu-control" />
+
       <ul className="navbar-option">
         <li>
           <NavLink to={navs.home.path}>{navs.home.name}</NavLink>

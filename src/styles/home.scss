@@ -18,6 +18,11 @@
     @content;
   }
 }
+@mixin min-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 
 @keyframes bordershow {
   50% {
@@ -49,10 +54,13 @@
 $primary-color: #93cddd;
 
 .home {
+  max-width: 100%;
   margin: auto;
   width: 66rem;
-  // overflow-x: hidden;
-  // overflow-y: visible;
+
+  @include mini-pad {
+    margin-top: 6rem;
+  }
 
   .container-home {
     width: 100%;
@@ -60,7 +68,7 @@ $primary-color: #93cddd;
     position: relative;
 
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       @include user-select-none;
     }
@@ -74,16 +82,15 @@ $primary-color: #93cddd;
 
       .point {
         position: absolute;
-        z-index: 1;
+        z-index: 0;
 
-        // 藍色原點
         .point_a {
           cursor: pointer;
           display: block;
           position: relative;
           text-decoration: none;
 
-          // 白色原點
+          // 白色圓點
           .point_span {
             display: block;
             width: 5px;
@@ -92,6 +99,12 @@ $primary-color: #93cddd;
             border: 7px solid #001eb4;
             border-radius: 50%;
             animation: bordershow 3s infinite;
+
+            @include min-mobile {
+              width: 3px;
+              height: 3px;
+              border: 4px solid #001eb4;
+            }
 
             &::before {
               content: "";
@@ -123,7 +136,7 @@ $primary-color: #93cddd;
             }
           }
 
-          // 右邊欄
+          // 右邊列
           .point_wrap {
             height: 50px;
             width: 0;
@@ -139,6 +152,11 @@ $primary-color: #93cddd;
             top: 50%;
             left: 40px;
 
+            @include min-mobile {
+              top: 40px;
+              left: -15px;
+            }
+
             &::before {
               content: "";
               height: 100%;
@@ -149,6 +167,11 @@ $primary-color: #93cddd;
               z-index: -1;
               background: rgba(0, 30, 180, 0.77);
               border-radius: 30px;
+
+              @include min-mobile {
+                height: 100%;
+                width: 70%;
+              }
             }
             &::after {
               content: "";
@@ -160,7 +183,9 @@ $primary-color: #93cddd;
             }
 
             span {
+              padding-right: 3.5rem;
               color: transparent;
+              font-size: 1em;
             }
           }
 
@@ -203,7 +228,12 @@ $primary-color: #93cddd;
     align-items: center;
     background: $primary-color;
     position: relative;
-    @include desktop {
+
+    @include mini-pad {
+      height: 40vh;
+    }
+    @include min-mobile {
+      height: 30vh;
     }
 
     .hexagon {
@@ -212,7 +242,6 @@ $primary-color: #93cddd;
       right: 0;
 
       a {
-        @include user-select-none;
         width: 7rem;
         height: 7rem;
         display: flex;
@@ -225,18 +254,79 @@ $primary-color: #93cddd;
         -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
         clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
         position: absolute;
+        @include user-select-none;
+
+        @include pad {
+          width: 6.5rem;
+          height: 6.5rem;
+        }
+        @include mini-pad {
+          width: 5.5rem;
+          height: 5.5rem;
+          font-size: 0.9em;
+        }
+        @include mobile {
+          width: 4.5rem;
+          height: 4.5rem;
+          font-size: 0.7em;
+        }
+        @include min-mobile {
+          width: 3.5rem;
+          height: 3.5rem;
+          font-size: 0.5em;
+        }
 
         &:nth-child(1) {
           right: 1rem;
           top: -5rem;
+
+          @include pad {
+            top: -4.5rem;
+          }
+          @include mini-pad {
+            top: -4rem;
+          }
+          @include mobile {
+            top: -3.5rem;
+          }
+          @include min-mobile {
+            top: -2.5rem;
+          }
         }
         &:nth-child(2) {
           right: 7.5rem;
           top: -1rem;
+
+          @include pad {
+            right: 7rem;
+          }
+          @include mini-pad {
+            right: 6rem;
+          }
+          @include mobile {
+            right: 5rem;
+          }
+          @include min-mobile {
+            right: 4rem;
+            top: -0.7rem;
+          }
         }
         &:nth-child(3) {
           right: 1rem;
           top: 3rem;
+
+          @include pad {
+            top: 2.5rem;
+          }
+          @include mini-pad {
+            top: 2rem;
+          }
+          @include mobile {
+            top: 1.5rem;
+          }
+          @include min-mobile {
+            top: 1rem;
+          }
         }
         &::before {
           content: "";
@@ -247,6 +337,19 @@ $primary-color: #93cddd;
           border-radius: 3px;
           position: absolute;
           top: 5%;
+
+          @include pad {
+            border-left: 3.4rem solid #aaacbf;
+          }
+          @include mini-pad {
+            border-left: 2.9rem solid #aaacbf;
+          }
+          @include mobile {
+            border-left: 2.4rem solid #aaacbf;
+          }
+          @include min-mobile {
+            border-left: 2rem solid #aaacbf;
+          }
         }
         &::after {
           content: "";
@@ -259,24 +362,50 @@ $primary-color: #93cddd;
           position: absolute;
           top: 27%;
           left: -12%;
+
+          @include pad {
+            border-right: 3.3rem solid #aaacbf;
+          }
+          @include mini-pad {
+            border-right: 2.9rem solid #aaacbf;
+          }
+          @include mobile {
+            border-right: 2.4rem solid #aaacbf;
+          }
+          @include min-mobile {
+            border-right: 1.8rem solid #aaacbf;
+          }
         }
         &:hover {
           color: #f7f7f7;
           background: #434ca2;
         }
-      }
-    }
+      } // a
+    } // hexegon
 
     h1 {
-      @include user-select-none;
+      // 橫幅標題
       width: 100%;
       height: 40%;
-      padding-left: 2em;
       font-size: 5.5em;
+      padding-left: 2em;
       font-family: "Noto Sans Lisu";
       color: #fff;
+      @include user-select-none;
 
-      @include desktop {
+      @include mini-pad {
+        height: 50%;
+        font-size: 5em;
+        padding-left: 1em;
+        margin: 1.5rem 0 -1.5rem 0;
+      }
+      @include mobile {
+        font-size: 4em;
+      }
+      @include min-mobile {
+        height: 40%;
+        font-size: 2em;
+        margin: 0;
       }
 
       &::first-letter {
@@ -285,26 +414,68 @@ $primary-color: #93cddd;
     }
 
     .imgWrap {
-      width: 90%;
+      width: 95%;
       height: 60%;
       margin-bottom: 1rem;
-      border-radius: 100px;
+      border-radius: 70px;
       background: #dff0f5;
       display: flex;
       justify-content: center;
       align-items: center;
 
+      @include mini-pad {
+        height: 50%;
+      }
+      @include min-mobile {
+        height: 60%;
+      }
+
       img {
-        @include user-select-none;
+        // 橫幅圖片
         width: 10rem;
         height: 10rem;
         padding: 0 1rem;
+        @include user-select-none;
+
+        @include pad {
+          width: 9rem;
+          height: 9rem;
+          padding: 0 0.8rem;
+        }
+        @include mini-pad {
+          width: 7rem;
+          height: 7rem;
+          padding: 0 0.6rem;
+        }
+        @include mobile {
+          width: 5rem;
+          height: 5rem;
+          padding: 0 0.5rem;
+        }
+        @include min-mobile {
+          width: 3rem;
+          height: 3rem;
+          padding: 0 0.3rem;
+        }
       }
       img:nth-child(n + 3) {
         width: 13rem;
+
+        @include pad {
+          width: 11rem;
+        }
+        @include mini-pad {
+          width: 10rem;
+        }
+        @include mobile {
+          width: 8rem;
+        }
+        @include min-mobile {
+          width: 5rem;
+        }
       }
     }
-  }
+  } // banner-home
 
   // 內容
   .content {
@@ -327,6 +498,10 @@ $primary-color: #93cddd;
         top: 1.7rem;
         left: 1.5rem;
 
+        @include mobile {
+          width: 70%;
+        }
+
         &::before {
           content: "";
           display: inline-block;
@@ -346,6 +521,27 @@ $primary-color: #93cddd;
         position: absolute;
         top: 3.8rem;
         right: -1.3rem;
+
+        @include mini-pad {
+          width: 7rem;
+          top: 3.2rem;
+          right: -1.05rem;
+        }
+        @include mobile {
+          width: 5rem;
+          transform: rotate(39.5deg);
+          top: 2.5rem;
+          right: -0.75rem;
+        }
+        @include min-mobile {
+          width: 2rem;
+          border-bottom: 30px solid $primary-color;
+          border-left: 35px solid transparent;
+          border-right: 25px solid transparent;
+          transform: rotate(40deg);
+          top: 1.9rem;
+          right: 0.2rem;
+        }
       }
 
       .underline {
@@ -356,18 +552,31 @@ $primary-color: #93cddd;
         right: 1.5rem;
         bottom: 0;
 
+        @include mini-pad {
+          width: 82.5%;
+        }
+        @include mobile {
+          width: 80%;
+        }
+
         &::after {
           content: "";
           width: 2px;
-          height: 27rem;
+          height: 26rem;
           display: inline-block;
           background: $primary-color;
           position: absolute;
           right: 0;
           bottom: 0;
 
-          @include desktop {
-            height: 17rem;
+          @include mini-pad {
+            height: 27rem;
+          }
+          @include mobile {
+            height: 28rem;
+          }
+          @include min-mobile {
+            height: 20rem;
           }
         }
         &::before {
@@ -383,20 +592,25 @@ $primary-color: #93cddd;
 
       .news {
         width: 60%;
-        height: 80%;
         margin: auto;
         padding: 1rem;
         border-radius: 10px;
         position: absolute;
         left: 15%;
-        top: 0;
+        top: 10%;
         bottom: 0;
+
+        @include pad {
+          left: 10%;
+        }
+        @include min-mobile {
+          left: 8%;
+        }
 
         .news-wrap {
           width: 100%;
           display: inline-block;
           padding: 0.7rem;
-          // border-bottom: 1px dashed #000;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
           position: relative;
 
@@ -407,16 +621,34 @@ $primary-color: #93cddd;
           a {
             text-decoration: none;
             font-size: 1.2em;
-            margin-right: 4rem;
+            margin-right: 3rem;
+
+            @include pad {
+              font-size: 1em;
+            }
+            @include mini-pad {
+              font-size: 0.8em;
+            }
           }
 
           span {
-            line-height: 1.5;
+            // line-height: 1;
             padding-right: 5px;
             position: absolute;
             right: 0;
+
+            @include pad {
+              font-size: 1em;
+            }
+            @include mini-pad {
+              font-size: 0.7em;
+            }
           }
         }
+      }
+
+      img {
+        width: 80%;
       }
 
       h2 {
@@ -429,10 +661,38 @@ $primary-color: #93cddd;
         position: absolute;
         top: 4rem;
         right: 6.5rem;
+
+        @include mini-pad {
+          right: 5.5rem;
+        }
+        @include mobile {
+          right: 4.5rem;
+          font-size: 1.7em;
+        }
+        @include min-mobile {
+          top: 2.5rem;
+          right: 3rem;
+          font-size: 1.2em;
+          letter-spacing: 1.1rem;
+        }
       }
       h2:last-child {
         right: 4.5rem;
         top: 6rem;
+
+        @include mini-pad {
+          right: 3.5rem;
+        }
+        @include mobile {
+          right: 3rem;
+          font-size: 1.7em;
+        }
+        @include min-mobile {
+          top: 4rem;
+          right: 1.8rem;
+          font-size: 1.2em;
+          letter-spacing: 1.1rem;
+        }
       }
     }
     .wrap:nth-child(2) {
@@ -446,10 +706,36 @@ $primary-color: #93cddd;
         transform: scaleX(-1);
         top: 5rem;
         right: 4.5rem;
+
+        @include mini-pad {
+          top: 4rem;
+          right: 4rem;
+        }
+        @include mobile {
+          right: 3.5rem;
+        }
+        @include min-mobile {
+          top: 2.5rem;
+          right: 1.8rem;
+          letter-spacing: 1.1rem;
+        }
       }
       h2:last-child {
         top: 7rem;
         right: 6.5rem;
+
+        @include mini-pad {
+          top: 6rem;
+          right: 6rem;
+        }
+        @include mobile {
+          right: 5rem;
+        }
+        @include min-mobile {
+          top: 4rem;
+          right: 3rem;
+          letter-spacing: 1.1rem;
+        }
       }
     }
     .wrap:nth-child(3) {
