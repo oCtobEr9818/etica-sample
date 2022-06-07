@@ -1,10 +1,6 @@
 import React from "react";
 import "./styles/index.css";
 import "./styles/home.scss";
-// import "./styles/navbar.scss";
-// import "./styles/banner.scss";
-// import "./styles/content.scss";
-// import "./styles/footer.scss";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import Home from "./Pages/home";

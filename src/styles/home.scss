@@ -18,7 +18,7 @@
     @content;
   }
 }
-@mixin min-mobile {
+@mixin mini-mobile {
   @media (max-width: 400px) {
     @content;
   }
@@ -55,11 +55,12 @@ $primary-color: #93cddd;
 
 .home {
   max-width: 100%;
-  margin: auto;
   width: 66rem;
+  margin: auto;
+  overflow-x: hidden;
 
   @include mini-pad {
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 
   .container-home {
@@ -100,7 +101,7 @@ $primary-color: #93cddd;
             border-radius: 50%;
             animation: bordershow 3s infinite;
 
-            @include min-mobile {
+            @include mini-mobile {
               width: 3px;
               height: 3px;
               border: 4px solid #001eb4;
@@ -152,7 +153,7 @@ $primary-color: #93cddd;
             top: 50%;
             left: 40px;
 
-            @include min-mobile {
+            @include mini-mobile {
               top: 40px;
               left: -15px;
             }
@@ -168,7 +169,7 @@ $primary-color: #93cddd;
               background: rgba(0, 30, 180, 0.77);
               border-radius: 30px;
 
-              @include min-mobile {
+              @include mini-mobile {
                 height: 100%;
                 width: 70%;
               }
@@ -183,9 +184,12 @@ $primary-color: #93cddd;
             }
 
             span {
-              padding-right: 3.5rem;
               color: transparent;
               font-size: 1em;
+
+              @include mini-mobile {
+                padding-right: 3.5rem;
+              }
             }
           }
 
@@ -232,7 +236,7 @@ $primary-color: #93cddd;
     @include mini-pad {
       height: 40vh;
     }
-    @include min-mobile {
+    @include mini-mobile {
       height: 30vh;
     }
 
@@ -270,7 +274,7 @@ $primary-color: #93cddd;
           height: 4.5rem;
           font-size: 0.7em;
         }
-        @include min-mobile {
+        @include mini-mobile {
           width: 3.5rem;
           height: 3.5rem;
           font-size: 0.5em;
@@ -289,7 +293,7 @@ $primary-color: #93cddd;
           @include mobile {
             top: -3.5rem;
           }
-          @include min-mobile {
+          @include mini-mobile {
             top: -2.5rem;
           }
         }
@@ -306,7 +310,7 @@ $primary-color: #93cddd;
           @include mobile {
             right: 5rem;
           }
-          @include min-mobile {
+          @include mini-mobile {
             right: 4rem;
             top: -0.7rem;
           }
@@ -324,7 +328,7 @@ $primary-color: #93cddd;
           @include mobile {
             top: 1.5rem;
           }
-          @include min-mobile {
+          @include mini-mobile {
             top: 1rem;
           }
         }
@@ -347,7 +351,7 @@ $primary-color: #93cddd;
           @include mobile {
             border-left: 2.4rem solid #aaacbf;
           }
-          @include min-mobile {
+          @include mini-mobile {
             border-left: 2rem solid #aaacbf;
           }
         }
@@ -372,7 +376,7 @@ $primary-color: #93cddd;
           @include mobile {
             border-right: 2.4rem solid #aaacbf;
           }
-          @include min-mobile {
+          @include mini-mobile {
             border-right: 1.8rem solid #aaacbf;
           }
         }
@@ -387,9 +391,10 @@ $primary-color: #93cddd;
       // 橫幅標題
       width: 100%;
       height: 40%;
+      margin: -0.5rem 0 0.5rem 0;
+      padding-left: 1em;
       font-size: 5.5em;
-      padding-left: 2em;
-      font-family: "Noto Sans Lisu";
+      font-family: "Noto Sans Lisu", "Century Schoolbook";
       color: #fff;
       @include user-select-none;
 
@@ -402,7 +407,7 @@ $primary-color: #93cddd;
       @include mobile {
         font-size: 4em;
       }
-      @include min-mobile {
+      @include mini-mobile {
         height: 40%;
         font-size: 2em;
         margin: 0;
@@ -426,7 +431,7 @@ $primary-color: #93cddd;
       @include mini-pad {
         height: 50%;
       }
-      @include min-mobile {
+      @include mini-mobile {
         height: 60%;
       }
 
@@ -452,7 +457,7 @@ $primary-color: #93cddd;
           height: 5rem;
           padding: 0 0.5rem;
         }
-        @include min-mobile {
+        @include mini-mobile {
           width: 3rem;
           height: 3rem;
           padding: 0 0.3rem;
@@ -470,7 +475,7 @@ $primary-color: #93cddd;
         @include mobile {
           width: 8rem;
         }
-        @include min-mobile {
+        @include mini-mobile {
           width: 5rem;
         }
       }
@@ -479,11 +484,11 @@ $primary-color: #93cddd;
 
   // 內容
   .content {
-    width: 100%;
+    max-width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0 auto;
 
     .wrap {
       width: 100%;
@@ -533,7 +538,7 @@ $primary-color: #93cddd;
           top: 2.5rem;
           right: -0.75rem;
         }
-        @include min-mobile {
+        @include mini-mobile {
           width: 2rem;
           border-bottom: 30px solid $primary-color;
           border-left: 35px solid transparent;
@@ -575,7 +580,7 @@ $primary-color: #93cddd;
           @include mobile {
             height: 28rem;
           }
-          @include min-mobile {
+          @include mini-mobile {
             height: 20rem;
           }
         }
@@ -603,7 +608,7 @@ $primary-color: #93cddd;
         @include pad {
           left: 10%;
         }
-        @include min-mobile {
+        @include mini-mobile {
           left: 8%;
         }
 
@@ -669,7 +674,7 @@ $primary-color: #93cddd;
           right: 4.5rem;
           font-size: 1.7em;
         }
-        @include min-mobile {
+        @include mini-mobile {
           top: 2.5rem;
           right: 3rem;
           font-size: 1.2em;
@@ -687,7 +692,7 @@ $primary-color: #93cddd;
           right: 3rem;
           font-size: 1.7em;
         }
-        @include min-mobile {
+        @include mini-mobile {
           top: 4rem;
           right: 1.8rem;
           font-size: 1.2em;
@@ -714,7 +719,7 @@ $primary-color: #93cddd;
         @include mobile {
           right: 3.5rem;
         }
-        @include min-mobile {
+        @include mini-mobile {
           top: 2.5rem;
           right: 1.8rem;
           letter-spacing: 1.1rem;
@@ -731,7 +736,7 @@ $primary-color: #93cddd;
         @include mobile {
           right: 5rem;
         }
-        @include min-mobile {
+        @include mini-mobile {
           top: 4rem;
           right: 3rem;
           letter-spacing: 1.1rem;

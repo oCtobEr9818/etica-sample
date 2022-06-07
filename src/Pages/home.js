@@ -70,7 +70,7 @@ const Home = () => {
             <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>工控電池</span>
+                <span>關於我們</span>
               </div>
             </a>
           </li>
@@ -78,7 +78,7 @@ const Home = () => {
             <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>e-bike</span>
+                <span>解決方案</span>
               </div>
             </a>
           </li>
@@ -86,7 +86,7 @@ const Home = () => {
             <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>ESS儲能電池</span>
+                <span>研發</span>
               </div>
             </a>
           </li>
@@ -94,7 +94,7 @@ const Home = () => {
             <a href="#" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>40呎集裝箱</span>
+                <span>產品資訊</span>
               </div>
             </a>
           </li>

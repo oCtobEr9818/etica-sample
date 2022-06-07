@@ -13,11 +13,11 @@ body {
 
 /* 導覽列 */
 .navbar {
-  width: 1320px;
+  max-width: 66rem;
   height: 6rem;
   display: block;
+  margin-right: 5rem;
   position: relative;
-  padding-left: 5rem;
   margin: auto;
   z-index: 1;
 }
@@ -49,7 +49,7 @@ body {
   background: currentColor;
   border-radius: 3px;
   position: absolute;
-  left: 17rem;
+  left: 12rem;
   bottom: 1rem;
 }
 
@@ -57,11 +57,11 @@ body {
   content: '';
   box-sizing: border-box;
   display: inline-block;
-  width: 65%;
+  width: 80%;
   height: 2px;
   background: currentColor;
   position: absolute;
-  left: 17.7rem;
+  left: 12.7rem;
   bottom: 3.4rem;
 }
 
@@ -73,19 +73,19 @@ body {
 }
 
 /* 導覽列選項 */
-.navbar-option {
+.navbar .navbar-option {
   display: flex;
   justify-content: center;
-  margin: -1.3rem 0 -1.3rem 2rem;
-  padding-right: 5rem;
+  position: absolute;
+  right: 0;
+  top: 60%;
+}
+
+.navbar .navbar-option li {
   position: relative;
 }
 
-.navbar-option li {
-  position: relative;
-}
-
-.navbar-option li::before {
+.navbar .navbar-option li::before {
   content: '';
   display: inline-block;
   width: .45rem;
@@ -98,7 +98,7 @@ body {
   left: 1.2rem;
 }
 
-.navbar-option li::after {
+.navbar .navbar-option li::after {
   content: '';
   display: inline-block;
   width: .45rem;
@@ -110,7 +110,7 @@ body {
   right: 1.2rem;
 }
 
-.navbar-option li a {
+.navbar .navbar-option li a {
   color: #343875;
   padding: 0 1.7rem;
   font-size: 1em;
@@ -120,7 +120,7 @@ body {
   letter-spacing: .2rem;
 }
 
-.navbar-option li a::before {
+.navbar .navbar-option li a::before {
   content: '';
   display: inline-block;
   width: .25rem;
@@ -132,7 +132,7 @@ body {
   left: 2rem;
 }
 
-.navbar-option li a::after {
+.navbar .navbar-option li a::after {
   content: '';
   display: inline-block;
   width: .25rem;
@@ -144,15 +144,10 @@ body {
   right: 2rem;
 }
 
-/* .navbar-option li a.active,
-.navbar-option > a::after {
-  color: #f00;
-} */
-
-.navbar-option li:hover::before,
-.navbar-option li:hover::after,
-.navbar-option li a:hover::before,
-.navbar-option li a:hover::after {
+.navbar .navbar-option li:hover::before,
+.navbar .navbar-option li:hover::after,
+.navbar .navbar-option li a:hover::before,
+.navbar .navbar-option li a:hover::after {
   background: #029be2;
   opacity: .6;
 }
@@ -381,7 +376,7 @@ body {
 
 /* 解決方案內容 */
 .container .solution-img {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -398,7 +393,7 @@ body {
 }
 
 .container .solution-img .wrap {
-  width: 70%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -431,7 +426,7 @@ body {
 }
 
 .container .solution-img .wrap .threeImg {
-  width: 700px;
+  height: 5rem;
   padding-bottom: 2.2rem;
 }
 
@@ -595,21 +590,29 @@ body {
 .content {
   display: flex;
 }
+/* .content:first-child .contentRight-img {
+  width: 0;
+  margin: 0;
+} */
 
 .content .contentLeft-img {
   width: 10rem;
   height: 20rem;
   margin-left: 3.2rem;
 }
+
 .content .contentRight-img {
   height: 22rem;
   margin-left: 4rem;
 }
+
 .content p {
   width: 44rem;
   font-size: 1.2em;
   white-space: pre-line;
+  margin: 0 auto;
 }
+
 .content:last-child {
   margin-bottom: 5rem;
 }
@@ -693,51 +696,30 @@ body {
   }
     
   /* 關於我們左圖 */
-  .content .contentLeft-img {
+  .container .content .contentLeft-img {
     width: 9rem;
     height: 18rem;
     margin-left: 2.8rem;
   }
-  .content .contentRight-img {
-    height: 20rem;
+  .container .content .contentRight-img {
+    width: auto;
+    max-height: 20rem;
     object-fit: contain;
   }
-  .content p {
+  .container .content p {
     width: 37rem;
   }
 }
 
 @media screen and (max-width: 1200px) {
   /* 導覽列 */
-  .navbar {
+  /* .navbar {
     width: 100%;
-  }
+  } */
 
-  .navbar .navbar-line::after {
+  /* .navbar .navbar-line::after {
     width: 60%;
-  }
-
-  .navbar .navbar-option li:first-child {
-    margin-left: 3rem;
-  }
-
-  .navbar .navbar-option li a {
-    padding: 0 1.3rem;
-    letter-spacing: .1rem;
-  }
-
-  .navbar .navbar-option li .dropdown .subNavbar {
-    left: 0.2rem;
-  }
-
-  .navbar .navbar-option li .dropdown .subNavbar li {
-    margin: 0 0 .8rem 0;
-  }
-
-  /* 橫幅 */
-  .container  {
-    width: 48rem;
-  }
+  } */
 
   /* e-bike圖片 */
   .container .ebike-img,
@@ -756,11 +738,11 @@ body {
     height: 17rem;
     margin-left: 2.4rem;
   }
-  .content .contentRight-img {
-    height: 15rem;
+  .container .content .contentRight-img {
+    height: 16rem;
     margin-left: 2.8rem;
   }
-  .content p {
+  .container .content p {
     font-size: 1em;
     width: 30rem;
   }
@@ -773,31 +755,27 @@ body {
 
 @media screen and (max-width: 992px) {
   /* 導覽列 */
-  .navbar .navbar-brand {
-    margin-left: -2rem;
-  }
-
   .navbar .navbar-line {
     width: 10rem;
-    margin-left: -2rem;
   }
   .navbar .navbar-line::before {
-    width: 2px;
     height: 3rem;
-    position: absolute;
-    left: 13.6rem;
+    left: 12.2rem;
     bottom: 1rem;
   }
   .navbar .navbar-line::after {
-    width: 60%;
-    height: 2px;
-    position: absolute;
-    left: 14.4rem;
+    width: 70%;
+    left: 12.9rem;
     bottom: 3.7rem;
   }
 
+  .navbar .navbar-option {
+    left: 7rem;
+  }
+
   .navbar .navbar-option li a {
-    padding: 0 .75rem;
+    padding: 0 .7rem;
+    letter-spacing: .1rem;
     font-size: 1.2em;
   }
 
@@ -812,26 +790,27 @@ body {
   }
 
   /* 關於我們左圖 */
-  .content .contentLeft-img {
+  .container .content .contentLeft-img {
     width: 7.5rem;
     height: 15rem;
     margin-left: 2.4rem;
   }
-  .content .contentRight-img {
-    height: 12rem;
-    width: auto;
+  .container .content .contentRight-img {
+    height: 21rem;
     margin: 0 2.5rem;
   }
-  .content p {
-    margin-right: 2.5rem;
-    width: 27rem;
+  .container .content p {
+    width: 35rem;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 770px) {
   /* 導覽列 */
   .navbar {
+    max-width: 100%;
     width: 100%;
+    padding: 0;
     background: #fff;
     border-bottom: 1px solid #ccc;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
@@ -860,15 +839,15 @@ body {
     width: 2px;
     height: 2.5rem;
     position: absolute;
-    left: 15rem;
+    left: 13.5rem;
     bottom: .9rem;
   }
   
   .navbar .navbar-line::after {
-    width: 50%;
+    width: 55%;
     height: 2px;
     position: absolute;
-    left: 15.7rem;
+    left: 14.2rem;
     bottom: 3.1rem;
   }
 
@@ -876,7 +855,7 @@ body {
   .navbar .dropMenu {
     position: absolute;
     top: 1.5rem;
-    right: 6rem;
+    right: 2rem;
   }
 
   .navbar .dropMenu .menu-btn {
@@ -923,7 +902,7 @@ body {
 
   /* 選單隱藏 */
   .navbar .navbar-option {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -1024,8 +1003,8 @@ body {
   }
 
   /* 產品資訊 */
-  .container .hexegon {
-    width: 9rem;
+  .container .industrialBattery-img .hexegon {
+    width: 11rem;
   }
       /* e-bike圖片 */
   .container .ebike-img,
@@ -1039,17 +1018,16 @@ body {
   }
 
   /* 關於我們左圖 */
-  .content .contentLeft-img {
+  .container .content .contentLeft-img {
     width: 6.4rem;
     height: 12.8rem;
     margin-left: 1.8rem;
   }
-  .content .contentRight-img {
-    height: 12rem;
-    width: auto;
+  .container .content .contentRight-img {
+    height: 16rem;
     margin: 0 2rem;
   }
-  .content p {
+  .container .content p {
     width: 23rem;
   }
 
@@ -1065,28 +1043,21 @@ body {
 
 @media screen and (max-width: 576px) {
   /* 導覽列 */
-  .navbar {
-    width: 100%;
-  }
-
-  .navbar .navbar-brand {
-    margin-left: -3rem;
-  }
   .navbar .navbar-brand .navbar-logo {
     width: 9rem;
   }
   
   .navbar .navbar-line {
     width: 9.5rem;
-    margin-left: -3rem;
   }
   .navbar .navbar-line::before {
     height: 2rem;
-    left: 11.8rem;
+    left: 11.4rem;
     bottom: 1.35rem;
   }
   .navbar .navbar-line::after {
-    left: 12.3rem;
+    width: 45%;
+    left: 11.9rem;
     bottom: 3.1rem;
   }
   /* 藍色大方塊 */
@@ -1161,8 +1132,8 @@ body {
   }
 
   /* 產品資訊 */
-  .container .hexegon {
-    width: 8rem;
+  .container .industrialBattery-img .hexegon {
+    width: 9rem;
   }
   
   .container .handheld {
@@ -1174,16 +1145,16 @@ body {
   }
 
   /* 關於我們左圖 */
-  .content .contentLeft-img {
+  .container .content .contentLeft-img {
     width: 4.3rem;
     height: 8.6rem;
     margin-left: 1.3rem;
   }
-  .content .contentRight-img {
+  .container .content .contentRight-img {
     height: 9.5rem;
-    margin: 0 1.2rem;
+    /* margin: 0 1.2rem; */
   }
-  .content p {
+  .container .content p {
     width: 18rem;
     font-size: .9em;
     margin-right: 1.8rem;
@@ -1200,26 +1171,21 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .navbar .navbar-brand {
-    margin-left: -4rem;
-  }
-
   .navbar .navbar-brand .navbar-logo {
     width: 7rem;
   }
 
   .navbar .navbar-line {
     width: 7.5rem;
-    margin-left: -4rem;
   }
   .navbar .navbar-line::before {
     height: 1.5rem;
-    left: 8.75rem;
+    left: 9.3rem;
     bottom: 2rem;
   }
   .navbar .navbar-line::after {
     width: 40%;
-    left: 9.15rem;
+    left: 9.7rem;
     bottom: 3.3rem;
   }
 
@@ -1232,6 +1198,21 @@ body {
     left: 0.5rem;
   }
 
+  /* 藍色大方塊 */
+  .navbar .navbar-option li::before {
+    left: 38%;
+  }
+  .navbar .navbar-option li::after {
+    right: 32.5%;
+  }
+  .navbar .navbar-option li a::before {
+    left: 40%;
+  }
+  .navbar .navbar-option li a::after {
+    right: 40.5%;
+  }
+
+  /* 橫幅 */
   .container .banner img {
     width: 11rem;
   }
@@ -1260,7 +1241,7 @@ body {
   }
 
   /* 產品資訊 */
-  .container .hexegon {
+  .container .industrialBattery-img .hexegon {
     width: 7rem;
   }
       /* 產品資訊表格 */
@@ -1269,15 +1250,15 @@ body {
   }
 
   /* 關於我們左圖 */
-  .content .contentLeft-img {
+  .container .content .contentLeft-img {
     width: 3.5rem;
     height: 7rem;
   }
-  .content .contentRight-img {
+  .container .content .contentRight-img {
     height: 8rem;
     margin: 0 1rem;
   }
-  .content p {
+  .container .content p {
     width: 15rem;
     margin-right: 1.5rem;
   }

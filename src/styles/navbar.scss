@@ -18,6 +18,11 @@
     @content;
   }
 }
+@mixin mini-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 
 .navbar {
   width: 66rem;
@@ -27,10 +32,6 @@
   padding-left: 5rem;
   margin: auto;
   z-index: 1;
-
-  @include desktop {
-    // width: 100%;
-  }
   @include pad {
     width: 100%;
   }
@@ -50,14 +51,12 @@
     display: inline-block;
     margin: 1rem 0 0 1.5rem;
     padding: 1.15rem 0 0;
-
     @include mini-pad {
       margin: 1rem 0 0 1.5rem;
     }
 
     .navbar-logo {
       width: 9rem;
-
       @include pad {
         width: 10rem;
       }
@@ -75,7 +74,6 @@
     margin-left: 1.5rem;
     border-top: 2px solid #000;
     opacity: 0.3;
-
     @include pad {
       width: 10.5em;
     }
@@ -99,9 +97,8 @@
       background: currentColor;
       border-radius: 3px;
       position: absolute;
-      left: 17rem;
+      left: 12rem;
       bottom: 1rem;
-
       @include pad {
         width: 2px;
         height: 1.75rem;
@@ -126,13 +123,12 @@
       content: "";
       box-sizing: border-box;
       display: block;
-      width: 65%;
+      width: 80%;
       height: 2px;
       background: currentColor;
       position: absolute;
-      left: 17.7rem;
+      left: 12.7rem;
       bottom: 3.4rem;
-
       @include pad {
         width: 60%;
         height: 2px;
@@ -170,13 +166,14 @@
   #menu-control {
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0;
 
     /* 768px以下裝置的選單控制 */
-    :checked ~ .navbar-option {
-      top: 6rem;
-      opacity: 1;
-    }
+    // :checked ~ .navbar-option {
+    //   top: 6rem;
+    //   opacity: 1;
+    // }
   }
 
   @include mini-pad {
@@ -219,9 +216,9 @@
   .navbar-option {
     display: flex;
     justify-content: center;
-    margin: -1.3rem 0 -1.3rem 2rem;
-    padding-right: 5rem;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 60%;
 
     @include desktop {
       // margin: 0 0 0 10rem;
@@ -253,9 +250,10 @@
         height: 0.45rem;
         background-color: #000;
         opacity: 0.2;
+        z-index: 1;
         position: absolute;
         bottom: 0.1rem;
-        left: 0.75rem;
+        left: 1.2rem;
       }
       &::after {
         content: "";
@@ -266,16 +264,17 @@
         opacity: 0.2;
         position: absolute;
         bottom: 0.1rem;
-        right: 0.75rem;
+        right: 1.2rem;
       }
 
       a {
         color: #343875;
-        padding: 0 1rem;
-        font-size: 1.5em;
+        padding: 0 1.7rem;
+        font-size: 1em;
         font-weight: bold;
         text-decoration: none;
         position: relative;
+        letter-spacing: 0.2rem;
 
         @include pad {
           font-size: 0.8em;
@@ -297,22 +296,22 @@
           display: inline-block;
           width: 0.25rem;
           height: 0.25rem;
-          background-color: #000;
+          background: #000;
           opacity: 0.2;
           position: absolute;
           bottom: 0.1rem;
-          left: 1.4rem;
+          left: 2rem;
         }
         &::after {
           content: "";
           display: inline-block;
           width: 0.25rem;
           height: 0.25rem;
-          background-color: #000;
+          background: #000;
           opacity: 0.2;
           position: absolute;
           bottom: 0.1rem;
-          right: 1.4rem;
+          right: 2rem;
         }
       }
 
@@ -324,7 +323,7 @@
         opacity: 0.6;
       }
       &:nth-child(2):hover > .dropdown .subNavbar {
-        display: block;
+        display: inline-block;
       }
     } //li
 
@@ -333,32 +332,30 @@
       z-index: 1;
 
       .subNavbar {
-        width: 150px;
-        height: 200px;
+        width: 100px;
         display: none;
         text-align: center;
-        background-color: #75c2d3;
-        border-radius: 40px;
+        background: #75c2d3;
+        border-radius: 20px;
         position: absolute;
-        top: 2.5rem;
-        left: -1rem;
+        top: 2rem;
+        left: 0.8rem;
 
         &::before {
           content: "";
           display: inline-block;
-          width: 150px;
-          height: 30px;
+          width: 100px;
+          height: 20px;
           position: absolute;
-          top: -1rem;
+          top: -0.8rem;
           left: 0;
         }
 
         li {
-          margin-bottom: 1rem;
-          padding-left: 0.5rem;
-          transform: translateY(0px);
-          transition: 0.3s;
           position: relative;
+          margin-bottom: 1rem;
+          transform: translateY(0);
+          transition: 0.3s;
 
           &:first-child {
             margin-top: 1rem;
