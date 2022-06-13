@@ -1,5 +1,7 @@
 import { imgHandler } from "../Components/imgHandler";
 import { v4 } from "uuid";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const data = {
@@ -10,15 +12,15 @@ const Home = () => {
       },
       {
         img: "/img/home/img02.png",
-        alt: "公司Logo牆面",
+        alt: "明曜科技Logo牆面",
       },
       {
         img: "/img/home/img03.png",
-        alt: "公司Logo牆面",
+        alt: "明曜科技入口處",
       },
       {
         img: "/img/home/img04.png",
-        alt: "公司大廳",
+        alt: "明曜科技大廳",
       },
     ],
     globalClient: {
@@ -60,6 +62,10 @@ const Home = () => {
       },
     ],
   };
+
+  Aos.init({
+    offset: 50,
+  });
 
   return (
     <div className="home">
@@ -111,6 +117,9 @@ const Home = () => {
         <div className="imgWrap">
           {data.bannerImage.map((imageItem) => (
             <img
+              data-fancybox="gallery"
+              data-caption={imageItem.alt}
+              data-aos="zoom-in"
               src={imgHandler(imageItem.img)}
               alt={imageItem.alt}
               key={v4()}
@@ -124,11 +133,11 @@ const Home = () => {
           <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="news">
+          <div className="news" data-aos="fade-up">
             {data.news.map((newsItem) => (
               <div className="news-wrap" key={v4()}>
                 <i className="fa fa-newspaper-o" aria-hidden="true"></i>
-                <a href={newsItem.url} target="_blank">
+                <a href={newsItem.url} rel="noreferrer" target="_blank">
                   {newsItem.title}
                 </a>
                 <span>{newsItem.date}</span>
@@ -152,8 +161,10 @@ const Home = () => {
           <div className="trapezoid"></div>
           <div className="underline"></div>
           <img
+            data-fancybox="single"
             src={imgHandler(data.globalClient.img)}
             alt={data.globalClient.alt}
+            data-aos="fade-up"
           />
           <h2>全客</h2>
           <h2>球戶</h2>

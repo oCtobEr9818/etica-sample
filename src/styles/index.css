@@ -287,7 +287,7 @@ body {
 .container {
   padding-top: 4rem;
   margin: auto;
-  width: 66rem;
+  max-width: 66rem;
 }
 
 .container .banner {
@@ -408,7 +408,9 @@ body {
 
 .container .solution-img .wrap .imgWrap img {
   width: 120px;
+  height: 166px;
   margin: 0 3rem 0 -3rem;
+  object-fit: contain;
 }
 
 .container .solution-img .wrap .imgWrap p {
@@ -426,7 +428,7 @@ body {
 }
 
 .container .solution-img .wrap .threeImg {
-  height: 5rem;
+  /* height: 5rem; */
   padding-bottom: 2.2rem;
 }
 
@@ -510,6 +512,7 @@ body {
   color: #1017a9;
   position: relative;
   margin: 0 auto 2rem;
+  font-weight: 500;
 }
 
 .content-title .wrap h2::before{
@@ -620,7 +623,7 @@ body {
 
 /* 頁尾 */
 .footer {
-  width: 1440px;
+  width: 1400px;
   height: 40vh;
   margin: auto;
   background: linear-gradient(140deg, transparent 110px, #88ddec 0);

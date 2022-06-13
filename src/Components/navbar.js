@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const navs = {
   home: {
@@ -34,13 +35,13 @@ const navs = {
 const Navbar = () => {
   return (
     <div className="navbar">
-      <a href="/etica-sample" className="navbar-brand">
+      <NavLink to={navs.home.path} className="navbar-brand">
         <img
           className="navbar-logo"
           src={process.env.PUBLIC_URL + "/img/logo.png"}
           alt="明曜科技,ETICA BATTERY,Etica Battery,ETICA,etica battery."
         />
-      </a>
+      </NavLink>
       <div className="navbar-line"></div>
 
       <div className="dropMenu">
@@ -59,16 +60,16 @@ const Navbar = () => {
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
-                <a href="#introduction">公司簡介</a>
+                <Link to="/aboutus#introduction">公司簡介</Link>
               </li>
               <li>
-                <a href="#history">企業沿革</a>
+                <Link to="/aboutus#history">企業沿革</Link>
               </li>
               <li>
-                <a href="#business">經營理念</a>
+                <Link to="/aboutus#business">經營理念</Link>
               </li>
               <li>
-                <a href="#feature">未來展望</a>
+                <Link to="/aboutus#feature">未來展望</Link>
               </li>
             </ul>
           </div>
@@ -78,19 +79,19 @@ const Navbar = () => {
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
-                <a href="#commercialFacility">商業設施</a>
+                <Link to="/solution#commercialFacility">商業設施</Link>
               </li>
               <li>
-                <a href="#trsportationApplication">交通應用</a>
+                <Link to="/solution#trsportationApplication">交通應用</Link>
               </li>
               <li>
-                <a href="#publicHouse">公設住宅</a>
+                <Link to="/solution#publicHouse">公設住宅</Link>
               </li>
               <li>
-                <a href="#industryApplication">工業應用</a>
+                <Link to="/solution#industryApplication">工業應用</Link>
               </li>
               <li>
-                <a href="#greenEnergyIndustry">綠能產業</a>
+                <Link to="/solution#greenEnergyIndustry">綠能產業</Link>
               </li>
             </ul>
           </div>
