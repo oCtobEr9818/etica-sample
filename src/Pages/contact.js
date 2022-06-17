@@ -2,29 +2,44 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import mapKey from "../Components/key";
 
-const Contact = ({ latitude = 24.9553234, longitude = 121.3841572 }) => {
-  const renderMarkers = (map, maps) => {
-    let marker = new maps.Marker({
-      position: { lat: latitude, lng: longitude },
-      map,
-      title: "明曜科技股份有限公司",
-    });
-    return marker;
-  };
-
-  const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const Contact = () => {
+  const AnyReactComponent = ({ text }) => (
+    <div className="markPoint">
+      <div className="point">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+      </div>
+      <div className="text">{text}</div>
+    </div>
+  );
 
   return (
-    <div className="container" style={{ height: "30vh", width: "30%" }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: mapKey }}
-        defaultCenter={{ lat: latitude, lng: longitude }}
-        defaultZoom={15}
-        yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
-      >
-        <AnyReactComponent lat={24.9553234} lng={121.3841572} text="明曜科技" />
-      </GoogleMapReact>
+    <div className="container" style={{ height: "43.5vh" }}>
+      <div className="map">
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: mapKey }}
+          defaultCenter={{ lat: 24.9553234, lng: 121.3841572 }}
+          defaultZoom={14}
+          yesIWantToUseGoogleMapApiInternals
+        >
+          <AnyReactComponent
+            lat={24.9553234}
+            lng={121.3841572}
+            text="明曜科技股份有限公司"
+          />
+          <AnyReactComponent
+            lat={24.9485431}
+            lng={121.381965}
+            text="桃子腳國民中小學"
+          />
+        </GoogleMapReact>
+
+        {/* <button className="map-option" onClick={{}}>
+          樹林
+        </button>
+        <button className="map-option" onClick={{}}>
+          三重
+        </button> */}
+      </div>
     </div>
   );
 };

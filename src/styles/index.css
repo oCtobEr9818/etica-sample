@@ -285,6 +285,7 @@ body {
 
 /* 橫幅開始 */
 .container {
+  max-width: 100%;
   padding-top: 4rem;
   margin: auto;
   max-width: 66rem;
@@ -492,6 +493,42 @@ body {
   border: 1px solid #ddd;
   padding-right: .7rem;
 }
+
+/* google地圖 */
+.container .map {
+  margin: 0 auto;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.container .map .markPoint {
+  position: relative;
+}
+
+.container .map .markPoint .point {
+  color: #f00;
+  font-size: 3em;
+  position: absolute;
+  top: -40px;
+}
+
+.container .map .markPoint .text {
+  width: 140px;
+  color: #f00;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: -30px;
+  left: 20px;
+}
+
 
 /* 內容 */
 .content-title {
