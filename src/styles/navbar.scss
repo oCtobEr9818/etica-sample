@@ -32,16 +32,17 @@
   padding-left: 5rem;
   margin: auto;
   z-index: 1;
-  @include pad {
-    width: 100%;
-  }
   @include mini-pad {
-    background-color: #fff;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    background: #fff;
     border-bottom: 1px solid #ccc;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     position: fixed;
     top: 0;
+    left: 0;
   }
   @include mobile {
     width: 100%;
@@ -51,8 +52,9 @@
     display: inline-block;
     margin: 1rem 0 0 1.5rem;
     padding: 1.15rem 0 0;
+
     @include mini-pad {
-      margin: 1rem 0 0 1.5rem;
+      margin-top: 10px;
     }
 
     .navbar-logo {
@@ -61,7 +63,7 @@
         width: 10rem;
       }
       @include mini-pad {
-        width: 9rem;
+        width: 11rem;
       }
       @include mobile {
         width: 7rem;
@@ -75,12 +77,12 @@
     border-top: 2px solid #000;
     opacity: 0.3;
     @include pad {
-      width: 10.5em;
+      width: 10rem;
     }
     @include mini-pad {
-      width: 9.5rem;
-      margin-left: 1.5rem;
-      border-top: 1px solid #000;
+      width: 11.5rem;
+      margin-left: 1rem;
+      border-top: 2px solid #000;
       opacity: 0.3;
     }
     @include mobile {
@@ -100,18 +102,16 @@
       left: 12rem;
       bottom: 1rem;
       @include pad {
-        width: 2px;
-        height: 1.75rem;
-        position: absolute;
-        left: 12.4rem;
-        bottom: 1.3rem;
+        height: 3rem;
+        left: 12.2rem;
+        bottom: 1rem;
       }
       @include mini-pad {
-        width: 1px;
-        height: 1.75rem;
+        width: 2px;
+        height: 2.5rem;
         position: absolute;
-        left: 11.45rem;
-        bottom: 1.55rem;
+        left: 13.5rem;
+        bottom: 0.9rem;
       }
       @include mobile {
         height: 1.5rem;
@@ -130,17 +130,15 @@
       left: 12.7rem;
       bottom: 3.4rem;
       @include pad {
-        width: 60%;
-        height: 2px;
-        position: absolute;
+        width: 70%;
         left: 12.9rem;
-        bottom: 2.85rem;
+        bottom: 3.7rem;
       }
       @include mini-pad {
-        width: 50%;
-        height: 1px;
+        width: 55%;
+        height: 2px;
         position: absolute;
-        left: 11.925rem;
+        left: 14.2rem;
         bottom: 3.1rem;
       }
       @include mobile {
@@ -220,12 +218,8 @@
     right: 0;
     top: 60%;
 
-    @include desktop {
-      // margin: 0 0 0 10rem;
-    }
     @include pad {
-      padding: 0 0.75rem;
-      font-size: 1.2em;
+      left: 7rem;
     }
     @include mini-pad {
       width: 100%;
@@ -277,7 +271,9 @@
         letter-spacing: 0.2rem;
 
         @include pad {
-          font-size: 0.8em;
+          padding: 0 0.7rem;
+          letter-spacing: 0.1rem;
+          font-size: 1.2em;
         }
         @include mini-pad {
           width: 100%;
@@ -400,10 +396,12 @@
           }
 
           a {
+            width: 100%;
+            padding: 0 0 0 4px;
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: normal;
-            letter-spacing: 0.2em;
+            font-size: 0.8em;
+            font-weight: 500;
+            letter-spacing: 0.4em;
             color: #fff;
             position: relative;
             display: block;
@@ -446,4 +444,36 @@
       } //subNavbar
     } // dropdown
   } //navbar-option
+
+  .dropMenu {
+    @include mini-pad {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+
+      .menu-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        display: block;
+        cursor: pointer;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+        &::before {
+          content: "";
+          height: 3px;
+          width: 1.8rem;
+          position: absolute;
+          left: 0.4rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: #000;
+          box-shadow: 0 10px 0 #000, 0 -10px 0 #000;
+        }
+      }
+    }
+  }
 } //navbar

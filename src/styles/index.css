@@ -752,15 +752,6 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  /* 導覽列 */
-  /* .navbar {
-    width: 100%;
-  } */
-
-  /* .navbar .navbar-line::after {
-    width: 60%;
-  } */
-
   /* e-bike圖片 */
   .container .ebike-img,
   .container .ESS-img {
@@ -1306,7 +1297,6 @@ body {
   /* 頁尾 */
   .footer {
     height: 30vh;
-    margin: 15% 0 0;
     background: linear-gradient(135deg, transparent 50px, #88ddec 0);
   }
   

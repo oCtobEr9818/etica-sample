@@ -32,13 +32,6 @@ const Contact = () => {
             text="桃子腳國民中小學"
           />
         </GoogleMapReact>
-
-        {/* <button className="map-option" onClick={{}}>
-          樹林
-        </button>
-        <button className="map-option" onClick={{}}>
-          三重
-        </button> */}
       </div>
     </div>
   );

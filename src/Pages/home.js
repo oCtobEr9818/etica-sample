@@ -2,6 +2,7 @@ import { imgHandler } from "../Components/imgHandler";
 import { v4 } from "uuid";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import MapChart from "../Components/mapChart";
 
 const Home = () => {
   const data = {
@@ -64,7 +65,7 @@ const Home = () => {
   };
 
   Aos.init({
-    offset: 50,
+    offset: 100,
   });
 
   return (
@@ -73,7 +74,7 @@ const Home = () => {
         <img src={process.env.PUBLIC_URL + "/img/home/test.png"} alt="test" />
         <ul className="imgOption">
           <li className="point point1">
-            <a href="#" className="point_a">
+            <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>關於我們</span>
@@ -81,7 +82,7 @@ const Home = () => {
             </a>
           </li>
           <li className="point point2">
-            <a href="#" className="point_a">
+            <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>解決方案</span>
@@ -89,7 +90,7 @@ const Home = () => {
             </a>
           </li>
           <li className="point point3">
-            <a href="#" className="point_a">
+            <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>研發</span>
@@ -97,7 +98,7 @@ const Home = () => {
             </a>
           </li>
           <li className="point point4">
-            <a href="#" className="point_a">
+            <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
                 <span>產品資訊</span>
@@ -160,12 +161,15 @@ const Home = () => {
           <div className="topline" id="client"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <img
+          <div className="certification" data-aos="fade-right">
+            <MapChart />
+          </div>
+          {/* <img
             data-fancybox="single"
             src={imgHandler(data.globalClient.img)}
             alt={data.globalClient.alt}
             data-aos="fade-up"
-          />
+          /> */}
           <h2>全客</h2>
           <h2>球戶</h2>
         </div>
