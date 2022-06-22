@@ -571,7 +571,7 @@ $primary-color: #93cddd;
           display: inline-block;
           background: $primary-color;
           position: absolute;
-          right: 0;
+          right: 0px;
           bottom: 0;
 
           @include mini-pad {
@@ -594,7 +594,7 @@ $primary-color: #93cddd;
           top: 0;
         }
       }
-
+      // 相關新聞
       .news {
         width: 60%;
         margin: auto;
@@ -651,21 +651,41 @@ $primary-color: #93cddd;
           }
         }
       }
-
+      // 全球客戶
       .certification {
-        max-width: 100%;
-        height: auto;
-        margin: 0 7rem 0 0;
+        width: 900px;
+        height: 500px;
+        margin: -20rem 7rem 0 0;
+        z-index: -1;
+        @include user-select-none;
 
         svg {
           width: 100%;
-          height: 650px;
+          height: 100%;
         }
-      }
 
-      img {
-        width: 80%;
-        z-index: -1;
+        table {
+          max-width: 100%;
+          border-collapse: collapse;
+
+          tbody {
+            width: 100%;
+
+            th,
+            td {
+              font-size: 0.8em;
+              padding: 5px;
+              width: 70px;
+              text-align: center;
+            }
+
+            th {
+              &:nth-child(1) {
+                color: #f00;
+              }
+            }
+          }
+        }
       }
 
       h2 {
@@ -756,6 +776,7 @@ $primary-color: #93cddd;
       }
     }
     .wrap:nth-child(3) {
+      height: 85vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -772,6 +793,9 @@ $primary-color: #93cddd;
         &::before {
           width: 0;
           height: 0;
+        }
+        &::after {
+          height: 42rem;
         }
       }
     }

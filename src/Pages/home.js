@@ -24,27 +24,6 @@ const Home = () => {
         alt: "明曜科技大廳",
       },
     ],
-    globalClient: {
-      img: "/img/home/globalclient.png",
-      alt: `美國和歐洲
-            DATALOGIC
-            HONEYWELL
-            IBM
-            UBIQCONN
-            ZONAR
-            ASIA
-            ACBEL
-            ASKEY
-            MOLICEL
-            OLYMPUS
-            中華電信
-            卡西歐
-            電裝 WAVE
-            JVCKENWOOD
-            LAWSON
-            SEVEN-ELEVEN
-            手機 `,
-    },
     news: [
       {
         url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
@@ -66,6 +45,7 @@ const Home = () => {
 
   Aos.init({
     offset: 100,
+    delay: 50,
   });
 
   return (
@@ -163,13 +143,80 @@ const Home = () => {
           <div className="underline"></div>
           <div className="certification" data-aos="fade-right">
             <MapChart />
+            <table>
+              <tbody>
+                <tr>
+                  <th>台灣</th>
+                  <td>7-Eleven</td>
+                  <td>亞旭 ASKEY</td>
+                  <td>研揚 AAEON</td>
+                  <td>攸泰 Ubiqconn</td>
+                  <td>威霸科技 Poslab</td>
+                  <td>菲力 Fairly</td>
+                  <td>乾坤富 ENDRICH</td>
+                  <td>達旺電力 UrVOLT</td>
+                  <td>群光電能 Chicony</td>
+                  <td>台泥儲能 TCC</td>
+                  <td>大眾電腦 FIC</td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td>康舒 AcBel</td>
+                  <td>彬松 ARTRON</td>
+                  <td>中華電信CHT</td>
+                  <td>台達電子 DELTA</td>
+                  <td>華城電機</td>
+                  <td>緯創 Wistron</td>
+                  <td>宇辰系統 YUCHEN</td>
+                  <td>金鋐建設</td>
+                  <td>奧林巴斯 OLYMPUS</td>
+                  <td>泓德能源 HDRE</td>
+                  <td>能元 MOLICEL</td>
+                </tr>
+                <tr>
+                  <th style={{ color: "#f90" }}>日本</th>
+                  <td>CASIO</td>
+                  <td>DENSO WAVE</td>
+                  <td>MAP</td>
+                  <td>SATORI</td>
+                  <td>JVCKENWOOD</td>
+                  <td>LAWSON</td>
+                </tr>
+                <tr>
+                  <th style={{ color: "#0af" }}>美國</th>
+                  <td>2T</td>
+                  <td>Motive</td>
+                  <td>Honeywell</td>
+                  <td>IBM</td>
+                  <td>ZONAR</td>
+                </tr>
+                <tr>
+                  <th style={{ color: "#faf" }}>歐洲</th>
+                  <td>DATALOGIC</td>
+                  <td>Aava Mobile</td>
+                  <td>RPB Safety</td>
+                  <td>AMPLER</td>
+                </tr>
+                <tr>
+                  <th style={{ color: "#00f" }}>中國</th>
+                  <td>
+                    ASKEY
+                    <br />
+                    (江蘇)
+                  </td>
+                  <td>
+                    AcBel
+                    <br />
+                    (東莞)
+                  </td>
+                </tr>
+                <tr>
+                  <th style={{ color: "#0aa" }}>韓國</th>
+                  <td>POINT Mobile</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          {/* <img
-            data-fancybox="single"
-            src={imgHandler(data.globalClient.img)}
-            alt={data.globalClient.alt}
-            data-aos="fade-up"
-          /> */}
           <h2>全客</h2>
           <h2>球戶</h2>
         </div>

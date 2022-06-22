@@ -518,14 +518,10 @@ body {
 .container .map .markPoint .text {
   width: 140px;
   color: #f00;
-  font-size: 1.2em;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  font-size: 1.3em;
+  font-weight: 600;
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: 20px;
 }
 

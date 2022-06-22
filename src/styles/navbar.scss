@@ -43,9 +43,54 @@
     position: fixed;
     top: 0;
     left: 0;
+
+    .menu-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #f7f7f7;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        height: 3px;
+        width: 1.8rem;
+        position: absolute;
+        left: 0.35rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: #000;
+        box-shadow: 0 10px 0 #000, 0 -10px 0 #000;
+      }
+
+      span {
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+        display: block;
+        overflow: hidden;
+      }
+    }
   }
   @include mobile {
     width: 100%;
+
+    .menu-btn {
+      width: 2.2rem;
+      height: 2.2rem;
+      top: 1.2rem;
+      right: 1.2rem;
+
+      &::before {
+        left: 0.2rem;
+      }
+    }
   }
 
   .navbar-brand {
@@ -59,9 +104,6 @@
 
     .navbar-logo {
       width: 9rem;
-      @include pad {
-        width: 10rem;
-      }
       @include mini-pad {
         width: 11rem;
       }
@@ -76,9 +118,6 @@
     margin-left: 1.5rem;
     border-top: 2px solid #000;
     opacity: 0.3;
-    @include pad {
-      width: 10rem;
-    }
     @include mini-pad {
       width: 11.5rem;
       margin-left: 1rem;
@@ -148,67 +187,6 @@
       }
     }
   }
-  @include mobile {
-    .menu-btn {
-      width: 2.2rem;
-      height: 2.2rem;
-      top: 1.2rem;
-      right: 1.2rem;
-
-      &::before {
-        left: 0.2rem;
-      }
-    }
-  }
-
-  #menu-control {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-
-    /* 768px以下裝置的選單控制 */
-    // :checked ~ .navbar-option {
-    //   top: 6rem;
-    //   opacity: 1;
-    // }
-  }
-
-  @include mini-pad {
-    .menu-btn {
-      width: 2.5rem;
-      height: 2.5rem;
-      background-color: #f7f7f7;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      display: block;
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      cursor: pointer;
-
-      &::before {
-        content: "";
-        height: 3px;
-        width: 1.8rem;
-        position: absolute;
-        left: 0.35rem;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background-color: #000;
-        box-shadow: 0 10px 0 #000, 0 -10px 0 #000;
-      }
-
-      span {
-        opacity: 0;
-        width: 1px;
-        height: 1px;
-        display: block;
-        overflow: hidden;
-      }
-    }
-  }
 
   /* 導覽列選項 */
   .navbar-option {
@@ -223,13 +201,12 @@
     }
     @include mini-pad {
       width: 100%;
-      height: 25vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 0 auto;
+      margin: auto;
       position: absolute;
-      top: -17rem;
+      top: -25rem;
       opacity: 0;
       transition: 0.3s;
     }
@@ -237,6 +214,7 @@
     li {
       position: relative;
 
+      // 藍色大方塊
       &::before {
         content: "";
         display: inline-block;
@@ -248,6 +226,14 @@
         position: absolute;
         bottom: 0.1rem;
         left: 1.2rem;
+
+        @include mini-pad {
+          z-index: 1;
+          width: 0.6rem;
+          height: 0.6rem;
+          bottom: 1.2rem;
+          left: 42.5%;
+        }
       }
       &::after {
         content: "";
@@ -259,6 +245,18 @@
         position: absolute;
         bottom: 0.1rem;
         right: 1.2rem;
+
+        @include mini-pad {
+          width: 0.6rem;
+          height: 0.6rem;
+          bottom: 1.2rem;
+          right: 39.5%;
+        }
+      }
+      &:first-child {
+        @include mini-pad {
+          margin-left: 0;
+        }
       }
 
       a {
@@ -277,16 +275,17 @@
         }
         @include mini-pad {
           width: 100%;
-          height: 3rem;
+          height: 0;
           display: block;
-          background-color: #fff;
-          line-height: 1.75;
-          font-size: 1.5em;
+          color: transparent;
+          background: transparent;
+          font-size: 1.6em;
           text-align: center;
-          border-bottom: 1px solid #000;
-          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          line-height: 2;
+          transition: 0.3s;
         }
 
+        // 藍色小方塊
         &::before {
           content: "";
           display: inline-block;
@@ -297,6 +296,13 @@
           position: absolute;
           bottom: 0.1rem;
           left: 2rem;
+
+          @include mini-pad {
+            width: 0.4rem;
+            height: 0.4rem;
+            bottom: 1.1rem;
+            left: 43.5%;
+          }
         }
         &::after {
           content: "";
@@ -308,6 +314,18 @@
           position: absolute;
           bottom: 0.1rem;
           right: 2rem;
+
+          @include mini-pad {
+            width: 0.4rem;
+            height: 0.4rem;
+            bottom: 1.1rem;
+            right: 43.5%;
+          }
+        }
+        &:last-child {
+          @include mini-pad {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          }
         }
       }
 
@@ -318,133 +336,137 @@
         background-color: #029be2;
         opacity: 0.6;
       }
-      &:nth-child(2):hover > .dropdown .subNavbar {
+      &:hover > .dropdown .subNavbar {
         display: inline-block;
       }
-    } //li
 
-    .dropdown {
-      display: inline-block;
-      z-index: 1;
-
-      .subNavbar {
-        width: 100px;
-        display: none;
-        text-align: center;
-        background: #75c2d3;
-        border-radius: 20px;
-        position: absolute;
-        top: 2rem;
-        left: 0.8rem;
-
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 100px;
-          height: 20px;
-          position: absolute;
-          top: -0.8rem;
-          left: 0;
+      .dropdown {
+        display: inline-block;
+        z-index: 1;
+        @include mini-pad {
+          display: none;
         }
 
-        li {
-          position: relative;
-          margin-bottom: 1rem;
-          transform: translateY(0);
-          transition: 0.3s;
+        .subNavbar {
+          width: 100px;
+          display: none;
+          text-align: center;
+          background: #75c2d3;
+          border-radius: 20px;
+          position: absolute;
+          top: 2rem;
+          left: 0.8rem;
 
-          &:first-child {
-            margin-top: 1rem;
-          }
-          &:hover {
-            transform: translateY(-5px);
-          }
-          // 插頭線身
           &::before {
             content: "";
-            opacity: 1;
-            border-bottom: 1px solid #172a88;
+            display: inline-block;
+            width: 100px;
+            height: 20px;
             position: absolute;
-            left: 10%;
-            right: 0;
-            bottom: -5px;
-            width: 0;
-            height: 0;
-            transition: 0.2s 0.25s;
-          }
-          &:hover::before {
-            left: 15%;
-            right: 0;
-            width: 70%;
-            transition: 0.2s;
-          }
-          // 插頭頭部
-          &::after {
-            content: "";
-            width: 0;
-            height: 10px;
-            opacity: 1;
-            background-color: #172a88;
-            position: absolute;
-            left: 85%;
-            bottom: -10px;
-            transition: 0.2s 0.1s;
-          }
-          &:hover::after {
-            width: 6px;
-            transition: 0.2s 0.2s;
+            top: -0.8rem;
+            left: 0;
           }
 
-          a {
-            width: 100%;
-            padding: 0 0 0 4px;
-            text-decoration: none;
-            font-size: 0.8em;
-            font-weight: 500;
-            letter-spacing: 0.4em;
-            color: #fff;
+          li {
             position: relative;
-            display: block;
+            margin-bottom: 1rem;
+            transform: translateY(0);
+            transition: 0.3s;
 
-            // 插頭黃色前端
+            &:first-child {
+              margin-top: 1rem;
+            }
+            &:hover {
+              transform: translateY(-5px);
+            }
+            // 插頭線身
             &::before {
               content: "";
-              width: 0;
-              height: 1px;
               opacity: 1;
-              background-color: yellow;
+              border-bottom: 1px solid #172a88;
               position: absolute;
-              bottom: -7px;
-              left: 86%;
-              transition: 0.2s;
-              z-index: 1;
+              left: 10%;
+              right: 0;
+              bottom: -5px;
+              width: 0;
+              height: 0;
+              transition: 0.2s 0.25s;
             }
             &:hover::before {
-              width: 6px;
-              transition: 0.2s 0.4s;
+              left: 15%;
+              right: 0;
+              width: 70%;
+              transition: 0.2s;
             }
+            // 插頭頭部
             &::after {
               content: "";
               width: 0;
-              height: 1px;
+              height: 10px;
               opacity: 1;
-              background-color: yellow;
+              background-color: #172a88;
               position: absolute;
-              bottom: -3px;
-              left: 86%;
-              transition: 0.2s;
-              z-index: 1;
+              left: 85%;
+              bottom: -10px;
+              transition: 0.2s 0.1s;
             }
             &:hover::after {
               width: 6px;
-              transition: 0.2s 0.4s;
+              transition: 0.2s 0.2s;
             }
-          }
-        } //li
-      } //subNavbar
-    } // dropdown
+
+            a {
+              width: 100%;
+              padding: 0 0 0 4px;
+              text-decoration: none;
+              font-size: 0.8em;
+              font-weight: 500;
+              letter-spacing: 0.4em;
+              color: #fff;
+              position: relative;
+              display: block;
+
+              // 插頭黃色前端
+              &::before {
+                content: "";
+                width: 0;
+                height: 1px;
+                opacity: 1;
+                background-color: yellow;
+                position: absolute;
+                bottom: -7px;
+                left: 86%;
+                transition: 0.2s;
+                z-index: 1;
+              }
+              &:hover::before {
+                width: 6px;
+                transition: 0.2s 0.4s;
+              }
+              &::after {
+                content: "";
+                width: 0;
+                height: 1px;
+                opacity: 1;
+                background-color: yellow;
+                position: absolute;
+                bottom: -3px;
+                left: 86%;
+                transition: 0.2s;
+                z-index: 1;
+              }
+              &:hover::after {
+                width: 6px;
+                transition: 0.2s 0.4s;
+              }
+            }
+          } //li
+        } //subNavbar
+      } // dropdown
+    } //li
   } //navbar-option
 
+  // 768px以下選單
   .dropMenu {
     @include mini-pad {
       position: absolute;
@@ -472,6 +494,34 @@
           margin: auto;
           background: #000;
           box-shadow: 0 10px 0 #000, 0 -10px 0 #000;
+        }
+
+        span {
+          opacity: 0;
+          width: 1px;
+          height: 1px;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+  } // dropMenu
+
+  #menu-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    :checked ~ .navbar-option {
+      top: 6rem;
+      opacity: 1;
+
+      li {
+        a {
+          height: 3.5rem;
+          background: #fff;
+          color: #343875;
         }
       }
     }

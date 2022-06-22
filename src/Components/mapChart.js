@@ -11,14 +11,41 @@ const geoUrl =
 
 const markers = [
   {
-    markerOffset: -30,
-    name: "Taiwan",
+    markerOffset: { x: 25, y: -8 },
+    markerColor: "#f00",
+    name: "台灣",
     coordinates: [121, 24],
   },
-  { markerOffset: 15, name: "La Paz", coordinates: [-68.1193, -16.4897] },
-  { markerOffset: 15, name: "Brasilia", coordinates: [-47.8825, -15.7942] },
-  { markerOffset: 15, name: "Santiago", coordinates: [-70.6693, -33.4489] },
-  { markerOffset: 15, name: "Bogota", coordinates: [-74.0721, 4.711] },
+  {
+    markerOffset: { x: 0, y: 18 },
+    markerColor: "#00f",
+    name: "中國",
+    coordinates: [108, 30],
+  },
+  {
+    markerOffset: { x: -5, y: -27 },
+    markerColor: "#0aa",
+    name: "韓國",
+    coordinates: [128, 36],
+  },
+  {
+    markerOffset: { x: 25, y: -8 },
+    markerColor: "#f90",
+    name: "日本",
+    coordinates: [138, 36],
+  },
+  {
+    markerOffset: { x: 0, y: 15 },
+    markerColor: "#faf",
+    name: "歐洲",
+    coordinates: [8, 50],
+  },
+  {
+    markerOffset: { x: 0, y: 15 },
+    markerColor: "#0af",
+    name: "美國",
+    coordinates: [-115, 42],
+  },
 ];
 
 const MapChart = () => {
@@ -36,11 +63,11 @@ const MapChart = () => {
           ))
         }
       </Geographies>
-      {markers.map(({ name, coordinates, markerOffset }) => (
+      {markers.map(({ name, coordinates, markerOffset, markerColor }) => (
         <Marker key={name} coordinates={coordinates}>
           <g
             fill="none"
-            stroke="#FF5533"
+            stroke={markerColor}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -51,7 +78,8 @@ const MapChart = () => {
           </g>
           <text
             textAnchor="middle"
-            y={markerOffset}
+            x={markerOffset.x}
+            y={markerOffset.y}
             style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
           >
             {name}

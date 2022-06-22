@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 import mapKey from "../Components/key";
 
 const Contact = () => {
-  const AnyReactComponent = ({ text }) => (
+  const CustomMarker = ({ text }) => (
     <div className="markPoint">
       <div className="point">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -17,20 +17,16 @@ const Contact = () => {
       <div className="map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: mapKey }}
-          defaultCenter={{ lat: 24.9553234, lng: 121.3841572 }}
-          defaultZoom={14}
+          defaultCenter={{ lat: 24.998752, lng: 121.4247906 }}
+          defaultZoom={12}
           yesIWantToUseGoogleMapApiInternals
         >
-          <AnyReactComponent
+          <CustomMarker
             lat={24.9553234}
             lng={121.3841572}
-            text="明曜科技股份有限公司"
+            text="明曜科技總公司"
           />
-          <AnyReactComponent
-            lat={24.9485431}
-            lng={121.381965}
-            text="桃子腳國民中小學"
-          />
+          <CustomMarker lat={25.0480859} lng={121.469599} text="三重新廠" />
         </GoogleMapReact>
       </div>
     </div>
