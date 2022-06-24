@@ -16,9 +16,8 @@ body {
   max-width: 66rem;
   height: 6rem;
   display: block;
-  margin-right: 5rem;
-  position: relative;
   margin: auto;
+  position: relative;
   z-index: 1;
 }
 
@@ -28,7 +27,7 @@ body {
   padding: 1.15rem 0 0;
 }
 
-.navbar .navbar-logo {
+.navbar .navbar-brand .navbar-logo {
   width: 9rem;
 }
 
@@ -501,7 +500,6 @@ body {
   height: 40vh;
   display: flex;
   flex: 1;
-  position: relative;
 }
 
 .container .map .markPoint {
@@ -782,9 +780,6 @@ body {
 
 @media screen and (max-width: 992px) {
   /* 導覽列 */
-  .navbar .navbar-line {
-    width: 10rem;
-  }
   .navbar .navbar-line::before {
     height: 3rem;
     left: 12.2rem;
@@ -1137,6 +1132,7 @@ body {
     top: 1.65rem;
   }
 
+  /* 內容標題 */
   .content-title .wrap h2{
     font-size: 1.3em;
   }
@@ -1179,7 +1175,6 @@ body {
   }
   .container .content .contentRight-img {
     height: 9.5rem;
-    /* margin: 0 1.2rem; */
   }
   .container .content p {
     width: 18rem;

@@ -18,58 +18,103 @@
     @content;
   }
 }
+@mixin mini-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 
 .footer {
-  width: 1261px;
+  max-width: 1400px;
   height: 40vh;
-  margin: 0 auto;
-  background: linear-gradient(135deg, transparent 130px, #88ddec 0);
+  margin: auto;
+  background: linear-gradient(140deg, transparent 110px, #88ddec 0);
+  position: relative;
+  color: #666;
   @include desktop {
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
-  @include pad {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
+  @include mini-pad {
+    background: linear-gradient(140deg, transparent 90px, #88ddec 0);
   }
   @include mobile {
     width: 100%;
+  }
+  @include mini-mobile {
+    height: 30vh;
+    background: linear-gradient(135deg, transparent 50px, #88ddec 0);
   }
 
   h2 {
     display: inline-block;
     font-size: 1.7em;
-    margin: 4rem 0 0 10rem;
+    font-weight: normal;
+    position: absolute;
+    top: 20%;
+    left: 18%;
     @include pad {
       font-size: 1.5em;
       display: block;
     }
     @include mini-pad {
+      // margin-left: 7rem;
+    }
+    @include mobile {
+      font-size: 1.5em;
+    }
+    @include mini-mobile {
       font-size: 1.2em;
-      margin-left: 7rem;
+      padding-left: 0.5rem;
     }
   }
 
   .footer-wrap {
     width: 500px;
-    text-align: left;
-    font-size: 1em;
+    display: inline-block;
+    font-size: 1.2em;
     line-height: 2;
-    margin: 1rem auto 0;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    margin: auto;
+    @include mini-pad {
+      left: 18%;
+    }
+    @include mobile {
+      font-size: 1em;
+    }
+    @include mini-mobile {
+      font-size: 0.7em;
+    }
 
     p {
+      font-family: "BankGothic Md BT";
+
       .fa {
         width: 2rem;
         padding-right: 0.5rem;
+        text-align: center;
       }
       @include pad {
-        margin-left: 10rem;
         text-align: left;
       }
       @include mini-pad {
-        font-size: 0.8em;
-        margin-left: 7rem;
+        font-size: 0.9em;
+        // margin-left: 7rem;
       }
     }
   } //footer-wrap
+
+  a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    position: absolute;
+    bottom: 5px;
+    @include mini-mobile {
+      font-size: 0.5em;
+    }
+  }
 } //footer

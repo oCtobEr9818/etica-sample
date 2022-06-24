@@ -18,12 +18,18 @@
     @content;
   }
 }
+@mixin mini-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 
 .container {
   // 內容的標題
   .content-title {
+    max-width: 66rem; // added
     height: 20vh;
-    margin-top: 5rem;
+    margin: 5rem auto 0; // added
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +43,10 @@
         color: #1017a9;
         position: relative;
         margin: 0 auto 2rem;
+        font-weight: 500;
+        @include mobile {
+          font-size: 1.3em;
+        }
 
         &::before {
           content: "";
@@ -67,20 +77,27 @@
 
         &::before {
           content: "";
-          background-color: #0bcf67;
-          height: 20px;
-          width: 13px;
+          background: #0bcf67;
+          height: 10px;
+          width: 8px;
           position: absolute;
           left: 15%;
+          @include mobile {
+            width: 9px;
+          }
         }
         &::after {
           content: "";
-          background-color: #0bcf67;
-          height: 20px;
-          width: 13px;
+          background: #0bcf67;
+          height: 10px;
+          width: 8px;
           position: absolute;
           left: 85%;
           top: 0;
+          @include mobile {
+            width: 9px;
+            left: 83%;
+          }
         }
 
         .square {
@@ -90,20 +107,27 @@
           &::before {
             content: "";
             display: block;
-            background-color: #0bcf67;
-            height: 20px;
-            width: 13px;
+            background: #0bcf67;
+            height: 10px;
+            width: 8px;
             position: absolute;
             left: 5%;
+            @include mobile {
+              width: 9px;
+            }
           }
           &::after {
             content: "";
             display: block;
-            background-color: #0bcf67;
-            height: 20px;
-            width: 13px;
+            background: #0bcf67;
+            height: 10px;
+            width: 8px;
             position: absolute;
             left: 95%;
+            @include mobile {
+              width: 9px;
+              left: 93%;
+            }
           }
         }
       }
@@ -112,7 +136,14 @@
 
   // 關於我們內容
   .content {
+    max-width: 66rem; // added
+    margin: auto; // added
     display: flex;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
     // 關於我們左圖
     .contentLeft-img {
       width: 10rem;
@@ -139,6 +170,10 @@
         height: 8.6rem;
         margin-left: 1.3rem;
       }
+      @include mini-mobile {
+        width: 3.5rem;
+        height: 7rem;
+      }
     }
     // 關於我們右圖
     .contentRight-img {
@@ -146,22 +181,23 @@
       margin-left: 4rem;
 
       @include desktop {
-        height: 15rem;
+        height: 16rem;
         margin-left: 2.8rem;
       }
       @include pad {
-        width: auto;
-        height: 12rem;
+        height: 21rem;
         margin: 0 2.5rem;
       }
       @include mini-pad {
-        height: 12rem;
-        width: auto;
+        height: 16rem;
         margin: 0 2rem;
       }
       @include mobile {
         height: 9.5rem;
-        margin: 0 1.2rem;
+      }
+      @include mini-mobile {
+        height: 8rem;
+        margin: 0 1rem;
       }
     }
 
@@ -169,14 +205,15 @@
       width: 44rem;
       font-size: 1.2em;
       white-space: pre-line;
+      margin: 0 auto;
 
       @include desktop {
         font-size: 1em;
         width: 30rem;
       }
       @include pad {
-        margin-right: 2.5rem;
-        width: 27rem;
+        width: 35rem;
+        margin: 0 auto;
       }
       @include mini-pad {
         width: 23rem;
@@ -186,23 +223,33 @@
         font-size: 0.9em;
         margin-right: 1.8rem;
       }
+      @include mini-mobile {
+        width: 15rem;
+        margin-right: 1.5rem;
+      }
     }
   }
 
-  // 解決方案內容
+  //解決方案
   .solution-img {
-    width: 100%;
+    // max-width: 100%;
+    max-width: 66rem; // added
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    padding-left: 2rem;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
 
     .blueImg {
       width: 30%;
     }
 
     .wrap {
-      width: 70%;
+      max-width: 70%;
       display: flex;
       flex-direction: column;
 
@@ -214,15 +261,22 @@
         margin: 0 auto 2rem;
 
         img {
-          margin: 0 0.7rem;
+          width: 120px;
+          height: 166px;
+          margin: 0 3rem 0 -3rem;
+          object-fit: contain;
         }
 
         p {
           width: 12.5rem;
+          margin: 0 2rem 0 -2rem;
           line-height: 1.7;
           font-size: 0.9em;
           white-space: pre-line;
           color: #4b93a0;
+          @include desktop {
+            font-size: 0.7em;
+          }
 
           &::first-line {
             font-weight: bold;
@@ -232,27 +286,30 @@
       }
 
       .threeImg {
-        width: 35rem;
         padding-bottom: 2.2rem;
       }
-    }
+    } // wrap
   } // solution-img
 
   // 產品資訊
   .industrialBattery-img {
     display: flex;
-    width: 90%;
+    // width: 90%;
+    max-width: 66rem; // added
+    margin: auto; // added
 
     .hexegon {
       width: 12rem;
       margin: 0 0.5rem 0 0;
       object-fit: contain;
-
       @include mini-pad {
-        width: 9rem;
+        width: 11rem;
       }
       @include mobile {
-        width: 8rem;
+        width: 9rem;
+      }
+      @include mini-mobile {
+        width: 7rem;
       }
     }
 
@@ -266,18 +323,123 @@
   }
 
   p {
-    width: 90%;
+    // width: 90%;
+    max-width: 66rem; // added
     letter-spacing: 0.4px;
     margin: 1.5rem auto 0;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
   }
 
-  // e-bike, ESS儲能電池
-  .ebike-img,
-  .ESS-img {
+  // ESS儲能電池主頁
+  .product-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+    .imgWrap {
+      width: 600px;
+      height: 460px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 1;
+      background: linear-gradient(115deg, transparent 654px, #aaa 664px, transparent 0);
+      position: relative;
+
+      img {
+        width: 210px;
+        height: 200px;
+        padding: 15px;
+        transform: translateY(0);
+        transition: 0.3s;
+        object-fit: contain;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+    }
+
+    h2 {
+      width: 500px;
+      height: 460px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5em;
+      font-family: "Noto Sans Lisu";
+      color: transparent;
+      -webkit-text-stroke: 2px #000;
+      background: linear-gradient(115deg, transparent 110px, #aaa 120px, transparent 0);
+    }
+  }
+
+  // ESS儲能電池分頁
+  .product2-content,
+  .product3-content {
+    max-width: 1200px;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 200px;
+      object-fit: contain;
+    }
+
+    .contentWrap {
+      width: 70%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 2rem;
+        border-collapse: collapse;
+
+        thead {
+          tr {
+            td {
+              border: 1px solid #000;
+              text-align: center;
+              padding: 10px;
+            }
+          }
+        }
+      }
+
+      button {
+        padding: 5px;
+        margin-top: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // e-bike
+  .ebike-img {
     display: flex;
     justify-content: center;
     margin: auto;
-
     @include desktop {
       width: 80%;
     }
@@ -288,13 +450,14 @@
 
   // 產品資訊表格
   .table {
-    width: 100%;
+    // width: 100%;
+    max-width: 66rem; // added
+    margin: auto; // added
     cursor: default;
     text-align: left;
     display: block;
     margin: 3rem auto 0;
     overflow-x: auto;
-
     @include pad {
       width: 90%;
     }
@@ -303,31 +466,61 @@
       line-height: 3;
       border-collapse: collapse;
       width: 100%;
-
       @include desktop {
         line-height: 2.5;
       }
       @include mini-pad {
         line-height: 2;
-        font-size: 0.9em;
+        font-size: 18px;
       }
       @include mobile {
-        font-size: 0.8em;
+        font-size: 16px;
       }
-
-      thead {
-        th {
-          background-color: #ddd;
-          border: 1px solid #aaa;
-          border-bottom: 2px solid #aaa;
-        }
+      @include mini-mobile {
+        font-size: 14px;
       }
 
       th,
       td {
-        padding-left: 0.5rem;
+        padding-left: 10px;
         border: 1px solid #ddd;
         padding-right: 0.7rem;
+      }
+
+      thead th {
+        background: #ddd;
+        border: 1px solid #aaa;
+        border-bottom: 2px solid #aaa;
+      }
+    }
+  }
+
+  // google地圖
+  .map {
+    margin: 0 auto;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex: 1;
+
+    .markpoint {
+      position: relative;
+
+      .point {
+        color: #f00;
+        font-size: 3em;
+        position: absolute;
+        top: -40px;
+      }
+
+      .text {
+        width: 140px;
+        color: #f00;
+        font-size: 1.3em;
+        font-weight: 600;
+        position: absolute;
+        top: -40px;
+        left: 20px;
       }
     }
   }

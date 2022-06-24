@@ -9,19 +9,19 @@ const Home = () => {
     bannerImage: [
       {
         img: "/img/home/img01.png",
-        alt: "公司外觀",
+        alt: "樹林區公司外觀",
       },
       {
-        img: "/img/home/img02.png",
-        alt: "明曜科技Logo牆面",
+        img: "/img/home/img_2.png",
+        alt: "三重區公司外觀示意圖",
       },
       {
-        img: "/img/home/img03.png",
-        alt: "明曜科技入口處",
+        img: "/img/home/img_3.png",
+        alt: "三重區公司外觀示意圖",
       },
       {
-        img: "/img/home/img04.png",
-        alt: "明曜科技大廳",
+        img: "/img/home/img_4.png",
+        alt: "三重區公司外觀示意圖",
       },
     ],
     news: [

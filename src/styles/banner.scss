@@ -25,17 +25,15 @@
 }
 
 .container {
+  max-width: 100%;
+  // width: 66rem;
   padding-top: 4rem;
   margin: auto;
-  max-width: 66rem;
   @include pad {
     width: 100%;
   }
   @include mini-pad {
     padding: 6rem 0 0;
-  }
-  @include mobile {
-    overflow-x: hidden;
   }
 
   .banner {
@@ -47,9 +45,6 @@
     background: linear-gradient(0deg, #0c3e4c, #195e8d, #75bccd);
     z-index: -1;
     @include mobile {
-      height: 40vh;
-    }
-    @include mini-mobile {
       height: 35vh;
     }
 
@@ -133,6 +128,7 @@
         width: 80%;
         font-weight: normal;
         font-size: 2em;
+        letter-spacing: 0.5rem;
         text-align: right;
         color: #fff;
         border-bottom: 1px solid #93cddd;
@@ -195,7 +191,7 @@
             right: -4.28rem;
           }
         }
-      }
+      } // h2
     } // slash
   } // banner
 } //container

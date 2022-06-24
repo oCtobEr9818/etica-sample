@@ -463,7 +463,7 @@ $primary-color: #93cddd;
           padding: 0 0.3rem;
         }
       }
-      img:nth-child(n + 3) {
+      img:nth-child(n + 2) {
         width: 13rem;
 
         @include pad {
@@ -655,7 +655,7 @@ $primary-color: #93cddd;
       .certification {
         width: 900px;
         height: 500px;
-        margin: -20rem 7rem 0 0;
+        margin: -20rem 0 0;
         z-index: -1;
         @include user-select-none;
 
