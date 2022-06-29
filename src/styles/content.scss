@@ -69,7 +69,7 @@
       }
 
       .decoraction {
-        height: 20px;
+        height: 10px;
         width: 100%;
         background-color: #88ddec;
         margin: 0 auto 2rem;
@@ -102,7 +102,7 @@
 
         .square {
           width: 100%;
-          height: 20px;
+          height: 10px;
 
           &::before {
             content: "";
@@ -291,49 +291,7 @@
     } // wrap
   } // solution-img
 
-  // 產品資訊
-  .industrialBattery-img {
-    display: flex;
-    // width: 90%;
-    max-width: 66rem; // added
-    margin: auto; // added
-
-    .hexegon {
-      width: 12rem;
-      margin: 0 0.5rem 0 0;
-      object-fit: contain;
-      @include mini-pad {
-        width: 11rem;
-      }
-      @include mobile {
-        width: 9rem;
-      }
-      @include mini-mobile {
-        width: 7rem;
-      }
-    }
-
-    .handheld {
-      object-fit: contain;
-      width: 75%;
-      @include mobile {
-        width: 70%;
-      }
-    }
-  }
-
-  p {
-    // width: 90%;
-    max-width: 66rem; // added
-    letter-spacing: 0.4px;
-    margin: 1.5rem auto 0;
-
-    &:last-child {
-      margin-bottom: 5rem;
-    }
-  }
-
-  // ESS儲能電池主頁
+  // 產品資訊-ESS儲能電池
   .product-content {
     max-width: 1200px;
     margin: auto;
@@ -435,62 +393,39 @@
     }
   }
 
-  // e-bike
-  .ebike-img {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    @include desktop {
+  // 研發
+  .development-content {
+    max-width: 100%;
+
+    .development-wrap {
       width: 80%;
-    }
-    @include mini-pad {
-      width: 95%;
-    }
-  }
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
 
-  // 產品資訊表格
-  .table {
-    // width: 100%;
-    max-width: 66rem; // added
-    margin: auto; // added
-    cursor: default;
-    text-align: left;
-    display: block;
-    margin: 3rem auto 0;
-    overflow-x: auto;
-    @include pad {
-      width: 90%;
-    }
-
-    table {
-      line-height: 3;
-      border-collapse: collapse;
-      width: 100%;
-      @include desktop {
-        line-height: 2.5;
-      }
-      @include mini-pad {
-        line-height: 2;
-        font-size: 18px;
-      }
-      @include mobile {
-        font-size: 16px;
-      }
-      @include mini-mobile {
-        font-size: 14px;
+      img {
+        width: 50%;
+        height: 600px;
+        object-fit: cover;
+        background: #caa;
       }
 
-      th,
-      td {
-        padding-left: 10px;
-        border: 1px solid #ddd;
-        padding-right: 0.7rem;
-      }
+      .development-txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #f7f7f7;
+        background: #242834;
 
-      thead th {
-        background: #ddd;
-        border: 1px solid #aaa;
-        border-bottom: 2px solid #aaa;
+        h2 {
+          margin: 5rem 0 0;
+        }
+
+        p {
+          margin: 2rem 5rem;
+          line-height: 2;
+        }
       }
     }
   }

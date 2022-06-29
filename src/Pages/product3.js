@@ -67,11 +67,6 @@ const Product3 = () => {
 
       {/* 電動推車電池模組 */}
       <div className="product3-content">
-        <img
-          src={imgHandler(data.product3_content.cart.img)}
-          alt={data.product3_content.cart.alt}
-        />
-
         <div className="contentWrap">
           <h2 id="cart">電動推車電池模組</h2>
           <table>
@@ -100,6 +95,10 @@ const Product3 = () => {
             </thead>
           </table>
         </div>
+        <img
+          src={imgHandler(data.product3_content.cart.img)}
+          alt={data.product3_content.cart.alt}
+        />
       </div>
     </div>
   );

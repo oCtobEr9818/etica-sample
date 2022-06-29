@@ -125,7 +125,7 @@
       }
 
       h2 {
-        width: 80%;
+        width: 85%;
         font-weight: normal;
         font-size: 2em;
         letter-spacing: 0.5rem;
@@ -135,6 +135,9 @@
         padding: 0 1rem 0.3rem 0;
         position: absolute;
         right: 6rem;
+        @include pad {
+          width: 70%;
+        }
         @include mini-pad {
           width: 60%;
           font-size: 1.2rem;

@@ -146,7 +146,7 @@ const Home = () => {
             <table>
               <tbody>
                 <tr>
-                  <th>台灣</th>
+                  <th style={{ color: "#f00" }}>台灣</th>
                   <td>7-Eleven</td>
                   <td>亞旭 ASKEY</td>
                   <td>研揚 AAEON</td>
