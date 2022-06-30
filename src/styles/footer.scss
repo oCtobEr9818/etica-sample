@@ -26,9 +26,9 @@
 
 .footer {
   max-width: 1400px;
-  height: 40vh;
+  height: 30vh;
   margin: auto;
-  background: linear-gradient(140deg, transparent 110px, #88ddec 0);
+  background: linear-gradient(140deg, transparent 100px, #88ddec 0);
   position: relative;
   color: #666;
   @include desktop {
@@ -36,13 +36,13 @@
     overflow-x: hidden;
   }
   @include mini-pad {
-    background: linear-gradient(140deg, transparent 90px, #88ddec 0);
+    background: linear-gradient(140deg, transparent 80px, #88ddec 0);
   }
   @include mobile {
     width: 100%;
   }
   @include mini-mobile {
-    height: 30vh;
+    height: 25vh;
     background: linear-gradient(135deg, transparent 50px, #88ddec 0);
   }
 

@@ -649,8 +649,25 @@ $primary-color: #93cddd;
           }
         }
       }
-      // 全球客戶
+
+      // 國際認證
       .certification {
+        max-width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          margin: 0 8rem 0 1rem;
+          transform: scaleX(-1);
+        }
+      }
+
+      // 全球客戶
+      .client {
         max-width: 900px;
         height: 500px;
         margin: -20rem 0 0;
@@ -675,7 +692,7 @@ $primary-color: #93cddd;
             box-sizing: border-box;
           }
         }
-      } // certification
+      } // client
 
       h2 {
         @include user-select-none;

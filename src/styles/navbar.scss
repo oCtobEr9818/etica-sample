@@ -326,10 +326,11 @@
         color: #343875;
         padding: 0 1.7rem;
         font-size: 1em;
-        font-weight: bold;
+        font-weight: 600;
+        font-family: Microsoft JhengHei, Arial, sans-serif;
         text-decoration: none;
         position: relative;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.15rem;
         @include pad {
           padding: 0 0.7rem;
           letter-spacing: 0.1rem;
@@ -496,8 +497,9 @@
               text-decoration: none;
               font-size: 0.8em;
               font-weight: 500;
+              font-family: Microsoft JhengHei, Arial, sans-serif;
               letter-spacing: 0.4em;
-              color: #fff;
+              color: #f7f7f7;
               position: relative;
               display: block;
 

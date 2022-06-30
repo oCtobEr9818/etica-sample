@@ -110,6 +110,7 @@ const Home = () => {
       </div>
 
       <div className="content">
+        {/* 相關新聞 */}
         <div className="wrap">
           <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
@@ -129,19 +130,27 @@ const Home = () => {
           <h2>關聞</h2>
         </div>
 
+        {/* 國際認證 */}
         <div className="wrap">
           <div className="topline" id="international"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
+          <div className="certification" data-aos="fade-right">
+            <img
+              src={process.env.PUBLIC_URL + "/img/認證標章.jpg"}
+              alt="test"
+            />
+          </div>
           <h2>國認</h2>
           <h2>際證</h2>
         </div>
 
+        {/* 全球客戶 */}
         <div className="wrap">
           <div className="topline" id="client"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="certification" data-aos="fade-right">
+          <div className="client" data-aos="fade-right">
             <MapChart />
             <table>
               <tbody>
