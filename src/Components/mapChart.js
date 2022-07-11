@@ -6,8 +6,8 @@ import {
   Marker,
 } from "react-simple-maps";
 
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+// const geoUrl =
+//   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const markers = [
   {
@@ -51,7 +51,7 @@ const markers = [
 const MapChart = () => {
   return (
     <ComposableMap className="mapChart">
-      <Geographies geography={geoUrl}>
+      <Geographies geography={process.env.PUBLIC_URL + "/feature.json"}>
         {({ geographies }) =>
           geographies.map((geo) => (
             <Geography
@@ -80,7 +80,7 @@ const MapChart = () => {
             textAnchor="middle"
             x={markerOffset.x}
             y={markerOffset.y}
-            style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
+            style={{ fontFamily: "Arial", fill: "#5D5A6D" }}
           >
             {name}
           </text>

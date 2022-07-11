@@ -11,13 +11,13 @@ const AboutUs = () => {
     introduction: {
       title: "公司簡介",
       id: "introduction",
-      content: `Since its founding in 2002, ETICA BATTERY INC. has experienced incredible growth. With its customer base in the rapidly evolving notebook computer, cellular phone, and handheld device markets.
-        
-        Etica has dedicated its considerable energies and resources to developing products in its current core markets, as well as new battery technologies for emerging applications such as automotive, ESS,and robot sector.
-        
-        These are the deliverables and tools Etica is using to be an enterprise affording energy of substitute and next generation for protection of earth environment.
+      content: `自 2002 年成立以來，明曜科技致力於研發及製造儲能電池、3C和可攜式手持設備。我們的客戶遍布全球,且提供完整的客製化方案來幫助各領域業主解決電源上的問題。
 
-        The principles that guided the company in its energetic pursuit of growth are honesty and pragmatism-Always putting customers first, emphasizing standards-based quality.`,
+      我們亦投入大量精力和資源開發現在當前的核心市場產品，更致力於產品研發及創新,用於汽車、ESS 和機器人領域等新興應用的新電池技術。
+      
+      明曜科技正在持續努力，以期許成為提供替代能源和次世代能源來保護地球環境的企業。
+      
+      誠實和務實是我司一貫的作業指標—始終以客戶需求為優先，專注於提升產品的價值及品質。`,
       image: process.env.PUBLIC_URL + "/img/company.png",
       alt: "淺藍色為底的圖片，裡面有一棟房子，房子旁邊有一棵樹",
     },

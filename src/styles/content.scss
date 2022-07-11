@@ -205,7 +205,9 @@
       width: 44rem;
       font-size: 1.2em;
       white-space: pre-line;
-      margin: 0 auto;
+      text-align: justify;
+
+      // margin: 0 auto;
 
       @include desktop {
         font-size: 1em;

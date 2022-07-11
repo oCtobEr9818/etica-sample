@@ -663,6 +663,7 @@ $primary-color: #93cddd;
           width: 100%;
           margin: 0 8rem 0 1rem;
           transform: scaleX(-1);
+          @include user-select-none;
         }
       }
 
@@ -671,7 +672,6 @@ $primary-color: #93cddd;
         max-width: 900px;
         height: 500px;
         margin: -20rem 0 0;
-        z-index: -1;
         @include user-select-none;
 
         svg {
