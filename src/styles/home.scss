@@ -182,12 +182,16 @@ $primary-color: #93cddd;
               z-index: -1;
             }
 
-            span {
-              color: transparent;
-              font-size: 1em;
+            a {
+              text-decoration: none;
 
-              @include mini-mobile {
-                padding-right: 3.5rem;
+              span {
+                color: transparent;
+                font-size: 1em;
+
+                @include mini-mobile {
+                  padding-right: 3.5rem;
+                }
               }
             }
           }
@@ -197,27 +201,31 @@ $primary-color: #93cddd;
             transition: 0.4s;
             width: 180px;
           }
-          &:hover > .point_wrap span {
+          &:hover > .point_wrap a span {
             color: #fff;
             transition: 0.4s 0.4s;
           }
         } // point_a
       } // point
       .point1 {
-        top: 52%;
-        left: 25%;
+        top: 55%;
+        left: 20.5%;
       }
       .point2 {
-        top: 25%;
-        left: 39%;
+        top: 38%;
+        left: 50%;
       }
       .point3 {
-        top: 22%;
-        left: 69%;
+        top: 35%;
+        left: 62.5%;
       }
       .point4 {
-        top: 47%;
-        left: 55.5%;
+        top: 75%;
+        left: 53%;
+      }
+      .point5 {
+        top: 48%;
+        right: 12%;
       }
     } // imgOption
   } // container-home

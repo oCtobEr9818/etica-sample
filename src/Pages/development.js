@@ -20,7 +20,7 @@ const Development = () => {
         <div className="development-wrap">
           {/* 水冷高壓 */}
           <img
-            src={process.env.PUBLIC_URL + "/img/水冷高壓.png"}
+            src={process.env.PUBLIC_URL + "/img/水冷高壓.jpg"}
             alt="水冷高壓"
           />
           <div className="development-txt">
@@ -41,13 +41,13 @@ const Development = () => {
             </p>
           </div>
           <img
-            src={process.env.PUBLIC_URL + "/img/防延燒設計.png"}
+            src={process.env.PUBLIC_URL + "/img/防延燒設計.jpg"}
             alt="防延燒設計"
           />
 
           {/* 集裝箱(大型儲能) */}
           <img
-            src={process.env.PUBLIC_URL + "/img/集裝箱.png"}
+            src={process.env.PUBLIC_URL + "/img/集裝箱.jpg"}
             alt="集裝箱(大型儲能)"
           />
           <div className="development-txt">

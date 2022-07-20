@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { HashLink as Link } from "react-router-hash-link";
 import { v4 } from "uuid";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -51,13 +52,15 @@ const Home = () => {
   return (
     <div className="home">
       <div className="container-home">
-        <img src={process.env.PUBLIC_URL + "/img/home/test.png"} alt="test" />
+        <img src={process.env.PUBLIC_URL + "/img/home/test.jpg"} alt="test" />
         <ul className="imgOption">
           <li className="point point1">
             <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>關於我們</span>
+                <Link to="/solution#commercialFacility">
+                  <span>商業設施</span>
+                </Link>
               </div>
             </a>
           </li>
@@ -65,7 +68,9 @@ const Home = () => {
             <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>解決方案</span>
+                <Link to="/solution#trsportationApplication">
+                  <span>交通應用</span>
+                </Link>
               </div>
             </a>
           </li>
@@ -73,7 +78,9 @@ const Home = () => {
             <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>研發</span>
+                <Link to="/solution#greenEnergyIndustry">
+                  <span>綠能產業</span>
+                </Link>
               </div>
             </a>
           </li>
@@ -81,7 +88,19 @@ const Home = () => {
             <a href="#test" className="point_a">
               <span className="point_span"></span>
               <div className="point_wrap">
-                <span>產品資訊</span>
+                <Link to="/solution#publicHouse">
+                  <span>公設住宅</span>
+                </Link>
+              </div>
+            </a>
+          </li>
+          <li className="point point5">
+            <a href="#test" className="point_a">
+              <span className="point_span"></span>
+              <div className="point_wrap">
+                <Link to="/solution#industryApplication">
+                  <span>工業應用</span>
+                </Link>
               </div>
             </a>
           </li>
