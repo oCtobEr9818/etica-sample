@@ -76,7 +76,15 @@ const Product = () => {
             </Link>
           ))}
         </div>
-        <h2>ESS</h2>
+        <div className="right-title">
+          <h2>ESS</h2>
+          <div className="title-bg">
+            <img
+              src={process.env.PUBLIC_URL + "/img/3-53405622.jpg"}
+              alt="ESS-bg"
+            />
+          </div>
+        </div>
       </div>
 
       {/* e-bike */}
@@ -89,14 +97,20 @@ const Product = () => {
             </Link>
           ))}
         </div>
-        <h2>LEV</h2>
+        <div className="right-title">
+          <h2>LEV</h2>
+          <div className="title-bg"></div>
+        </div>
       </div>
 
       {/* 工控電池 */}
       <ContentTitle title={data.industrialBattery.title} />
       <div className="product-content">
         <div className="imgWrap"></div>
-        <h2>工控電池</h2>
+        <div className="right-title">
+          <h2>工控電池</h2>
+          <div className="title-bg"></div>
+        </div>
       </div>
     </div>
   );

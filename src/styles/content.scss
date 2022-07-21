@@ -314,7 +314,7 @@
       align-items: center;
       flex-wrap: wrap;
       z-index: 1;
-      background: linear-gradient(115deg, transparent 654px, #aaa 664px, transparent 0);
+      // background: linear-gradient(115deg, transparent 654px, #aaa 664px, transparent 0);
       position: relative;
 
       img {
@@ -332,17 +332,49 @@
       }
     }
 
-    h2 {
+    .right-title {
       width: 500px;
       height: 460px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 5em;
-      font-family: "Noto Sans Lisu";
-      color: transparent;
-      -webkit-text-stroke: 2px #000;
-      background: linear-gradient(115deg, transparent 110px, #aaa 120px, transparent 0);
+      position: relative;
+
+      .title-bg {
+        width: 672px;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        right: 0;
+        left: -122px;
+        &::after {
+          content: "";
+          width: 220px;
+          height: 100%;
+          background: linear-gradient(115deg, #fff 195px, transparent 0);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+      }
+
+      h2 {
+        width: 500px;
+        height: 460px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        font-family: "Noto Sans Lisu";
+        color: #fff;
+        -webkit-text-stroke: 2px #000;
+        z-index: 1;
+        position: absolute;
+        // background: linear-gradient(115deg, transparent 110px, #aaa 120px, transparent 0);
+      }
     }
   }
 
@@ -350,18 +382,19 @@
   .product2-content,
   .product3-content {
     max-width: 1200px;
-    margin: 5rem auto;
+    height: 85vh;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
     img {
-      width: 200px;
+      width: 500px;
       object-fit: contain;
     }
 
     .contentWrap {
-      width: 70%;
+      width: 75%;
       margin: auto;
       display: flex;
       align-items: center;
@@ -371,17 +404,34 @@
         font-size: 2em;
       }
 
+      p {
+        width: 100%;
+        margin-top: 4rem;
+        line-height: 2;
+        white-space: pre-line;
+        display: flex;
+        justify-content: center;
+      }
+
       table {
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 5rem;
         border-collapse: collapse;
 
         thead {
           tr {
-            td {
+            td,
+            th {
               border: 1px solid #000;
               text-align: center;
-              padding: 10px;
+              font-weight: normal;
+              padding: 15px;
+            }
+
+            th {
+              font-weight: bold;
+              font-size: 1.1em;
+              background: #93cddd;
             }
           }
         }

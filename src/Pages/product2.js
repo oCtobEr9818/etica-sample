@@ -46,28 +46,34 @@ const Product2 = () => {
 
         <div className="contentWrap">
           <h2 id="ET48">水冷高壓儲能櫃</h2>
+          <p>
+            內建OTA軟韌體讀取功能
+            <br />
+            電池模組包含防延燒專利設計(專利號：10940384260號)
+            <br />
+            容量可依客戶需求擴充
+          </p>
           <table>
             <thead>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <th>電壓</th>
+                <th>瓦數</th>
+                <th>重量</th>
+                <th>尺寸</th>
+                <th>供電需求</th>
               </tr>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <td>48 V</td>
+                <td>9.6 kWh</td>
+                <td>120 kg</td>
+                <td>1011*676*565 mm</td>
+                <td>
+                  Single phase 3-wires
+                  <br />
+                  output 110 / 220 VAC
+                  <br />
+                  6KW Hybrid PV inverter
+                </td>
               </tr>
             </thead>
           </table>
@@ -78,31 +84,26 @@ const Product2 = () => {
       <div className="product2-content">
         <div className="contentWrap">
           <h2 id="house">家用儲能櫃 & 太陽能轉變器</h2>
+          <p>EV 快充專用儲能櫃</p>
           <table>
             <thead>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <th>電壓</th>
+                <th>容量</th>
+                <th>瓦數</th>
+                <th>工作電流</th>
+                <th>尺寸</th>
               </tr>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <td>48V</td>
+                <td>192Ah</td>
+                <td>9.2kWh</td>
+                <td>200~250 A</td>
+                <td>1100*1332*1585 mm</td>
               </tr>
             </thead>
           </table>
+
           <button>查看文件</button>
         </div>
 
@@ -121,31 +122,32 @@ const Product2 = () => {
 
         <div className="contentWrap">
           <h2 id="wallmounted">壁掛式儲能箱</h2>
+          <p>內建 OTA 軟韌體讀取功能</p>
           <table>
             <thead>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <th>電壓</th>
+                <th>瓦數</th>
+                <th>尺寸</th>
+                <th>重量</th>
+                <th>供電需求</th>
               </tr>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <td>48 V</td>
+                <td>9.2 kWh</td>
+                <td>1400*750*250 mm</td>
+                <td>100 kg</td>
+                <td>
+                  Single phase 3-wires
+                  <br />
+                  output 110 / 220 VAC
+                  <br />
+                  6KW Hybrid PV inverter
+                </td>
               </tr>
             </thead>
           </table>
+
           <button>查看文件</button>
         </div>
       </div>
@@ -157,25 +159,16 @@ const Product2 = () => {
           <table>
             <thead>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <th>電壓</th>
+                <th>容量</th>
+                <th>瓦數</th>
+                <th>工作電流</th>
               </tr>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <td>48V</td>
+                <td>192Ah</td>
+                <td>9.2kWh</td>
+                <td>3200A</td>
               </tr>
             </thead>
           </table>

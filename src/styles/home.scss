@@ -138,20 +138,19 @@ $primary-color: #93cddd;
 
           // 右邊列
           .point_wrap {
-            height: 50px;
-            width: 0;
+            height: 0;
+            width: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             white-space: nowrap;
-            visibility: visible;
+            visibility: hidden;
             transition: 0.5s;
             transform: translateY(-50%);
             position: absolute;
-            top: 50%;
-            left: 40px;
-
+            top: -40px;
+            left: -80px;
             @include mini-mobile {
               top: 40px;
               left: -15px;
@@ -199,11 +198,12 @@ $primary-color: #93cddd;
           &:hover > .point_wrap {
             visibility: visible;
             transition: 0.4s;
-            width: 180px;
-          }
-          &:hover > .point_wrap a span {
-            color: #fff;
-            transition: 0.4s 0.4s;
+            height: 50px;
+
+            a span {
+              color: #fff;
+              transition: 0.4s 0.4s;
+            }
           }
         } // point_a
       } // point
