@@ -5,7 +5,9 @@ const Solution = () => {
   const data = {
     solution_img: {
       title: "解決方案",
-      image: imgHandler("/img/solution.png"),
+      image1: imgHandler("/img/solution.png"),
+      image2: imgHandler("/img/solution-test.png"),
+      image3: imgHandler("/img/squares.png"),
       alt: "一大塊太陽能板架設在停車場",
     },
     public: {
@@ -100,7 +102,37 @@ const Solution = () => {
   return (
     <div className="container">
       <div className="banner">
-        <img src={data.solution_img.image} alt={data.solution_img.alt} />
+        <img
+          src={data.solution_img.image2}
+          alt={data.solution_img.alt}
+          id="solution2"
+        />
+        <img
+          src={data.solution_img.image1}
+          alt={data.solution_img.alt}
+          id="solution1"
+        />
+        <img
+          src={data.solution_img.image3}
+          alt="squares"
+          className="squares square1"
+        />
+        <img
+          src={data.solution_img.image3}
+          alt="squares"
+          className="squares square2"
+        />
+        <img
+          src={data.solution_img.image3}
+          alt="squares"
+          className="squares square3"
+        />
+        <img
+          src={data.solution_img.image3}
+          alt="squares"
+          className="squares square4"
+        />
+
         <div className="slash">
           <h2>{data.solution_img.title}</h2>
         </div>

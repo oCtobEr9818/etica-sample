@@ -48,6 +48,29 @@
       height: 35vh;
     }
 
+    #solution1 {
+      width: 27rem;
+    }
+    #solution2 {
+      width: 28rem;
+      height: 24.5rem;
+      left: 2rem;
+      z-index: -1;
+    }
+    .squares {
+      top: 3rem;
+      left: 30rem;
+    }
+    .square2 {
+      left: 54.5rem;
+    }
+    .square3 {
+      left: 78.9rem;
+    }
+    .square4 {
+      left: 103.3rem;
+    }
+
     img {
       width: 25rem;
       z-index: 1;
@@ -68,7 +91,7 @@
     .slash {
       width: 100%;
       position: relative;
-      margin-bottom: 2rem;
+      margin-top: 10rem;
       @include mini-pad {
         width: 100%;
         position: relative;
@@ -125,7 +148,7 @@
       }
 
       h2 {
-        width: 85%;
+        width: 92%;
         font-weight: normal;
         font-size: 2em;
         letter-spacing: 0.5rem;

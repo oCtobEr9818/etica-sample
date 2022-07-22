@@ -382,65 +382,74 @@
   .product2-content,
   .product3-content {
     max-width: 1200px;
-    height: 85vh;
+    height: 80vh;
     margin: auto;
+    border-bottom: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    img {
-      width: 500px;
-      object-fit: contain;
+    flex-direction: column;
+    &:last-child {
+      border: none;
     }
 
     .contentWrap {
-      width: 75%;
+      width: 100%;
       margin: auto;
       display: flex;
+      justify-content: center;
       align-items: center;
-      flex-direction: column;
 
-      h2 {
-        font-size: 2em;
+      img {
+        width: 400px;
+        height: 450px;
+        object-fit: contain;
       }
 
-      p {
-        width: 100%;
-        margin-top: 4rem;
-        line-height: 2;
-        white-space: pre-line;
-        display: flex;
-        justify-content: center;
-      }
+      .subtitle {
+        width: 500px;
+        text-align: left;
+        margin-left: 10rem;
 
-      table {
-        width: 100%;
-        margin-top: 5rem;
-        border-collapse: collapse;
+        h2 {
+          font-size: 2em;
+          display: block;
+        }
 
-        thead {
-          tr {
-            td,
-            th {
-              border: 1px solid #000;
-              text-align: center;
-              font-weight: normal;
-              padding: 15px;
-            }
+        ul {
+          width: 100%;
+          margin-top: 4rem;
+          font-size: 1em;
+          line-height: 2.5;
 
-            th {
-              font-weight: bold;
-              font-size: 1.1em;
-              background: #93cddd;
-            }
+          li {
+            list-style: square;
+            margin-left: 1.5rem;
           }
         }
       }
+    }
+    table {
+      width: 100%;
+      margin: 0 0 10rem;
+      border-collapse: collapse;
 
-      button {
-        padding: 5px;
-        margin-top: 1rem;
-        cursor: pointer;
+      thead {
+        tr {
+          td,
+          th {
+            border: 1px solid #000;
+            text-align: center;
+            font-weight: normal;
+            padding: 15px;
+          }
+
+          th {
+            font-weight: bold;
+            font-size: 1.1em;
+            background: #93cddd;
+          }
+        }
       }
     }
   }
