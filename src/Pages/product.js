@@ -11,6 +11,13 @@ const Product = () => {
     },
     industrialBattery: {
       title: "工控電池",
+      image: [
+        {
+          img: "/img/1S1P.jpg",
+          alt: "1S1P",
+          url: "/product4#1S1P",
+        },
+      ],
     },
     eBikeLEV: {
       title: "e-bike.LEV",
@@ -51,6 +58,10 @@ const Product = () => {
           url: "/product2#energyStorageBox",
         },
       ],
+      bgImage: {
+        img: "/img/3-53405622.jpg",
+        alt: "ESS-bg",
+      },
     },
   };
 
@@ -80,8 +91,8 @@ const Product = () => {
           <h2>ESS</h2>
           <div className="title-bg">
             <img
-              src={process.env.PUBLIC_URL + "/img/3-53405622.jpg"}
-              alt="ESS-bg"
+              src={imgHandler(data.energyStorageBattery.bgImage.img)}
+              alt={data.energyStorageBattery.bgImage.alt}
             />
           </div>
         </div>
@@ -106,7 +117,13 @@ const Product = () => {
       {/* 工控電池 */}
       <ContentTitle title={data.industrialBattery.title} />
       <div className="product-content">
-        <div className="imgWrap"></div>
+        <div className="imgWrap">
+          {data.industrialBattery.image.map((item) => (
+            <Link to={item.url}>
+              <img src={imgHandler(item.img)} alt={item.alt} key={v4} />
+            </Link>
+          ))}
+        </div>
         <div className="right-title">
           <h2>工控電池</h2>
           <div className="title-bg"></div>

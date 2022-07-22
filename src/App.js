@@ -12,6 +12,7 @@ import Solution from "./Pages/solution";
 import Product from "./Pages/product";
 import Product2 from "./Pages/product2";
 import Product3 from "./Pages/product3";
+import Product4 from "./Pages/product4";
 import Development from "./Pages/development";
 import Performance from "./Pages/performance";
 import Contact from "./Pages/contact";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/product2" element={<Product2 />} />
         <Route path="/product3" element={<Product3 />} />
+        <Route path="/product4" element={<Product4 />} />
         <Route path="/development" element={<Development />} />
         <Route path="/performance" element={<Performance />} />
         <Route path="/contact" element={<Contact />} />
