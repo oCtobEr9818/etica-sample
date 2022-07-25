@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="container-home">
-        <img src={process.env.PUBLIC_URL + "/img/home/test.jpg"} alt="test" />
+        <img src={imgHandler("/img/home/test.jpg")} alt="test" />
         <ul className="imgOption">
           <li className="point point1">
             <a href="#test" className="point_a">
@@ -155,10 +155,7 @@ const Home = () => {
           <div className="trapezoid"></div>
           <div className="underline"></div>
           <div className="certification" data-aos="fade-right">
-            <img
-              src={process.env.PUBLIC_URL + "/img/認證標章.jpg"}
-              alt="test"
-            />
+            <img src={imgHandler("/img/Certification mark.jpg")} alt="test" />
           </div>
           <h2>國認</h2>
           <h2>際證</h2>

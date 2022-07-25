@@ -19,10 +19,7 @@ const Development = () => {
       <div className="development-content">
         <div className="development-wrap">
           {/* 水冷高壓 */}
-          <img
-            src={process.env.PUBLIC_URL + "/img/水冷高壓.jpg"}
-            alt="水冷高壓"
-          />
+          <img src={process.env.PUBLIC_URL + "/img/WCHP.jpg"} alt="水冷高壓" />
           <div className="development-txt">
             <h2>水冷高壓儲能</h2>
             <p>
@@ -40,14 +37,11 @@ const Development = () => {
               減少鋰電池意外燃燒時產生的連鎖反應，有效提高儲能系統的安全性
             </p>
           </div>
-          <img
-            src={process.env.PUBLIC_URL + "/img/防延燒設計.jpg"}
-            alt="防延燒設計"
-          />
+          <img src={process.env.PUBLIC_URL + "/img/ASD.jpg"} alt="防延燒設計" />
 
           {/* 集裝箱(大型儲能) */}
           <img
-            src={process.env.PUBLIC_URL + "/img/集裝箱.jpg"}
+            src={process.env.PUBLIC_URL + "/img/Container.jpg"}
             alt="集裝箱(大型儲能)"
           />
           <div className="development-txt">
