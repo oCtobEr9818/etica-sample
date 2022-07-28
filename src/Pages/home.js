@@ -52,61 +52,54 @@ const Home = () => {
   return (
     <div className="home">
       <div className="container-home">
+        {/* 首頁大圖 */}
         <img src={imgHandler("/img/home/test.jpg")} alt="test" />
+
         <ul className="imgOption">
           <li className="point point1">
-            <a href="#test" className="point_a">
-              <span className="point_span"></span>
+            <Link to="/solution#commercialFacility" className="point_a">
+              <span className="point_span" /> {/* 白色圓點 */}
               <div className="point_wrap">
-                <Link to="/solution#commercialFacility">
-                  <span>商業設施</span>
-                </Link>
+                <span>商業設施</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="point point2">
-            <a href="#test" className="point_a">
-              <span className="point_span"></span>
+            <Link to="/solution#trsportationApplication" className="point_a">
+              <span className="point_span" />
               <div className="point_wrap">
-                <Link to="/solution#trsportationApplication">
-                  <span>交通應用</span>
-                </Link>
+                <span>交通應用</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="point point3">
-            <a href="#test" className="point_a">
-              <span className="point_span"></span>
+            <Link to="/solution#greenEnergyIndustry" className="point_a">
+              <span className="point_span" />
               <div className="point_wrap">
-                <Link to="/solution#greenEnergyIndustry">
-                  <span>綠能產業</span>
-                </Link>
+                <span>綠能產業</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="point point4">
-            <a href="#test" className="point_a">
-              <span className="point_span"></span>
+            <Link to="/solution#publicHouse" className="point_a">
+              <span className="point_span" />
               <div className="point_wrap">
-                <Link to="/solution#publicHouse">
-                  <span>公設住宅</span>
-                </Link>
+                <span>公設住宅</span>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="point point5">
-            <a href="#test" className="point_a">
-              <span className="point_span"></span>
+            <Link to="/solution#industryApplication" className="point_a">
+              <span className="point_span" />
               <div className="point_wrap">
-                <Link to="/solution#industryApplication">
-                  <span>工業應用</span>
-                </Link>
+                <span>工業應用</span>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
 
+      {/* 橫幅 */}
       <div className="banner-home">
         <div className="hexagon">
           <a href="#news">相關新聞</a>

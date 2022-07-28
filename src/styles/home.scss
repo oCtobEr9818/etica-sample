@@ -146,7 +146,7 @@ $primary-color: #93cddd;
             text-align: center;
             white-space: nowrap;
             visibility: hidden;
-            transition: 0.5s;
+            transition: 0.4s 0.25s;
             transform: translateY(-50%);
             position: absolute;
             top: -40px;
@@ -174,23 +174,20 @@ $primary-color: #93cddd;
             }
             &::after {
               content: "";
-              height: 100%;
-              width: 30px;
+              height: 20px;
+              width: 180px;
               position: absolute;
-              right: 95%;
+              bottom: -15px;
               z-index: -1;
             }
 
-            a {
-              text-decoration: none;
+            span {
+              transition: 0.2s;
+              color: transparent;
+              font-size: 1em;
 
-              span {
-                color: transparent;
-                font-size: 1em;
-
-                @include mini-mobile {
-                  padding-right: 3.5rem;
-                }
+              @include mini-mobile {
+                padding-right: 3.5rem;
               }
             }
           }
@@ -200,9 +197,9 @@ $primary-color: #93cddd;
             transition: 0.4s;
             height: 50px;
 
-            a span {
+            span {
               color: #fff;
-              transition: 0.4s 0.4s;
+              transition: 0.4s 0.3s;
             }
           }
         } // point_a
