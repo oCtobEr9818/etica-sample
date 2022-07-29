@@ -146,7 +146,7 @@ $primary-color: #93cddd;
             text-align: center;
             white-space: nowrap;
             visibility: hidden;
-            transition: 0.4s 0.25s;
+            transition: 0.3s 0.2s;
             transform: translateY(-50%);
             position: absolute;
             top: -40px;
@@ -194,12 +194,12 @@ $primary-color: #93cddd;
 
           &:hover > .point_wrap {
             visibility: visible;
-            transition: 0.4s;
+            transition: 0.3s;
             height: 50px;
 
             span {
               color: #fff;
-              transition: 0.4s 0.3s;
+              transition: 0.3s 0.3s;
             }
           }
         } // point_a
@@ -226,6 +226,16 @@ $primary-color: #93cddd;
       }
     } // imgOption
   } // container-home
+
+  // copyright
+  // .copyright {
+  //   display: block;
+  //   padding: 0 5rem 1rem 0;
+  //   text-align: center;
+  //   text-decoration: none;
+  //   font-size: 0.5em;
+  //   color: rgba(0, 0, 0, 0.2);
+  // }
 
   // 橫幅
   .banner-home {

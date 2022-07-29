@@ -33,6 +33,10 @@ const Product = () => {
           url: "/product3#cart",
         },
       ],
+      bgImage: {
+        img: "/img/EV.jpg",
+        alt: "EV-bg",
+      },
     },
     energyStorageBattery: {
       title: "ESS儲能電池",
@@ -110,7 +114,12 @@ const Product = () => {
         </div>
         <div className="right-title">
           <h2>LEV</h2>
-          <div className="title-bg"></div>
+          <div className="title-bg">
+            <img
+              src={imgHandler(data.eBikeLEV.bgImage.img)}
+              alt={data.eBikeLEV.bgImage.alt}
+            />
+          </div>
         </div>
       </div>
 

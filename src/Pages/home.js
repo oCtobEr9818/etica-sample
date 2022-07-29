@@ -53,7 +53,7 @@ const Home = () => {
     <div className="home">
       <div className="container-home">
         {/* 首頁大圖 */}
-        <img src={imgHandler("/img/home/test.jpg")} alt="test" />
+        <img src={imgHandler("/img/home/test.jpg")} alt="Etica形象圖" />
 
         <ul className="imgOption">
           <li className="point point1">
@@ -98,6 +98,14 @@ const Home = () => {
           </li>
         </ul>
       </div>
+      {/* <a
+        href="http://www.freepik.com"
+        rel="noreferrer"
+        target="_blank"
+        className="copyright"
+      >
+        Designed by macrovector / Freepik
+      </a> */}
 
       {/* 橫幅 */}
       <div className="banner-home">
