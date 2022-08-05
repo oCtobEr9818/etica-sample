@@ -1,5 +1,6 @@
 import ContentTitle from "../Components/content-title";
 import Content from "../Components/content";
+import { imgHandler } from "../Components/imgHandler";
 
 const AboutUs = () => {
   const data = {
@@ -30,7 +31,7 @@ const AboutUs = () => {
         alt: "淺藍色為底的圖片，一本書和一支筆",
       },
       milestone: {
-        image: process.env.PUBLIC_URL + "/img/milestone.png",
+        image: process.env.PUBLIC_URL + "/img/milestone.jpg",
         alt: `2002 - ETICA Battery INC. was founded
               2022 - UL Certification
               2003 - ISO 9001 Certification
@@ -60,11 +61,16 @@ const AboutUs = () => {
   return (
     <div className="container">
       <div className="banner">
-        <img src={data.aboutus.image} alt={data.aboutus.alt} />
+        {/* <img src={data.aboutus.image} alt={data.aboutus.alt} />
 
         <div className="slash">
           <h2>{data.aboutus.title}</h2>
-        </div>
+        </div> */}
+        <img
+          src={imgHandler("/img/解決方案04.jpg")}
+          alt="解決方案04"
+          style={{ width: "100%" }}
+        />
       </div>
 
       {/* 公司簡介 */}

@@ -38,7 +38,8 @@
 
   .banner {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
+    margin-bottom: 30rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -49,26 +50,26 @@
     }
 
     #solution1 {
-      width: 27rem;
+      width: 38rem;
     }
     #solution2 {
-      width: 28rem;
-      height: 24.5rem;
-      left: 2rem;
+      width: 39rem;
+      height: 35rem;
+      left: 3rem;
       z-index: -1;
     }
     .squares {
-      top: 3rem;
-      left: 30rem;
+      top: 6rem;
+      left: 43rem;
     }
     .square2 {
-      left: 54.5rem;
+      left: 67.5rem;
     }
     .square3 {
-      left: 78.9rem;
+      left: 91.9rem;
     }
     .square4 {
-      left: 103.3rem;
+      left: 113.3rem;
     }
 
     img {
