@@ -6,7 +6,7 @@ const AboutUs = () => {
   const data = {
     aboutus: {
       title: "關於我們",
-      image: process.env.PUBLIC_URL + "/img/aboutus.png",
+      image: imgHandler("/img/aboutus.png"),
       alt: "三個人在開會，兩個男人一個女人，其中一個男人有地中海",
     },
     introduction: {
@@ -16,10 +16,8 @@ const AboutUs = () => {
 
       我們亦投入大量精力和資源開發現在當前的核心市場產品，更致力於產品研發及創新,用於汽車、ESS 和機器人領域等新興應用的新電池技術。
       
-      明曜科技正在持續努力，以期許成為提供替代能源和次世代能源來保護地球環境的企業。
-      
-      誠實和務實是我司一貫的作業指標—始終以客戶需求為優先，專注於提升產品的價值及品質。`,
-      image: process.env.PUBLIC_URL + "/img/company.png",
+      明曜科技正在持續努力，以期許成為提供替代能源和次世代能源來保護地球環境的企業。`,
+      image: imgHandler("/img/company.png"),
       alt: "淺藍色為底的圖片，裡面有一棟房子，房子旁邊有一棵樹",
     },
     history: {
@@ -27,11 +25,11 @@ const AboutUs = () => {
       id: "history",
       content: "",
       book: {
-        image: process.env.PUBLIC_URL + "/img/book.png",
+        image: imgHandler("/img/book.png"),
         alt: "淺藍色為底的圖片，一本書和一支筆",
       },
       milestone: {
-        image: process.env.PUBLIC_URL + "/img/milestone.jpg",
+        image: imgHandler("/img/milestone.jpg"),
         alt: `2002 - ETICA Battery INC. was founded
               2022 - UL Certification
               2003 - ISO 9001 Certification
@@ -45,15 +43,25 @@ const AboutUs = () => {
     business: {
       title: "經營理念",
       id: "business",
-      content: "",
-      image: process.env.PUBLIC_URL + "/img/peopleMoney.png",
+      content: `我們最基本的理念是，一旦做出承諾，必定不計代價，全力以赴；我們用人的首要條件是品格與才能，並充分給與個人發揮的空間，讓他們可以充分發揮各自的優點。
+      
+      誠實和務實是我司一貫的作業指標—始終以客戶需求為優先，專注於提升產品的價值及品質。
+
+      雖然來自不同的領域，但大家共同一心想著發展儲能的目標前行。此建立的團隊為明曜儲能提供了多面向的發展，也因此做出了與眾不同的產品。
+      `,
+      image: imgHandler("/img/peopleMoney.png"),
       alt: "淺藍色為底的圖片，一個人被鈔票圍著",
     },
     feature: {
       title: "未來展望",
       id: "feature",
-      content: "",
-      image: process.env.PUBLIC_URL + "/img/earth.png",
+      content: `明曜科技團隊透過與世界級的大廠合作，學習各品牌的優點及經驗，也讓明曜團隊的技術經驗持續成長。
+
+      盡可能讓更多的人使用儲能的系統，以降低地球資源過度消耗，也減少電力供給不穩定的問題，提供給未來更美好的生活品質。
+
+      未來明曜團隊以提供各種多樣化的儲能系統為目標。
+      `,
+      image: imgHandler("/img/earth.png"),
       alt: "淺藍色為底的圖片，一架飛機繞著地球飛",
     },
   };
@@ -61,16 +69,16 @@ const AboutUs = () => {
   return (
     <div className="container">
       <div className="banner">
-        {/* <img src={data.aboutus.image} alt={data.aboutus.alt} />
+        <img src={data.aboutus.image} alt={data.aboutus.alt} />
 
         <div className="slash">
           <h2>{data.aboutus.title}</h2>
-        </div> */}
-        <img
+        </div>
+        {/* <img
           src={imgHandler("/img/解決方案04.jpg")}
           alt="解決方案04"
           style={{ width: "100%" }}
-        />
+        /> */}
       </div>
 
       {/* 公司簡介 */}

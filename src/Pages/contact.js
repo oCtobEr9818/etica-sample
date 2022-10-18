@@ -1,40 +1,41 @@
 import React, { useRef } from "react";
 import GoogleMapReact from "google-map-react";
-import mapKey from "../Components/key";
 import emailjs from "@emailjs/browser";
 
+import mapKey from "../Components/key";
+import { useFormValidate } from "../Components/useFormValidate";
+
 const Contact = () => {
-  // useEffect(() => {
-  //   const handleEnter = (e) => {
-  //     if (e.key === "Enter") {
-  //       e.preventDefault();
+  const emailRule =
+    /^\w+((-\w+)|(\.\w+))*[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+  const isNotEmpty = (value) => value.trim() !== "";
+  const isEmailFormat = (value) => emailRule.test(value);
 
-  //       console.log("pressed Enter");
-  //     }
-  //   };
+  const {
+    value: name,
+    isValid: nameIsValid,
+    hasError: nameError,
+    onChangeValue: onChangeName,
+    onBlurValue: onBlurName,
+  } = useFormValidate(isNotEmpty);
 
-  //   document.addEventListener("keydown", handleEnter);
-
-  //   return () => {
-  //     document.addEventListener("keydown", handleEnter);
-  //   };
-  // }, []);
-
-  // function validateForm() {
-  //   let x =
-  //     document.forms["contact-form"]["fullname"]["company"]["email"]["msg"]
-  //       .value;
-  //   if (x === "") {
-  //     alert("欄位不能空白!");
-  //     return false;
-  //   }
-  // }
+  const {
+    value: email,
+    isValid: emailIsValid,
+    hasError: emailError,
+    onChangeValue: onChangeEmail,
+    onBlurValue: onBlurEmail,
+  } = useFormValidate(isEmailFormat);
 
   // 發送email
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!nameIsValid || !emailIsValid) {
+      alert("欄位不能為空白");
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -43,24 +44,46 @@ const Contact = () => {
         form.current,
         "sCK8COnh4d-o6DHKh"
       )
-      .then(
-        () => {
+      .then((e) => {
+        if (e) {
           alert("已送出信件！");
-        },
-        () => {
-          alert("送出失敗，請稍後再試一次");
         }
-      );
+      });
     form.current.reset();
   };
+
+  const nameInputClasses = nameError ? "invalid" : "";
+  const emailInputClasses = emailError ? "invalid" : "";
 
   // google地圖標記點
   const CustomMarker = ({ text }) => (
     <div className="markPoint">
-      <div className="point">
+      <div
+        className="point"
+        style={{
+          width: "50px",
+          color: "#f00",
+          fontSize: "3em",
+          position: "absolute",
+          top: "-40px",
+        }}
+      >
         <i className="fa fa-map-marker" aria-hidden="true"></i>
       </div>
-      <div className="text">{text}</div>
+      <div
+        className="text"
+        style={{
+          width: "140px",
+          color: "#f00",
+          fontSize: "1.3em",
+          fontWeight: "600",
+          position: "absolute",
+          top: "-40px",
+          left: "20px",
+        }}
+      >
+        {text}
+      </div>
     </div>
   );
 
@@ -70,7 +93,7 @@ const Contact = () => {
         <GoogleMapReact
           bootstrapURLKeys={{ key: mapKey }}
           defaultCenter={{ lat: 24.998752, lng: 121.4247906 }}
-          defaultZoom={12}
+          defaultZoom={11}
           yesIWantToUseGoogleMapApiInternals
         >
           <CustomMarker
@@ -85,34 +108,52 @@ const Contact = () => {
       {/* 聯絡我們表單 */}
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="form-wrap">
-          <label>姓名：</label>
+          <label>*姓名：</label>
           <input
             type="text"
             name="user_name"
-            placeholder="請輸入姓名或英文名字"
+            placeholder="請留下姓名或者公司名稱"
+            onChange={onChangeName}
+            onBlur={onBlurName}
+            value={name}
+            className={nameInputClasses}
           />
+          {nameError && <p>此欄位不能為空白</p>}
           <br />
         </div>
+
         <div className="form-wrap">
-          <label>公司：</label>
+          <label>*電子信箱：</label>
           <input
-            type="text"
-            name="company"
-            placeholder="請輸入您的公司，若為個人請填個人"
+            type="email"
+            name="email"
+            placeholder="請輸入常用的電子信箱"
+            onChange={onChangeEmail}
+            onBlur={onBlurEmail}
+            value={email}
+            className={emailInputClasses}
           />
+          {emailError && <p>格式錯誤或欄位為空白</p>}
           <br />
         </div>
+
         <div className="form-wrap">
-          <label>電子信箱：</label>
-          <input type="email" name="email" placeholder="請輸入常用的電子信箱" />
+          <label>主旨：</label>
+          <input type="text" name="subject" placeholder="請輸入主旨" />
           <br />
         </div>
         <div className="form-wrap">
           <label>內容：</label>
           <textarea name="message" cols="30" rows="10" />
         </div>
+
         <div className="form-wrap">
-          <input type="submit" value="送出" className="submit" />
+          <input
+            type="submit"
+            value="送出"
+            className="submit"
+            disabled={!nameIsValid || !emailIsValid}
+          />
         </div>
       </form>
     </div>

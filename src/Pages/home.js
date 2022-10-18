@@ -31,16 +31,6 @@ const Home = () => {
         title: "明曜異業結盟展企圖心 今年營收上看10億",
         date: "2022/03/01",
       },
-      {
-        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
-        title: "Lorem ipsum dolor sit amet consectetur Sapiente, enim!",
-        date: "2022/03/14",
-      },
-      {
-        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
-        title: "Lorem ipsum dolor sit amet consectetur.",
-        date: "2022/03/16",
-      },
     ],
   };
 

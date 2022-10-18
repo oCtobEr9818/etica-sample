@@ -1,3 +1,6 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Development = () => {
   const data = {
     development: {
@@ -6,6 +9,11 @@ const Development = () => {
       alt: "暫無圖片",
     },
   };
+
+  Aos.init({
+    offset: 100,
+    delay: 50,
+  });
 
   return (
     <div className="container">
@@ -19,7 +27,11 @@ const Development = () => {
       <div className="development-content">
         <div className="development-wrap">
           {/* 水冷高壓 */}
-          <img src={process.env.PUBLIC_URL + "/img/WCHP.jpg"} alt="水冷高壓" />
+          <img
+            src={process.env.PUBLIC_URL + "/img/WCHP.jpg"}
+            alt="水冷高壓"
+            data-aos="fade-right"
+          />
           <div className="development-txt">
             <h2>水冷高壓儲能</h2>
             <p>
@@ -37,12 +49,17 @@ const Development = () => {
               減少鋰電池意外燃燒時產生的連鎖反應，有效提高儲能系統的安全性
             </p>
           </div>
-          <img src={process.env.PUBLIC_URL + "/img/ASD.jpg"} alt="防延燒設計" />
+          <img
+            src={process.env.PUBLIC_URL + "/img/ASD.jpg"}
+            alt="防延燒設計"
+            data-aos="fade-left"
+          />
 
           {/* 集裝箱(大型儲能) */}
           <img
             src={process.env.PUBLIC_URL + "/img/Container.jpg"}
             alt="集裝箱(大型儲能)"
+            data-aos="fade-right"
           />
           <div className="development-txt">
             <h2>集裝箱(大型儲能)</h2>

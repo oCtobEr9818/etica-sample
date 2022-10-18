@@ -1,3 +1,5 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
 @mixin desktop {
   @media (max-width: 1200px) {
     @content;
@@ -499,7 +501,7 @@
   // google地圖
   .map {
     margin: 0 auto;
-    width: 100%;
+    width: 800px;
     height: 40vh;
     display: flex;
     flex: 1;
@@ -508,6 +510,7 @@
       position: relative;
 
       .point {
+        width: 50px;
         color: #f00;
         font-size: 3em;
         position: absolute;
@@ -530,12 +533,13 @@
   .contact-form {
     width: 70%;
     height: 390px;
-    margin: auto;
+    margin: 2rem auto 0;
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .form-wrap {
       width: 600px;
@@ -568,9 +572,13 @@
         border-radius: 4px;
         font-size: 1em;
         font-weight: 600;
-        position: absolute;
-        right: 0;
         cursor: pointer;
+      }
+
+      p {
+        position: absolute;
+        color: #f00;
+        font-size: 0.8em;
       }
     }
   }

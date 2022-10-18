@@ -1,4 +1,4 @@
-// const key = "AIzaSyAlOgWY80IloY0rw7rHfL9YFaUqMc7dGyU";
-// const mapKey = (e) => e;
+const key = "AIzaSyBVoRf_p7vaFSv-EX0YvZE68lSzvJP-mg4";
+const mapKey = (e) => e;
 
-// export default mapKey(key);
+export default mapKey(key);

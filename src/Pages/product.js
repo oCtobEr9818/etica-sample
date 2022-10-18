@@ -72,18 +72,18 @@ const Product = () => {
   return (
     <div className="container">
       <div className="banner">
-        {/* <img
+        <img
           src={imgHandler(data.product_img.image)}
           alt={data.product_img.alt}
         />
         <div className="slash">
           <h2>產品資訊</h2>
-        </div> */}
-        <img
+        </div>
+        {/* <img
           src={imgHandler("/img/解決方案03.jpg")}
           alt="解決方案01"
           style={{ width: "100%" }}
-        />
+        /> */}
       </div>
 
       {/* ESS儲能電池 */}

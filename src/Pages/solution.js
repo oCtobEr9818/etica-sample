@@ -122,16 +122,6 @@ const Solution = () => {
           alt="squares"
           className="squares square2"
         />
-        <img
-          src={data.solution_img.image3}
-          alt="squares"
-          className="squares square3"
-        />
-        {/* <img
-          src={data.solution_img.image3}
-          alt="squares"
-          className="squares square4"
-        /> */}
 
         <div className="slash">
           <h2>{data.solution_img.title}</h2>
