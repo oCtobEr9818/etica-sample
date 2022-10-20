@@ -6,7 +6,7 @@ const Development = () => {
     development: {
       title: "研發",
       image: process.env.PUBLIC_URL + "/img/sub-development.png",
-      alt: "暫無圖片",
+      alt: "動力研發部開發環境",
     },
   };
 

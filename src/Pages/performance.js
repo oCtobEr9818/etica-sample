@@ -3,7 +3,7 @@ const Performance = () => {
     development: {
       title: "實績案例",
       image: process.env.PUBLIC_URL + "/img/sub-performance.png",
-      alt: "暫無圖片",
+      alt: "實際案場使用情境",
     },
   };
 

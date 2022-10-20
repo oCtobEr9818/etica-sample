@@ -7,7 +7,7 @@ const Product = () => {
   const data = {
     product_img: {
       image: "/img/sub-product.png",
-      alt: "ESS Energy Storage System",
+      alt: "ESS Energy Storage System, ETICA 儲能櫃",
     },
     industrialBattery: {
       title: "工控電池",

@@ -7,7 +7,7 @@ const AboutUs = () => {
     aboutus: {
       title: "關於我們",
       image: imgHandler("/img/sub-aboutus.png"),
-      alt: "三個人在開會，兩個男人一個女人，其中一個男人有地中海",
+      alt: "辦公室內有木製的ETICA字樣",
     },
     introduction: {
       title: "公司簡介",
