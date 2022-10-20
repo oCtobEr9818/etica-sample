@@ -6,7 +6,7 @@ const AboutUs = () => {
   const data = {
     aboutus: {
       title: "關於我們",
-      image: imgHandler("/img/aboutus.png"),
+      image: imgHandler("/img/sub-aboutus.png"),
       alt: "三個人在開會，兩個男人一個女人，其中一個男人有地中海",
     },
     introduction: {
@@ -71,14 +71,9 @@ const AboutUs = () => {
       <div className="banner">
         <img src={data.aboutus.image} alt={data.aboutus.alt} />
 
-        <div className="slash">
+        {/* <div className="slash">
           <h2>{data.aboutus.title}</h2>
-        </div>
-        {/* <img
-          src={imgHandler("/img/解決方案04.jpg")}
-          alt="解決方案04"
-          style={{ width: "100%" }}
-        /> */}
+        </div> */}
       </div>
 
       {/* 公司簡介 */}

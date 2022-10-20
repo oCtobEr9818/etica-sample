@@ -7,12 +7,11 @@ import { useFormValidate } from "../Components/useFormValidate";
 
 const Contact = () => {
   const emailRule =
-    /^\w+((-\w+)|(\.\w+))*[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+    /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
   const isNotEmpty = (value) => value.trim() !== "";
   const isEmailFormat = (value) => emailRule.test(value);
 
   const {
-    value: name,
     isValid: nameIsValid,
     hasError: nameError,
     onChangeValue: onChangeName,
@@ -20,7 +19,6 @@ const Contact = () => {
   } = useFormValidate(isNotEmpty);
 
   const {
-    value: email,
     isValid: emailIsValid,
     hasError: emailError,
     onChangeValue: onChangeEmail,
@@ -33,7 +31,6 @@ const Contact = () => {
     e.preventDefault();
 
     if (!nameIsValid || !emailIsValid) {
-      alert("欄位不能為空白");
       return;
     }
 
@@ -115,10 +112,9 @@ const Contact = () => {
             placeholder="請留下姓名或者公司名稱"
             onChange={onChangeName}
             onBlur={onBlurName}
-            value={name}
             className={nameInputClasses}
           />
-          {nameError && <p>此欄位不能為空白</p>}
+          {nameError && <p className="error-text">此欄位不能為空白</p>}
           <br />
         </div>
 
@@ -130,10 +126,9 @@ const Contact = () => {
             placeholder="請輸入常用的電子信箱"
             onChange={onChangeEmail}
             onBlur={onBlurEmail}
-            value={email}
             className={emailInputClasses}
           />
-          {emailError && <p>格式錯誤或欄位為空白</p>}
+          {emailError && <p className="error-text">格式錯誤或欄位為空白</p>}
           <br />
         </div>
 

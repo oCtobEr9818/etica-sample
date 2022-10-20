@@ -32,16 +32,10 @@ export const useFormValidate = (validateValue) => {
     dispatch({ type: "BLUR" });
   };
 
-  const reset = () => {
-    dispatch({ type: "RESET" });
-  };
-
   return {
-    value: input.value,
     isValid: valueIsValid,
     hasError,
     onChangeValue,
     onBlurValue,
-    reset,
   };
 };

@@ -6,7 +6,7 @@ import { v4 } from "uuid";
 const Product = () => {
   const data = {
     product_img: {
-      image: "/img/product.png",
+      image: "/img/sub-product.png",
       alt: "ESS Energy Storage System",
     },
     industrialBattery: {
@@ -76,14 +76,9 @@ const Product = () => {
           src={imgHandler(data.product_img.image)}
           alt={data.product_img.alt}
         />
-        <div className="slash">
+        {/* <div className="slash">
           <h2>產品資訊</h2>
-        </div>
-        {/* <img
-          src={imgHandler("/img/解決方案03.jpg")}
-          alt="解決方案01"
-          style={{ width: "100%" }}
-        /> */}
+        </div> */}
       </div>
 
       {/* ESS儲能電池 */}
