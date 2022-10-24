@@ -76,9 +76,6 @@ const Product = () => {
           src={imgHandler(data.product_img.image)}
           alt={data.product_img.alt}
         />
-        {/* <div className="slash">
-          <h2>產品資訊</h2>
-        </div> */}
       </div>
 
       {/* ESS儲能電池 */}

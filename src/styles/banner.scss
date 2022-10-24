@@ -26,14 +26,9 @@
 
 .container {
   max-width: 100%;
-  // width: 66rem;
-  padding-top: 4rem;
   margin: auto;
   @include pad {
     width: 100%;
-  }
-  @include mini-pad {
-    padding: 6rem 0 0;
   }
 
   .banner {
@@ -43,157 +38,21 @@
     display: flex;
     align-items: center;
     position: relative;
-    // background: linear-gradient(0deg, #0c3e4c, #195e8d, #75bccd);
-    // z-index: -1;
-    // @include mobile {
-    //   height: 35vh;
-    // }
+
+    @include desktop {
+      margin: 0;
+    }
 
     img {
       width: 100%;
-      height: 650px;
-      z-index: 1;
-      // @include mini-pad {
-      //   width: 23rem;
-      // }
-      // @include mobile {
-      //   width: 15rem;
-      // }
-      // @include mini-mobile {
-      //   width: 11rem;
-      // }
+      padding-top: 5rem;
+      height: 620px;
+      z-index: -1;
+
+      @include desktop {
+        padding: 0;
+        height: auto;
+      }
     }
-
-    // .slash {
-    //   width: 100%;
-    //   position: relative;
-    //   margin-top: 10rem;
-    //   @include mini-pad {
-    //     width: 100%;
-    //     position: relative;
-    //     margin-bottom: 2rem;
-    //   }
-
-    //   &::before {
-    //     content: "";
-    //     display: block;
-    //     color: #93cddd;
-    //     width: 1.5rem;
-    //     border-bottom: 1px solid #93cddd;
-    //     transform: rotate(110deg);
-    //     position: absolute;
-    //     right: 5rem;
-    //     top: 2.3rem;
-    //     @include mini-pad {
-    //       width: 1.2rem;
-    //       right: 5.2rem;
-    //       top: 1.4rem;
-    //     }
-    //     @include mobile {
-    //       width: 1rem;
-    //       right: 5.3rem;
-    //       top: 1.1rem;
-    //     }
-    //     @include mini-mobile {
-    //       right: 4.35rem;
-    //       top: 1.08rem;
-    //     }
-    //   }
-    //   &::after {
-    //     content: "";
-    //     display: block;
-    //     color: #93cddd;
-    //     width: 2.45rem;
-    //     border-bottom: 1px solid #93cddd;
-    //     transform: rotate(250deg);
-    //     position: absolute;
-    //     right: 3.85rem;
-    //     top: 2.8rem;
-    //     @include mini-pad {
-    //       right: 3.95rem;
-    //       top: 1.9rem;
-    //     }
-    //     @include mobile {
-    //       width: 2rem;
-    //       right: 4.3rem;
-    //       top: 1.55rem;
-    //     }
-    //     @include mini-mobile {
-    //       right: 3.35rem;
-    //     }
-    //   }
-
-    //   h2 {
-    //     width: 92%;
-    //     font-weight: normal;
-    //     font-size: 2em;
-    //     letter-spacing: 0.5rem;
-    //     text-align: right;
-    //     color: #fff;
-    //     border-bottom: 1px solid #93cddd;
-    //     padding: 0 1rem 0.3rem 0;
-    //     position: absolute;
-    //     right: 6rem;
-    //     @include pad {
-    //       width: 70%;
-    //     }
-    //     @include mini-pad {
-    //       width: 60%;
-    //       font-size: 1.2rem;
-    //     }
-    //     @include mobile {
-    //       font-size: 1rem;
-    //     }
-    //     @include mini-mobile {
-    //       right: 5rem;
-    //       letter-spacing: 0.3rem;
-    //       padding-right: 0.7rem;
-    //     }
-
-    //     &::before {
-    //       content: "";
-    //       display: block;
-    //       color: #93cddd;
-    //       width: 0.9rem;
-    //       border-bottom: 1px solid #93cddd;
-    //       transform: rotate(110deg);
-    //       position: absolute;
-    //       right: -1.9rem;
-    //       top: 3.5rem;
-    //       @include mini-pad {
-    //         right: -1.85rem;
-    //         top: 2.66rem;
-    //       }
-    //       @include mobile {
-    //         right: -1.63rem;
-    //         top: 2.06rem;
-    //       }
-    //       @include mini-mobile {
-    //         right: -1.6rem;
-    //       }
-    //     }
-    //     &::after {
-    //       content: "";
-    //       display: block;
-    //       color: #93cddd;
-    //       width: 3rem;
-    //       border-bottom: 1px solid #93cddd;
-    //       position: absolute;
-    //       right: -4.65rem;
-    //       top: 3.1rem;
-    //       @include mini-pad {
-    //         right: -4.55rem;
-    //         top: 2.2rem;
-    //       }
-    //       @include mobile {
-    //         right: -4.35rem;
-    //         top: 1.65rem;
-    //       }
-    //       @include mini-mobile {
-    //         right: -4.28rem;
-    //       }
-    //     }
-    //   } // h2
-    // } // slash
   } // banner
 } //container

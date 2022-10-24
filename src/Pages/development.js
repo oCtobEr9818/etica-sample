@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 const Development = () => {
   const data = {
     development: {
-      title: "研發",
       image: process.env.PUBLIC_URL + "/img/sub-development.png",
       alt: "動力研發部開發環境",
     },
@@ -19,9 +18,6 @@ const Development = () => {
     <div className="container">
       <div className="banner">
         <img src={data.development.image} alt={data.development.alt} />
-        {/* <div className="slash">
-          <h2>{data.development.title}</h2>
-        </div> */}
       </div>
 
       <div className="development-content">

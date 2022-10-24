@@ -4,7 +4,6 @@ import { imgHandler } from "../Components/imgHandler";
 const Solution = () => {
   const data = {
     solution_img: {
-      title: "解決方案",
       image: imgHandler("/img/sub-solution.png"),
       alt: "一大塊太陽能板架設在停車場",
     },
@@ -101,10 +100,6 @@ const Solution = () => {
     <div className="container">
       <div className="banner">
         <img src={data.solution_img.image} alt={data.solution_img.alt} />
-
-        {/* <div className="slash">
-          <h2>{data.solution_img.title}</h2>
-        </div> */}
       </div>
 
       {/* 商業設施 */}

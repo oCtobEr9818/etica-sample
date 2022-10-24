@@ -5,7 +5,6 @@ import { imgHandler } from "../Components/imgHandler";
 const AboutUs = () => {
   const data = {
     aboutus: {
-      title: "關於我們",
       image: imgHandler("/img/sub-aboutus.png"),
       alt: "辦公室內有木製的ETICA字樣",
     },
@@ -70,10 +69,6 @@ const AboutUs = () => {
     <div className="container">
       <div className="banner">
         <img src={data.aboutus.image} alt={data.aboutus.alt} />
-
-        {/* <div className="slash">
-          <h2>{data.aboutus.title}</h2>
-        </div> */}
       </div>
 
       {/* 公司簡介 */}

@@ -25,12 +25,26 @@ const Contact = () => {
     onBlurValue: onBlurEmail,
   } = useFormValidate(isEmailFormat);
 
+  const {
+    isValid: subjectIsValid,
+    hasError: subjectError,
+    onChangeValue: onChangeSubject,
+    onBlurValue: onBlurSubject,
+  } = useFormValidate(isNotEmpty);
+
+  const {
+    isValid: contentIsValid,
+    hasError: contentError,
+    onChangeValue: onChangeContent,
+    onBlurValue: onBlurContent,
+  } = useFormValidate(isNotEmpty);
+
   // 發送email
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!nameIsValid || !emailIsValid) {
+    if (!nameIsValid || !emailIsValid || subjectIsValid || contentIsValid) {
       return;
     }
 
@@ -51,6 +65,8 @@ const Contact = () => {
 
   const nameInputClasses = nameError ? "invalid" : "";
   const emailInputClasses = emailError ? "invalid" : "";
+  const subjectInputClasses = emailError ? "invalid" : "";
+  const contentInputClasses = emailError ? "invalid" : "";
 
   // google地圖標記點
   const CustomMarker = ({ text }) => (
@@ -133,13 +149,30 @@ const Contact = () => {
         </div>
 
         <div className="form-wrap">
-          <label>主旨：</label>
-          <input type="text" name="subject" placeholder="請輸入主旨" />
+          <label>*主旨：</label>
+          <input
+            type="text"
+            name="subject"
+            placeholder="請輸入主旨"
+            onChange={onChangeSubject}
+            onBlur={onBlurSubject}
+            className={subjectInputClasses}
+          />
+          {subjectError && <p className="error-text">此欄位不能為空白</p>}
           <br />
         </div>
+
         <div className="form-wrap">
-          <label>內容：</label>
-          <textarea name="message" cols="30" rows="10" />
+          <label>*內容：</label>
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            onChange={onChangeContent}
+            onBlur={onBlurContent}
+            className={contentInputClasses}
+          />
+          {contentError && <p className="error-text">此欄位不能為空白</p>}
         </div>
 
         <div className="form-wrap">
