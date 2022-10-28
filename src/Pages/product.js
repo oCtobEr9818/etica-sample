@@ -61,6 +61,31 @@ const Product = () => {
           alt: "集裝箱",
           url: "/product2#energyStorageBox",
         },
+        {
+          img: "/img/etica-c.png",
+          alt: "etica-c",
+          url: "/product2#Etica-C",
+        },
+        {
+          img: "/img/etica-o.png",
+          alt: "etica-o",
+          url: "/product2#Etica-O",
+        },
+        {
+          img: "/img/etica-r1.png",
+          alt: "etica-r1",
+          url: "/product2#Etica-R1",
+        },
+        {
+          img: "/img/etica-r3.png",
+          alt: "etica-r3",
+          url: "/product2#Etica-R3",
+        },
+        {
+          img: "/img/etica-p.png",
+          alt: "etica-p",
+          url: "/product2#Etica-P",
+        },
       ],
       bgImage: {
         img: "/img/3-53405622.jpg",

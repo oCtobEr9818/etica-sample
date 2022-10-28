@@ -7,7 +7,7 @@ import { useFormValidate } from "../Components/useFormValidate";
 
 const Contact = () => {
   const emailRule =
-    /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+    /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
   const isNotEmpty = (value) => value.trim() !== "";
   const isEmailFormat = (value) => emailRule.test(value);
 
@@ -44,7 +44,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!nameIsValid || !emailIsValid || subjectIsValid || contentIsValid) {
+    if (!nameIsValid || !emailIsValid || !subjectIsValid || !contentIsValid) {
       return;
     }
 

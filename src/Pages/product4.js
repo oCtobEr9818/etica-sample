@@ -3,7 +3,7 @@ import { imgHandler } from "../Components/imgHandler";
 const Product4 = () => {
   const data = {
     product_img: {
-      image: "/img/product.png",
+      image: "/img/sub-product.png",
       alt: "ESS Energy Storage System",
     },
     product4_content: {
@@ -21,9 +21,6 @@ const Product4 = () => {
           src={imgHandler(data.product_img.image)}
           alt={data.product_img.alt}
         />
-        <div className="slash">
-          <h2>LEV產品資訊</h2>
-        </div>
       </div>
 
       <div className="product4-content">
