@@ -656,11 +656,16 @@
 
       label {
         font-size: 1.1em;
+
+        span {
+          color: #f00;
+        }
       }
 
       input {
         width: 100%;
         padding: 10px 0 10px 5px;
+        margin-top: 5px;
         &:focus {
           border: none;
         }

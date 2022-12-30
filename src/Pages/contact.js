@@ -121,7 +121,9 @@ const Contact = () => {
       {/* 聯絡我們表單 */}
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="form-wrap">
-          <label>*姓名：</label>
+          <label>
+            姓名 <span>*</span>
+          </label>
           <input
             type="text"
             name="user_name"
@@ -135,7 +137,9 @@ const Contact = () => {
         </div>
 
         <div className="form-wrap">
-          <label>*電子信箱：</label>
+          <label>
+            電子信箱 <span>*</span>
+          </label>
           <input
             type="email"
             name="email"
@@ -149,7 +153,9 @@ const Contact = () => {
         </div>
 
         <div className="form-wrap">
-          <label>*主旨：</label>
+          <label>
+            主旨 <span>*</span>
+          </label>
           <input
             type="text"
             name="subject"
@@ -163,7 +169,9 @@ const Contact = () => {
         </div>
 
         <div className="form-wrap">
-          <label>*內容：</label>
+          <label>
+            內容 <span>*</span>
+          </label>
           <textarea
             name="message"
             cols="30"
