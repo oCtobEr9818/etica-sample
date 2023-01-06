@@ -67,7 +67,7 @@ const Product = () => {
           url: "/product2#Etica-C",
         },
         {
-          img: "/img/etica-o.png",
+          img: "/img/etica-O.png",
           alt: "etica-o",
           url: "/product2#Etica-O",
         },
