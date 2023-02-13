@@ -11,6 +11,9 @@
 # production
 /build
 
+# google map key
+/src/Components/key.js
+
 # misc
 .DS_Store
 .env.local
