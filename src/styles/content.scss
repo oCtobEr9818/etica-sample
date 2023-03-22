@@ -335,6 +335,7 @@
       border-right: none;
       z-index: 0;
       overflow-y: auto;
+
       @include desktop {
         border-left: none;
       }
@@ -348,35 +349,58 @@
         height: 300px;
       }
 
-      img {
-        width: 210px;
-        height: 200px;
-        padding: 15px;
-        transform: translateY(0);
-        transition: 0.3s;
-        object-fit: contain;
-        cursor: pointer;
-        @include desktop {
-          width: 170px;
-          height: 160px;
+      a {
+        color: rgb(42, 8, 235);
+        text-decoration: none;
+        position: relative;
+
+        &::before {
+          content: "more";
+          padding: 0 1em;
+          z-index: 1;
+          line-height: 1.5em;
+          border: 1px solid #ccc;
+          border-radius: 200px;
+          font-size: 0.9em;
+          font-family: "Ariel";
+          position: absolute;
+          top: 30px;
+          right: -20px;
         }
-        @include pad {
-          width: 145px;
-          height: 135px;
-        }
-        @include mini-pad {
-          width: 100px;
-          height: 110px;
-        }
-        @include mobile {
-          width: 70px;
-        }
-        @include mini-mobile {
-          width: 50px;
+        &:hover {
+          color: #f00;
         }
 
-        &:hover {
-          transform: translateY(-10px);
+        img {
+          width: 210px;
+          height: 200px;
+          padding: 15px;
+          transform: translateY(0);
+          transition: 0.3s;
+          object-fit: contain;
+          cursor: pointer;
+          @include desktop {
+            width: 170px;
+            height: 160px;
+          }
+          @include pad {
+            width: 145px;
+            height: 135px;
+          }
+          @include mini-pad {
+            width: 100px;
+            height: 110px;
+          }
+          @include mobile {
+            width: 70px;
+          }
+          @include mini-mobile {
+            width: 50px;
+          }
+
+          &:hover {
+            transform: translateY(-10px);
+          }
         }
       }
     }
