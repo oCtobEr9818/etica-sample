@@ -13,15 +13,15 @@ const Home = () => {
         alt: "樹林區公司外觀",
       },
       {
-        img: "/img/home/img_2.png",
+        img: "/img/home/img_7.png",
+        alt: "三重區公司外觀實際圖",
+      },
+      {
+        img: "/img/home/img_5.png",
         alt: "三重區公司外觀示意圖",
       },
       {
-        img: "/img/home/img_3.png",
-        alt: "三重區公司外觀示意圖",
-      },
-      {
-        img: "/img/home/img_4.png",
+        img: "/img/home/img_6.png",
         alt: "三重區公司外觀示意圖",
       },
     ],
@@ -47,7 +47,7 @@ const Home = () => {
 
         <ul className="imgOption">
           <li className="point point1">
-            <Link to="/solution#commercialFacility" className="point_a">
+            <Link to="/solution_commercial_facility" className="point_a">
               <span className="point_span" /> {/* 白色圓點 */}
               <div className="point_wrap">
                 <span>商業設施</span>
@@ -55,7 +55,7 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point2">
-            <Link to="/solution#trsportationApplication" className="point_a">
+            <Link to="/solution_transportation_application" className="point_a">
               <span className="point_span" />
               <div className="point_wrap">
                 <span>交通應用</span>
@@ -63,7 +63,7 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point3">
-            <Link to="/solution#greenEnergyIndustry" className="point_a">
+            <Link to="/solution_greenEnergy_industry" className="point_a">
               <span className="point_span" />
               <div className="point_wrap">
                 <span>綠能產業</span>
@@ -71,7 +71,7 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point4">
-            <Link to="/solution#publicHouse" className="point_a">
+            <Link to="/solution_public_house" className="point_a">
               <span className="point_span" />
               <div className="point_wrap">
                 <span>公設住宅</span>
@@ -79,7 +79,7 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point5">
-            <Link to="/solution#industryApplication" className="point_a">
+            <Link to="/solution_industry_application" className="point_a">
               <span className="point_span" />
               <div className="point_wrap">
                 <span>工業應用</span>

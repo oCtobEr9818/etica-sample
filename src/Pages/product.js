@@ -15,7 +15,7 @@ const Product = () => {
         {
           img: "/img/1S1P.jpg",
           alt: "1S1P",
-          url: "/product4#1S1P",
+          url: "/product_industrial_battery#1S1P",
         },
       ],
     },
@@ -25,12 +25,12 @@ const Product = () => {
         {
           img: "/img/bicycle.png",
           alt: "腳踏車",
-          url: "/product3#bicycle",
+          url: "/product_ebike#bicycle",
         },
         {
           img: "/img/cart.png",
           alt: "推車",
-          url: "/product3#cart",
+          url: "/product_ebike#cart",
         },
       ],
       bgImage: {
@@ -44,47 +44,47 @@ const Product = () => {
         {
           img: "/img/ET48 Hybrid.png",
           alt: "水冷高壓儲能櫃",
-          url: "/product2#ET48",
+          url: "/product_ESS#ET48",
         },
         {
           img: "/img/indoor.png",
           alt: "家用儲能櫃 & 太陽能轉變器",
-          url: "/product2#house",
+          url: "/product_ESS#house",
         },
         {
           img: "/img/wallmounted.png",
           alt: "壁掛式儲能箱",
-          url: "/product2#wallmounted",
+          url: "/product_ESS#wallmounted",
         },
         {
           img: "/img/energyStorageBox2.png",
           alt: "集裝箱",
-          url: "/product2#energyStorageBox",
+          url: "/product_ESS#energyStorageBox",
         },
         {
           img: "/img/etica-c.png",
           alt: "etica-c",
-          url: "/product2#Etica-C",
+          url: "/product_ESS#Etica-C",
         },
         {
           img: "/img/etica-O.png",
           alt: "etica-o",
-          url: "/product2#Etica-O",
+          url: "/product_ESS#Etica-O",
         },
         {
           img: "/img/etica-r1.png",
           alt: "etica-r1",
-          url: "/product2#Etica-R1",
+          url: "/product_ESS#Etica-R1",
         },
         {
           img: "/img/etica-r3.png",
           alt: "etica-r3",
-          url: "/product2#Etica-R3",
+          url: "/product_ESS#Etica-R3",
         },
         {
           img: "/img/etica-p.png",
           alt: "etica-p",
-          url: "/product2#Etica-P",
+          url: "/product_ESS#Etica-P",
         },
       ],
       bgImage: {

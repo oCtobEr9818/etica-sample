@@ -21,14 +21,14 @@ const Development = () => {
       </div>
 
       <div className="development-content">
-        <div className="development-wrap">
+        <div className="content-wrap">
           {/* 水冷高壓 */}
           <img
             src={process.env.PUBLIC_URL + "/img/WCHP.jpg"}
             alt="水冷高壓"
             data-aos="fade-right"
           />
-          <div className="development-txt">
+          <div className="content-txt">
             <h2>水冷高壓儲能</h2>
             <p>
               透過儲能電池櫃間相互串連
@@ -38,7 +38,7 @@ const Development = () => {
           </div>
 
           {/* 防延燒專利 */}
-          <div className="development-txt">
+          <div className="content-txt">
             <h2>防延燒專利</h2>
             <p>
               取得中華民國專利認證，利用獨家的防延燒材質隔板，
@@ -57,7 +57,7 @@ const Development = () => {
             alt="集裝箱(大型儲能)"
             data-aos="fade-right"
           />
-          <div className="development-txt">
+          <div className="content-txt">
             <h2>集裝箱(大型儲能)</h2>
             <p>
               貨櫃式的儲能系統，通過各項嚴格的工業安規與電力技術標準

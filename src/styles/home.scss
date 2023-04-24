@@ -423,7 +423,7 @@ $primary-color: #93cddd;
       }
       @include mini-mobile {
         height: 40%;
-        font-size: 3em;
+        font-size: 2em;
         margin: 0;
       }
 
@@ -512,6 +512,73 @@ $primary-color: #93cddd;
       width: 100%;
       height: 60vh;
       position: relative;
+      &:nth-child(2) {
+        transform: scaleX(-1);
+
+        .topline::before {
+          display: none;
+        }
+
+        h2 {
+          transform: scaleX(-1);
+          top: 5rem;
+          right: 4.5rem;
+
+          @include mini-pad {
+            top: 4rem;
+            right: 4rem;
+          }
+          @include mobile {
+            right: 3.5rem;
+          }
+          @include mini-mobile {
+            top: 2.5rem;
+            right: 1.8rem;
+            letter-spacing: 1.1rem;
+          }
+        }
+        h2:last-child {
+          top: 7rem;
+          right: 6.5rem;
+
+          @include mini-pad {
+            top: 6rem;
+            right: 6rem;
+          }
+          @include mobile {
+            right: 5rem;
+          }
+          @include mini-mobile {
+            top: 4rem;
+            right: 3rem;
+            letter-spacing: 1.1rem;
+          }
+        }
+      }
+      &:nth-child(3) {
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        .topline::before {
+          display: none;
+        }
+
+        .underline {
+          width: 0;
+          height: 0;
+          &::before {
+            width: 0;
+            height: 0;
+          }
+          &::after {
+            height: 40em;
+            right: -1px;
+          }
+        }
+      }
 
       .topline {
         height: 2px;
@@ -574,7 +641,6 @@ $primary-color: #93cddd;
         position: absolute;
         right: 1.5rem;
         bottom: 0;
-
         @include mini-pad {
           width: 82.5%;
         }
@@ -589,7 +655,7 @@ $primary-color: #93cddd;
           display: inline-block;
           background: $primary-color;
           position: absolute;
-          right: 0px;
+          right: 0;
           bottom: 0;
 
           @include mini-pad {
@@ -682,7 +748,11 @@ $primary-color: #93cddd;
           width: 100%;
           margin: 0 8rem 0 1rem;
           transform: scaleX(-1);
+
           @include user-select-none;
+          @include mini-mobile {
+            margin-right: 1rem;
+          }
         }
       }
 
@@ -690,7 +760,7 @@ $primary-color: #93cddd;
       .client {
         max-width: 80%;
         height: 500px;
-        margin: -19rem 5rem 0 0;
+        margin: -16rem 5rem 0 0;
         @include user-select-none;
 
         @include pad {
@@ -704,8 +774,9 @@ $primary-color: #93cddd;
 
         table {
           width: 100%;
+          margin: -9em -1em 9em 1em;
           display: block;
-          overflow-x: auto;
+          overflow-x: scroll;
           word-spacing: nowrap;
           border-collapse: collapse;
 
@@ -761,73 +832,6 @@ $primary-color: #93cddd;
           right: 1.8rem;
           font-size: 1.2em;
           letter-spacing: 1.1rem;
-        }
-      }
-    }
-    .wrap:nth-child(2) {
-      transform: scaleX(-1);
-
-      .topline::before {
-        display: none;
-      }
-
-      h2 {
-        transform: scaleX(-1);
-        top: 5rem;
-        right: 4.5rem;
-
-        @include mini-pad {
-          top: 4rem;
-          right: 4rem;
-        }
-        @include mobile {
-          right: 3.5rem;
-        }
-        @include mini-mobile {
-          top: 2.5rem;
-          right: 1.8rem;
-          letter-spacing: 1.1rem;
-        }
-      }
-      h2:last-child {
-        top: 7rem;
-        right: 6.5rem;
-
-        @include mini-pad {
-          top: 6rem;
-          right: 6rem;
-        }
-        @include mobile {
-          right: 5rem;
-        }
-        @include mini-mobile {
-          top: 4rem;
-          right: 3rem;
-          letter-spacing: 1.1rem;
-        }
-      }
-    }
-    .wrap:nth-child(3) {
-      height: 85vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-
-      .topline::before {
-        display: none;
-      }
-
-      .underline {
-        width: 0;
-        height: 0;
-
-        &::before {
-          width: 0;
-          height: 0;
-        }
-        &::after {
-          height: 42rem;
         }
       }
     }

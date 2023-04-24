@@ -1,6 +1,6 @@
 import { imgHandler } from "../Components/imgHandler";
 
-const Product4 = () => {
+const ProductIndustrialBattery = () => {
   const data = {
     product_img: {
       image: "/img/sub-product.png",
@@ -23,7 +23,7 @@ const Product4 = () => {
         />
       </div>
 
-      <div className="product4-content">
+      <div className="product-industrial-battery-content">
         <div className="contentWrap">
           <img
             src={imgHandler(data.product4_content.AS1P.img)}
@@ -43,27 +43,47 @@ const Product4 = () => {
         <table>
           <thead>
             <tr>
-              <th>電壓</th>
-              <th>電壓範圍</th>
-              <th>放電電流</th>
-              <th>最大放電電流</th>
-              <th>充電電流</th>
-              <th>充電工作溫度</th>
-              <th>放電工作溫度</th>
-              <th>通訊</th>
-              <th>尺寸</th>
-              <th>重量</th>
+              <th>項目</th>
+              <th>規格</th>
             </tr>
             <tr>
+              <th>電壓</th>
               <td>3.8 V</td>
+            </tr>
+            <tr>
+              <th>電壓範圍</th>
               <td>3.8~2.8 V</td>
+            </tr>
+            <tr>
+              <th>放電電流</th>
               <td>1.6 A</td>
+            </tr>
+            <tr>
+              <th>最大放電電流</th>
               <td>3 A</td>
+            </tr>
+            <tr>
+              <th>充電電流</th>
               <td>1.6 A</td>
-              <td>0~45 °C</td>
-              <td>-20~60 °C</td>
+            </tr>
+            <tr>
+              <th>充電工作溫度</th>
+              <td>0 ~ 45 °C</td>
+            </tr>
+            <tr>
+              <th>放電工作溫度</th>
+              <td>-20 ~ 60 °C</td>
+            </tr>
+            <tr>
+              <th>通訊介面</th>
               <td>I2C</td>
-              <td>89*69.3*28.9 mm</td>
+            </tr>
+            <tr>
+              <th>尺寸</th>
+              <td>89mm * 69.3mm * 28.9mm </td>
+            </tr>
+            <tr>
+              <th>重量</th>
               <td>67 g</td>
             </tr>
           </thead>
@@ -73,4 +93,4 @@ const Product4 = () => {
   );
 };
 
-export default Product4;
+export default ProductIndustrialBattery;

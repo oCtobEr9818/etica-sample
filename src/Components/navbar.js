@@ -44,10 +44,9 @@ const Navbar = () => {
       </NavLink>
       <div className="navbar-line"></div>
 
+      {/* 768px以下選控制 */}
       <div className="dropMenu">
-        <label htmlFor="menu-control" className="menu-btn">
-          <span></span>
-        </label>
+        <label htmlFor="menu-control" className="menu-btn"></label>
       </div>
       <input type="checkbox" id="menu-control" />
 

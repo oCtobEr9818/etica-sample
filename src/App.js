@@ -9,10 +9,15 @@ import Footer from "./Components/footer";
 import Home from "./Pages/home";
 import AboutUs from "./Pages/aboutUs";
 import Solution from "./Pages/solution";
+import CommercialFacility from "./Pages/solution_commercial_facility";
+import TransportationApplication from "./Pages/solution_transportation_application";
+import PublicHouse from "./Pages/solution_public_house";
+import IndustryApplication from "./Pages/solution_industry_application";
+import GreenEnergyIndustry from "./Pages/solution_greenEnergy_industry";
 import Product from "./Pages/product";
-import Product2 from "./Pages/product2";
-import Product3 from "./Pages/product3";
-import Product4 from "./Pages/product4";
+import ProductESS from "./Pages/product_ESS";
+import ProductEbike from "./Pages/product_ebike";
+import ProductIndustrialBattery from "./Pages/product_industrial_battery";
 import Development from "./Pages/development";
 import Performance from "./Pages/performance";
 import Contact from "./Pages/contact";
@@ -24,15 +29,45 @@ function App() {
       <Navbar />
 
       <Routes>
+        {/* 首頁 */}
         <Route exact path="/" element={<Home />} />
+        {/* 關於我們 */}
         <Route path="/aboutus" element={<AboutUs />} />
+
+        {/* 解決方案 */}
         <Route path="/solution" element={<Solution />} />
+        <Route
+          path="/solution_commercial_facility"
+          element={<CommercialFacility />}
+        />
+        <Route
+          path="/solution_transportation_application"
+          element={<TransportationApplication />}
+        />
+        <Route
+          path="/solution_greenEnergy_industry"
+          element={<GreenEnergyIndustry />}
+        />
+        <Route path="/solution_public_house" element={<PublicHouse />} />
+        <Route
+          path="/solution_industry_application"
+          element={<IndustryApplication />}
+        />
+
+        {/* 產品資訊 */}
         <Route path="/product" element={<Product />} />
-        <Route path="/product2" element={<Product2 />} />
-        <Route path="/product3" element={<Product3 />} />
-        <Route path="/product4" element={<Product4 />} />
+        <Route path="/product_ESS" element={<ProductESS />} />
+        <Route path="/product_ebike" element={<ProductEbike />} />
+        <Route
+          path="/product_industrial_battery"
+          element={<ProductIndustrialBattery />}
+        />
+
+        {/* 研發 */}
         <Route path="/development" element={<Development />} />
+        {/* 實績案例 */}
         <Route path="/performance" element={<Performance />} />
+        {/* 聯絡我們 */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

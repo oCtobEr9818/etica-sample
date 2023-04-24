@@ -56,9 +56,9 @@ const Solution = () => {
       },
       alt: "商辦，商場，飯店，微電網儲能櫃-室內型，微電網儲能櫃-戶外型，Pack Bank，額定電流",
     },
-    trsportationApplication: {
+    transportationApplication: {
       title: "交通應用",
-      id: "trsportationApplication",
+      id: "transportationApplication",
       image: {
         blueImg: imgHandler("/img/trsportationApplication1.png"),
         threeImg: imgHandler("/img/trsportationApplication2.png"),
@@ -140,14 +140,14 @@ const Solution = () => {
 
       {/* 交通應用 */}
       <ContentTitle
-        title={data.trsportationApplication.title}
-        id={data.trsportationApplication.id}
+        title={data.transportationApplication.title}
+        id={data.transportationApplication.id}
       />
       <div className="solution-img">
         <img
           className="blueImg"
-          src={data.trsportationApplication.image.blueImg}
-          alt={data.trsportationApplication.alt}
+          src={data.transportationApplication.image.blueImg}
+          alt={data.transportationApplication.alt}
         />
         <div className="wrap">
           <div className="imgWrap">
@@ -167,19 +167,19 @@ const Solution = () => {
           </div>
           <img
             className="threeImg"
-            src={data.trsportationApplication.image.threeImg}
-            alt={data.trsportationApplication.alt}
+            src={data.transportationApplication.image.threeImg}
+            alt={data.transportationApplication.alt}
           />
           <div className="imgWrap">
             <img
               className="battery1"
-              src={data.trsportationApplication.image.batteryImg1}
-              alt={data.trsportationApplication.alt}
+              src={data.transportationApplication.image.batteryImg1}
+              alt={data.transportationApplication.alt}
             />
             <img
               className="battery2"
-              src={data.trsportationApplication.image.batteryImg2}
-              alt={data.trsportationApplication.alt}
+              src={data.transportationApplication.image.batteryImg2}
+              alt={data.transportationApplication.alt}
             />
           </div>
         </div>
