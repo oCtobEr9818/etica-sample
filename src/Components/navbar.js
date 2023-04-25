@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
+import { useState } from "react";
 
 const navs = {
   home: {
@@ -33,6 +34,9 @@ const navs = {
 };
 
 const Navbar = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const handleMenuExpanded = () => setIsExpanded(false);
+
   return (
     <div className="navbar">
       <NavLink to={navs.home.path} className="navbar-brand">
@@ -48,14 +52,23 @@ const Navbar = () => {
       <div className="dropMenu">
         <label htmlFor="menu-control" className="menu-btn"></label>
       </div>
-      <input type="checkbox" id="menu-control" />
+      <input
+        type="checkbox"
+        id="menu-control"
+        checked={isExpanded}
+        onChange={() => setIsExpanded(!isExpanded)}
+      />
 
-      <ul className="navbar-option">
+      <ul className={`navbar-option ${isExpanded ? "active" : ""}`}>
         <li>
-          <NavLink to={navs.home.path}>{navs.home.name}</NavLink>
+          <NavLink to={navs.home.path} onClick={handleMenuExpanded}>
+            {navs.home.name}
+          </NavLink>
         </li>
         <li>
-          <NavLink to={navs.aboutus.path}>{navs.aboutus.name}</NavLink>
+          <NavLink to={navs.aboutus.path} onClick={handleMenuExpanded}>
+            {navs.aboutus.name}
+          </NavLink>
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
@@ -74,7 +87,9 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-          <NavLink to={navs.solution.path}>{navs.solution.name}</NavLink>
+          <NavLink to={navs.solution.path} onClick={handleMenuExpanded}>
+            {navs.solution.name}
+          </NavLink>
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
@@ -96,16 +111,24 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-          <NavLink to={navs.product.path}>{navs.product.name}</NavLink>
+          <NavLink to={navs.product.path} onClick={handleMenuExpanded}>
+            {navs.product.name}
+          </NavLink>
         </li>
         <li>
-          <NavLink to={navs.development.path}>{navs.development.name}</NavLink>
+          <NavLink to={navs.development.path} onClick={handleMenuExpanded}>
+            {navs.development.name}
+          </NavLink>
         </li>
         <li>
-          <NavLink to={navs.performance.path}>{navs.performance.name}</NavLink>
+          <NavLink to={navs.performance.path} onClick={handleMenuExpanded}>
+            {navs.performance.name}
+          </NavLink>
         </li>
         <li>
-          <NavLink to={navs.contact.path}>{navs.contact.name}</NavLink>
+          <NavLink to={navs.contact.path} onClick={handleMenuExpanded}>
+            {navs.contact.name}
+          </NavLink>
         </li>
       </ul>
     </div>

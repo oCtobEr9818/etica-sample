@@ -1,0 +1,127 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mini-pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin mini-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+.container {
+  // 關於我們內容
+  .content {
+    max-width: 66rem; // added
+    margin: auto; // added
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+    // 關於我們左圖
+    .contentLeft-img {
+      width: 10rem;
+      height: 20rem;
+      margin-left: 3.2rem;
+
+      @include desktop {
+        width: 8.5rem;
+        height: 17rem;
+        margin-left: 2.4rem;
+      }
+      @include pad {
+        width: 7.5rem;
+        height: 15rem;
+        margin-left: 2.4rem;
+      }
+      @include mini-pad {
+        width: 6.4rem;
+        height: 12.8rem;
+        margin-left: 1.8rem;
+      }
+      @include mobile {
+        width: 4.3rem;
+        height: 8.6rem;
+        margin-left: 1.3rem;
+      }
+      @include mini-mobile {
+        width: 3.5rem;
+        height: 7rem;
+      }
+    }
+    // 關於我們右圖
+    .contentRight-img {
+      height: 22rem;
+      margin-left: 4rem;
+
+      @include desktop {
+        height: 16rem;
+        margin-left: 2.8rem;
+      }
+      @include pad {
+        height: 21rem;
+        margin: 0 2.5rem;
+      }
+      @include mini-pad {
+        height: 16rem;
+        margin: 0 2rem;
+      }
+      @include mobile {
+        height: 9.5rem;
+      }
+      @include mini-mobile {
+        height: 8rem;
+        margin: 0 1rem;
+      }
+    }
+
+    p {
+      width: 44rem;
+      font-size: 1.2em;
+      white-space: pre-line;
+      text-align: justify;
+
+      // margin: 0 auto;
+
+      @include desktop {
+        font-size: 1em;
+        width: 30rem;
+      }
+      @include pad {
+        width: 35rem;
+        margin: 0 auto;
+      }
+      @include mini-pad {
+        width: 23rem;
+      }
+      @include mobile {
+        width: 18rem;
+        font-size: 0.9em;
+        margin-right: 1.8rem;
+      }
+      @include mini-mobile {
+        width: 15rem;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

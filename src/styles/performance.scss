@@ -1,0 +1,92 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mini-pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin mini-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+.container {
+  // 實績案例
+  .performance-content {
+    max-width: 100%;
+    color: #f7f7f7;
+
+    .content-wrap {
+      width: 100%;
+      height: auto;
+      padding: 5rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #242834;
+
+      h1 {
+        width: 100%;
+        margin: 0 auto 5em;
+        display: block;
+        text-align: center;
+        @include mini-pad {
+          margin: 0 auto 2em;
+        }
+      }
+
+      .performance-content {
+        width: 100%;
+        margin: 0 auto 12em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mini-pad {
+          margin-bottom: 9em;
+          flex-direction: column;
+        }
+
+        h2 {
+          width: 12em;
+          display: flex;
+          align-items: center;
+          @include mini-pad {
+            width: 60%;
+            order: 1;
+            font-size: 20px;
+          }
+        }
+
+        img {
+          width: 30%;
+          height: 500px;
+          margin: 0 1em;
+          object-fit: contain;
+          @include mini-pad {
+            width: 90%;
+            height: auto;
+            margin: 1em 0;
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,19 @@
 import React from "react";
-import "./styles/home.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./styles/navbar.scss";
 import "./styles/banner.scss";
 import "./styles/content.scss";
+import "./styles/home.scss";
+import "./styles/aboutUs.scss";
+import "./styles/solution.scss";
+import "./styles/product.scss";
+import "./styles/development.scss";
+import "./styles/performance.scss";
+import "./styles/contact.scss";
 import "./styles/footer.scss";
+
 import Navbar from "./Components/navbar";
-import Footer from "./Components/footer";
 import Home from "./Pages/home";
 import AboutUs from "./Pages/aboutUs";
 import Solution from "./Pages/solution";
@@ -21,7 +29,7 @@ import ProductIndustrialBattery from "./Pages/product_industrial_battery";
 import Development from "./Pages/development";
 import Performance from "./Pages/performance";
 import Contact from "./Pages/contact";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./Components/footer";
 
 function App() {
   return (
@@ -31,6 +39,7 @@ function App() {
       <Routes>
         {/* 首頁 */}
         <Route exact path="/" element={<Home />} />
+
         {/* 關於我們 */}
         <Route path="/aboutus" element={<AboutUs />} />
 

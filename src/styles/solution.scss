@@ -1,0 +1,106 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mini-pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin mini-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+.container {
+  //解決方案
+  .solution-img {
+    // max-width: 100%;
+    max-width: 66rem; // added
+    margin: auto;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+    .blueImg {
+      width: 30%;
+    }
+
+    .wrap {
+      max-width: 70%;
+      display: flex;
+      flex-direction: column;
+
+      .imgWrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 2rem;
+
+        img {
+          width: 120px;
+          height: 166px;
+          margin: 0 3rem 0 -3rem;
+          object-fit: contain;
+
+          @include mini-pad {
+            width: 90px;
+          }
+          @include mobile {
+            width: 70px;
+          }
+        }
+
+        p {
+          width: 12.5rem;
+          margin: 0 2rem 0 -2rem;
+          line-height: 1.7;
+          font-size: 0.9em;
+          white-space: pre-line;
+          color: #4b93a0;
+          z-index: 1;
+
+          &::first-line {
+            font-weight: bold;
+            font-size: 1.1em;
+          }
+
+          @include desktop {
+            font-size: 0.7em;
+          }
+          @include mini-pad {
+            width: 10rem;
+            font-size: 0.5em;
+          }
+          @include mobile {
+            font-size: 0.3em;
+          }
+        }
+      }
+
+      .threeImg {
+        padding-bottom: 2.2rem;
+      }
+    } // wrap
+  } // solution-img
+}
