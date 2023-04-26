@@ -26,10 +26,24 @@
   }
 }
 
+@mixin common-style {
+  max-width: 100%;
+  color: #f7f7f7;
+}
+@mixin content-wrap-style {
+  width: 100%;
+  height: auto;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #242834;
+}
+
 .container {
   //解決方案
   .solution-img {
-    // max-width: 100%;
     max-width: 66rem; // added
     margin: auto;
     padding-left: 2rem;
@@ -103,4 +117,239 @@
       }
     } // wrap
   } // solution-img
+
+  // 電力設施
+  .commercial-facility {
+    @include common-style;
+
+    .content-wrap {
+      @include content-wrap-style;
+
+      h1 {
+        width: 100%;
+        margin: 0 auto 3em;
+        display: block;
+        text-align: center;
+        @include mini-pad {
+          margin: 0 auto 2em;
+        }
+      }
+
+      p {
+        width: 50%;
+        @include mini-pad {
+          width: 80%;
+        }
+      }
+
+      .commercial-facility-content {
+        width: 100%;
+        height: 400px;
+        margin: 4em auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+          max-width: 80%;
+          width: 800px;
+
+          li {
+            margin-bottom: 2em;
+            list-style: initial;
+            text-align: left;
+            font-size: 1.2em;
+          }
+        }
+
+        img {
+          max-width: 80%;
+          width: 800px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  // 交通應用
+  .transportation-application {
+    @include common-style;
+
+    .content-wrap {
+      @include content-wrap-style;
+
+      h1 {
+        width: 100%;
+        margin: 0 auto 3em;
+        display: block;
+        text-align: center;
+        @include mini-pad {
+          margin: 0 auto 2em;
+        }
+      }
+
+      p {
+        width: 50%;
+        @include mini-pad {
+          width: 80%;
+        }
+      }
+
+      .transportation-application-content {
+        width: 100%;
+        height: 70vh;
+        margin: 4em auto 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        @include mini-pad {
+          height: auto;
+          flex-direction: column;
+        }
+
+        img {
+          max-width: 80%;
+          width: 300px;
+          height: 25em;
+          margin: 2em auto;
+        }
+      }
+    }
+  }
+
+  // 公設住宅
+  .public-house {
+    @include common-style;
+
+    .content-wrap {
+      @include content-wrap-style;
+    }
+
+    h1 {
+      width: 100%;
+      margin: 0 auto 3em;
+      display: block;
+      text-align: center;
+      @include mini-pad {
+        margin: 0 auto 2em;
+      }
+    }
+
+    p {
+      width: 50%;
+      @include mini-pad {
+        width: 80%;
+      }
+    }
+
+    .public-house-content {
+      width: 100%;
+      height: 70vh;
+      margin: 4em auto 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      @include mini-pad {
+        height: auto;
+      }
+
+      img {
+        max-width: 80%;
+        padding: 0 5em;
+      }
+    }
+  }
+
+  // 工業應用
+  .industry-application {
+    @include common-style;
+
+    .content-wrap {
+      @include content-wrap-style;
+    }
+
+    h1 {
+      width: 100%;
+      margin: 0 auto 3em;
+      display: block;
+      text-align: center;
+      @include mini-pad {
+        margin: 0 auto 2em;
+      }
+    }
+
+    .industry-application-content {
+      width: 100%;
+      height: 70vh;
+      margin: 4em auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include mini-pad {
+        height: auto;
+      }
+
+      ul {
+        max-width: 80%;
+        width: 700px;
+
+        li {
+          margin-bottom: 2em;
+          list-style: initial;
+          text-align: left;
+          font-size: 1.2em;
+        }
+      }
+
+      img {
+        max-width: 80%;
+        width: 700px;
+        margin: 0 auto 5em;
+      }
+    }
+  }
+
+  // 綠能產業
+  .greenEnergy-industry {
+    @include common-style;
+
+    .content-wrap {
+      @include content-wrap-style;
+
+      h1 {
+        width: 100%;
+        margin: 0 auto 3em;
+        display: block;
+        text-align: center;
+        @include mini-pad {
+          margin: 0 auto 2em;
+        }
+      }
+
+      p {
+        width: 50%;
+        @include mini-pad {
+          width: 80%;
+        }
+      }
+
+      .greenEnergy-industry-content {
+        width: 100%;
+        height: auto;
+        margin: 4em auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          max-width: 80%;
+          width: 700px;
+          margin: 2em auto;
+        }
+      }
+    }
+  }
 }

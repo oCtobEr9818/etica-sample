@@ -60,8 +60,8 @@ const Solution = () => {
       title: "交通應用",
       id: "transportationApplication",
       image: {
-        blueImg: imgHandler("/img/trsportationApplication1.png"),
-        threeImg: imgHandler("/img/trsportationApplication2.png"),
+        blueImg: imgHandler("/img/transportationApplication1.png"),
+        threeImg: imgHandler("/img/transportationApplication2.png"),
         batteryImg1: imgHandler("/img/battery1.png"),
         batteryImg2: imgHandler("/img/battery2.png"),
       },
