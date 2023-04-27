@@ -1,55 +1,56 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
+const data = {
+  product_img: {
+    image: "/img/sub-product.png",
+    alt: "ESS Energy Storage System",
+  },
+  product2_content: {
+    water: {
+      img: "/img/ET48 Hybrid.png",
+      alt: "水冷高壓儲能櫃",
+    },
+    house: {
+      img: "/img/indoor.png",
+      alt: "家用儲能櫃",
+    },
+    wallmounted: {
+      img: "/img/wallmounted.png",
+      alt: "壁掛式儲能櫃",
+    },
+    energyStorageBox: {
+      img: "/img/energyStorageBox2.png",
+      alt: "集裝箱",
+    },
+    etica_c: {
+      img: "/img/etica-c.png",
+      alt: "etica-c",
+    },
+    etica_c2: {
+      img: "/img/etica-c2.png",
+      alt: "etica-c2",
+    },
+    etica_o: {
+      img: "/img/etica-o.png",
+      alt: "etica-o",
+    },
+    etica_r1: {
+      img: "/img/etica-r1.png",
+      alt: "etica-r1",
+    },
+    etica_r3: {
+      img: "/img/etica-r3.png",
+      alt: "etica-r3",
+    },
+    etica_p: {
+      img: "/img/etica-p.png",
+      alt: "etica-p",
+    },
+  },
+};
+
 const ProductESS = () => {
-  const data = {
-    product_img: {
-      image: "/img/sub-product.png",
-      alt: "ESS Energy Storage System",
-    },
-    product2_content: {
-      water: {
-        img: "/img/ET48 Hybrid.png",
-        alt: "水冷高壓儲能櫃",
-      },
-      house: {
-        img: "/img/indoor.png",
-        alt: "家用儲能櫃",
-      },
-      wallmounted: {
-        img: "/img/wallmounted.png",
-        alt: "壁掛式儲能櫃",
-      },
-      energyStorageBox: {
-        img: "/img/energyStorageBox2.png",
-        alt: "集裝箱",
-      },
-      etica_c: {
-        img: "/img/etica-c.png",
-        alt: "etica-c",
-      },
-      etica_c2: {
-        img: "/img/etica-c2.png",
-        alt: "etica-c2",
-      },
-      etica_o: {
-        img: "/img/etica-o.png",
-        alt: "etica-o",
-      },
-      etica_r1: {
-        img: "/img/etica-r1.png",
-        alt: "etica-r1",
-      },
-      etica_r3: {
-        img: "/img/etica-r3.png",
-        alt: "etica-r3",
-      },
-      etica_p: {
-        img: "/img/etica-p.png",
-        alt: "etica-p",
-      },
-    },
-  };
   return (
     <Layout>
       <div className="banner">

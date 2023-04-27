@@ -1,23 +1,24 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
+const data = {
+  product_img: {
+    image: "/img/sub-product.png",
+    alt: "ESS Energy Storage System",
+  },
+  product3_content: {
+    bicycle: {
+      img: "/img/bicycle.png",
+      alt: "電動單車電池模組",
+    },
+    cart: {
+      img: "/img/cart.png",
+      alt: "電動推車電池模組",
+    },
+  },
+};
+
 const ProductEbike = () => {
-  const data = {
-    product_img: {
-      image: "/img/sub-product.png",
-      alt: "ESS Energy Storage System",
-    },
-    product3_content: {
-      bicycle: {
-        img: "/img/bicycle.png",
-        alt: "電動單車電池模組",
-      },
-      cart: {
-        img: "/img/cart.png",
-        alt: "電動推車電池模組",
-      },
-    },
-  };
   return (
     <Layout>
       <div className="banner">

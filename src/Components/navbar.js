@@ -103,15 +103,15 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/solution_greenEnergy_industry#greenEnergy-industry">
-                  公設住宅
-                </Link>
-              </li>
-              <li>
-                <Link to="/solution_public_house#public-house">工業應用</Link>
+                <Link to="/solution_public_house#public-house">公設住宅</Link>
               </li>
               <li>
                 <Link to="/solution_industry_application#industry-application">
+                  工業應用
+                </Link>
+              </li>
+              <li>
+                <Link to="/solution_greenEnergy_industry#greenEnergy-industry">
                   綠能產業
                 </Link>
               </li>

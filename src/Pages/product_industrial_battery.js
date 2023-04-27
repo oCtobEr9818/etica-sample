@@ -1,20 +1,20 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
-const ProductIndustrialBattery = () => {
-  const data = {
-    product_img: {
-      image: "/img/sub-product.png",
-      alt: "ESS Energy Storage System",
+const data = {
+  product_img: {
+    image: "/img/sub-product.png",
+    alt: "ESS Energy Storage System",
+  },
+  product4_content: {
+    AS1P: {
+      img: "/img/1S1P.jpg",
+      alt: "1S1P",
     },
-    product4_content: {
-      AS1P: {
-        img: "/img/1S1P.jpg",
-        alt: "1S1P",
-      },
-    },
-  };
+  },
+};
 
+const ProductIndustrialBattery = () => {
   return (
     <Layout>
       <div className="banner">

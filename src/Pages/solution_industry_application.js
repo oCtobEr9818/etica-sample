@@ -1,24 +1,24 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
-const IndustryApplication = () => {
-  const data = {
-    solution_img: {
-      image: imgHandler("/img/sub-solution.png"),
-      alt: "一大塊太陽能板架設在停車場",
+const data = {
+  solution_img: {
+    image: imgHandler("/img/sub-solution.png"),
+    alt: "一大塊太陽能板架設在停車場",
+  },
+  content_img: {
+    data01: {
+      image: imgHandler("/img/industryApplication_img1.png"),
+      alt: "",
     },
-    content_img: {
-      data01: {
-        image: imgHandler("/img/industryApplication_img1.png"),
-        alt: "",
-      },
-      data02: {
-        image: imgHandler("/img/industryApplication_img2.png"),
-        alt: "",
-      },
+    data02: {
+      image: imgHandler("/img/industryApplication_img2.png"),
+      alt: "",
     },
-  };
+  },
+};
 
+const IndustryApplication = () => {
   return (
     <Layout>
       <div className="banner">

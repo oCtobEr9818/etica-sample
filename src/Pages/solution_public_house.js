@@ -1,20 +1,20 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
-const PublicHouse = () => {
-  const data = {
-    solution_img: {
-      image: imgHandler("/img/sub-solution.png"),
-      alt: "一大塊太陽能板架設在停車場",
+const data = {
+  solution_img: {
+    image: imgHandler("/img/sub-solution.png"),
+    alt: "一大塊太陽能板架設在停車場",
+  },
+  constent_data: {
+    data01: {
+      image: imgHandler("/img/publicHouse_img1.png"),
+      alt: "公設住宅示意圖",
     },
-    constent_data: {
-      data01: {
-        image: imgHandler("/img/publicHouse_img1.png"),
-        alt: "公設住宅示意圖",
-      },
-    },
-  };
+  },
+};
 
+const PublicHouse = () => {
   return (
     <Layout>
       <div className="banner">

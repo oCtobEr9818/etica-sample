@@ -1,35 +1,35 @@
 import { Layout } from "../Components/Layout";
 
-const Performance = () => {
-  const data = {
-    banner_data: {
-      image: process.env.PUBLIC_URL + "/img/sub-performance.png",
-      alt: "實際案場使用情境",
+const data = {
+  banner_data: {
+    image: process.env.PUBLIC_URL + "/img/sub-performance.png",
+    alt: "實際案場使用情境",
+  },
+  content_data: {
+    data01: {
+      image: process.env.PUBLIC_URL + "/img/performance-01.png",
+      alt: "很多黑色外型的pack",
     },
-    content_data: {
-      data01: {
-        image: process.env.PUBLIC_URL + "/img/performance-01.png",
-        alt: "很多黑色外型的pack",
-      },
-      data02: {
-        image: process.env.PUBLIC_URL + "/img/performance-02.png",
-        alt: "彰濱工業區案場",
-      },
-      data03: {
-        image: process.env.PUBLIC_URL + "/img/performance-03.png",
-        alt: "消防署設備師士蒞臨講習",
-      },
-      data04: {
-        image: process.env.PUBLIC_URL + "/img/performance-04.png",
-        alt: "案場照",
-      },
-      data05: {
-        image: process.env.PUBLIC_URL + "/img/performance-05.png",
-        alt: "五個人在案場拍照",
-      },
+    data02: {
+      image: process.env.PUBLIC_URL + "/img/performance-02.png",
+      alt: "彰濱工業區案場",
     },
-  };
+    data03: {
+      image: process.env.PUBLIC_URL + "/img/performance-03.png",
+      alt: "消防署設備師士蒞臨講習",
+    },
+    data04: {
+      image: process.env.PUBLIC_URL + "/img/performance-04.png",
+      alt: "案場照",
+    },
+    data05: {
+      image: process.env.PUBLIC_URL + "/img/performance-05.png",
+      alt: "五個人在案場拍照",
+    },
+  },
+};
 
+const Performance = () => {
   return (
     <Layout>
       <div className="banner">

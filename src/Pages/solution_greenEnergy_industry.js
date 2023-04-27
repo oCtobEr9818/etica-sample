@@ -1,25 +1,25 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
+const data = {
+  solution_img: {
+    image: imgHandler("/img/sub-solution.png"),
+    alt: "一大塊太陽能板架設在停車場",
+  },
+
+  content_img: {
+    data01: {
+      image: imgHandler("/img/greenEnergyIndustry_img1.png"),
+      alt: "風力發電 太陽能板 Etica儲能櫃",
+    },
+    data02: {
+      image: imgHandler("/img/greenEnergyIndustry_img2.png"),
+      alt: "汽車充電站",
+    },
+  },
+};
+
 const GreenEnergyIndustry = () => {
-  const data = {
-    solution_img: {
-      image: imgHandler("/img/sub-solution.png"),
-      alt: "一大塊太陽能板架設在停車場",
-    },
-
-    content_img: {
-      data01: {
-        image: imgHandler("/img/greenEnergyIndustry_img1.png"),
-        alt: "風力發電 太陽能板 Etica儲能櫃",
-      },
-      data02: {
-        image: imgHandler("/img/greenEnergyIndustry_img2.png"),
-        alt: "汽車充電站",
-      },
-    },
-  };
-
   return (
     <Layout>
       <div className="banner">

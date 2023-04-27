@@ -5,40 +5,40 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import MapChart from "../Components/mapChart";
 
+const data = {
+  bannerImage: [
+    {
+      img: "/img/home/img01.png",
+      alt: "樹林區公司外觀",
+    },
+    {
+      img: "/img/home/img_7.png",
+      alt: "三重區公司外觀實際圖",
+    },
+    {
+      img: "/img/home/img_5.png",
+      alt: "三重區公司外觀示意圖",
+    },
+    {
+      img: "/img/home/img_6.png",
+      alt: "三重區公司外觀示意圖",
+    },
+  ],
+  news: [
+    {
+      url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
+      title: "明曜異業結盟展企圖心 今年營收上看10億",
+      date: "2022/03/01",
+    },
+  ],
+};
+
+Aos.init({
+  offset: 100,
+  delay: 50,
+});
+
 const Home = () => {
-  const data = {
-    bannerImage: [
-      {
-        img: "/img/home/img01.png",
-        alt: "樹林區公司外觀",
-      },
-      {
-        img: "/img/home/img_7.png",
-        alt: "三重區公司外觀實際圖",
-      },
-      {
-        img: "/img/home/img_5.png",
-        alt: "三重區公司外觀示意圖",
-      },
-      {
-        img: "/img/home/img_6.png",
-        alt: "三重區公司外觀示意圖",
-      },
-    ],
-    news: [
-      {
-        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
-        title: "明曜異業結盟展企圖心 今年營收上看10億",
-        date: "2022/03/01",
-      },
-    ],
-  };
-
-  Aos.init({
-    offset: 100,
-    delay: 50,
-  });
-
   return (
     <div className="home">
       <div className="container-home">

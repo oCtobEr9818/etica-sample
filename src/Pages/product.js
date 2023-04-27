@@ -5,87 +5,87 @@ import { Layout } from "../Components/Layout";
 
 import { v4 } from "uuid";
 
-const Product = () => {
-  const data = {
-    product_img: {
-      image: "/img/sub-product.png",
-      alt: "ESS Energy Storage System, ETICA 儲能櫃",
-    },
-    industrialBattery: {
-      title: "工控電池",
-      image: [
-        {
-          img: "/img/1S1P.jpg",
-          alt: "1S1P",
-          url: "/product_industrial_battery#1S1P",
-        },
-      ],
-    },
-    eBikeLEV: {
-      title: "e-bike.LEV",
-      image: [
-        {
-          img: "/img/bicycle.png",
-          alt: "腳踏車",
-          url: "/product_ebike#bicycle",
-        },
-        {
-          img: "/img/cart.png",
-          alt: "推車",
-          url: "/product_ebike#cart",
-        },
-      ],
-      bgImage: {
-        img: "/img/EV.jpg",
-        alt: "EV-bg",
+const data = {
+  product_img: {
+    image: "/img/sub-product.png",
+    alt: "ESS Energy Storage System, ETICA 儲能櫃",
+  },
+  industrialBattery: {
+    title: "工控電池",
+    image: [
+      {
+        img: "/img/1S1P.jpg",
+        alt: "1S1P",
+        url: "/product_industrial_battery#1S1P",
       },
-    },
-    energyStorageBattery: {
-      title: "ESS儲能電池",
-      image: [
-        {
-          img: "/img/ET48 Hybrid.png",
-          alt: "水冷高壓儲能櫃",
-          url: "/product_ESS#ET48",
-        },
-        {
-          img: "/img/energyStorageBox2.png",
-          alt: "集裝箱",
-          url: "/product_ESS#energyStorageBox",
-        },
-        {
-          img: "/img/etica-c.png",
-          alt: "etica-c",
-          url: "/product_ESS#Etica-C",
-        },
-        {
-          img: "/img/etica-o.png",
-          alt: "etica-o",
-          url: "/product_ESS#Etica-O",
-        },
-        {
-          img: "/img/etica-r1.png",
-          alt: "etica-r1",
-          url: "/product_ESS#Etica-R1",
-        },
-        {
-          img: "/img/etica-r3.png",
-          alt: "etica-r3",
-          url: "/product_ESS#Etica-R3",
-        },
-        {
-          img: "/img/etica-p.png",
-          alt: "etica-p",
-          url: "/product_ESS#Etica-P",
-        },
-      ],
-      bgImage: {
-        img: "/img/3-53405622.jpg",
-        alt: "ESS-bg",
+    ],
+  },
+  eBikeLEV: {
+    title: "e-bike.LEV",
+    image: [
+      {
+        img: "/img/bicycle.png",
+        alt: "腳踏車",
+        url: "/product_ebike#bicycle",
       },
+      {
+        img: "/img/cart.png",
+        alt: "推車",
+        url: "/product_ebike#cart",
+      },
+    ],
+    bgImage: {
+      img: "/img/EV.jpg",
+      alt: "EV-bg",
     },
-  };
+  },
+  energyStorageBattery: {
+    title: "ESS儲能電池",
+    image: [
+      {
+        img: "/img/ET48 Hybrid.png",
+        alt: "水冷高壓儲能櫃",
+        url: "/product_ESS#ET48",
+      },
+      {
+        img: "/img/energyStorageBox2.png",
+        alt: "集裝箱",
+        url: "/product_ESS#energyStorageBox",
+      },
+      {
+        img: "/img/etica-c.png",
+        alt: "etica-c",
+        url: "/product_ESS#Etica-C",
+      },
+      {
+        img: "/img/etica-o.png",
+        alt: "etica-o",
+        url: "/product_ESS#Etica-O",
+      },
+      {
+        img: "/img/etica-r1.png",
+        alt: "etica-r1",
+        url: "/product_ESS#Etica-R1",
+      },
+      {
+        img: "/img/etica-r3.png",
+        alt: "etica-r3",
+        url: "/product_ESS#Etica-R3",
+      },
+      {
+        img: "/img/etica-p.png",
+        alt: "etica-p",
+        url: "/product_ESS#Etica-P",
+      },
+    ],
+    bgImage: {
+      img: "/img/3-53405622.jpg",
+      alt: "ESS-bg",
+    },
+  },
+};
 
+const Product = () => {
   return (
     <Layout>
       <div className="banner">

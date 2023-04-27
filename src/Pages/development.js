@@ -3,19 +3,19 @@ import "aos/dist/aos.css";
 
 import { Layout } from "../Components/Layout";
 
+const data = {
+  development: {
+    image: process.env.PUBLIC_URL + "/img/sub-development.png",
+    alt: "動力研發部開發環境",
+  },
+};
+
+Aos.init({
+  offset: 100,
+  delay: 50,
+});
+
 const Development = () => {
-  const data = {
-    development: {
-      image: process.env.PUBLIC_URL + "/img/sub-development.png",
-      alt: "動力研發部開發環境",
-    },
-  };
-
-  Aos.init({
-    offset: 100,
-    delay: 50,
-  });
-
   return (
     <Layout>
       <div className="banner">

@@ -1,24 +1,24 @@
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
-const CommercialFacility = () => {
-  const data = {
-    solution_img: {
-      image: imgHandler("/img/sub-solution.png"),
-      alt: "一大塊太陽能板架設在停車場",
+const data = {
+  solution_img: {
+    image: imgHandler("/img/sub-solution.png"),
+    alt: "一大塊太陽能板架設在停車場",
+  },
+  constent_data: {
+    data01: {
+      image: imgHandler("/img/commercialFacility_plan1.png"),
+      alt: "獨立水冷電池櫃",
     },
-    constent_data: {
-      data01: {
-        image: imgHandler("/img/commercialFacility_plan1.png"),
-        alt: "獨立水冷電池櫃",
-      },
-      data02: {
-        image: imgHandler("/img/commercialFacility_plan2.png"),
-        alt: "20呎儲能櫃",
-      },
+    data02: {
+      image: imgHandler("/img/commercialFacility_plan2.png"),
+      alt: "20呎儲能櫃",
     },
-  };
+  },
+};
 
+const CommercialFacility = () => {
   return (
     <Layout>
       <div className="banner">
