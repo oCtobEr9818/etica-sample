@@ -1,3 +1,5 @@
+import { Layout } from "../Components/Layout";
+
 const Performance = () => {
   const data = {
     banner_data: {
@@ -29,7 +31,7 @@ const Performance = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.banner_data.image} alt={data.banner_data.alt} />
       </div>
@@ -69,7 +71,7 @@ const Performance = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

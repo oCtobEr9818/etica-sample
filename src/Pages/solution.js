@@ -1,5 +1,6 @@
 import ContentTitle from "../Components/content-title";
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const Solution = () => {
   const data = {
@@ -97,7 +98,7 @@ const Solution = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.solution_img.image} alt={data.solution_img.alt} />
       </div>
@@ -298,7 +299,7 @@ const Solution = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

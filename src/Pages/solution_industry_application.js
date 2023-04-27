@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const IndustryApplication = () => {
   const data = {
@@ -19,14 +20,14 @@ const IndustryApplication = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.solution_img.image} alt={data.solution_img.alt} />
       </div>
 
       <div className="industry-application">
         <div className="content-wrap">
-          <h1>工業應用</h1>
+          <h1 id="industry-application">工業應用</h1>
 
           <div className="industry-application-content">
             <ul>
@@ -44,7 +45,7 @@ const IndustryApplication = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

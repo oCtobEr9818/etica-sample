@@ -1,6 +1,7 @@
 import ContentTitle from "../Components/content-title";
 import Content from "../Components/content";
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const AboutUs = () => {
   const data = {
@@ -62,7 +63,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.aboutus.image} alt={data.aboutus.alt} />
       </div>
@@ -105,7 +106,7 @@ const AboutUs = () => {
         altR=""
         content={data.feature.content}
       />
-    </div>
+    </Layout>
   );
 };
 

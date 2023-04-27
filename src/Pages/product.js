@@ -1,6 +1,8 @@
 import { HashLink as Link } from "react-router-hash-link";
 import ContentTitle from "../Components/content-title";
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
+
 import { v4 } from "uuid";
 
 const Product = () => {
@@ -47,16 +49,6 @@ const Product = () => {
           url: "/product_ESS#ET48",
         },
         {
-          img: "/img/indoor.png",
-          alt: "家用儲能櫃 & 太陽能轉變器",
-          url: "/product_ESS#house",
-        },
-        {
-          img: "/img/wallmounted.png",
-          alt: "壁掛式儲能箱",
-          url: "/product_ESS#wallmounted",
-        },
-        {
           img: "/img/energyStorageBox2.png",
           alt: "集裝箱",
           url: "/product_ESS#energyStorageBox",
@@ -95,7 +87,7 @@ const Product = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img
           src={imgHandler(data.product_img.image)}
@@ -108,8 +100,8 @@ const Product = () => {
       <div className="product-content">
         <div className="imgWrap">
           {data.energyStorageBattery.image.map((item) => (
-            <Link to={item.url}>
-              <img src={imgHandler(item.img)} alt={item.alt} key={v4} />
+            <Link to={item.url} key={v4()}>
+              <img src={imgHandler(item.img)} alt={item.alt} />
             </Link>
           ))}
         </div>
@@ -129,8 +121,8 @@ const Product = () => {
       <div className="product-content">
         <div className="imgWrap">
           {data.eBikeLEV.image.map((item) => (
-            <Link to={item.url}>
-              <img src={imgHandler(item.img)} alt={item.alt} key={v4} />
+            <Link to={item.url} key={v4()}>
+              <img src={imgHandler(item.img)} alt={item.alt} />
             </Link>
           ))}
         </div>
@@ -150,8 +142,8 @@ const Product = () => {
       <div className="product-content">
         <div className="imgWrap">
           {data.industrialBattery.image.map((item) => (
-            <Link to={item.url}>
-              <img src={imgHandler(item.img)} alt={item.alt} key={v4} />
+            <Link to={item.url} key={v4()}>
+              <img src={imgHandler(item.img)} alt={item.alt} />
             </Link>
           ))}
         </div>
@@ -160,7 +152,7 @@ const Product = () => {
           <div className="title-bg"></div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

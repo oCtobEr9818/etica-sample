@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 
 import mapKey from "../Components/key";
 import { useFormValidate } from "../Components/useFormValidate";
+import { Layout } from "../Components/Layout";
 
 const Contact = () => {
   const emailRule =
@@ -101,7 +102,7 @@ const Contact = () => {
   );
 
   return (
-    <div className="container" style={{ height: "100vh" }}>
+    <Layout>
       <div className="map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: mapKey }}
@@ -122,7 +123,10 @@ const Contact = () => {
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="form-wrap">
           <label>
-            姓名 <span>*</span>
+            姓名{" "}
+            <span>
+              *{nameError && <p className="error-text">此欄位不能為空白</p>}
+            </span>
           </label>
           <input
             type="text"
@@ -132,13 +136,17 @@ const Contact = () => {
             onBlur={onBlurName}
             className={nameInputClasses}
           />
-          {nameError && <p className="error-text">此欄位不能為空白</p>}
+
           <br />
         </div>
 
         <div className="form-wrap">
           <label>
-            電子信箱 <span>*</span>
+            電子信箱{" "}
+            <span>
+              *
+              {emailError && <p className="error-text">格式錯誤或欄位為空白</p>}
+            </span>
           </label>
           <input
             type="email"
@@ -148,13 +156,16 @@ const Contact = () => {
             onBlur={onBlurEmail}
             className={emailInputClasses}
           />
-          {emailError && <p className="error-text">格式錯誤或欄位為空白</p>}
+
           <br />
         </div>
 
         <div className="form-wrap">
           <label>
-            主旨 <span>*</span>
+            主旨{" "}
+            <span>
+              *{subjectError && <p className="error-text">此欄位不能為空白</p>}
+            </span>
           </label>
           <input
             type="text"
@@ -164,13 +175,16 @@ const Contact = () => {
             onBlur={onBlurSubject}
             className={subjectInputClasses}
           />
-          {subjectError && <p className="error-text">此欄位不能為空白</p>}
+
           <br />
         </div>
 
         <div className="form-wrap">
           <label>
-            內容 <span>*</span>
+            內容{" "}
+            <span>
+              *{contentError && <p className="error-text">此欄位不能為空白</p>}
+            </span>
           </label>
           <textarea
             name="message"
@@ -180,7 +194,6 @@ const Contact = () => {
             onBlur={onBlurContent}
             className={contentInputClasses}
           />
-          {contentError && <p className="error-text">此欄位不能為空白</p>}
         </div>
 
         <div className="form-wrap">
@@ -192,7 +205,7 @@ const Contact = () => {
           />
         </div>
       </form>
-    </div>
+    </Layout>
   );
 };
 

@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const TransportationApplication = () => {
   const data = {
@@ -19,14 +20,14 @@ const TransportationApplication = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.solution_img.image} alt={data.solution_img.alt} />
       </div>
 
       <div className="transportation-application">
         <div className="content-wrap">
-          <h1>交通應用</h1>
+          <h1 id="transportation-application">交通應用</h1>
 
           <p>
             適用於快速充電站等裝置。本產品具耐高壓與防延燒等設計，亦可依其需求再與其他rack並聯以提升其容量，同時供應多台電動車充電，符合客戶使用需求。
@@ -44,7 +45,7 @@ const TransportationApplication = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

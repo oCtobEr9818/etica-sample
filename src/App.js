@@ -31,7 +31,7 @@ import Performance from "./Pages/performance";
 import Contact from "./Pages/contact";
 import Footer from "./Components/footer";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter basename="/etica-sample">
       <Navbar />
@@ -84,5 +84,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

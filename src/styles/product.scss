@@ -268,30 +268,32 @@
       margin: 0 0 10rem;
       border-collapse: collapse;
 
-      tr {
-        td,
-        th {
-          border: 1px solid #000;
-          text-align: center;
-          font-weight: normal;
-          padding: 15px;
-        }
-
-        td {
-          width: 70%;
-          transition: 0.2s;
-          &:hover {
-            background: rgb(218, 214, 214);
+      tbody {
+        tr {
+          td,
+          th {
+            border: 1px solid #000;
+            text-align: center;
+            font-weight: normal;
+            padding: 15px;
           }
-        }
 
-        th {
-          width: 30%;
-          font-weight: bold;
-          font-size: 1.1em;
-          background: #93cddd;
-          &:nth-child(2) {
+          td {
             width: 70%;
+            transition: 0.2s;
+            &:hover {
+              background: rgb(218, 214, 214);
+            }
+          }
+
+          th {
+            width: 30%;
+            font-weight: bold;
+            font-size: 1.1em;
+            background: #93cddd;
+            &:nth-child(2) {
+              width: 70%;
+            }
           }
         }
       }

@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const ProductESS = () => {
   const data = {
@@ -50,7 +51,7 @@ const ProductESS = () => {
     },
   };
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img
           src={imgHandler(data.product_img.image)}
@@ -76,180 +77,50 @@ const ProductESS = () => {
         </div>
 
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>48 V</td>
-          </tr>
-          <tr>
-            <th>標準充電電流</th>
-            <td>50 A</td>
-          </tr>
-          <tr>
-            <th>瓦數</th>
-            <td>9.6kWh</td>
-          </tr>
-          <tr>
-            <th>IP等級</th>
-            <td>IP22</td>
-          </tr>
-          <tr>
-            <th>工作溫度</th>
-            <td>-10~45℃</td>
-          </tr>
-          <tr>
-            <th>重量</th>
-            <td>80 kg</td>
-          </tr>
-          <tr>
-            <th>尺寸</th>
-            <td>676mm＊565mm＊1011mm L*W*H</td>
-          </tr>
-          <tr>
-            <th>供電需求</th>
-            <td>
-              Single phase 3-wires
-              <br />
-              output 110 / 220 VAC
-              <br />
-              6KW Hybrid PV inverter
-            </td>
-          </tr>
-        </table>
-      </div>
-
-      {/* 家用儲能櫃 & 太陽能轉變器 */}
-      <div className="product-ESS-content">
-        <div className="contentWrap">
-          <div className="subtitle">
-            <h2 id="house">家用儲能櫃 & 太陽能轉變器</h2>
-            <ul>
-              <li>EV 快充專用儲能櫃</li>
-            </ul>
-          </div>
-
-          <img
-            src={imgHandler(data.product2_content.house.img)}
-            alt={data.product2_content.house.alt}
-          />
-        </div>
-
-        <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>48 V</td>
-          </tr>
-          <tr>
-            <th>瓦數</th>
-            <td>9.2 kWh</td>
-          </tr>
-          <tr>
-            <th>容量</th>
-            <td>192 Ah</td>
-          </tr>
-          <tr>
-            <th>尺寸</th>
-            <td>1100mm＊1332mm＊1585mm L*W*H</td>
-          </tr>
-          <tr>
-            <th>工作電流</th>
-            <td>200~250 A</td>
-          </tr>
-        </table>
-      </div>
-
-      {/* 壁掛式儲能箱 */}
-      <div className="product-ESS-content">
-        <div className="contentWrap">
-          <img
-            src={imgHandler(data.product2_content.wallmounted.img)}
-            alt={data.product2_content.wallmounted.alt}
-          />
-          <div className="subtitle">
-            <h2 id="wallmounted">壁掛式儲能箱</h2>
-            <ul>
-              <li>內建 OTA 軟韌體讀取功能</li>
-            </ul>
-          </div>
-        </div>
-        <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>51.2 V (25°C)</td>
-          </tr>
-          <tr>
-            <th>功率</th>
-            <td>5.12 kWh</td>
-          </tr>
-          <tr>
-            <th>標準充電/放電電流</th>
-            <td>50 A</td>
-          </tr>
-          <tr>
-            <th>最大充電/放電持續電流</th>
-            <td>100 A</td>
-          </tr>
-          <tr>
-            <th>電池自放電率</th>
-            <td>≤3% / 月 (25 ℃，50% SOC)</td>
-          </tr>
-          <tr>
-            <th>迴圈壽命</th>
-            <td>
-              ≥5, 200 次 (0.5C / 0.5C，70% DOD)
-              <br />
-              ≥3, 500 次 (0.5C / 0.5C，80%DOD)
-            </td>
-          </tr>
-          <tr>
-            <th>出場荷電狀態</th>
-            <td>30% ~ 40%</td>
-          </tr>
-          <tr>
-            <th>內壓等級</th>
-            <td>1500 V DC</td>
-          </tr>
-          <tr>
-            <th>絕緣電阻</th>
-            <td>{">"}100 MΩ</td>
-          </tr>
-          <tr>
-            <th>IP等級</th>
-            <td>IP20</td>
-          </tr>
-          <tr>
-            <th>海拔高度</th>
-            <td>{"<"}2000 m</td>
-          </tr>
-          <tr>
-            <th>工作溫度</th>
-            <td>
-              0℃~55℃ (充電)，-20℃~55℃ (放電)
-              <br />
-              -10℃~30℃
-              <br />
-              5%~95%，RH
-            </td>
-          </tr>
-          <tr>
-            <th>重量</th>
-            <td>48 kg</td>
-          </tr>
-          <tr>
-            <th>尺寸</th>
-            <td>444mm * 465mm * 132mm L*W*H</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>電壓</th>
+              <td>48 V</td>
+            </tr>
+            <tr>
+              <th>標準充電電流</th>
+              <td>50 A</td>
+            </tr>
+            <tr>
+              <th>瓦數</th>
+              <td>9.6kWh</td>
+            </tr>
+            <tr>
+              <th>IP等級</th>
+              <td>IP22</td>
+            </tr>
+            <tr>
+              <th>工作溫度</th>
+              <td>-10~45℃</td>
+            </tr>
+            <tr>
+              <th>重量</th>
+              <td>80 kg</td>
+            </tr>
+            <tr>
+              <th>尺寸</th>
+              <td>676mm＊565mm＊1011mm L*W*H</td>
+            </tr>
+            <tr>
+              <th>供電需求</th>
+              <td>
+                Single phase 3-wires
+                <br />
+                output 110 / 220 VAC
+                <br />
+                6KW Hybrid PV inverter
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -270,26 +141,28 @@ const ProductESS = () => {
           />
         </div>
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>48 V</td>
-          </tr>
-          <tr>
-            <th>瓦數</th>
-            <td>9.2 kWh</td>
-          </tr>
-          <tr>
-            <th>容量</th>
-            <td>192 Ah</td>
-          </tr>
-          <tr>
-            <th>工作電流</th>
-            <td>3200 A</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>電壓</th>
+              <td>48 V</td>
+            </tr>
+            <tr>
+              <th>瓦數</th>
+              <td>9.2 kWh</td>
+            </tr>
+            <tr>
+              <th>容量</th>
+              <td>192 Ah</td>
+            </tr>
+            <tr>
+              <th>工作電流</th>
+              <td>3200 A</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -316,58 +189,60 @@ const ProductESS = () => {
           </div>
         </div>
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>化學成分</th>
-            <td>LiFePO4</td>
-          </tr>
-          <tr>
-            <th>電池櫃組成</th>
-            <td>416S1P x 10 Racks (max)</td>
-          </tr>
-          <tr>
-            <th>輸出功率</th>
-            <td>3.72MWh</td>
-          </tr>
-          <tr>
-            <th>額定功率</th>
-            <td>3.72MW (1.0C)</td>
-          </tr>
-          <tr>
-            <th>最大電流</th>
-            <td>2800A (Maximum)</td>
-          </tr>
-          <tr>
-            <th>電池運作溫度</th>
-            <td>-20~45℃</td>
-          </tr>
-          <tr>
-            <th>額定電壓</th>
-            <td>1331.2V (Cell = 3.2V)</td>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>1164.8~1497.6V (電芯電壓範圍2.8V~3.6V)</td>
-          </tr>
-          <tr>
-            <th>通訊介面</th>
-            <td>Modbus TCP</td>
-          </tr>
-          <tr>
-            <th>HMI</th>
-            <td>Linux interface, IPC, PLC 介面整合</td>
-          </tr>
-          <tr>
-            <th>電芯認證</th>
-            <td>UN38.3, UL1973, UL9540A, IEC 62619</td>
-          </tr>
-          <tr>
-            <th>電池櫃認證</th>
-            <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>化學成分</th>
+              <td>LiFePO4</td>
+            </tr>
+            <tr>
+              <th>電池櫃組成</th>
+              <td>416S1P x 10 Racks (max)</td>
+            </tr>
+            <tr>
+              <th>輸出功率</th>
+              <td>3.72MWh</td>
+            </tr>
+            <tr>
+              <th>額定功率</th>
+              <td>3.72MW (1.0C)</td>
+            </tr>
+            <tr>
+              <th>最大電流</th>
+              <td>2800A (Maximum)</td>
+            </tr>
+            <tr>
+              <th>電池運作溫度</th>
+              <td>-20~45℃</td>
+            </tr>
+            <tr>
+              <th>額定電壓</th>
+              <td>1331.2V (Cell = 3.2V)</td>
+            </tr>
+            <tr>
+              <th>電壓</th>
+              <td>1164.8~1497.6V (電芯電壓範圍2.8V~3.6V)</td>
+            </tr>
+            <tr>
+              <th>通訊介面</th>
+              <td>Modbus TCP</td>
+            </tr>
+            <tr>
+              <th>HMI</th>
+              <td>Linux interface, IPC, PLC 介面整合</td>
+            </tr>
+            <tr>
+              <th>電芯認證</th>
+              <td>UN38.3, UL1973, UL9540A, IEC 62619</td>
+            </tr>
+            <tr>
+              <th>電池櫃認證</th>
+              <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -394,58 +269,62 @@ const ProductESS = () => {
         </div>
 
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電池模組</th>
-            <td>CATL 280Ah 52S1P Battery pack</td>
-          </tr>
-          <tr>
-            <th>電池櫃組成</th>
-            <td>8串電池 & 控制器 & 水冷機 & Novec 1230消防系統</td>
-          </tr>
-          <tr>
-            <th>輸出功率</th>
-            <td>372kWh</td>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>1164.8~1497.6 VCD (電芯電壓範圍2.8~3.6 V)</td>
-          </tr>
-          <tr>
-            <th>充電溫度範圍</th>
-            <td>0~50℃</td>
-          </tr>
-          <tr>
-            <th>放電溫度範圍</th>
-            <td>-20~55℃</td>
-          </tr>
-          <tr>
-            <th>尺寸</th>
-            <td>1560mm * 1330mm * 2203mm L*W*H </td>
-          </tr>
-          <tr>
-            <th>重量</th>
-            <td>3550kg</td>
-          </tr>
-          <tr>
-            <th>通訊介面</th>
-            <td>CAN Bus</td>
-          </tr>
-          <tr>
-            <th>HMI</th>
-            <td>Linux 系統, IPC, PLC介面整合</td>
-          </tr>
-          <tr>
-            <th>電芯認證</th>
-            <td>UN38.3, UL1973, UL9540A, IEC 62619</td>
-          </tr>
-          <tr>
-            <th>電池櫃認證</th>
-            <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>電池模組</th>
+              <td>CATL 280Ah 52S1P Battery pack</td>
+            </tr>
+            <tr>
+              <th>電池櫃組成</th>
+              <td>
+                8串電池 {"&"} 控制器 {"&"} 水冷機 {"&"} Novec 1230消防系統
+              </td>
+            </tr>
+            <tr>
+              <th>輸出功率</th>
+              <td>372kWh</td>
+            </tr>
+            <tr>
+              <th>電壓</th>
+              <td>1164.8~1497.6 VCD (電芯電壓範圍2.8~3.6 V)</td>
+            </tr>
+            <tr>
+              <th>充電溫度範圍</th>
+              <td>0~50℃</td>
+            </tr>
+            <tr>
+              <th>放電溫度範圍</th>
+              <td>-20~55℃</td>
+            </tr>
+            <tr>
+              <th>尺寸</th>
+              <td>1560mm * 1330mm * 2203mm L*W*H </td>
+            </tr>
+            <tr>
+              <th>重量</th>
+              <td>3550kg</td>
+            </tr>
+            <tr>
+              <th>通訊介面</th>
+              <td>CAN Bus</td>
+            </tr>
+            <tr>
+              <th>HMI</th>
+              <td>Linux 系統, IPC, PLC介面整合</td>
+            </tr>
+            <tr>
+              <th>電芯認證</th>
+              <td>UN38.3, UL1973, UL9540A, IEC 62619</td>
+            </tr>
+            <tr>
+              <th>電池櫃認證</th>
+              <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -470,39 +349,41 @@ const ProductESS = () => {
         </div>
 
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>51.2V</td>
-          </tr>
-          <tr>
-            <th>容量</th>
-            <td>5.12kW x2 = 10.24kW</td>
-          </tr>
-          <tr>
-            <th>輸出功率</th>
-            <td>5kw (0.5C)</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>電壓</th>
+              <td>51.2V</td>
+            </tr>
+            <tr>
+              <th>容量</th>
+              <td>5.12kW x2 = 10.24kW</td>
+            </tr>
+            <tr>
+              <th>輸出功率</th>
+              <td>5kw (0.5C)</td>
+            </tr>
 
-          <tr>
-            <th>通訊介面</th>
-            <td>RS 485 Battery / RS232</td>
-          </tr>
-          <tr>
-            <th>電池組成</th>
-            <td>(8s1p X 2) x2</td>
-          </tr>
-          <tr>
-            <th>重量</th>
-            <td>180 kg</td>
-          </tr>
-          <tr>
-            <th>尺寸</th>
-            <td>650mm * 268mm * 1568mm L*W*H</td>
-          </tr>
+            <tr>
+              <th>通訊介面</th>
+              <td>RS 485 Battery / RS232</td>
+            </tr>
+            <tr>
+              <th>電池組成</th>
+              <td>(8s1p X 2) x2</td>
+            </tr>
+            <tr>
+              <th>重量</th>
+              <td>180 kg</td>
+            </tr>
+            <tr>
+              <th>尺寸</th>
+              <td>650mm * 268mm * 1568mm L*W*H</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -526,76 +407,78 @@ const ProductESS = () => {
           />
         </div>
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電壓</th>
-            <td>51.2 V (25°C)</td>
-          </tr>
-          <tr>
-            <th>功率</th>
-            <td>5.12 kWh</td>
-          </tr>
-          <tr>
-            <th>標準充電/放電電流</th>
-            <td>50 A</td>
-          </tr>
-          <tr>
-            <th>最大充電/放電持續電流</th>
-            <td>100 A</td>
-          </tr>
-          <tr>
-            <th>電池自放電率</th>
-            <td>≤3% / 月 (25 ℃，50% SOC)</td>
-          </tr>
-          <tr>
-            <th>迴圈壽命</th>
-            <td>
-              ≥5, 200 次 (0.5C / 0.5C，70% DOD)
-              <br />
-              ≥3, 500 次 (0.5C / 0.5C，80%DOD)
-            </td>
-          </tr>
-          <tr>
-            <th>出場荷電狀態</th>
-            <td>30% ~ 40%</td>
-          </tr>
-          <tr>
-            <th>內壓等級</th>
-            <td>1500 V DC</td>
-          </tr>
-          <tr>
-            <th>絕緣電阻</th>
-            <td>{">"}100 MΩ</td>
-          </tr>
-          <tr>
-            <th>IP等級</th>
-            <td>IP20</td>
-          </tr>
-          <tr>
-            <th>海拔高度</th>
-            <td>{"<"}2000 m</td>
-          </tr>
-          <tr>
-            <th>工作溫度</th>
-            <td>
-              0℃~55℃ (充電)，-20℃~55℃ (放電)
-              <br />
-              -10℃~30℃
-              <br />
-              5%~95%，RH
-            </td>
-          </tr>
-          <tr>
-            <th>重量</th>
-            <td>48 kg</td>
-          </tr>
-          <tr>
-            <th>尺寸</th>
-            <td>444mm * 465mm * 132mm L*W*H</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>電壓</th>
+              <td>51.2 V (25°C)</td>
+            </tr>
+            <tr>
+              <th>功率</th>
+              <td>5.12 kWh</td>
+            </tr>
+            <tr>
+              <th>標準充電/放電電流</th>
+              <td>50 A</td>
+            </tr>
+            <tr>
+              <th>最大充電/放電持續電流</th>
+              <td>100 A</td>
+            </tr>
+            <tr>
+              <th>電池自放電率</th>
+              <td>≤3% / 月 (25 ℃，50% SOC)</td>
+            </tr>
+            <tr>
+              <th>迴圈壽命</th>
+              <td>
+                ≥5, 200 次 (0.5C / 0.5C，70% DOD)
+                <br />
+                ≥3, 500 次 (0.5C / 0.5C，80%DOD)
+              </td>
+            </tr>
+            <tr>
+              <th>出場荷電狀態</th>
+              <td>30% ~ 40%</td>
+            </tr>
+            <tr>
+              <th>內壓等級</th>
+              <td>1500 V DC</td>
+            </tr>
+            <tr>
+              <th>絕緣電阻</th>
+              <td>{">"}100 MΩ</td>
+            </tr>
+            <tr>
+              <th>IP等級</th>
+              <td>IP20</td>
+            </tr>
+            <tr>
+              <th>海拔高度</th>
+              <td>{"<"}2000 m</td>
+            </tr>
+            <tr>
+              <th>工作溫度</th>
+              <td>
+                0℃~55℃ (充電)，-20℃~55℃ (放電)
+                <br />
+                -10℃~30℃
+                <br />
+                5%~95%，RH
+              </td>
+            </tr>
+            <tr>
+              <th>重量</th>
+              <td>48 kg</td>
+            </tr>
+            <tr>
+              <th>尺寸</th>
+              <td>444mm * 465mm * 132mm L*W*H</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -629,53 +512,55 @@ const ProductESS = () => {
           </div>
         </div>
         <table>
-          <tr>
-            <th>項目</th>
-            <th>規格</th>
-          </tr>
-          <tr>
-            <th>電池模組</th>
-            <td>16S1P</td>
-          </tr>
-          <tr>
-            <th>平均電壓</th>
-            <td>806.4 V</td>
-          </tr>
-          <tr>
-            <th>電壓範圍</th>
-            <td>672 ~ 918.4 V</td>
-          </tr>
-          <tr>
-            <th>輸入/輸出充電電流</th>
-            <td>最大28 A (0.25C)</td>
-          </tr>
-          <tr>
-            <th>輸入/輸出放電電流</th>
-            <td>最大60 A (0.5C)</td>
-          </tr>
-          <tr>
-            <th>充電環境溫度</th>
-            <td>10 ~ 42 °C (cell temperature)</td>
-          </tr>
-          <tr>
-            <th>放電環境溫度</th>
-            <td>-10 ~ 55 °C (cell temperature)</td>
-          </tr>
-          <tr>
-            <th>環境濕度</th>
-            <td>30 ~ 85 % (no condensation)</td>
-          </tr>
-          <tr>
-            <th>功率</th>
-            <td>96 kWh</td>
-          </tr>
-          <tr>
-            <th>海拔高度</th>
-            <td>{"<"}2000 m</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>項目</th>
+              <th>規格</th>
+            </tr>
+            <tr>
+              <th>電池模組</th>
+              <td>16S1P</td>
+            </tr>
+            <tr>
+              <th>平均電壓</th>
+              <td>806.4 V</td>
+            </tr>
+            <tr>
+              <th>電壓範圍</th>
+              <td>672 ~ 918.4 V</td>
+            </tr>
+            <tr>
+              <th>輸入/輸出充電電流</th>
+              <td>最大28 A (0.25C)</td>
+            </tr>
+            <tr>
+              <th>輸入/輸出放電電流</th>
+              <td>最大60 A (0.5C)</td>
+            </tr>
+            <tr>
+              <th>充電環境溫度</th>
+              <td>10 ~ 42 °C (cell temperature)</td>
+            </tr>
+            <tr>
+              <th>放電環境溫度</th>
+              <td>-10 ~ 55 °C (cell temperature)</td>
+            </tr>
+            <tr>
+              <th>環境濕度</th>
+              <td>30 ~ 85 % (no condensation)</td>
+            </tr>
+            <tr>
+              <th>功率</th>
+              <td>96 kWh</td>
+            </tr>
+            <tr>
+              <th>海拔高度</th>
+              <td>{"<"}2000 m</td>
+            </tr>
+          </tbody>
         </table>
       </div>
-    </div>
+    </Layout>
   );
 };
 

@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const GreenEnergyIndustry = () => {
   const data = {
@@ -20,14 +21,14 @@ const GreenEnergyIndustry = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.solution_img.image} alt={data.solution_img.alt} />
       </div>
 
       <div className="greenEnergy-industry">
         <div className="content-wrap">
-          <h1>綠能產業</h1>
+          <h1 id="greenEnergy-industry">綠能產業</h1>
 
           <p>
             適用範圍：太陽能電站、漁電共生、科技植栽。
@@ -46,7 +47,7 @@ const GreenEnergyIndustry = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

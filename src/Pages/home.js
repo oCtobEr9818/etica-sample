@@ -47,15 +47,21 @@ const Home = () => {
 
         <ul className="imgOption">
           <li className="point point1">
-            <Link to="/solution_commercial_facility" className="point_a">
+            <Link
+              to="/solution_commercial_facility#commercial-facility"
+              className="point_a"
+            >
               <span className="point_span" /> {/* 白色圓點 */}
               <div className="point_wrap">
-                <span>商業設施</span>
+                <span>電力設施</span>
               </div>
             </Link>
           </li>
           <li className="point point2">
-            <Link to="/solution_transportation_application" className="point_a">
+            <Link
+              to="/solution_transportation_application#transportation-application"
+              className="point_a"
+            >
               <span className="point_span" />
               <div className="point_wrap">
                 <span>交通應用</span>
@@ -63,7 +69,10 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point3">
-            <Link to="/solution_greenEnergy_industry" className="point_a">
+            <Link
+              to="/solution_greenEnergy_industry#greenEnergy-industry"
+              className="point_a"
+            >
               <span className="point_span" />
               <div className="point_wrap">
                 <span>綠能產業</span>
@@ -71,7 +80,7 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point4">
-            <Link to="/solution_public_house" className="point_a">
+            <Link to="/solution_public_house#public-house" className="point_a">
               <span className="point_span" />
               <div className="point_wrap">
                 <span>公設住宅</span>
@@ -79,7 +88,10 @@ const Home = () => {
             </Link>
           </li>
           <li className="point point5">
-            <Link to="/solution_industry_application" className="point_a">
+            <Link
+              to="/solution_industry_application#industry-application"
+              className="point_a"
+            >
               <span className="point_span" />
               <div className="point_wrap">
                 <span>工業應用</span>

@@ -12,7 +12,7 @@ const navs = {
     name: "關於我們",
   },
   solution: {
-    path: "/solution",
+    path: "/solution_commercial_facility",
     name: "解決方案",
   },
   product: {
@@ -93,19 +93,27 @@ const Navbar = () => {
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
-                <Link to="/solution#commercialFacility">商業設施</Link>
+                <Link to="/solution_commercial_facility#commercial-facility">
+                  電力設施
+                </Link>
               </li>
               <li>
-                <Link to="/solution#trsportationApplication">交通應用</Link>
+                <Link to="/solution_transportation_application#transportation-application">
+                  交通應用
+                </Link>
               </li>
               <li>
-                <Link to="/solution#publicHouse">公設住宅</Link>
+                <Link to="/solution_greenEnergy_industry#greenEnergy-industry">
+                  公設住宅
+                </Link>
               </li>
               <li>
-                <Link to="/solution#industryApplication">工業應用</Link>
+                <Link to="/solution_public_house#public-house">工業應用</Link>
               </li>
               <li>
-                <Link to="/solution#greenEnergyIndustry">綠能產業</Link>
+                <Link to="/solution_industry_application#industry-application">
+                  綠能產業
+                </Link>
               </li>
             </ul>
           </div>

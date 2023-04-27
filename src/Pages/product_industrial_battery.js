@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const ProductIndustrialBattery = () => {
   const data = {
@@ -15,7 +16,7 @@ const ProductIndustrialBattery = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img
           src={imgHandler(data.product_img.image)}
@@ -41,7 +42,7 @@ const ProductIndustrialBattery = () => {
         </div>
 
         <table>
-          <thead>
+          <tbody>
             <tr>
               <th>項目</th>
               <th>規格</th>
@@ -86,10 +87,10 @@ const ProductIndustrialBattery = () => {
               <th>重量</th>
               <td>67 g</td>
             </tr>
-          </thead>
+          </tbody>
         </table>
       </div>
-    </div>
+    </Layout>
   );
 };
 

@@ -1,6 +1,8 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+import { Layout } from "../Components/Layout";
+
 const Development = () => {
   const data = {
     development: {
@@ -15,7 +17,7 @@ const Development = () => {
   });
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.development.image} alt={data.development.alt} />
       </div>
@@ -66,7 +68,7 @@ const Development = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

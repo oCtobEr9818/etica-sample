@@ -1,4 +1,5 @@
 import { imgHandler } from "../Components/imgHandler";
+import { Layout } from "../Components/Layout";
 
 const PublicHouse = () => {
   const data = {
@@ -15,14 +16,14 @@ const PublicHouse = () => {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div className="banner">
         <img src={data.solution_img.image} alt={data.solution_img.alt} />
       </div>
 
       <div className="public-house">
         <div className="content-wrap">
-          <h1>公設住宅</h1>
+          <h1 id="public-house">公設住宅</h1>
 
           <p>
             適用範圍：家庭、電力不足或不穩定的郊區、不可斷電的儀器或設備。
@@ -37,7 +38,7 @@ const PublicHouse = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
