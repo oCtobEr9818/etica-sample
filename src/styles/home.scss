@@ -575,7 +575,8 @@ $primary-color: #93cddd;
           }
           &::after {
             height: 40em;
-            right: -1px;
+            right: 0;
+            bottom: -20px;
           }
         }
       }
@@ -774,11 +775,14 @@ $primary-color: #93cddd;
 
         table {
           width: 100%;
-          margin: -9em -1em 9em 1em;
+          margin: -6em -1em 6em 1em;
           display: block;
           overflow-x: scroll;
           word-spacing: nowrap;
           border-collapse: collapse;
+          @include mini-pad {
+            margin: -11em -1em 11em 1em;
+          }
 
           th,
           td {
@@ -787,6 +791,9 @@ $primary-color: #93cddd;
             padding: 5px;
             text-align: center;
             box-sizing: border-box;
+            @include mini-pad {
+              font-size: 0.6em;
+            }
           }
         }
       } // client

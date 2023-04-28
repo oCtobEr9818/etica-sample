@@ -14,6 +14,9 @@ import "./styles/contact.scss";
 import "./styles/footer.scss";
 
 import Navbar from "./Components/navbar";
+import Footer from "./Components/footer";
+import ScrollToTopButton from "./Components/scrollToTopBtn";
+
 import Home from "./Pages/home";
 import AboutUs from "./Pages/aboutUs";
 import Solution from "./Pages/solution";
@@ -29,7 +32,6 @@ import ProductIndustrialBattery from "./Pages/product_industrial_battery";
 import Development from "./Pages/development";
 import Performance from "./Pages/performance";
 import Contact from "./Pages/contact";
-import Footer from "./Components/footer";
 
 export default function App() {
   return (
@@ -80,6 +82,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
+      <ScrollToTopButton />
       <Footer />
     </BrowserRouter>
   );

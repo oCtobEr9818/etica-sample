@@ -1,8 +1,9 @@
-import { imgHandler } from "../Components/imgHandler";
 import { HashLink as Link } from "react-router-hash-link";
 import { v4 } from "uuid";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
+import { imgHandler } from "../Components/imgHandler";
 import MapChart from "../Components/mapChart";
 
 const data = {
