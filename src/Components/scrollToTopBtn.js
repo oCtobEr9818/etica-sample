@@ -27,11 +27,13 @@ const ScrollToTopButton = () => {
   // 設定按鈕的 CSS style
   const style = {
     position: isFixed ? "fixed" : "absolute",
-    bottom: isFixed // 如果 isFixed 狀態為 true，則按鈕的 bottom 距離為 100px 或 350px，否則 bottom 距離為 50px 或 180px
-      ? window.innerWidth < 768 // 如果螢幕寬度小於 768px，則 bottom 距離為 50px，否則 bottom 距離為 100px
+    // 電腦螢幕寬度，按鈕的 bottom 距離為 100px(fixed) 或 350px(absolute)
+    // 手機螢幕寬度， bottom 距離為 50px(fixed) 或 180px(absolute)
+    bottom: isFixed
+      ? window.innerWidth < 768
         ? "50px"
         : "100px"
-      : window.innerWidth < 768 // 如果螢幕寬度小於 768px，則 bottom 距離為 180px，否則 bottom 距離為 350px
+      : window.innerWidth < 768
       ? "180px"
       : "350px",
     right: window.innerWidth < 768 ? "8%" : "3%", // 如果螢幕寬度小於 768px，則 right 距離為 8%，否則 right 距離為 3%
