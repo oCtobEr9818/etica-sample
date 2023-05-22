@@ -55,8 +55,8 @@ $primary-color: #93cddd;
 
 .home {
   max-width: 100%;
-  width: 66rem;
-  margin: auto;
+  // width: 66rem;
+  margin: 3rem auto 0;
 
   @include mini-pad {
     margin-top: 8rem;
@@ -65,12 +65,32 @@ $primary-color: #93cddd;
   .container-home {
     width: 100%;
     height: auto;
+    margin-bottom: 7rem;
     position: relative;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      object-fit: contain;
       @include user-select-none;
+    }
+
+    .container-home-txt {
+      width: 50%;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+
+      h2 {
+        color: #f7f7f7;
+        font-size: 2em;
+      }
+
+      p {
+        width: 80%;
+        color: #f7f7f7;
+        font-size: 1.5em;
+      }
     }
 
     .imgOption {
@@ -556,7 +576,7 @@ $primary-color: #93cddd;
         }
       }
       &:nth-child(3) {
-        height: 85vh;
+        // height: 85vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -573,20 +593,15 @@ $primary-color: #93cddd;
             width: 0;
             height: 0;
           }
-          &::after {
-            height: 40em;
-            right: 0;
-            bottom: -20px;
-          }
         }
       }
 
       .topline {
         height: 2px;
-        width: 80%;
+        width: 90%;
         background: $primary-color;
         position: absolute;
-        top: 1.7rem;
+        top: 1.68rem;
         left: 1.5rem;
 
         @include mobile {
@@ -636,7 +651,7 @@ $primary-color: #93cddd;
       }
 
       .underline {
-        width: 85.2%;
+        width: 87.8%;
         height: 2px;
         background: $primary-color;
         position: absolute;
@@ -672,13 +687,71 @@ $primary-color: #93cddd;
         &::before {
           content: "";
           width: 2px;
-          height: 2rem;
+          height: 1.9rem;
           display: inline-block;
           background: $primary-color;
           position: absolute;
           top: 0;
         }
       }
+
+      // 服務項目
+      .service {
+        width: 100%;
+        height: 100%;
+
+        .service-content {
+          width: 80%;
+          height: 50%;
+          padding: 3rem;
+          margin: 10rem 0 0 3.5rem;
+          box-sizing: border-box;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          grid-template-columns: 25% 25% 25% 25%;
+          grid-template-rows: 70% 30%;
+          z-index: -1;
+          @include user-select-none;
+
+          img {
+            width: 10rem;
+            height: 8rem;
+            margin: auto;
+            object-fit: contain;
+          }
+
+          h4 {
+            color: #888;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.3em;
+          }
+        }
+      }
+
+      // 國際認證
+      .certification {
+        max-width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 80%;
+          margin: 0 8rem 0 1rem;
+          transform: scaleX(-1);
+
+          @include user-select-none;
+          @include mini-mobile {
+            margin-right: 1rem;
+          }
+        }
+      }
+
       // 相關新聞
       .news {
         width: 60%;
@@ -735,68 +808,6 @@ $primary-color: #93cddd;
           }
         }
       }
-
-      // 國際認證
-      .certification {
-        max-width: 80%;
-        height: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-          width: 100%;
-          margin: 0 8rem 0 1rem;
-          transform: scaleX(-1);
-
-          @include user-select-none;
-          @include mini-mobile {
-            margin-right: 1rem;
-          }
-        }
-      }
-
-      // 全球客戶
-      .client {
-        max-width: 80%;
-        height: 500px;
-        margin: -16rem 5rem 0 0;
-        @include user-select-none;
-
-        @include pad {
-          width: 800px;
-        }
-
-        svg {
-          width: 100%;
-          height: 100%;
-        }
-
-        table {
-          width: 100%;
-          margin: -6em -1em 6em 1em;
-          display: block;
-          overflow-x: scroll;
-          word-spacing: nowrap;
-          border-collapse: collapse;
-          @include mini-pad {
-            margin: -11em -1em 11em 1em;
-          }
-
-          th,
-          td {
-            width: 100%;
-            font-size: 0.8em;
-            padding: 5px;
-            text-align: center;
-            box-sizing: border-box;
-            @include mini-pad {
-              font-size: 0.6em;
-            }
-          }
-        }
-      } // client
 
       h2 {
         @include user-select-none;

@@ -1,10 +1,10 @@
-import { HashLink as Link } from "react-router-hash-link";
+// import { HashLink as Link } from "react-router-hash-link";
 import { v4 } from "uuid";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 import { imgHandler } from "../Components/imgHandler";
-import MapChart from "../Components/mapChart";
+// import MapChart from "../Components/mapChart";
 
 const data = {
   bannerImage: [
@@ -23,6 +23,24 @@ const data = {
     {
       img: "/img/home/img_6.png",
       alt: "三重區公司外觀示意圖",
+    },
+  ],
+  services: [
+    {
+      img: "/img/home/energy-storage.png",
+      alt: "ESS儲能櫃",
+    },
+    {
+      img: "/img/home/industry-device.png",
+      alt: "工控電池",
+    },
+    {
+      img: "/img/home/e-bike.png",
+      alt: "e-bike",
+    },
+    {
+      img: "/img/home/service.png",
+      alt: "戴著黃色安全帽的男人在白板畫圖",
     },
   ],
   news: [
@@ -44,15 +62,22 @@ const Home = () => {
     <div className="home">
       <div className="container-home">
         {/* 首頁大圖 */}
-        <img src={imgHandler("/img/home/test.jpg")} alt="Etica形象圖" />
+        <img src={imgHandler("/img/home/title-page.png")} alt="Etica形象圖" />
 
-        <ul className="imgOption">
+        <div className="container-home-txt">
+          <h2>專業電池模組製造及維運</h2>
+          <p>
+            明曜科技致力於提供儲能、工控設備及E-bike電源管理解決方案，能提供完整的MIT一站式客製化服務來幫助各領域業主解決電源上的問題。
+          </p>
+        </div>
+
+        {/* <ul className="imgOption">
           <li className="point point1">
             <Link
               to="/solution_commercial_facility#commercial-facility"
               className="point_a"
             >
-              <span className="point_span" /> {/* 白色圓點 */}
+              <span className="point_span" />
               <div className="point_wrap">
                 <span>電力設施</span>
               </div>
@@ -99,7 +124,7 @@ const Home = () => {
               </div>
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
       {/* <a
         href="http://www.freepik.com"
@@ -113,7 +138,7 @@ const Home = () => {
       {/* 橫幅 */}
       <div className="banner-home">
         <div className="hexagon">
-          <a href="#news">相關新聞</a>
+          <a href="#service">服務項目</a>
           <a href="#international">國際認證</a>
           <a href="#client">全球客戶</a>
         </div>
@@ -133,24 +158,24 @@ const Home = () => {
       </div>
 
       <div className="content">
-        {/* 相關新聞 */}
+        {/* 服務項目 */}
         <div className="wrap">
-          <div className="topline" id="news"></div>
+          <div className="topline" id="service"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="news" data-aos="fade-up">
-            {data.news.map((newsItem) => (
-              <div className="news-wrap" key={v4()}>
-                <i className="fa fa-newspaper-o" aria-hidden="true"></i>
-                <a href={newsItem.url} rel="noreferrer" target="_blank">
-                  {newsItem.title}
-                </a>
-                <span>{newsItem.date}</span>
-              </div>
-            ))}
+          <div className="service">
+            <div className="service-content" data-aos="fade-right">
+              {data.services.map((service) => (
+                <img src={imgHandler(service.img)} alt={service.alt}></img>
+              ))}
+              <h4>儲能系統</h4>
+              <h4>工控電池</h4>
+              <h4>E-bike</h4>
+              <h4>維運管理</h4>
+            </div>
           </div>
-          <h2>相新</h2>
-          <h2>關聞</h2>
+          <h2>服項</h2>
+          <h2>務目</h2>
         </div>
 
         {/* 國際認證 */}
@@ -165,89 +190,24 @@ const Home = () => {
           <h2>際證</h2>
         </div>
 
-        {/* 全球客戶 */}
+        {/* 相關新聞 */}
         <div className="wrap">
-          <div className="topline" id="client"></div>
+          <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="client" data-aos="fade-right">
-            <MapChart />
-            <table>
-              <tbody>
-                <tr>
-                  <th style={{ color: "#f00" }}>台灣</th>
-                  <td>7-Eleven</td>
-                  <td>亞旭 ASKEY</td>
-                  <td>研揚 AAEON</td>
-                  <td>攸泰 Ubiqconn</td>
-                  <td>威霸科技 Poslab</td>
-                  <td>菲力 Fairly</td>
-                  <td>乾坤富 ENDRICH</td>
-                  <td>達旺電力 UrVOLT</td>
-                  <td>群光電能 Chicony</td>
-                  <td>台泥儲能 TCC</td>
-                  <td>大眾電腦 FIC</td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <td>康舒 AcBel</td>
-                  <td>彬松 ARTRON</td>
-                  <td>中華電信CHT</td>
-                  <td>台達電子 DELTA</td>
-                  <td>華城電機</td>
-                  <td>緯創 Wistron</td>
-                  <td>宇辰系統 YUCHEN</td>
-                  <td>金鋐建設</td>
-                  <td>奧林巴斯 OLYMPUS</td>
-                  <td>泓德能源 HDRE</td>
-                  <td>能元 MOLICEL</td>
-                </tr>
-                <tr>
-                  <th style={{ color: "#f90" }}>日本</th>
-                  <td>CASIO</td>
-                  <td>DENSO WAVE</td>
-                  <td>MAP</td>
-                  <td>SATORI</td>
-                  <td>JVCKENWOOD</td>
-                  <td>LAWSON</td>
-                </tr>
-                <tr>
-                  <th style={{ color: "#0af" }}>美國</th>
-                  <td>2T</td>
-                  <td>Motive</td>
-                  <td>Honeywell</td>
-                  <td>IBM</td>
-                  <td>ZONAR</td>
-                </tr>
-                <tr>
-                  <th style={{ color: "#faf" }}>歐洲</th>
-                  <td>DATALOGIC</td>
-                  <td>Aava Mobile</td>
-                  <td>RPB Safety</td>
-                  <td>AMPLER</td>
-                </tr>
-                <tr>
-                  <th style={{ color: "#00f" }}>中國</th>
-                  <td>
-                    ASKEY
-                    <br />
-                    (江蘇)
-                  </td>
-                  <td>
-                    AcBel
-                    <br />
-                    (東莞)
-                  </td>
-                </tr>
-                <tr>
-                  <th style={{ color: "#0aa" }}>韓國</th>
-                  <td>POINT Mobile</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="news" data-aos="fade-right">
+            {data.news.map((newsItem) => (
+              <div className="news-wrap" key={v4()}>
+                <i className="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href={newsItem.url} rel="noreferrer" target="_blank">
+                  {newsItem.title}
+                </a>
+                <span>{newsItem.date}</span>
+              </div>
+            ))}
           </div>
-          <h2>全客</h2>
-          <h2>球戶</h2>
+          <h2>相新</h2>
+          <h2>關聞</h2>
         </div>
       </div>
     </div>

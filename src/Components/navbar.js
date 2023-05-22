@@ -8,7 +8,7 @@ const navs = {
     name: "",
   },
   energyStorageSystem: {
-    path: "",
+    path: null,
     name: "儲能系統",
   },
   industryBattery: {
@@ -39,8 +39,7 @@ const navs = {
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const handleMenuExpanded = () => setIsExpanded(false);
-
+  const handleMenuExpanded = (e) => setIsExpanded(false);
   return (
     <div className="navbar">
       <NavLink to={navs.home.path} className="navbar-brand">
@@ -64,15 +63,18 @@ const Navbar = () => {
       />
 
       <ul className={`navbar-option ${isExpanded ? "active" : ""}`}>
+        {/* 儲能系統 */}
         <li>
-          <NavLink
-            to={navs.energyStorageSystem.path}
-            onClick={handleMenuExpanded}
-          >
+          <button onClick={handleMenuExpanded}>
             {navs.energyStorageSystem.name}
-          </NavLink>
+          </button>
           <div className="dropdown">
             <ul className="subNavbar">
+              <li>
+                <Link to="">
+                  <h3>解決方案</h3>
+                </Link>
+              </li>
               <li>
                 <Link to="/solution_commercial_facility#commercial-facility">
                   電力設施
@@ -96,19 +98,27 @@ const Navbar = () => {
                   綠能產業
                 </Link>
               </li>
+              <li>
+                <Link to="">
+                  <h3>產品資訊</h3>
+                </Link>
+              </li>
             </ul>
           </div>
         </li>
+        {/* 工控裝置 */}
         <li>
           <NavLink to={navs.industryBattery.path} onClick={handleMenuExpanded}>
             {navs.industryBattery.name}
           </NavLink>
         </li>
+        {/* e-bike */}
         <li>
           <NavLink to={navs.eBike.path} onClick={handleMenuExpanded}>
             {navs.eBike.name}
           </NavLink>
         </li>
+        {/* 維運管理 */}
         <li>
           <NavLink
             to={navs.maintenanceManagement.path}
@@ -117,11 +127,13 @@ const Navbar = () => {
             {navs.maintenanceManagement.name}
           </NavLink>
         </li>
+        {/* 技術研發 */}
         <li>
           <NavLink to={navs.development.path} onClick={handleMenuExpanded}>
             {navs.development.name}
           </NavLink>
         </li>
+        {/* 關於明曜 */}
         <li>
           <NavLink to={navs.aboutus.path} onClick={handleMenuExpanded}>
             {navs.aboutus.name}
@@ -143,6 +155,7 @@ const Navbar = () => {
             </ul>
           </div>
         </li>
+        {/* 聯絡我們 */}
         <li>
           <NavLink to={navs.contact.path} onClick={handleMenuExpanded}>
             {navs.contact.name}
