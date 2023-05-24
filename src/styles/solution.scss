@@ -28,7 +28,7 @@
 
 @mixin common-style {
   max-width: 100%;
-  color: #f7f7f7;
+  color: #333;
 }
 @mixin content-wrap-style {
   width: 100%;
@@ -38,7 +38,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #242834;
 }
 
 .container {
@@ -137,6 +136,8 @@
 
       p {
         width: 50%;
+        margin: 1rem 0;
+        font-size: 1.7em;
         @include mini-pad {
           width: 80%;
         }
@@ -144,7 +145,7 @@
 
       .commercial-facility-content {
         width: 100%;
-        height: 400px;
+        height: 70vh;
         margin: 4em auto 0;
         display: flex;
         flex-direction: column;
@@ -159,7 +160,7 @@
             margin-bottom: 2em;
             list-style: initial;
             text-align: left;
-            font-size: 1.2em;
+            font-size: 1.5em;
           }
         }
 
@@ -191,6 +192,8 @@
 
       p {
         width: 50%;
+        margin: 1rem 0;
+        font-size: 1.7em;
         @include mini-pad {
           width: 80%;
         }
@@ -210,9 +213,8 @@
 
         img {
           max-width: 80%;
-          width: 300px;
-          height: 25em;
-          margin: 2em auto;
+          height: 40rem;
+          margin: 0 auto;
         }
       }
     }
@@ -224,39 +226,41 @@
 
     .content-wrap {
       @include content-wrap-style;
-    }
 
-    h1 {
-      width: 100%;
-      margin: 0 auto 3em;
-      display: block;
-      text-align: center;
-      @include mini-pad {
-        margin: 0 auto 2em;
-      }
-    }
-
-    p {
-      width: 50%;
-      @include mini-pad {
-        width: 80%;
-      }
-    }
-
-    .public-house-content {
-      width: 100%;
-      height: 70vh;
-      margin: 4em auto 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      @include mini-pad {
-        height: auto;
+      h1 {
+        width: 100%;
+        margin: 0 auto 3em;
+        display: block;
+        text-align: center;
+        @include mini-pad {
+          margin: 0 auto 2em;
+        }
       }
 
-      img {
-        max-width: 80%;
-        padding: 0 5em;
+      p {
+        width: 50%;
+        margin: 1rem 0;
+        font-size: 1.7em;
+        @include mini-pad {
+          width: 80%;
+        }
+      }
+
+      .public-house-content {
+        width: 100%;
+        height: 70vh;
+        margin: 4em auto 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        @include mini-pad {
+          height: auto;
+        }
+
+        img {
+          max-width: 80%;
+          padding: 0 5em;
+        }
       }
     }
   }
@@ -267,46 +271,42 @@
 
     .content-wrap {
       @include content-wrap-style;
-    }
 
-    h1 {
-      width: 100%;
-      margin: 0 auto 3em;
-      display: block;
-      text-align: center;
-      @include mini-pad {
-        margin: 0 auto 2em;
-      }
-    }
-
-    .industry-application-content {
-      width: 100%;
-      height: 70vh;
-      margin: 4em auto 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      @include mini-pad {
-        height: auto;
-      }
-
-      ul {
-        max-width: 80%;
-        width: 700px;
-
-        li {
-          margin-bottom: 2em;
-          list-style: initial;
-          text-align: left;
-          font-size: 1.2em;
+      h1 {
+        width: 100%;
+        margin: 0 auto 3em;
+        display: block;
+        text-align: center;
+        @include mini-pad {
+          margin: 0 auto 2em;
         }
       }
 
-      img {
-        max-width: 80%;
-        width: 700px;
-        margin: 0 auto 5em;
+      p {
+        width: 50%;
+        margin: 1rem 0;
+        font-size: 1.7em;
+        @include mini-pad {
+          width: 80%;
+        }
+      }
+
+      .industry-application-content {
+        width: 100%;
+        height: 70vh;
+        margin: 4em auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include mini-pad {
+          height: auto;
+        }
+
+        img {
+          max-width: 80%;
+          padding: 0 5em;
+        }
       }
     }
   }
@@ -330,6 +330,8 @@
 
       p {
         width: 50%;
+        margin: 1rem 0;
+        font-size: 1.7em;
         @include mini-pad {
           width: 80%;
         }
@@ -346,7 +348,6 @@
 
         img {
           max-width: 80%;
-          width: 700px;
           margin: 2em auto;
         }
       }

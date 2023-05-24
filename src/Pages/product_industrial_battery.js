@@ -7,9 +7,13 @@ const data = {
     alt: "ESS Energy Storage System",
   },
   product4_content: {
-    AS1P: {
-      img: "/img/1S1P.jpg",
-      alt: "1S1P",
+    industry_device: {
+      img: "/img/industryDevice.png",
+      alt: "工控裝置",
+    },
+    operating_area: {
+      img: "/img/operatingArea.png",
+      alt: "作業工廠",
     },
   },
 };
@@ -27,68 +31,22 @@ const ProductIndustrialBattery = () => {
       <div className="product-industrial-battery-content">
         <div className="contentWrap">
           <img
-            src={imgHandler(data.product4_content.AS1P.img)}
-            alt={data.product4_content.AS1P.alt}
+            src={imgHandler(data.product4_content.industry_device.img)}
+            alt={data.product4_content.industry_device.alt}
           />
 
           <div className="subtitle">
-            <h2 id="1S1P">1S1P</h2>
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
-            <br />
-          </div>
-        </div>
+            <h2 id="industry-device">工控裝置</h2>
 
-        <table>
-          <tbody>
-            <tr>
-              <th>項目</th>
-              <th>規格</th>
-            </tr>
-            <tr>
-              <th>電壓</th>
-              <td>3.8 V</td>
-            </tr>
-            <tr>
-              <th>電壓範圍</th>
-              <td>3.8~2.8 V</td>
-            </tr>
-            <tr>
-              <th>放電電流</th>
-              <td>1.6 A</td>
-            </tr>
-            <tr>
-              <th>最大放電電流</th>
-              <td>3 A</td>
-            </tr>
-            <tr>
-              <th>充電電流</th>
-              <td>1.6 A</td>
-            </tr>
-            <tr>
-              <th>充電工作溫度</th>
-              <td>0 ~ 45 °C</td>
-            </tr>
-            <tr>
-              <th>放電工作溫度</th>
-              <td>-20 ~ 60 °C</td>
-            </tr>
-            <tr>
-              <th>通訊介面</th>
-              <td>I2C</td>
-            </tr>
-            <tr>
-              <th>尺寸</th>
-              <td>89mm * 69.3mm * 28.9mm </td>
-            </tr>
-            <tr>
-              <th>重量</th>
-              <td>67 g</td>
-            </tr>
-          </tbody>
-        </table>
+            <p>
+              從行動式數據終端設備到手持POS機，堅固耐用的行動電子設備越來越受歡迎，這些設備需要功能強大、輕量化且堅固耐用的電源解決方案。明曜是業界最有經驗的工業用行動電子設備電池設計和製造商之一，可以運用日韓電池大廠的電池芯，針對每個客戶對於功能、電量計、通訊協議、場景控制、面板顯示等獨特需求客製化設計生產，為客戶帶來最合適的產品。
+            </p>
+          </div>
+          <img
+            src={imgHandler(data.product4_content.operating_area.img)}
+            alt={data.product4_content.operating_area.alt}
+          />
+        </div>
       </div>
     </Layout>
   );

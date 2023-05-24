@@ -30,26 +30,30 @@ const CommercialFacility = () => {
           <h1 id="commercial-facility">電力設施</h1>
 
           <p>
-            可參與電力交易平台，於電力系統納入更多能快速反應、具彈性且多元之外部資源；並設立備用容量市場，提供備用供電容量義務者籌措備用供電容量之市場交易管道。
+            電力交易平台為台電依電業法所設置，同時推動日前輔助服務市場與備用容量市場。日前輔助服務市場的目的在於電力系統納入更多能快速反應、彈性大且多元之外部資源，維持整體電網穩定；備用容量市場方便售電業者籌措法律規定的備用供電容量，避免超載。日前輔助服務市場商品分為調頻備轉(sReg、dReg)、E-dReg、即時備轉及補充備轉，儲能系統多以調頻備轉或E-dReg
+            的形式參與。
+          </p>
+          <p>
+            明曜以獨家技術研發+C20呎貨櫃儲能系統，以一半面積達成傳統40呎儲能櫃的儲存容量；另有+O戶外型儲能獨立櫃，適合中小型案場規畫使用。二者均搭載先進冷卻及消防技術使其更安全。
           </p>
 
           <div className="commercial-facility-content">
             <ul>
-              <li>方案一：獨立水冷電池櫃</li>
+              <li>方案一：20呎儲能櫃</li>
             </ul>
             <img
-              src={data.constent_data.data01.image}
-              alt={data.constent_data.data01.alt}
+              src={data.constent_data.data02.image}
+              alt={data.constent_data.data02.alt}
             />
           </div>
 
           <div className="commercial-facility-content">
             <ul>
-              <li>方案二：20呎儲能櫃</li>
+              <li>方案二：獨立水冷電池櫃</li>
             </ul>
             <img
-              src={data.constent_data.data02.image}
-              alt={data.constent_data.data02.alt}
+              src={data.constent_data.data01.image}
+              alt={data.constent_data.data01.alt}
             />
           </div>
         </div>

@@ -101,7 +101,7 @@ const Home = () => {
             >
               <span className="point_span" />
               <div className="point_wrap">
-                <span>綠能產業</span>
+                <span>光儲整合</span>
               </div>
             </Link>
           </li>

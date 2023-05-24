@@ -7,29 +7,9 @@ const data = {
     alt: "ESS Energy Storage System",
   },
   product2_content: {
-    water: {
-      img: "/img/ET48 Hybrid.png",
-      alt: "水冷高壓儲能櫃",
-    },
-    house: {
-      img: "/img/indoor.png",
-      alt: "家用儲能櫃",
-    },
-    wallmounted: {
-      img: "/img/wallmounted.png",
-      alt: "壁掛式儲能櫃",
-    },
-    energyStorageBox: {
-      img: "/img/energyStorageBox2.png",
-      alt: "集裝箱",
-    },
     etica_c: {
       img: "/img/etica-c.png",
       alt: "etica-c",
-    },
-    etica_c2: {
-      img: "/img/etica-c2.png",
-      alt: "etica-c2",
     },
     etica_o: {
       img: "/img/etica-o.png",
@@ -43,9 +23,9 @@ const data = {
       img: "/img/etica-r3.png",
       alt: "etica-r3",
     },
-    etica_p: {
-      img: "/img/etica-p.png",
-      alt: "etica-p",
+    water: {
+      img: "/img/etica-r4.png",
+      alt: "etica-r4",
     },
   },
 };
@@ -60,113 +40,6 @@ const ProductESS = () => {
         />
       </div>
 
-      {/* 水冷高壓儲能櫃 */}
-      <div className="product-ESS-content">
-        <div className="contentWrap">
-          <img
-            src={imgHandler(data.product2_content.water.img)}
-            alt={data.product2_content.water.alt}
-          />
-          <div className="subtitle">
-            <h2 id="ET48">水冷高壓儲能櫃</h2>
-            <ul>
-              <li>容量可依客戶需求擴充</li>
-              <li>內建OTA軟韌體讀取功能</li>
-              <li>電池模組包含防延燒專利設計(專利號：10940384260號)</li>
-            </ul>
-          </div>
-        </div>
-
-        <table>
-          <tbody>
-            <tr>
-              <th>項目</th>
-              <th>規格</th>
-            </tr>
-            <tr>
-              <th>電壓</th>
-              <td>48 V</td>
-            </tr>
-            <tr>
-              <th>標準充電電流</th>
-              <td>50 A</td>
-            </tr>
-            <tr>
-              <th>瓦數</th>
-              <td>9.6kWh</td>
-            </tr>
-            <tr>
-              <th>IP等級</th>
-              <td>IP22</td>
-            </tr>
-            <tr>
-              <th>工作溫度</th>
-              <td>-10~45℃</td>
-            </tr>
-            <tr>
-              <th>重量</th>
-              <td>80 kg</td>
-            </tr>
-            <tr>
-              <th>尺寸</th>
-              <td>676mm＊565mm＊1011mm L*W*H</td>
-            </tr>
-            <tr>
-              <th>供電需求</th>
-              <td>
-                Single phase 3-wires
-                <br />
-                output 110 / 220 VAC
-                <br />
-                6KW Hybrid PV inverter
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {/* 集裝箱 */}
-      <div className="product-ESS-content">
-        <div className="contentWrap">
-          <div className="subtitle">
-            <h2 id="energyStorageBox">集裝箱</h2>
-            <ul>
-              <li>Bank：Including 20 Packs</li>
-              <li>40呎：Including 16 Banks</li>
-              <li>750~1080 V / 3 MWh</li>
-            </ul>
-          </div>
-          <img
-            src={imgHandler(data.product2_content.energyStorageBox.img)}
-            alt={data.product2_content.energyStorageBox.alt}
-          />
-        </div>
-        <table>
-          <tbody>
-            <tr>
-              <th>項目</th>
-              <th>規格</th>
-            </tr>
-            <tr>
-              <th>電壓</th>
-              <td>48 V</td>
-            </tr>
-            <tr>
-              <th>瓦數</th>
-              <td>9.2 kWh</td>
-            </tr>
-            <tr>
-              <th>容量</th>
-              <td>192 Ah</td>
-            </tr>
-            <tr>
-              <th>工作電流</th>
-              <td>3200 A</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       {/* Etica-C */}
       <div className="product-ESS-content">
         <div className="contentWrap">
@@ -174,18 +47,14 @@ const ProductESS = () => {
             src={imgHandler(data.product2_content.etica_c.img)}
             alt={data.product2_content.etica_c.alt}
           />
-          <img
-            src={imgHandler(data.product2_content.etica_c2.img)}
-            alt={data.product2_content.etica_c2.alt}
-          />
 
           <div className="subtitle">
             <h2 id="Etica-C">Etica-C</h2>
             <ul>
-              <li>使用20尺貨櫃</li>
+              <li>20呎貨櫃儲能系統</li>
               <li>一體化設計，單櫃3.72MWh</li>
-              <li>適用於較大型案場</li>
               <li>獨立主動式消防系統</li>
+              <li>適用於D-reg、E-dreg、用電大戶表後儲能系統等</li>
             </ul>
           </div>
         </div>
@@ -253,14 +122,12 @@ const ProductESS = () => {
           <div className="subtitle">
             <h2 id="Etica-O">Etica-O</h2>
             <ul>
-              <li>單機體小，2.28m(h)*1.3m(w)*1.3m(d)</li>
-              <li>
-                組合式設計，單櫃 372.7kWh
-                <br />
-                輸出功率配置獨立範圍 1.1MW ~ 3.7MW
-              </li>
-              <li>適用於不規則案場</li>
+              <li>單機體小，組合式設計</li>
+              <li>輸出功率配置獨立範圍 1.1MW ~ 3.7MW</li>
               <li>主動式消防系統</li>
+              <li>
+                適用於飯店、商用備用電源、汽車快充站、中小型不可斷電的儀器或設備
+              </li>
             </ul>
           </div>
           <img
@@ -339,12 +206,10 @@ const ProductESS = () => {
           <div className="subtitle">
             <h2 id="Etica-R1">Etica-R1</h2>
             <ul>
-              <li>適用於家用儲能</li>
-              <li>當太陽能充足時，電力會優先提供給家庭使用</li>
-              <li>當陰天、夜晚或停電時，電池的電力會轉換成交流電給家庭使用</li>
-              <li>
-                適用範圍：家庭、電力不足或不穩定的郊區，不可斷電的儀器或設備
-              </li>
+              <li>家用儲能系統</li>
+              <li>一體化設計</li>
+              <li>Hybrid PV inverter 6kW</li>
+              <li>適用於家庭、電力不足或不穩定的郊區，不可斷電的儀器或設備</li>
             </ul>
           </div>
         </div>
@@ -367,7 +232,6 @@ const ProductESS = () => {
               <th>輸出功率</th>
               <td>5kw (0.5C)</td>
             </tr>
-
             <tr>
               <th>通訊介面</th>
               <td>RS 485 Battery / RS232</td>
@@ -382,7 +246,7 @@ const ProductESS = () => {
             </tr>
             <tr>
               <th>尺寸</th>
-              <td>650mm * 268mm * 1568mm L*W*H</td>
+              <td>596mm * 351mm * 1132mm L*W*H</td>
             </tr>
           </tbody>
         </table>
@@ -394,12 +258,10 @@ const ProductESS = () => {
           <div className="subtitle">
             <h2 id="Etica-R3">Etica-R3</h2>
             <ul>
-              <li>適用於家用儲能</li>
-              <li>當太陽能充足時，電力會優先提供給家庭使用</li>
-              <li>當陰天、夜晚或停電時，電池的電力會轉換成交流電給家庭使用</li>
-              <li>
-                適用範圍：家庭、電力不足或不穩定的郊區，不可斷電的儀器或設備
-              </li>
+              <li>家用儲能系統</li>
+              <li>一體化設計</li>
+              <li>Hybrid PV inverter 8kW</li>
+              <li>適用於家庭、電力不足或不穩定的郊區，不可斷電的儀器或設備</li>
             </ul>
           </div>
           <img
@@ -483,35 +345,24 @@ const ProductESS = () => {
         </table>
       </div>
 
-      {/* Etica-P */}
+      {/* Etica-R4 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <img
-            src={imgHandler(data.product2_content.etica_p.img)}
-            alt={data.product2_content.etica_p.alt}
+            src={imgHandler(data.product2_content.water.img)}
+            alt={data.product2_content.water.alt}
           />
           <div className="subtitle">
-            <h2 id="Etica-P">Etica-P</h2>
+            <h2 id="Etica-R4">Etica-R4</h2>
             <ul>
-              <li>
-                「儲能配合充電樁整合」方案，提供最佳的容量方案
-                <br />
-                "PCS+電池+充電樁" 整合控制
-              </li>
-              <li>
-                儲能系統依據預設之條件、整合及連動
-                PCS、電池、充電樁之充/放電行為
-              </li>
-              <li>
-                於「離峰時段」啟動儲能充電將電池充滿電力，預備於次日支援充電樁之用電
-              </li>
-              <li>
-                於「尖峰時段」配合充電樁電動車充電時之用電、由儲能系統釋放電力，以抵銷用電之需量壓力；依此可以實現負載轉移之需求
-              </li>
-              <li>可與電力聚合商合作，參與台電公司電力輔助服務之競標</li>
+              <li>工業用儲能系統</li>
+              <li>一體化設計</li>
+              <li>Hybrid PV inverter 6kW</li>
+              <li>可以依需求增加電池組數量加長使用時間</li>
             </ul>
           </div>
         </div>
+
         <table>
           <tbody>
             <tr>
@@ -519,44 +370,42 @@ const ProductESS = () => {
               <th>規格</th>
             </tr>
             <tr>
-              <th>電池模組</th>
-              <td>16S1P</td>
+              <th>電壓</th>
+              <td>48 V</td>
             </tr>
             <tr>
-              <th>平均電壓</th>
-              <td>806.4 V</td>
+              <th>標準充電電流</th>
+              <td>50 A</td>
             </tr>
             <tr>
-              <th>電壓範圍</th>
-              <td>672 ~ 918.4 V</td>
+              <th>瓦數</th>
+              <td>9.6kWh</td>
             </tr>
             <tr>
-              <th>輸入/輸出充電電流</th>
-              <td>最大28 A (0.25C)</td>
+              <th>IP等級</th>
+              <td>IP22</td>
             </tr>
             <tr>
-              <th>輸入/輸出放電電流</th>
-              <td>最大60 A (0.5C)</td>
+              <th>工作溫度</th>
+              <td>-10~45℃</td>
             </tr>
             <tr>
-              <th>充電環境溫度</th>
-              <td>10 ~ 42 °C (cell temperature)</td>
+              <th>重量</th>
+              <td>80 kg</td>
             </tr>
             <tr>
-              <th>放電環境溫度</th>
-              <td>-10 ~ 55 °C (cell temperature)</td>
+              <th>尺寸</th>
+              <td>676mm＊565mm＊1011mm L*W*H</td>
             </tr>
             <tr>
-              <th>環境濕度</th>
-              <td>30 ~ 85 % (no condensation)</td>
-            </tr>
-            <tr>
-              <th>功率</th>
-              <td>96 kWh</td>
-            </tr>
-            <tr>
-              <th>海拔高度</th>
-              <td>{"<"}2000 m</td>
+              <th>供電需求</th>
+              <td>
+                Single phase 3-wires
+                <br />
+                output 110 / 220 VAC
+                <br />
+                6KW Hybrid PV inverter
+              </td>
             </tr>
           </tbody>
         </table>
