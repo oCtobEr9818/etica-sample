@@ -39,83 +39,181 @@
   align-items: center;
   flex-direction: column;
 }
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 
 .container {
-  //解決方案
-  .solution-img {
-    max-width: 66rem; // added
-    margin: auto;
-    padding-left: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .container-solution {
+    max-width: 100%;
+    width: 66rem;
+    height: auto;
+    margin: 0 auto 7rem;
+    position: relative;
 
-    &:last-child {
-      margin-bottom: 5rem;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      @include user-select-none;
     }
 
-    .blueImg {
-      width: 30%;
-    }
+    .imgOption {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
 
-    .wrap {
-      max-width: 70%;
-      display: flex;
-      flex-direction: column;
+      .point {
+        position: absolute;
+        z-index: 0;
 
-      .imgWrap {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto 2rem;
+        .point_a {
+          cursor: pointer;
+          display: block;
+          position: relative;
+          text-decoration: none;
 
-        img {
-          width: 120px;
-          height: 166px;
-          margin: 0 3rem 0 -3rem;
-          object-fit: contain;
+          // 白色圓點
+          .point_span {
+            display: block;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border: 7px solid #001eb4;
+            border-radius: 50%;
+            animation: bordershow 3s infinite;
 
-          @include mini-pad {
-            width: 90px;
+            @include mini-mobile {
+              width: 3px;
+              height: 3px;
+              border: 4px solid #001eb4;
+            }
+
+            &::before {
+              content: "";
+              width: 25px;
+              height: 25px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: -1;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              background: rgba(0, 30, 180, 0.4);
+              animation: borderM 3s 0.75s infinite;
+            }
+            &::after {
+              content: "";
+              width: 25px;
+              height: 25px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: -1;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              background: rgba(0, 30, 180, 0.4);
+              animation: borderM 3s infinite;
+            }
           }
-          @include mobile {
-            width: 70px;
-          }
-        }
 
-        p {
-          width: 12.5rem;
-          margin: 0 2rem 0 -2rem;
-          line-height: 1.7;
-          font-size: 0.9em;
-          white-space: pre-line;
-          color: #4b93a0;
-          z-index: 1;
+          // 右邊列
+          .point_wrap {
+            height: 0;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+            visibility: hidden;
+            transition: 0.3s 0.2s;
+            transform: translateY(-50%);
+            position: absolute;
+            top: -40px;
+            left: -80px;
+            @include mini-mobile {
+              top: 40px;
+              left: -15px;
+            }
 
-          &::first-line {
-            font-weight: bold;
-            font-size: 1.1em;
+            &::before {
+              content: "";
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+              background: rgba(0, 30, 180, 0.77);
+              border-radius: 30px;
+
+              @include mini-mobile {
+                height: 100%;
+                width: 70%;
+              }
+            }
+            &::after {
+              content: "";
+              height: 20px;
+              width: 180px;
+              position: absolute;
+              bottom: -15px;
+              z-index: -1;
+            }
+
+            span {
+              transition: 0.2s;
+              color: transparent;
+              font-size: 1em;
+
+              @include mini-mobile {
+                padding-right: 3.5rem;
+              }
+            }
           }
 
-          @include desktop {
-            font-size: 0.7em;
+          &:hover > .point_wrap {
+            visibility: visible;
+            transition: 0.3s;
+            height: 50px;
+
+            span {
+              color: #fff;
+              transition: 0.3s 0.3s;
+            }
           }
-          @include mini-pad {
-            width: 10rem;
-            font-size: 0.5em;
-          }
-          @include mobile {
-            font-size: 0.3em;
-          }
-        }
+        } // point_a
+      } // point
+      .point1 {
+        top: 55%;
+        left: 20.5%;
       }
-
-      .threeImg {
-        padding-bottom: 2.2rem;
+      .point2 {
+        top: 38%;
+        left: 50%;
       }
-    } // wrap
-  } // solution-img
+      .point3 {
+        top: 35%;
+        left: 62.5%;
+      }
+      .point4 {
+        top: 75%;
+        left: 53%;
+      }
+      .point5 {
+        top: 48%;
+        right: 12%;
+      }
+    } // imgOption
+  }
 
   // 電力設施
   .commercial-facility {
@@ -135,12 +233,9 @@
       }
 
       p {
-        width: 50%;
+        width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
-        @include mini-pad {
-          width: 80%;
-        }
       }
 
       .commercial-facility-content {
@@ -154,7 +249,7 @@
 
         ul {
           max-width: 80%;
-          width: 800px;
+          width: 100%;
 
           li {
             margin-bottom: 2em;
@@ -166,7 +261,6 @@
 
         img {
           max-width: 80%;
-          width: 800px;
           margin: 0 auto;
         }
       }
@@ -191,18 +285,15 @@
       }
 
       p {
-        width: 50%;
+        width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
-        @include mini-pad {
-          width: 80%;
-        }
       }
 
       .transportation-application-content {
         width: 100%;
         height: 70vh;
-        margin: 4em auto 0;
+        margin: 4em auto;
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -238,12 +329,9 @@
       }
 
       p {
-        width: 50%;
+        width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
-        @include mini-pad {
-          width: 80%;
-        }
       }
 
       .public-house-content {
@@ -259,7 +347,7 @@
 
         img {
           max-width: 80%;
-          padding: 0 5em;
+          margin: 0 auto;
         }
       }
     }
@@ -283,12 +371,9 @@
       }
 
       p {
-        width: 50%;
+        width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
-        @include mini-pad {
-          width: 80%;
-        }
       }
 
       .industry-application-content {
@@ -305,7 +390,7 @@
 
         img {
           max-width: 80%;
-          padding: 0 5em;
+          margin: 0 auto;
         }
       }
     }
@@ -329,12 +414,9 @@
       }
 
       p {
-        width: 50%;
+        width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
-        @include mini-pad {
-          width: 80%;
-        }
       }
 
       .greenEnergy-industry-content {
@@ -348,7 +430,7 @@
 
         img {
           max-width: 80%;
-          margin: 2em auto;
+          margin: 0 auto 3rem;
         }
       }
     }

@@ -357,7 +357,11 @@
               margin-top: 1rem;
             }
             &:last-child {
-              margin-top: 2rem;
+              a {
+                h3 {
+                  margin-top: 2rem;
+                }
+              }
             }
             &:hover {
               transform: translateY(-5px);

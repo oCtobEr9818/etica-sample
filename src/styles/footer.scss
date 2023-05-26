@@ -28,11 +28,16 @@
 
 .footer {
   max-width: 100%;
+  width: 100%;
   height: 30vh;
   margin: 0 auto;
   background: #88ddec;
   position: relative;
-  color: #666;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   @include desktop {
     overflow-x: hidden;
   }
@@ -41,56 +46,39 @@
   }
   @include mobile {
     width: 100%;
+    flex-direction: column;
   }
   @include mini-mobile {
     height: 25vh;
     background: #88ddec;
   }
 
-  h2 {
-    display: inline-block;
-    font-size: 1.7em;
-    font-weight: normal;
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    @include pad {
-      font-size: 1.5em;
-      display: block;
-    }
-    @include mini-pad {
-      // margin-left: 7rem;
-    }
-    @include mobile {
-      font-size: 1.5em;
-    }
-    @include mini-mobile {
-      font-size: 1.2em;
-      padding-left: 0.5rem;
-    }
-  }
-
   .footer-wrap {
-    width: 500px;
-    display: inline-block;
-    font-size: 1.2em;
+    width: 400px;
+    height: 100%;
+    margin: 3rem 2rem -3rem;
+    display: inline;
     line-height: 2;
-    position: absolute;
-    top: 35%;
-    left: 33%;
-    margin: auto;
-    @include mini-pad {
-      left: 18%;
-    }
     @include mobile {
-      font-size: 1em;
+      width: 100%;
+      padding: 1rem 0 0 1rem;
+      margin: 0 auto;
+      text-align: center;
     }
-    @include mini-mobile {
-      font-size: 0.7em;
+
+    h2 {
+      @include mobile {
+        font-size: 1.2em;
+        text-align: left;
+      }
     }
 
     p {
       font-family: "BankGothic Md BT";
+      @include mobile {
+        font-size: 0.8em;
+        text-align: left;
+      }
 
       .fa {
         width: 2rem;
@@ -101,8 +89,7 @@
         text-align: left;
       }
       @include mini-pad {
-        font-size: 0.9em;
-        // margin-left: 7rem;
+        font-size: 0.8em;
       }
     }
   } //footer-wrap

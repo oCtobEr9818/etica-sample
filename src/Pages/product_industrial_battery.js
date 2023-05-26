@@ -22,19 +22,18 @@ const ProductIndustrialBattery = () => {
   return (
     <Layout>
       <div className="banner">
-        <img
+        {/* <img
           src={imgHandler(data.product_img.image)}
           alt={data.product_img.alt}
+        /> */}
+        <img
+          src={imgHandler(data.product4_content.industry_device.img)}
+          alt={data.product4_content.industry_device.alt}
         />
       </div>
 
       <div className="product-industrial-battery-content">
         <div className="contentWrap">
-          <img
-            src={imgHandler(data.product4_content.industry_device.img)}
-            alt={data.product4_content.industry_device.alt}
-          />
-
           <div className="subtitle">
             <h2 id="industry-device">工控裝置</h2>
 

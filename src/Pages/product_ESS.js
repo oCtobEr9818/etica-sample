@@ -3,7 +3,7 @@ import { Layout } from "../Components/Layout";
 
 const data = {
   product_img: {
-    image: "/img/sub-product.png",
+    img: "/img/sub-product.png",
     alt: "ESS Energy Storage System",
   },
   product2_content: {
@@ -35,7 +35,7 @@ const ProductESS = () => {
     <Layout>
       <div className="banner">
         <img
-          src={imgHandler(data.product_img.image)}
+          src={imgHandler(data.product_img.img)}
           alt={data.product_img.alt}
         />
       </div>

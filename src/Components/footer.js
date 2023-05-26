@@ -1,9 +1,8 @@
 const Footer = () => {
   return (
     <div className="footer">
-      <h2>聯絡方式</h2>
-
       <div className="footer-wrap">
+        <h2>明曜科技總公司</h2>
         <p>
           <i className="fa fa-map-marker" aria-hidden="true"></i>
           新北市樹林區柑園街二段122巷3號10樓(巨人科技)
@@ -19,6 +18,14 @@ const Footer = () => {
         <p>
           <i className="fa fa-fax" aria-hidden="true"></i>
           886-2-26689564
+        </p>
+      </div>
+
+      <div className="footer-wrap">
+        <h2>三重新廠(2023下半年落成)</h2>
+        <p>
+          <i className="fa fa-map-marker" aria-hidden="true"></i>
+          新北市三重區中興北街89號
         </p>
       </div>
       <p id="copyright">&copy;Copyright 明曜科技版權所有</p>

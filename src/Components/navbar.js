@@ -12,11 +12,11 @@ const navs = {
     name: "儲能系統",
   },
   industryBattery: {
-    path: "/product_industrial_battery",
+    path: "/product-industrial-battery",
     name: "工控裝置",
   },
   eBike: {
-    path: "/product_ebike",
+    path: "/product-ebike",
     name: "E-bike",
   },
   maintenanceManagement: {
@@ -76,30 +76,30 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/solution_commercial_facility#commercial-facility">
+                <Link to="/solution-commercial-facility#commercial-facility">
                   電力設施
                 </Link>
               </li>
               <li>
-                <Link to="/solution_transportation_application#transportation-application">
+                <Link to="/solution-transportation-application#transportation-application">
                   交通應用
                 </Link>
               </li>
               <li>
-                <Link to="/solution_public_house#public-house">公設住宅</Link>
+                <Link to="/solution-public-house#public-house">公設住宅</Link>
               </li>
               <li>
-                <Link to="/solution_industry_application#industry-application">
+                <Link to="/solution-industry-application#industry-application">
                   工業應用
                 </Link>
               </li>
               <li>
-                <Link to="/solution_greenEnergy_industry#greenEnergy-industry">
+                <Link to="/solution-greenEnergy-industry#greenEnergy-industry">
                   光儲整合
                 </Link>
               </li>
               <li>
-                <Link to="/product_ESS">
+                <Link to="/product-ESS">
                   <h3>產品資訊</h3>
                 </Link>
               </li>

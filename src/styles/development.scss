@@ -37,14 +37,12 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background: #242834;
 
       img {
         margin: 2rem 0;
         width: 40%;
         height: 600px;
         object-fit: cover;
-        background: #242834;
         @include mini-pad {
           height: 500px;
         }
@@ -58,8 +56,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #f7f7f7;
-        background: #242834;
         @include mini-pad {
           width: 50%;
         }
@@ -68,6 +64,7 @@
           width: 80%;
           margin-top: 10rem;
           text-align: center;
+          font-size: 2em;
           @include mini-pad {
             margin-top: 7rem;
           }
@@ -77,6 +74,7 @@
           width: 80%;
           margin: 2rem 5rem;
           line-height: 2;
+          font-size: 1.4em;
         }
       }
     }
