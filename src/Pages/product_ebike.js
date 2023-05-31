@@ -44,6 +44,7 @@ const ProductEbike = () => {
           src={imgHandler(data.product3_content.bicycle.img)}
           alt={data.product3_content.bicycle.alt}
         />
+
         <div className="contentWrap">
           <table>
             <tbody>

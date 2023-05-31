@@ -27,18 +27,22 @@ const data = {
     {
       img: "/img/home/energy-storage.png",
       alt: "ESS儲能櫃",
+      title: "儲能系統",
     },
     {
       img: "/img/home/industry-device.png",
       alt: "工控電池",
+      title: "工控電池",
     },
     {
       img: "/img/home/e-bike.png",
       alt: "e-bike",
+      title: "E-bike",
     },
     {
       img: "/img/home/service.png",
       alt: "戴著黃色安全帽的男人在白板畫圖",
+      title: "維運管理",
     },
   ],
   news: [
@@ -68,70 +72,7 @@ const Home = () => {
             明曜科技致力於提供儲能、工控設備及E-bike電源管理解決方案，能提供完整的MIT一站式客製化服務來幫助各領域業主解決電源上的問題。
           </p>
         </div>
-
-        {/* <ul className="imgOption">
-          <li className="point point1">
-            <Link
-              to="/solution_commercial_facility#commercial-facility"
-              className="point_a"
-            >
-              <span className="point_span" />
-              <div className="point_wrap">
-                <span>電力設施</span>
-              </div>
-            </Link>
-          </li>
-          <li className="point point2">
-            <Link
-              to="/solution_transportation_application#transportation-application"
-              className="point_a"
-            >
-              <span className="point_span" />
-              <div className="point_wrap">
-                <span>交通應用</span>
-              </div>
-            </Link>
-          </li>
-          <li className="point point3">
-            <Link
-              to="/solution_greenEnergy_industry#greenEnergy-industry"
-              className="point_a"
-            >
-              <span className="point_span" />
-              <div className="point_wrap">
-                <span>光儲整合</span>
-              </div>
-            </Link>
-          </li>
-          <li className="point point4">
-            <Link to="/solution_public_house#public-house" className="point_a">
-              <span className="point_span" />
-              <div className="point_wrap">
-                <span>公設住宅</span>
-              </div>
-            </Link>
-          </li>
-          <li className="point point5">
-            <Link
-              to="/solution_industry_application#industry-application"
-              className="point_a"
-            >
-              <span className="point_span" />
-              <div className="point_wrap">
-                <span>工業應用</span>
-              </div>
-            </Link>
-          </li>
-        </ul> */}
       </div>
-      {/* <a
-        href="http://www.freepik.com"
-        rel="noreferrer"
-        target="_blank"
-        className="copyright"
-      >
-        Designed by macrovector / Freepik
-      </a> */}
 
       {/* 橫幅 */}
       <div className="banner-home">
@@ -164,12 +105,11 @@ const Home = () => {
           <div className="service">
             <div className="service-content" data-aos="fade-right">
               {data.services.map((service) => (
-                <img src={imgHandler(service.img)} alt={service.alt}></img>
+                <div className="service-content-wrap" key={v4()}>
+                  <img src={imgHandler(service.img)} alt={service.alt}></img>
+                  <h4>{service.title}</h4>
+                </div>
               ))}
-              <h4>儲能系統</h4>
-              <h4>工控電池</h4>
-              <h4>E-bike</h4>
-              <h4>維運管理</h4>
             </div>
           </div>
           <h2>服項</h2>
@@ -182,7 +122,10 @@ const Home = () => {
           <div className="trapezoid"></div>
           <div className="underline"></div>
           <div className="certification" data-aos="fade-right">
-            <img src={imgHandler("/img/Certification mark.jpg")} alt="test" />
+            <img
+              src={imgHandler("/img/Certification mark.jpg")}
+              alt="國際認證"
+            />
           </div>
           <h2>國認</h2>
           <h2>際證</h2>

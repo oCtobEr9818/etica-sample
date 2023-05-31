@@ -25,7 +25,7 @@
 }
 
 .navbar {
-  max-width: 66rem;
+  // max-width: 66rem;
   height: 6rem;
   display: block;
   margin: auto;
@@ -137,19 +137,12 @@
     display: inline-block;
     margin: 1rem 0 0 1.5rem;
     padding: 1.15rem 0 0;
-
     @include mini-pad {
       margin-top: 10px;
     }
 
     .navbar-logo {
       width: 9rem;
-      @include mini-pad {
-        width: 11rem;
-      }
-      @include mobile {
-        width: 9rem;
-      }
       @include mini-mobile {
         width: 7rem;
       }
@@ -159,14 +152,8 @@
   .navbar-line {
     width: 10rem;
     margin-left: 1.5rem;
-    border-top: 2px solid #000;
+    border-top: 3px solid #000;
     opacity: 0.3;
-    @include mini-pad {
-      width: 11.5rem;
-      margin-bottom: 1rem;
-      border-top: 2px solid #000;
-      opacity: 0.3;
-    }
     @include mobile {
       width: 9.5rem;
     }
@@ -180,22 +167,15 @@
       display: inline-block;
       transform: rotate(30deg);
       width: 2px;
-      height: 43px;
+      height: 2.7rem;
       background: currentColor;
       border-radius: 3px;
       position: absolute;
       left: 12rem;
       bottom: 0.7rem;
-      @include pad {
-        height: 3rem;
-        left: 12.2rem;
-      }
       @include mini-pad {
-        width: 2px;
-        height: 2.9rem;
-        position: absolute;
-        left: 13.6rem;
-        bottom: 0.4rem;
+        height: 2.1rem;
+        bottom: 1.2rem;
       }
       @include mobile {
         height: 2.2rem;
@@ -212,23 +192,15 @@
       content: "";
       box-sizing: border-box;
       display: block;
-      width: 80%;
+      width: 100%;
       height: 2px;
       background: currentColor;
       position: absolute;
       left: 12.7rem;
       bottom: 3.1rem;
-      @include pad {
-        width: 70%;
-        left: 12.9rem;
-        bottom: 3.4rem;
-      }
       @include mini-pad {
         width: 55%;
-        height: 2px;
-        position: absolute;
-        left: 14.4rem;
-        bottom: 3rem;
+        left: 12.5rem;
       }
       @include mobile {
         width: 45%;
@@ -245,15 +217,11 @@
 
   /* 導覽列選項 */
   .navbar-option {
+    margin: auto;
     display: flex;
-    justify-content: center;
     position: absolute;
     right: 0;
     top: 60%;
-
-    @include pad {
-      left: 7rem;
-    }
     // 選單隱藏
     @include mini-pad {
       width: 100%;
@@ -276,14 +244,17 @@
         padding: 0 1.2rem;
         border: none;
         background-color: transparent;
-        font-size: 1em;
+        font-size: 1.3em;
         font-weight: 600;
         font-family: Microsoft JhengHei, Arial, sans-serif;
         text-decoration: none;
         position: relative;
         letter-spacing: 0.15rem;
-        @include pad {
+        @include desktop {
           padding: 0 0.7rem;
+          font-size: 1.1em;
+        }
+        @include pad {
           letter-spacing: 0.1rem;
         }
         @include mini-pad {
@@ -325,7 +296,7 @@
         }
 
         .subNavbar {
-          width: 120px;
+          width: 140px;
           height: 0;
           display: none;
           text-align: center;
@@ -336,11 +307,10 @@
           top: 2rem;
           left: -0.2rem;
           transition: 0.3s;
-
           &::before {
             content: "";
             display: inline-block;
-            width: 100px;
+            width: 140px;
             height: 20px;
             position: absolute;
             top: -0.8rem;
@@ -352,7 +322,6 @@
             margin-bottom: 1rem;
             transform: translateY(0);
             transition: 0.3s;
-
             &:first-child {
               margin-top: 1rem;
             }
@@ -396,6 +365,7 @@
               left: 85%;
               bottom: -10px;
               transition: 0.2s 0.1s;
+              z-index: 0;
             }
             &:hover::after {
               width: 6px;
@@ -409,11 +379,12 @@
               text-align: center;
             }
 
+            // 子選項
             a {
               width: 100%;
               padding: 0;
               text-decoration: none;
-              font-size: 1em;
+              font-size: 1.1em;
               font-weight: 500;
               font-family: Microsoft JhengHei, Arial, sans-serif;
               letter-spacing: 0.2em;
@@ -425,7 +396,7 @@
               &::before {
                 content: "";
                 width: 0;
-                height: 1px;
+                height: 2px;
                 opacity: 1;
                 background-color: yellow;
                 position: absolute;
@@ -441,7 +412,7 @@
               &::after {
                 content: "";
                 width: 0;
-                height: 1px;
+                height: 2px;
                 opacity: 1;
                 background-color: yellow;
                 position: absolute;

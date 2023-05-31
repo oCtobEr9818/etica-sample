@@ -223,18 +223,27 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include mini-pad {
+        flex-direction: column;
+      }
 
       img {
         width: 400px;
         height: 400px;
         object-fit: contain;
         margin: 1em 0;
+        @include mini-pad {
+          order: 1;
+        }
       }
 
       .subtitle {
         width: 600px;
         margin: auto;
         text-align: left;
+        @include mini-pad {
+          order: 0;
+        }
 
         h2 {
           font-size: 2em;
@@ -257,7 +266,7 @@
 
     table {
       width: 100%;
-      margin: 0 0 10rem;
+      margin: 0 auto 10rem;
       border-collapse: collapse;
 
       tbody {
@@ -312,29 +321,36 @@
       flex-direction: column;
 
       img {
-        &:last-child {
-          margin-bottom: 5rem;
-        }
+        max-width: 100%;
+        margin-bottom: 7rem;
       }
 
       .subtitle {
+        width: 100%;
         height: 50vh;
         padding: 2rem 0;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         h2 {
           text-align: center;
           margin-bottom: 3rem;
           font-size: 2em;
+          @include mini-pad {
+            font-size: 1.5em;
+          }
         }
 
         p {
-          width: 100%;
+          width: 70%;
           margin: 0 auto;
           font-size: 1.5em;
+          @include mini-pad {
+            font-size: 1.2em;
+          }
         }
       }
     }
@@ -356,42 +372,50 @@
     }
 
     .txt {
+      width: 100%;
       height: 50vh;
+      margin: auto;
 
       h2 {
         text-align: center;
         margin-bottom: 3rem;
         font-size: 2em;
+        @include mini-pad {
+          font-size: 1.5em;
+        }
       }
 
       p {
         width: 70%;
         margin: 0 auto 1rem;
         font-size: 1.5em;
+        @include mini-pad {
+          font-size: 1.2em;
+        }
       }
     }
 
     img {
-      width: 80%;
+      max-width: 100%;
       height: 100%;
       object-fit: contain;
-      margin: 0 auto 3rem;
+      margin: 3rem auto;
     }
 
     .contentWrap {
       width: 100%;
-      margin: auto;
+      margin: 5rem auto;
+      overflow-x: auto;
 
       table {
-        width: 100%;
-        margin: 0 0 10rem;
+        width: 1000px;
+        margin: 0 auto;
         border-collapse: collapse;
 
         tbody {
           tr {
             td,
             th {
-              width: auto;
               border: 1px solid #000;
               text-align: center;
               font-weight: normal;

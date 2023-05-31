@@ -139,25 +139,27 @@
             position: absolute;
             top: -40px;
             left: -80px;
-            @include mini-mobile {
-              top: 40px;
-              left: -15px;
-            }
+            // @include mini-mobile {
+            //   top: 40px;
+            //   left: -15px;
+            // }
 
             &::before {
               content: "";
               height: 100%;
               width: 100%;
+              margin: auto;
               position: absolute;
-              left: 0;
               top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
               z-index: -1;
               background: rgba(0, 30, 180, 0.77);
               border-radius: 30px;
-
-              @include mini-mobile {
-                height: 100%;
-                width: 70%;
+              @include mobile {
+                height: 90%;
+                width: 65%;
               }
             }
             &::after {
@@ -173,9 +175,8 @@
               transition: 0.2s;
               color: transparent;
               font-size: 1em;
-
-              @include mini-mobile {
-                padding-right: 3.5rem;
+              @include mobile {
+                font-size: 0.9em;
               }
             }
           }
@@ -304,7 +305,7 @@
 
         img {
           max-width: 80%;
-          height: 40rem;
+          max-height: 40rem;
           margin: 0 auto;
         }
       }
