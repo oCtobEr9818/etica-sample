@@ -21,7 +21,7 @@ const MaintenanceManagement = () => {
 
       <div className="maintenance-management-content">
         <div className="txt">
-          <h2 id="bicycle">電動單車電池模組</h2>
+          <h2 id="bicycle">維運管理</h2>
           <p>
             儲能設備在建置完成運轉後才是挑戰的開始。除了電池自然老化，外部環境的粉塵、鹽害等亦會造成儲能系統無法維持高效率的調度，嚴重影響用電穩定及安全。為提升設備的壽命及安全性，建置前的規畫及運轉後維運管理同等重要。
           </p>

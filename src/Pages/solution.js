@@ -31,7 +31,7 @@ const Solution = () => {
           <ul className="imgOption">
             <li className="point point1">
               <Link
-                to="/solution_commercial_facility#commercial-facility"
+                to="/solution-commercial-facility#commercial-facility"
                 className="point_a"
               >
                 <span className="point_span" />
@@ -42,7 +42,7 @@ const Solution = () => {
             </li>
             <li className="point point2">
               <Link
-                to="/solution_transportation_application#transportation-application"
+                to="/solution-transportation-application#transportation-application"
                 className="point_a"
               >
                 <span className="point_span" />
@@ -53,7 +53,7 @@ const Solution = () => {
             </li>
             <li className="point point3">
               <Link
-                to="/solution_greenEnergy_industry#greenEnergy-industry"
+                to="/solution-greenEnergy-industry#greenEnergy-industry"
                 className="point_a"
               >
                 <span className="point_span" />
@@ -64,7 +64,7 @@ const Solution = () => {
             </li>
             <li className="point point4">
               <Link
-                to="/solution_public_house#public-house"
+                to="/solution-public-house#public-house"
                 className="point_a"
               >
                 <span className="point_span" />
@@ -75,7 +75,7 @@ const Solution = () => {
             </li>
             <li className="point point5">
               <Link
-                to="/solution_industry_application#industry-application"
+                to="/solution-industry-application#industry-application"
                 className="point_a"
               >
                 <span className="point_span" />
