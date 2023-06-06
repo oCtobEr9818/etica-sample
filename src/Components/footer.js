@@ -28,6 +28,7 @@ const Footer = () => {
           新北市三重區中興北街89號
         </p>
       </div>
+
       <p id="copyright">&copy;Copyright 明曜科技版權所有</p>
     </div>
   );

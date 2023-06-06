@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
+// import { useTranslation } from "react-i18next";
+
+import { imgHandler } from "./imgHandler";
 
 const navs = {
   home: {
@@ -39,13 +42,15 @@ const navs = {
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const handleMenuExpanded = (e) => setIsExpanded(false);
+  const handleMenuExpanded = () => setIsExpanded(false);
+  // const { t } = useTranslation();
+
   return (
     <div className="navbar">
       <NavLink to={navs.home.path} className="navbar-brand">
         <img
           className="navbar-logo"
-          src={process.env.PUBLIC_URL + "/img/logo.png"}
+          src={imgHandler("/img/logo.png")}
           alt="明曜科技,ETICA BATTERY,Etica Battery,ETICA,etica battery."
         />
       </NavLink>

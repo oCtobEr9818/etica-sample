@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
@@ -19,6 +21,8 @@ const data = {
 };
 
 const ProductEbike = () => {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <div className="banner">
@@ -30,13 +34,17 @@ const ProductEbike = () => {
 
       {/* 電動單車電池模組 */}
       <div className="product-ebike-content">
-        <div className="txt">
-          <h2 id="bicycle">電動單車電池模組</h2>
+        <div className="subTitle">
+          <h2 id="bicycle">{t("電動單車電池模組")}</h2>
           <p>
-            輕型電動載具種類繁多，其中電動自行車的全球市場在歐洲人熱衷戶外運動的風潮中蓬勃發展，台灣廠商在供應鏈中扮演舉足輕重的角色。與代步車、電動輪椅等不同，電動自行車設計者傾向將電池置於車架內，使外型更接近專業自行車，但也造成避震、重心位置等零組件設計問題，電池續航力也是使用者關心的重要性能。
+            {t(
+              "輕型電動載具種類繁多，其中電動自行車的全球市場在歐洲人熱衷戶外運動的風潮中蓬勃發展，台灣廠商在供應鏈中扮演舉足輕重的角色。與代步車、電動輪椅等不同，電動自行車設計者傾向將電池置於車架內，使外型更接近專業自行車，但也造成避震、重心位置等零組件設計問題，電池續航力也是使用者關心的重要性能。"
+            )}
           </p>
           <p>
-            明曜的EV電池專為輕型電動載具而設計，採用超強合金和世界一流的先進技術，使電池壽命更長，適用於電動摩托車、自行車、代步車、電動輪椅、高爾夫球車等。
+            {t(
+              "明曜的EV電池專為輕型電動載具而設計，採用超強合金和世界一流的先進技術，使電池壽命更長，適用於電動摩托車、自行車、代步車、電動輪椅、高爾夫球車等。"
+            )}
           </p>
         </div>
 

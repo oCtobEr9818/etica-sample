@@ -1,7 +1,18 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
-const Content = ({ imageL, imageR, altL, altR, content }) => {
+const Content = ({
+  imageL,
+  imageR,
+  altL,
+  altR,
+  content,
+  // content2,
+  // content3,
+}) => {
+  const { t } = useTranslation();
+
   Aos.init({
     offset: 100,
     delay: 50,
@@ -16,7 +27,7 @@ const Content = ({ imageL, imageR, altL, altR, content }) => {
         alt={altR}
         data-aos="zoom-in-up"
       />
-      <p>{content}</p>
+      <p>{t(`${content}`)}</p>
     </div>
   );
 };

@@ -26,6 +26,29 @@
   }
 }
 
+// 解決方案藍色圓點動畫
+@keyframes bordershow {
+  50% {
+    box-shadow: 0 0 10px 0 #001eb4;
+  }
+}
+@keyframes borderM {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @mixin common-style {
   max-width: 100%;
   color: #333;
@@ -397,7 +420,7 @@
     }
   }
 
-  // 綠能產業
+  // 光儲整合
   .greenEnergy-industry {
     @include common-style;
 

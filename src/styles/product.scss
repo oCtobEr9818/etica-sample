@@ -202,7 +202,7 @@
     }
   }
 
-  // ESS儲能電池分頁
+  // 產品資訊
   .product-ESS-content {
     max-width: 1200px;
     height: auto;
@@ -267,13 +267,36 @@
     table {
       width: 100%;
       margin: 0 auto 10rem;
-      border-collapse: collapse;
+      border-spacing: 0;
 
       tbody {
         tr {
+          &:first-child {
+            th {
+              &:first-child {
+                border-radius: 10px 0 0 0;
+              }
+              &:last-child {
+                border-radius: 0 10px 0 0;
+              }
+            }
+          }
+          &:last-child {
+            th {
+              &:first-child {
+                border-radius: 0 0 0 10px;
+              }
+            }
+            td {
+              &:last-child {
+                border-radius: 0 0 10px 0;
+              }
+            }
+          }
+
           td,
           th {
-            border: 1px solid #000;
+            border: 1px solid #333;
             text-align: center;
             font-weight: normal;
             padding: 15px;
@@ -300,21 +323,22 @@
       }
     }
   }
+  .product-ESS-txt {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+
+    p {
+      margin: auto;
+    }
+  }
 
   // 工控裝置
   .product-industrial-battery-content {
-    max-width: 1200px;
+    width: 100%;
     height: auto;
     margin: auto;
-    padding-top: 2em;
-    border-bottom: 1px solid #000;
-    &:last-child {
-      border: none;
-    }
 
     .contentWrap {
-      width: 100%;
-      margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -336,18 +360,21 @@
         align-items: center;
 
         h2 {
+          width: 100%;
+          margin-bottom: 3em;
+          display: block;
           text-align: center;
-          margin-bottom: 3rem;
           font-size: 2em;
           @include mini-pad {
+            margin-bottom: 2em;
             font-size: 1.5em;
           }
         }
 
         p {
-          width: 70%;
-          margin: 0 auto;
-          font-size: 1.5em;
+          width: 80%;
+          margin: 1rem auto;
+          font-size: 1.7em;
           @include mini-pad {
             font-size: 1.2em;
           }
@@ -358,37 +385,37 @@
 
   // e-bike
   .product-ebike-content {
-    max-width: 1200px;
-    height: auto;
+    width: 100%;
     margin: auto;
-    padding-top: 2em;
-    border-bottom: 1px solid #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    &:last-child {
-      border: none;
-    }
 
-    .txt {
+    .subTitle {
       width: 100%;
       height: 50vh;
+      padding: 2rem 0;
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h2 {
         text-align: center;
         margin-bottom: 3rem;
         font-size: 2em;
         @include mini-pad {
+          margin-bottom: 2em;
           font-size: 1.5em;
         }
       }
 
       p {
-        width: 70%;
-        margin: 0 auto 1rem;
-        font-size: 1.5em;
+        width: 80%;
+        margin: 1rem auto;
+        font-size: 1.7em;
         @include mini-pad {
           font-size: 1.2em;
         }
@@ -410,13 +437,36 @@
       table {
         width: 1000px;
         margin: 0 auto;
-        border-collapse: collapse;
+        border-spacing: 0;
 
         tbody {
           tr {
+            &:first-child {
+              th {
+                &:first-child {
+                  border-radius: 10px 0 0 0;
+                }
+                &:last-child {
+                  border-radius: 0 10px 0 0;
+                }
+              }
+            }
+            &:last-child {
+              th {
+                &:first-child {
+                  border-radius: 0 0 0 10px;
+                }
+              }
+              td {
+                &:last-child {
+                  border-radius: 0 0 10px 0;
+                }
+              }
+            }
+
             td,
             th {
-              border: 1px solid #000;
+              border: 1px solid #333;
               text-align: center;
               font-weight: normal;
               padding: 15px;

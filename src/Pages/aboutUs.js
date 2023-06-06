@@ -3,6 +3,8 @@ import Content from "../Components/content";
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
+import { useTranslation } from "react-i18next";
+
 const data = {
   aboutus: {
     image: imgHandler("/img/sub-aboutus.png"),
@@ -62,6 +64,8 @@ const data = {
 };
 
 const AboutUs = () => {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <div className="banner">

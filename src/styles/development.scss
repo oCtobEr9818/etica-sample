@@ -42,7 +42,7 @@
         margin: 2rem 0;
         width: 40%;
         height: 600px;
-        object-fit: cover;
+        object-fit: contain;
         @include mini-pad {
           height: 500px;
         }

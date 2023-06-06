@@ -1,12 +1,15 @@
 import React, { useRef } from "react";
 import GoogleMapReact from "google-map-react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 import mapKey from "../Components/key";
 import { useFormValidate } from "../Components/useFormValidate";
 import { Layout } from "../Components/Layout";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const emailRule =
     /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
   const isNotEmpty = (value) => value.trim() !== "";
@@ -123,15 +126,18 @@ const Contact = () => {
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="form-wrap">
           <label>
-            姓名{" "}
+            {t("姓名")}{" "}
             <span>
-              *{nameError && <p className="error-text">此欄位不能為空白</p>}
+              *
+              {nameError && (
+                <p className="error-text">{t("此欄位不能為空白")}</p>
+              )}
             </span>
           </label>
           <input
             type="text"
             name="user_name"
-            placeholder="請留下姓名或者公司名稱"
+            placeholder={t("請留下姓名或者公司名稱")}
             onChange={onChangeName}
             onBlur={onBlurName}
             className={nameInputClasses}
@@ -142,16 +148,18 @@ const Contact = () => {
 
         <div className="form-wrap">
           <label>
-            電子信箱{" "}
+            {t("電子信箱")}{" "}
             <span>
               *
-              {emailError && <p className="error-text">格式錯誤或欄位為空白</p>}
+              {emailError && (
+                <p className="error-text">{t("格式錯誤或欄位為空白")}</p>
+              )}
             </span>
           </label>
           <input
             type="email"
             name="email"
-            placeholder="請輸入常用的電子信箱"
+            placeholder={t("請輸入常用的電子信箱")}
             onChange={onChangeEmail}
             onBlur={onBlurEmail}
             className={emailInputClasses}
@@ -162,15 +170,18 @@ const Contact = () => {
 
         <div className="form-wrap">
           <label>
-            主旨{" "}
+            {t("主旨")}{" "}
             <span>
-              *{subjectError && <p className="error-text">此欄位不能為空白</p>}
+              *
+              {subjectError && (
+                <p className="error-text">{t("此欄位不能為空白")}</p>
+              )}
             </span>
           </label>
           <input
             type="text"
             name="subject"
-            placeholder="請輸入主旨"
+            placeholder={t("請輸入主旨")}
             onChange={onChangeSubject}
             onBlur={onBlurSubject}
             className={subjectInputClasses}
@@ -181,9 +192,12 @@ const Contact = () => {
 
         <div className="form-wrap">
           <label>
-            內容{" "}
+            {t("內容")}{" "}
             <span>
-              *{contentError && <p className="error-text">此欄位不能為空白</p>}
+              *
+              {contentError && (
+                <p className="error-text">{t("此欄位不能為空白")}</p>
+              )}
             </span>
           </label>
           <textarea
@@ -199,7 +213,7 @@ const Contact = () => {
         <div className="form-wrap">
           <input
             type="submit"
-            value="送出"
+            value={t("送出")}
             className="submit"
             disabled={!nameIsValid || !emailIsValid}
           />
