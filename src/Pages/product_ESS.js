@@ -11,23 +11,23 @@ const data = {
   product2_content: {
     etica_c: {
       img: "/img/etica-c.png",
-      alt: "etica-c",
+      alt: "etica+c",
     },
     etica_o: {
       img: "/img/etica-o.png",
-      alt: "etica-o",
+      alt: "etica+o",
     },
     etica_r1: {
       img: "/img/etica-r1.png",
-      alt: "etica-r1",
+      alt: "etica+r1",
     },
     etica_r3: {
       img: "/img/etica-r3.png",
-      alt: "etica-r3",
+      alt: "etica+r3",
     },
     water: {
       img: "/img/etica-r4.png",
-      alt: "etica-r4",
+      alt: "etica+r4",
     },
   },
 };
@@ -44,7 +44,7 @@ const ProductESS = () => {
         />
       </div>
 
-      {/* Etica-C */}
+      {/* Etica+C */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <img
@@ -53,7 +53,9 @@ const ProductESS = () => {
           />
 
           <div className="subtitle">
-            <h2 id="Etica-C">Etica-C</h2>
+            <h2 id="Etica+C">
+              Etica <sup>+</sup>C
+            </h2>
             <ul>
               <li>{t("20呎貨櫃儲能系統")}</li>
               <li>{t("一體化設計，單櫃3.72MWh")}</li>
@@ -65,66 +67,68 @@ const ProductESS = () => {
         <table>
           <tbody>
             <tr>
-              <th>項目</th>
-              <th>規格</th>
+              <th>{t("項目")}</th>
+              <th>{t("規格")}</th>
             </tr>
             <tr>
-              <th>化學成分</th>
+              <th>{t("化學成分")}</th>
               <td>LiFePO4</td>
             </tr>
             <tr>
-              <th>電池櫃組成</th>
+              <th>{t("電池櫃組成")}</th>
               <td>416S1P x 10 Racks (max)</td>
             </tr>
             <tr>
-              <th>輸出功率</th>
+              <th>{t("輸出功率")}</th>
               <td>3.72MWh</td>
             </tr>
             <tr>
-              <th>額定功率</th>
+              <th>{t("額定功率")}</th>
               <td>3.72MW (1.0C)</td>
             </tr>
             <tr>
-              <th>最大電流</th>
+              <th>{t("最大電流")}</th>
               <td>2800A (Maximum)</td>
             </tr>
             <tr>
-              <th>電池運作溫度</th>
+              <th>{t("電池運作溫度")}</th>
               <td>-20~45℃</td>
             </tr>
             <tr>
-              <th>額定電壓</th>
+              <th>{t("額定電壓")}</th>
               <td>1331.2V (Cell = 3.2V)</td>
             </tr>
             <tr>
-              <th>電池電壓</th>
-              <td>1164.8~1497.6V (電芯電壓範圍2.8V~3.6V)</td>
+              <th>{t("電池電壓")}</th>
+              <td>1164.8~1497.6V (cell 2.8V~3.6V)</td>
             </tr>
             <tr>
-              <th>通訊介面</th>
+              <th>{t("通訊介面")}</th>
               <td>Modbus TCP</td>
             </tr>
             <tr>
-              <th>HMI</th>
-              <td>Linux interface, IPC, PLC 介面整合</td>
+              <th>{t("HMI")}</th>
+              <td>Linux system, IPC, PLC interface integration</td>
             </tr>
             <tr>
-              <th>電芯認證</th>
+              <th>{t("電芯認證")}</th>
               <td>UN38.3, UL1973, UL9540A, IEC 62619</td>
             </tr>
             <tr>
-              <th>電池櫃認證</th>
+              <th>{t("電池櫃認證")}</th>
               <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      {/* Etica-O */}
+      {/* Etica+O */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <div className="subtitle">
-            <h2 id="Etica-O">Etica-O</h2>
+            <h2 id="Etica+O">
+              Etica <sup>+</sup>O
+            </h2>
             <ul>
               <li>{t("單機體小，組合式設計")}</li>
               <li>{t("輸出功率配置獨立範圍 1.1MW ~ 3.7MW")}</li>
@@ -145,64 +149,62 @@ const ProductESS = () => {
         <table>
           <tbody>
             <tr>
-              <th>項目</th>
-              <th>規格</th>
+              <th>{t("項目")}</th>
+              <th>{t("規格")}</th>
             </tr>
             <tr>
-              <th>電池模組</th>
+              <th>{t("電池模組")}</th>
               <td>CATL 280Ah 52S1P Battery pack</td>
             </tr>
             <tr>
-              <th>電池櫃組成</th>
-              <td>
-                8串電池 {"&"} 控制器 {"&"} 水冷機 {"&"} Novec 1230消防系統
-              </td>
+              <th>{t("電池櫃組成")}</th>
+              <td>{t("8串電池 & 控制器 & 水冷機 & Novec 1230消防系統")}</td>
             </tr>
             <tr>
-              <th>輸出功率</th>
+              <th>{t("輸出功率")}</th>
               <td>372kWh</td>
             </tr>
             <tr>
-              <th>電池電壓</th>
-              <td>1164.8~1497.6 VCD (電芯電壓範圍2.8~3.6 V)</td>
+              <th>{t("電池電壓")}</th>
+              <td>1164.8~1497.6 VCD (cell 2.8~3.6 V)</td>
             </tr>
             <tr>
-              <th>充電溫度範圍</th>
+              <th>{t("充電溫度範圍")}</th>
               <td>0~50℃</td>
             </tr>
             <tr>
-              <th>放電溫度範圍</th>
+              <th>{t("放電溫度範圍")}</th>
               <td>-20~55℃</td>
             </tr>
             <tr>
-              <th>尺寸</th>
+              <th>{t("尺寸")}</th>
               <td>1560mm * 1330mm * 2203mm L*W*H </td>
             </tr>
             <tr>
-              <th>重量</th>
+              <th>{t("重量")}</th>
               <td>3550kg</td>
             </tr>
             <tr>
-              <th>通訊介面</th>
+              <th>{t("通訊介面")}</th>
               <td>CAN Bus</td>
             </tr>
             <tr>
-              <th>HMI</th>
-              <td>Linux 系統, IPC, PLC介面整合</td>
+              <th>{t("HMI")}</th>
+              <td>Linux system, IPC, PLC interface integration</td>
             </tr>
             <tr>
-              <th>電芯認證</th>
+              <th>{t("電芯認證")}</th>
               <td>UN38.3, UL1973, UL9540A, IEC 62619</td>
             </tr>
             <tr>
-              <th>電池櫃認證</th>
+              <th>{t("電池櫃認證")}</th>
               <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      {/* Etica-R1 */}
+      {/* Etica+R1 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <img
@@ -210,7 +212,9 @@ const ProductESS = () => {
             alt={data.product2_content.etica_r1.alt}
           />
           <div className="subtitle">
-            <h2 id="Etica-R1">Etica-R1</h2>
+            <h2 id="Etica+R1">
+              Etica <sup>+</sup>R1
+            </h2>
             <ul>
               <li>{t("家用儲能系統")}</li>
               <li>{t("一體化設計")}</li>
@@ -225,46 +229,48 @@ const ProductESS = () => {
         <table>
           <tbody>
             <tr>
-              <th>項目</th>
-              <th>規格</th>
+              <th>{t("項目")}</th>
+              <th>{t("規格")}</th>
             </tr>
             <tr>
-              <th>電池電壓</th>
+              <th>{t("電池電壓")}</th>
               <td>51.2V</td>
             </tr>
             <tr>
-              <th>容量</th>
+              <th>{t("電池功率")}</th>
               <td>5.12kW x2 = 10.24kW</td>
             </tr>
             <tr>
-              <th>輸出功率</th>
+              <th>{t("輸出功率")}</th>
               <td>5kw (0.5C)</td>
             </tr>
             <tr>
-              <th>通訊介面</th>
+              <th>{t("通訊介面")}</th>
               <td>RS 485 Battery / RS232</td>
             </tr>
             <tr>
-              <th>電池組成</th>
+              <th>{t("電池組成")}</th>
               <td>(8s1p X 2) x2</td>
             </tr>
             <tr>
-              <th>重量</th>
+              <th>{t("重量")}</th>
               <td>180 kg</td>
             </tr>
             <tr>
-              <th>尺寸</th>
+              <th>{t("尺寸")}</th>
               <td>596mm * 351mm * 1132mm L*W*H</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      {/* Etica-R2 */}
+      {/* Etica+R3 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <div className="subtitle">
-            <h2 id="Etica-R3">Etica-R2</h2>
+            <h2 id="Etica+R3">
+              Etica <sup>+</sup>R3
+            </h2>
             <ul>
               <li>{t("家用儲能系統")}</li>
               <li>{t("一體化設計")}</li>
@@ -282,53 +288,53 @@ const ProductESS = () => {
         <table>
           <tbody>
             <tr>
-              <th>項目</th>
-              <th>規格</th>
+              <th>{t("項目")}</th>
+              <th>{t("規格")}</th>
             </tr>
             <tr>
-              <th>電池電壓</th>
+              <th>{t("電池電壓")}</th>
               <td>51.2 V (25°C)</td>
             </tr>
             <tr>
-              <th>電池功率</th>
+              <th>{t("電池功率")}</th>
               <td>18 kWh</td>
             </tr>
             <tr>
-              <th>標準充電/放電電流</th>
+              <th>{t("標準充電/放電電流")}</th>
               <td>50 A</td>
             </tr>
             <tr>
-              <th>最大充電/放電持續電流</th>
+              <th>{t("最大充電/放電持續電流")}</th>
               <td>100 A</td>
             </tr>
             <tr>
-              <th>電池自放電率</th>
+              <th>{t("電池自放電率")}</th>
               <td>≤3% / 月 (25 ℃，50% SOC)</td>
             </tr>
             <tr>
-              <th>出場荷電狀態</th>
+              <th>{t("出場荷電狀態")}</th>
               <td>30% ~ 40%</td>
             </tr>
             <tr>
-              <th>Inverter功率</th>
+              <th>{t("Inverter功率")}</th>
               <td>8 kW / 10 kVA</td>
             </tr>
             <tr>
-              <th>Inverter輸出</th>
+              <th>{t("Inverter輸出")}</th>
               <td>110 V / 220 V AC</td>
             </tr>
             <tr>
-              <th>IP等級</th>
+              <th>{t("IP等級")}</th>
               <td>IP54</td>
             </tr>
             <tr>
-              <th>海拔高度</th>
+              <th>{t("海拔高度")}</th>
               <td>{"<"}2000 m</td>
             </tr>
             <tr>
-              <th>工作溫度</th>
+              <th>{t("工作溫度")}</th>
               <td>
-                0℃~55℃ (充電)，-20℃~55℃ (放電)
+                0℃~55℃ ({t("充電")})，-20℃~55℃ ({t("放電")})
                 <br />
                 -10℃~30℃
                 <br />
@@ -336,18 +342,18 @@ const ProductESS = () => {
               </td>
             </tr>
             <tr>
-              <th>重量</th>
+              <th>{t("重量")}</th>
               <td>300 kg</td>
             </tr>
             <tr>
-              <th>尺寸</th>
+              <th>{t("尺寸")}</th>
               <td>401mm * 750mm * 1510mm L*W*H</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      {/* Etica-R3 */}
+      {/* Etica+R4 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <img
@@ -355,7 +361,9 @@ const ProductESS = () => {
             alt={data.product2_content.water.alt}
           />
           <div className="subtitle">
-            <h2 id="Etica-R4">Etica-R3</h2>
+            <h2 id="Etica+R4">
+              Etica <sup>+</sup>R4
+            </h2>
             <ul>
               <li>{t("工業用儲能系統")}</li>
               <li>{t("一體化設計")}</li>
@@ -368,53 +376,53 @@ const ProductESS = () => {
         <table>
           <tbody>
             <tr>
-              <th>項目</th>
-              <th>規格</th>
+              <th>{t("項目")}</th>
+              <th>{t("規格")}</th>
             </tr>
             <tr>
-              <th>電池電壓</th>
+              <th>{t("電池電壓")}</th>
               <td>48 V (25°C)</td>
             </tr>
             <tr>
-              <th>電池功率</th>
+              <th>{t("電池功率")}</th>
               <td>9.6 kWh</td>
             </tr>
             <tr>
-              <th>標準充電/放電電流</th>
+              <th>{t("標準充電/放電電流")}</th>
               <td>50 A</td>
             </tr>
             <tr>
-              <th>最大充電/放電持續電流</th>
+              <th>{t("最大充電/放電持續電流")}</th>
               <td>100 A</td>
             </tr>
             <tr>
-              <th>電池自放電率</th>
+              <th>{t("電池自放電率")}</th>
               <td>≤3% / 月 (25 ℃，50% SOC)</td>
             </tr>
             <tr>
-              <th>太陽能功率</th>
+              <th>{t("太陽能功率")}</th>
               <td>6 kW</td>
             </tr>
             <tr>
-              <th>Inverter功率</th>
+              <th>{t("Inverter功率")}</th>
               <td>5 kW</td>
             </tr>
             <tr>
-              <th>Inverter輸出</th>
+              <th>{t("Inverter輸出")}</th>
               <td>110 V / 220 V AC</td>
             </tr>
             <tr>
-              <th>IP等級</th>
+              <th>{t("IP等級")}</th>
               <td>IP20</td>
             </tr>
             <tr>
-              <th>海拔高度</th>
+              <th>{t("海拔高度")}</th>
               <td>{"<"}2000 m</td>
             </tr>
             <tr>
-              <th>工作溫度</th>
+              <th>{t("工作溫度")}</th>
               <td>
-                0℃~55℃ (充電)，-20℃~55℃ (放電)
+                0℃~55℃ ({t("充電")})，-20℃~55℃ ({t("放電")})
                 <br />
                 -10℃~30℃
                 <br />
@@ -422,11 +430,11 @@ const ProductESS = () => {
               </td>
             </tr>
             <tr>
-              <th>重量</th>
+              <th>{t("重量")}</th>
               <td>120 kg</td>
             </tr>
             <tr>
-              <th>尺寸</th>
+              <th>{t("尺寸")}</th>
               <td>676mm * 565mm * 749mm L*W*H</td>
             </tr>
           </tbody>

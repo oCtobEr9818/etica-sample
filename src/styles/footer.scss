@@ -64,32 +64,34 @@
       padding: 1rem 0 0 1rem;
       margin: 0 auto;
       text-align: center;
+      line-height: 1.5;
     }
 
     h2 {
       @include mobile {
-        font-size: 1.2em;
+        font-size: 0.8em;
         text-align: left;
       }
     }
 
     p {
       font-family: "BankGothic Md BT";
-      @include mobile {
+      text-align: left;
+      @include mini-pad {
+        padding-right: 1rem;
         font-size: 0.8em;
-        text-align: left;
+      }
+      @include mobile {
+        font-size: 0.6em;
       }
 
       .fa {
         width: 2rem;
         padding-right: 0.5rem;
         text-align: center;
-      }
-      @include pad {
-        text-align: left;
-      }
-      @include mini-pad {
-        font-size: 0.8em;
+        @include mini-pad {
+          padding: 0;
+        }
       }
     }
   } //footer-wrap
@@ -101,7 +103,7 @@
     color: #666;
     position: absolute;
     bottom: 5px;
-    @include mini-mobile {
+    @include mobile {
       font-size: 0.5em;
     }
   }

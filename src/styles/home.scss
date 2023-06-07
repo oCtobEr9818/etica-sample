@@ -585,6 +585,8 @@ $primary-color: #93cddd;
           }
 
           .service-content-wrap {
+            display: flex;
+            flex-direction: column;
             text-align: center;
             @include mobile {
               margin: 3rem 0;
@@ -597,11 +599,17 @@ $primary-color: #93cddd;
               object-fit: contain;
             }
 
-            h4 {
+            a {
+              width: 150px;
+              margin: 1.5rem auto -1.5rem;
+              text-decoration: none;
               color: #888;
               font-weight: 600;
               font-size: 1.3em;
               text-align: center;
+              &:hover {
+                color: rgb(226, 90, 90);
+              }
             }
           }
         }

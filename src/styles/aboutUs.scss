@@ -94,33 +94,35 @@
       }
     }
 
-    p {
-      width: auto;
-      font-size: 1.2em;
-      white-space: pre-line;
-      text-align: justify;
+    .content-txt {
+      display: flex;
+      flex-direction: column;
 
-      // margin: 0 auto;
+      p {
+        width: auto;
+        margin: 0 0 1rem;
+        font-size: 1.2em;
+        text-align: left;
 
-      @include desktop {
-        font-size: 1em;
-        width: 30rem;
-      }
-      @include pad {
-        width: 35rem;
-        margin: 0 auto;
-      }
-      @include mini-pad {
-        width: 23rem;
-      }
-      @include mobile {
-        width: 18rem;
-        font-size: 0.9em;
-        margin-right: 1.8rem;
-      }
-      @include mini-mobile {
-        width: 15rem;
-        margin-right: 1.5rem;
+        @include desktop {
+          font-size: 1em;
+          width: 30rem;
+        }
+        @include pad {
+          width: 35rem;
+        }
+        @include mini-pad {
+          width: 23rem;
+        }
+        @include mobile {
+          width: 18rem;
+          font-size: 0.9em;
+          margin-right: 1.8rem;
+        }
+        @include mini-mobile {
+          width: 15rem;
+          margin-right: 1.5rem;
+        }
       }
     }
   }

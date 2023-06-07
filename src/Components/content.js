@@ -3,13 +3,13 @@ import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 
 const Content = ({
-  imageL,
-  imageR,
-  altL,
-  altR,
-  content,
-  // content2,
-  // content3,
+  imageL = null,
+  imageR = null,
+  altL = "",
+  altR = "",
+  content = "",
+  content2 = "",
+  content3 = "",
 }) => {
   const { t } = useTranslation();
 
@@ -27,7 +27,11 @@ const Content = ({
         alt={altR}
         data-aos="zoom-in-up"
       />
-      <p>{t(`${content}`)}</p>
+      <div className="content-txt">
+        <p>{t(`${content}`)}</p>
+        <p>{t(`${content2}`)}</p>
+        <p>{t(`${content3}`)}</p>
+      </div>
     </div>
   );
 };

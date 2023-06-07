@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import SwitchLanguage from "../Components/translation";
 
 import { imgHandler } from "./imgHandler";
 
@@ -38,12 +39,15 @@ const navs = {
     path: "/contact",
     name: "聯絡我們",
   },
+  langOption: {
+    name: "",
+  },
 };
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleMenuExpanded = () => setIsExpanded(false);
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="navbar">
@@ -55,8 +59,7 @@ const Navbar = () => {
         />
       </NavLink>
       <div className="navbar-line"></div>
-
-      {/* 768px以下選控制 */}
+      {/* 768px以下選控制 */}{" "}
       <div className="dropMenu">
         <label htmlFor="menu-control" className="menu-btn"></label>
       </div>
@@ -66,46 +69,47 @@ const Navbar = () => {
         checked={isExpanded}
         onChange={() => setIsExpanded(!isExpanded)}
       />
-
       <ul className={`navbar-option ${isExpanded ? "active" : ""}`}>
         {/* 儲能系統 */}
         <li>
           <button onClick={handleMenuExpanded}>
-            {navs.energyStorageSystem.name}
+            {t(navs.energyStorageSystem.name)}
           </button>
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
                 <Link to="/solution">
-                  <h3>解決方案</h3>
+                  <h3>{t("解決方案")}</h3>
                 </Link>
               </li>
               <li>
                 <Link to="/solution-commercial-facility#commercial-facility">
-                  電力設施
+                  {t("電力設施")}
                 </Link>
               </li>
               <li>
                 <Link to="/solution-transportation-application#transportation-application">
-                  交通應用
+                  {t("交通應用")}
                 </Link>
               </li>
               <li>
-                <Link to="/solution-public-house#public-house">公設住宅</Link>
+                <Link to="/solution-public-house#public-house">
+                  {t("公設住宅")}
+                </Link>
               </li>
               <li>
                 <Link to="/solution-industry-application#industry-application">
-                  工業應用
+                  {t("工業應用")}
                 </Link>
               </li>
               <li>
                 <Link to="/solution-greenEnergy-industry#greenEnergy-industry">
-                  光儲整合
+                  {t("光儲整合")}
                 </Link>
               </li>
               <li>
                 <Link to="/product-ESS">
-                  <h3>產品資訊</h3>
+                  <h3>{t("產品資訊")}</h3>
                 </Link>
               </li>
             </ul>
@@ -114,13 +118,13 @@ const Navbar = () => {
         {/* 工控裝置 */}
         <li>
           <NavLink to={navs.industryBattery.path} onClick={handleMenuExpanded}>
-            {navs.industryBattery.name}
+            {t(navs.industryBattery.name)}
           </NavLink>
         </li>
         {/* e-bike */}
         <li>
           <NavLink to={navs.eBike.path} onClick={handleMenuExpanded}>
-            {navs.eBike.name}
+            {t(navs.eBike.name)}
           </NavLink>
         </li>
         {/* 維運管理 */}
@@ -129,33 +133,33 @@ const Navbar = () => {
             to={navs.maintenanceManagement.path}
             onClick={handleMenuExpanded}
           >
-            {navs.maintenanceManagement.name}
+            {t(navs.maintenanceManagement.name)}
           </NavLink>
         </li>
         {/* 技術研發 */}
         <li>
           <NavLink to={navs.development.path} onClick={handleMenuExpanded}>
-            {navs.development.name}
+            {t(navs.development.name)}
           </NavLink>
         </li>
         {/* 關於明曜 */}
         <li>
           <NavLink to={navs.aboutus.path} onClick={handleMenuExpanded}>
-            {navs.aboutus.name}
+            {t(navs.aboutus.name)}
           </NavLink>
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
-                <Link to="/aboutus#introduction">公司簡介</Link>
+                <Link to="/aboutus#introduction">{t("公司簡介")}</Link>
               </li>
               <li>
-                <Link to="/aboutus#history">企業沿革</Link>
+                <Link to="/aboutus#history">{t("企業沿革")}</Link>
               </li>
               <li>
-                <Link to="/aboutus#business">經營理念</Link>
+                <Link to="/aboutus#business">{t("經營理念")}</Link>
               </li>
               <li>
-                <Link to="/aboutus#feature">未來展望</Link>
+                <Link to="/aboutus#feature">{t("未來展望")}</Link>
               </li>
             </ul>
           </div>
@@ -163,10 +167,14 @@ const Navbar = () => {
         {/* 聯絡我們 */}
         <li>
           <NavLink to={navs.contact.path} onClick={handleMenuExpanded}>
-            {navs.contact.name}
+            {t(navs.contact.name)}
           </NavLink>
         </li>
+        <li>
+          <button>{t(navs.langOption.name)}</button>
+        </li>
       </ul>
+      <SwitchLanguage />
     </div>
   );
 };

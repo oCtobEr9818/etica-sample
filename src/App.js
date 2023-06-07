@@ -16,7 +16,6 @@ import "./styles/footer.scss";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import ScrollToTopButton from "./Components/scrollToTopBtn";
-import SwitchLanguage from "./Components/translation";
 
 import Home from "./Pages/home";
 import AboutUs from "./Pages/aboutUs";
@@ -38,8 +37,6 @@ export default function App() {
     <BrowserRouter basename="/etica-sample">
       <Suspense fallback={<div>Loading...</div>}>
         <Navbar />
-
-        <SwitchLanguage />
 
         <Routes>
           {/* 首頁 */}

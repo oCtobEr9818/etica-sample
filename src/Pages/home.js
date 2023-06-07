@@ -2,8 +2,63 @@ import { v4 } from "uuid";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
+import { HashLink as Link } from "react-router-hash-link";
 
 import { imgHandler } from "../Components/imgHandler";
+
+const data = {
+  bannerImage: [
+    {
+      img: "/img/home/img01.png",
+      alt: "樹林區公司外觀",
+    },
+    {
+      img: "/img/home/img_7.png",
+      alt: "三重區公司外觀實際圖",
+    },
+    {
+      img: "/img/home/img_5.png",
+      alt: "三重區公司外觀示意圖",
+    },
+    {
+      img: "/img/home/img_6.png",
+      alt: "三重區公司外觀示意圖",
+    },
+  ],
+  services: [
+    {
+      img: "/img/home/energy-storage.png",
+      alt: "ESS儲能櫃",
+      title: "儲能系統",
+      path: "/solution#solution-img",
+    },
+    {
+      img: "/img/home/industry-device.png",
+      alt: "工控裝置",
+      title: "工控裝置",
+      path: "/product-industrial-battery#industry-device",
+    },
+    {
+      img: "/img/home/e-bike.png",
+      alt: "e-bike",
+      title: "E-bike",
+      path: "/product-ebike#bicycle",
+    },
+    {
+      img: "/img/home/service.png",
+      alt: "戴著黃色安全帽的男人在白板畫圖",
+      title: "維運管理",
+      path: "/maintenance-management#O&M",
+    },
+  ],
+  news: [
+    {
+      url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
+      title: "明曜異業結盟展企圖心 今年營收上看10億",
+      date: "2022/03/01",
+    },
+  ],
+};
 
 Aos.init({
   offset: 100,
@@ -14,56 +69,6 @@ const Home = () => {
   const { t, i18n } = useTranslation();
 
   const changeLetterSpacing = i18n.language === "en" ? "english" : "taiwanese";
-
-  const data = {
-    bannerImage: [
-      {
-        img: "/img/home/img01.png",
-        alt: "樹林區公司外觀",
-      },
-      {
-        img: "/img/home/img_7.png",
-        alt: "三重區公司外觀實際圖",
-      },
-      {
-        img: "/img/home/img_5.png",
-        alt: "三重區公司外觀示意圖",
-      },
-      {
-        img: "/img/home/img_6.png",
-        alt: "三重區公司外觀示意圖",
-      },
-    ],
-    services: [
-      {
-        img: "/img/home/energy-storage.png",
-        alt: "ESS儲能櫃",
-        title: "儲能系統",
-      },
-      {
-        img: "/img/home/industry-device.png",
-        alt: "工控電池",
-        title: "工控電池",
-      },
-      {
-        img: "/img/home/e-bike.png",
-        alt: "e-bike",
-        title: "E-bike",
-      },
-      {
-        img: "/img/home/service.png",
-        alt: "戴著黃色安全帽的男人在白板畫圖",
-        title: "維運管理",
-      },
-    ],
-    news: [
-      {
-        url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
-        title: "明曜異業結盟展企圖心 今年營收上看10億",
-        date: "2022/03/01",
-      },
-    ],
-  };
 
   return (
     <div className="home">
@@ -86,7 +91,7 @@ const Home = () => {
         <div className="hexagon">
           <a href="#service">{t("服務項目")}</a>
           <a href="#international">{t("國際認證")}</a>
-          <a href="#client">{t("全球客戶")}</a>
+          <a href="#client">{t("相關新聞")}</a>
         </div>
         <h1>ETICA</h1>
         <div className="imgWrap">
@@ -113,8 +118,9 @@ const Home = () => {
             <div className="service-content" data-aos="fade-right">
               {data.services.map((service) => (
                 <div className="service-content-wrap" key={v4()}>
-                  <img src={imgHandler(service.img)} alt={service.alt}></img>
-                  <h4>{t(service.title)}</h4>
+                  <img src={imgHandler(service.img)} alt={service.alt} />
+
+                  <Link to={service.path}>{t(service.title)}</Link>
                 </div>
               ))}
             </div>

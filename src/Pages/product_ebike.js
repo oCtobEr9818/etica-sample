@@ -57,55 +57,55 @@ const ProductEbike = () => {
           <table>
             <tbody>
               <tr>
-                <th>規格 \ 型號</th>
+                <th>{t("規格 \\ 型號")}</th>
                 <th>Down Tube(ETI)</th>
                 <th>In-Frame(EEL- IE mini)</th>
                 <th>Rear Rack(RK-4C)</th>
               </tr>
               <tr>
-                <th>電壓 (V)</th>
+                <th>{t("電壓")}</th>
                 <td>36 V</td>
                 <td>36 V</td>
                 <td>36 V</td>
               </tr>
               <tr>
-                <th>電容 (Ah)</th>
+                <th>{t("電容")}</th>
                 <td>11.6 Ah / 14 Ah</td>
                 <td>11.6 Ah / 14 Ah</td>
                 <td>11.6 Ah / 14 Ah</td>
               </tr>
               <tr>
-                <th>最大電流 (A)</th>
+                <th>{t("最大電流")}</th>
                 <td>22 A / 28 A</td>
                 <td>22 A / 28 A</td>
                 <td>22 A / 28 A</td>
               </tr>
               <tr>
-                <th>尺寸 (mm)</th>
+                <th>{t("尺寸")}</th>
                 <td>398mm * 127mm * 93.5mm L*W*H</td>
                 <td>430mm * 64mm * 74mm L*W*H</td>
                 <td>407mm * 148mm * 76mm L*W*H</td>
               </tr>
               <tr>
-                <th>介面卡</th>
+                <th>{t("介面卡")}</th>
                 <td>UART or CANBUS</td>
                 <td>UART or CANBUS</td>
                 <td>UART or CANBUS</td>
               </tr>
               <tr>
-                <th>保護機制</th>
+                <th>{t("保護機制")}</th>
                 <td>OVP/SCP/OTP/UTP/UVP/OCP</td>
                 <td>OVP/SCP/OTP/UTP/UVP/OCP</td>
                 <td>OVP/SCP/OTP/UTP/UVP/OCP</td>
               </tr>
               <tr>
-                <th>更新</th>
+                <th>{t("更新")}</th>
                 <td>Bootloader / *IOT</td>
                 <td>Bootloader / *IOT</td>
                 <td>Bootloader / *IOT</td>
               </tr>
               <tr>
-                <th>認證</th>
+                <th>{t("認證")}</th>
                 <td>UN38.3/CE/FCC/*EN 13849-1</td>
                 <td>UN38.3/CE/FCC/*EN 13849-1</td>
                 <td>UN38.3/CE/FCC/*EN 13849-1</td>

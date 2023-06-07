@@ -25,6 +25,7 @@ const Solution = () => {
         <img
           src={imgHandler(data.solution_content.img)}
           alt={data.solution_content.alt}
+          id="solution-img"
         />
 
         <div className="solution-content">

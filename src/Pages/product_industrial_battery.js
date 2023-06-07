@@ -8,10 +8,14 @@ const data = {
     image: "/img/sub-industryDevice.png",
     alt: "ESS Energy Storage System",
   },
-  product4_content: {
+  product_content: {
+    device: {
+      img: "/img/home/industry-device.png",
+      alt: "工控電池",
+    },
     operating_area: {
       img: "/img/operatingArea.png",
-      alt: "作業工廠",
+      alt: "工控電池",
     },
   },
 };
@@ -40,8 +44,12 @@ const ProductIndustrialBattery = () => {
             </p>
           </div>
           <img
-            src={imgHandler(data.product4_content.operating_area.img)}
-            alt={data.product4_content.operating_area.alt}
+            src={imgHandler(data.product_content.device.img)}
+            alt={data.product_content.device.alt}
+          />
+          <img
+            src={imgHandler(data.product_content.operating_area.img)}
+            alt={data.product_content.operating_area.alt}
           />
         </div>
       </div>

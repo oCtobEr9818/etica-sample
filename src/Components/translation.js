@@ -8,8 +8,13 @@ export default function SwitchLanguage() {
 
   return (
     <>
-      <button onClick={() => changeLanguage("tw")}>中文</button>
-      <button onClick={() => changeLanguage("en")}>English</button>
+      <select
+        className="lang-menu"
+        onChange={(e) => changeLanguage(e.target.value)}
+      >
+        <option value="tw">中文</option>
+        <option value="en">English</option>
+      </select>
     </>
   );
 }

@@ -3,8 +3,6 @@ import Content from "../Components/content";
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
-import { useTranslation } from "react-i18next";
-
 const data = {
   aboutus: {
     image: imgHandler("/img/sub-aboutus.png"),
@@ -18,7 +16,7 @@ const data = {
     alt: "淺藍色為底的圖片，裡面有一棟房子，房子旁邊有一棵樹",
   },
   history: {
-    title: "歷史沿革",
+    title: "企業沿革",
     id: "history",
     content: "",
     book: {
@@ -40,32 +38,29 @@ const data = {
   business: {
     title: "經營理念",
     id: "business",
-    content: `我們最基本的理念是，一旦做出承諾，必定不計代價，全力以赴；我們用人的首要條件是品格與才能，並充分給與個人發揮的空間，讓他們可以充分發揮各自的優點。
-    
-    誠實和務實是我司一貫的作業指標—始終以客戶需求為優先，專注於提升產品的價值及品質。
-
-    雖然來自不同的領域，但大家共同一心想著發展儲能的目標前行。此建立的團隊為明曜儲能提供了多面向的發展，也因此做出了與眾不同的產品。
-    `,
+    contentLine1:
+      "我們最基本的理念是，一旦做出承諾，必定不計代價，全力以赴；我們用人的首要條件是品格與才能，並充分給與個人發揮的空間，讓他們可以充分發揮各自的優點。",
+    contentLine2:
+      "誠實和務實是我司一貫的作業指標—始終以客戶需求為優先，專注於提升產品的價值及品質。",
+    contentLine3:
+      "雖然來自不同的領域，但大家共同一心想著發展儲能的目標前行。此建立的團隊為明曜儲能提供了多面向的發展，也因此做出了與眾不同的產品。",
     image: imgHandler("/img/peopleMoney.png"),
     alt: "淺藍色為底的圖片，一個人被鈔票圍著",
   },
   feature: {
     title: "未來展望",
     id: "feature",
-    content: `明曜科技團隊透過與世界級的大廠合作，學習各品牌的優點及經驗，也讓明曜團隊的技術經驗持續成長。
-
-    盡可能讓更多的人使用儲能的系統，以降低地球資源過度消耗，也減少電力供給不穩定的問題，提供給未來更美好的生活品質。
-
-    未來明曜團隊以提供各種多樣化的儲能系統為目標。
-    `,
+    contentLine1:
+      "明曜科技團隊透過與世界級的大廠合作，學習各品牌的優點及經驗，也讓明曜團隊的技術經驗持續成長。",
+    contentLine2:
+      "盡可能讓更多的人使用儲能的系統，以降低地球資源過度消耗，也減少電力供給不穩定的問題，提供給未來更美好的生活品質。",
+    contentLine3: "未來明曜團隊以提供各種多樣化的儲能系統為目標。",
     image: imgHandler("/img/earth.png"),
     alt: "淺藍色為底的圖片，一架飛機繞著地球飛",
   },
 };
 
 const AboutUs = () => {
-  const { t } = useTranslation();
-
   return (
     <Layout>
       <div className="banner">
@@ -77,12 +72,10 @@ const AboutUs = () => {
       <Content
         imageL={data.introduction.image}
         altL={data.introduction.alt}
-        imageR=""
-        altR=""
         content={data.introduction.content}
       />
 
-      {/* 歷史沿革 */}
+      {/* 企業沿革 */}
       <ContentTitle title={data.history.title} id={data.history.id} />
       <Content
         imageL={data.history.book.image}
@@ -97,9 +90,9 @@ const AboutUs = () => {
       <Content
         imageL={data.business.image}
         altL={data.business.alt}
-        imageR=""
-        altR=""
-        content={data.business.content}
+        content={data.business.contentLine1}
+        content2={data.business.contentLine2}
+        content3={data.business.contentLine3}
       />
       {/* 未來展望 */}
       <ContentTitle title={data.feature.title} id={data.feature.id} />
@@ -108,7 +101,9 @@ const AboutUs = () => {
         altL={data.feature.alt}
         imageR=""
         altR=""
-        content={data.feature.content}
+        content={data.feature.contentLine1}
+        content2={data.feature.contentLine2}
+        content3={data.feature.contentLine3}
       />
     </Layout>
   );

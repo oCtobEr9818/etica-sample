@@ -25,7 +25,6 @@
 }
 
 .navbar {
-  // max-width: 66rem;
   height: 6rem;
   display: block;
   margin: auto;
@@ -43,10 +42,10 @@
     top: 0;
     left: 0;
 
-    // 768px選單
+    // 768px漢堡按鈕
     .dropMenu {
       position: absolute;
-      top: 1.5rem;
+      top: 1rem;
       right: 2rem;
 
       .menu-btn {
@@ -152,7 +151,7 @@
   .navbar-line {
     width: 10rem;
     margin-left: 1.5rem;
-    border-top: 3px solid #000;
+    border-top: 2px solid #000;
     opacity: 0.3;
     @include mobile {
       width: 9.5rem;
@@ -225,10 +224,7 @@
     // 選單隱藏
     @include mini-pad {
       width: 100%;
-      display: flex;
       flex-direction: column;
-      margin: auto;
-      position: absolute;
       top: -25rem;
       left: 0;
       opacity: 0;
@@ -240,6 +236,7 @@
 
       a,
       button {
+        width: 130px;
         color: #343875;
         padding: 0 1.2rem;
         border: none;
@@ -249,7 +246,15 @@
         font-family: Microsoft JhengHei, Arial, sans-serif;
         text-decoration: none;
         position: relative;
-        letter-spacing: 0.15rem;
+        &:last-child {
+          width: 80px;
+
+          @include mini-pad {
+            width: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          }
+        }
+
         @include desktop {
           padding: 0 0.7rem;
           font-size: 1.1em;
@@ -267,12 +272,6 @@
           text-align: center;
           line-height: 2;
           transition: 0.3s;
-        }
-
-        &:last-child {
-          @include mini-pad {
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
         }
       }
 
@@ -305,7 +304,7 @@
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
           position: absolute;
           top: 2rem;
-          left: -0.2rem;
+          left: -0.4rem;
           transition: 0.3s;
           &::before {
             content: "";
@@ -387,7 +386,6 @@
               font-size: 1.1em;
               font-weight: 500;
               font-family: Microsoft JhengHei, Arial, sans-serif;
-              letter-spacing: 0.2em;
               color: #f7f7f7;
               position: relative;
               display: block;
@@ -431,4 +429,20 @@
       } // dropdown
     } // li
   } // navbar-option
+
+  .lang-menu {
+    position: absolute;
+    top: 62px;
+    right: 10px;
+    z-index: 1;
+
+    &:focus {
+      border: 1px solid #888;
+    }
+
+    @include mini-pad {
+      top: 4.375rem;
+      right: 1.125rem;
+    }
+  }
 } // navbar
