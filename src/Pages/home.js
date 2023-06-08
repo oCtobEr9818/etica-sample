@@ -63,6 +63,7 @@ const data = {
 Aos.init({
   offset: 100,
   delay: 50,
+  once: true,
 });
 
 const Home = () => {
@@ -100,6 +101,7 @@ const Home = () => {
               data-fancybox="gallery"
               data-caption={imageItem.alt}
               data-aos="zoom-in"
+              data-aos-duration="500"
               src={imgHandler(imageItem.img)}
               alt={imageItem.alt}
               key={v4()}
@@ -115,7 +117,11 @@ const Home = () => {
           <div className="trapezoid"></div>
           <div className="underline"></div>
           <div className="service">
-            <div className="service-content" data-aos="fade-right">
+            <div
+              className="service-content"
+              data-aos="fade-right"
+              data-aos-duration="500"
+            >
               {data.services.map((service) => (
                 <div className="service-content-wrap" key={v4()}>
                   <img src={imgHandler(service.img)} alt={service.alt} />
@@ -134,7 +140,11 @@ const Home = () => {
           <div className="topline" id="international"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="certification" data-aos="fade-right">
+          <div
+            className="certification"
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
             <img
               src={imgHandler("/img/Certification mark.jpg")}
               alt="國際認證"
@@ -149,7 +159,7 @@ const Home = () => {
           <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="news" data-aos="fade-right">
+          <div className="news" data-aos="fade-right" data-aos-duration="500">
             {data.news.map((newsItem) => (
               <div className="news-wrap" key={v4()}>
                 <i className="fa fa-newspaper-o" aria-hidden="true"></i>

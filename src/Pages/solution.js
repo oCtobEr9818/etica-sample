@@ -1,4 +1,6 @@
 import { HashLink as Link } from "react-router-hash-link";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
@@ -13,6 +15,12 @@ const data = {
     alt: "",
   },
 };
+
+Aos.init({
+  offset: 100,
+  delay: 50,
+  once: true,
+});
 
 const Solution = () => {
   return (

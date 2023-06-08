@@ -16,23 +16,23 @@ const navs = {
     name: "儲能系統",
   },
   industryBattery: {
-    path: "/product-industrial-battery",
+    path: "/product-industrial-battery#industry-device",
     name: "工控裝置",
   },
   eBike: {
-    path: "/product-ebike",
+    path: "/product-ebike#bicycle",
     name: "E-bike",
   },
   maintenanceManagement: {
-    path: "/maintenance-management",
+    path: "/maintenance-management#O&M",
     name: "維運管理",
   },
   development: {
-    path: "/development",
+    path: "/development#R&D",
     name: "技術研發",
   },
   aboutus: {
-    path: "/aboutus",
+    path: "/aboutus#introduction",
     name: "關於明曜",
   },
   contact: {
@@ -108,7 +108,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/product-ESS">
+                <Link to="/product-ESS#Etica+C">
                   <h3>{t("產品資訊")}</h3>
                 </Link>
               </li>
@@ -117,36 +117,36 @@ const Navbar = () => {
         </li>
         {/* 工控裝置 */}
         <li>
-          <NavLink to={navs.industryBattery.path} onClick={handleMenuExpanded}>
+          <Link to={navs.industryBattery.path} onClick={handleMenuExpanded}>
             {t(navs.industryBattery.name)}
-          </NavLink>
+          </Link>
         </li>
         {/* e-bike */}
         <li>
-          <NavLink to={navs.eBike.path} onClick={handleMenuExpanded}>
+          <Link to={navs.eBike.path} onClick={handleMenuExpanded}>
             {t(navs.eBike.name)}
-          </NavLink>
+          </Link>
         </li>
         {/* 維運管理 */}
         <li>
-          <NavLink
+          <Link
             to={navs.maintenanceManagement.path}
             onClick={handleMenuExpanded}
           >
             {t(navs.maintenanceManagement.name)}
-          </NavLink>
+          </Link>
         </li>
         {/* 技術研發 */}
         <li>
-          <NavLink to={navs.development.path} onClick={handleMenuExpanded}>
+          <Link to={navs.development.path} onClick={handleMenuExpanded}>
             {t(navs.development.name)}
-          </NavLink>
+          </Link>
         </li>
         {/* 關於明曜 */}
         <li>
-          <NavLink to={navs.aboutus.path} onClick={handleMenuExpanded}>
+          <Link to={navs.aboutus.path} onClick={handleMenuExpanded}>
             {t(navs.aboutus.name)}
-          </NavLink>
+          </Link>
           <div className="dropdown">
             <ul className="subNavbar">
               <li>
@@ -166,9 +166,9 @@ const Navbar = () => {
         </li>
         {/* 聯絡我們 */}
         <li>
-          <NavLink to={navs.contact.path} onClick={handleMenuExpanded}>
+          <Link to={navs.contact.path} onClick={handleMenuExpanded}>
             {t(navs.contact.name)}
-          </NavLink>
+          </Link>
         </li>
         <li>
           <button>{t(navs.langOption.name)}</button>

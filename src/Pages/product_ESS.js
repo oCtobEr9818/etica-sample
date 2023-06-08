@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
@@ -32,6 +34,12 @@ const data = {
   },
 };
 
+Aos.init({
+  offset: 100,
+  delay: 50,
+  once: true,
+});
+
 const ProductESS = () => {
   const { t } = useTranslation();
 
@@ -50,9 +58,15 @@ const ProductESS = () => {
           <img
             src={imgHandler(data.product2_content.etica_c.img)}
             alt={data.product2_content.etica_c.alt}
+            data-aos="fade-right"
+            data-aos-duraction="500"
           />
 
-          <div className="subtitle">
+          <div
+            className="subtitle"
+            data-aos="fade-left"
+            data-aos-duraction="500"
+          >
             <h2 id="Etica+C">
               Etica <sup>+</sup>C
             </h2>
@@ -125,7 +139,11 @@ const ProductESS = () => {
       {/* Etica+O */}
       <div className="product-ESS-content">
         <div className="contentWrap">
-          <div className="subtitle">
+          <div
+            className="subtitle"
+            data-aos="fade-right"
+            data-aos-duraction="500"
+          >
             <h2 id="Etica+O">
               Etica <sup>+</sup>O
             </h2>
@@ -143,6 +161,8 @@ const ProductESS = () => {
           <img
             src={imgHandler(data.product2_content.etica_o.img)}
             alt={data.product2_content.etica_o.alt}
+            data-aos="fade-left"
+            data-aos-duraction="500"
           />
         </div>
 
@@ -210,8 +230,14 @@ const ProductESS = () => {
           <img
             src={imgHandler(data.product2_content.etica_r1.img)}
             alt={data.product2_content.etica_r1.alt}
+            data-aos="fade-right"
+            data-aos-duraction="500"
           />
-          <div className="subtitle">
+          <div
+            className="subtitle"
+            data-aos="fade-left"
+            data-aos-duraction="500"
+          >
             <h2 id="Etica+R1">
               Etica <sup>+</sup>R1
             </h2>
@@ -267,7 +293,11 @@ const ProductESS = () => {
       {/* Etica+R3 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
-          <div className="subtitle">
+          <div
+            className="subtitle"
+            data-aos="fade-right"
+            data-aos-duraction="500"
+          >
             <h2 id="Etica+R3">
               Etica <sup>+</sup>R3
             </h2>
@@ -283,6 +313,8 @@ const ProductESS = () => {
           <img
             src={imgHandler(data.product2_content.etica_r3.img)}
             alt={data.product2_content.etica_r3.alt}
+            data-aos="fade-left"
+            data-aos-duraction="500"
           />
         </div>
         <table>
@@ -359,8 +391,14 @@ const ProductESS = () => {
           <img
             src={imgHandler(data.product2_content.water.img)}
             alt={data.product2_content.water.alt}
+            data-aos="fade-right"
+            data-aos-duraction="500"
           />
-          <div className="subtitle">
+          <div
+            className="subtitle"
+            data-aos="fade-left"
+            data-aos-duraction="500"
+          >
             <h2 id="Etica+R4">
               Etica <sup>+</sup>R4
             </h2>

@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
 
 const data = {
   product_img: {
-    img: "/img/sub-product.png",
+    img: "/img/ebike-banner.png",
     alt: "ESS Energy Storage System",
   },
   product3_content: {
@@ -19,6 +21,12 @@ const data = {
     },
   },
 };
+
+Aos.init({
+  offset: 100,
+  delay: 50,
+  once: true,
+});
 
 const ProductEbike = () => {
   const { t } = useTranslation();
@@ -34,7 +42,7 @@ const ProductEbike = () => {
 
       {/* 電動單車電池模組 */}
       <div className="product-ebike-content">
-        <div className="subTitle">
+        <div className="subTitle" data-aos="fade-up" data-aos-duraction="500">
           <h2 id="bicycle">{t("電動單車電池模組")}</h2>
           <p>
             {t(
@@ -51,6 +59,8 @@ const ProductEbike = () => {
         <img
           src={imgHandler(data.product3_content.bicycle.img)}
           alt={data.product3_content.bicycle.alt}
+          data-aos="fade-up"
+          data-aos-duraction="500"
         />
 
         <div className="contentWrap">

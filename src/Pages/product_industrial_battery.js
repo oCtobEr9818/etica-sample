@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
@@ -20,6 +22,12 @@ const data = {
   },
 };
 
+Aos.init({
+  offset: 100,
+  delay: 50,
+  once: true,
+});
+
 const ProductIndustrialBattery = () => {
   const { t } = useTranslation();
 
@@ -34,7 +42,7 @@ const ProductIndustrialBattery = () => {
 
       <div className="product-industrial-battery-content">
         <div className="contentWrap">
-          <div className="subtitle">
+          <div className="subtitle" data-aos="fade-up" data-aos-duraction="500">
             <h2 id="industry-device">{t("工控裝置")}</h2>
 
             <p>
@@ -46,10 +54,14 @@ const ProductIndustrialBattery = () => {
           <img
             src={imgHandler(data.product_content.device.img)}
             alt={data.product_content.device.alt}
+            data-aos="fade-up"
+            data-aos-duraction="500"
           />
           <img
             src={imgHandler(data.product_content.operating_area.img)}
             alt={data.product_content.operating_area.alt}
+            data-aos="fade-up"
+            data-aos-duraction="500"
           />
         </div>
       </div>

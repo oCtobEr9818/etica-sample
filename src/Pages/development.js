@@ -16,6 +16,7 @@ const data = {
 Aos.init({
   offset: 100,
   delay: 50,
+  once: true,
 });
 
 const Development = () => {
@@ -28,6 +29,10 @@ const Development = () => {
       </div>
 
       <div className="development-content">
+        <h2 id={"R&D"} data-aos="fade-up" data-aos-duraction="500">
+          技術研發
+        </h2>
+
         <div className="content-wrap">
           {/* 水冷高壓 */}
           <img
@@ -35,7 +40,11 @@ const Development = () => {
             alt="水冷高壓"
             data-aos="fade-right"
           />
-          <div className="content-txt">
+          <div
+            className="content-txt"
+            data-aos="fade-up"
+            data-aos-duraction="500"
+          >
             <h2>{t("水冷高壓儲能")}</h2>
             <p>
               {t(
@@ -45,7 +54,11 @@ const Development = () => {
           </div>
 
           {/* 防延燒專利 */}
-          <div className="content-txt">
+          <div
+            className="content-txt"
+            data-aos="fade-up"
+            data-aos-duraction="500"
+          >
             <h2>{t("防延燒專利")}</h2>
             <p>
               {t(
@@ -65,7 +78,11 @@ const Development = () => {
             alt="集裝箱(大型儲能)"
             data-aos="fade-right"
           />
-          <div className="content-txt">
+          <div
+            className="content-txt"
+            data-aos="fade-up"
+            data-aos-duraction="500"
+          >
             <h2>{t("集裝箱(大型儲能)")}</h2>
             <p>
               {t(

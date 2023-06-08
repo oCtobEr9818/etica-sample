@@ -16,6 +16,7 @@ const Content = ({
   Aos.init({
     offset: 100,
     delay: 50,
+    once: true,
   });
 
   return (
@@ -26,8 +27,9 @@ const Content = ({
         src={imageR}
         alt={altR}
         data-aos="zoom-in-up"
+        data-aos-duration="500"
       />
-      <div className="content-txt">
+      <div className="content-txt" data-aos="fade-up" data-aos-duration="500">
         <p>{t(`${content}`)}</p>
         <p>{t(`${content2}`)}</p>
         <p>{t(`${content3}`)}</p>

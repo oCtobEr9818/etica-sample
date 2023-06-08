@@ -147,25 +147,21 @@
             }
           }
 
-          // 右邊列
+          // 文字列
           .point_wrap {
-            height: 0;
+            height: 50px; // height: 0;
             width: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             white-space: nowrap;
-            visibility: hidden;
+            // visibility: hidden;
             transition: 0.3s 0.2s;
             transform: translateY(-50%);
             position: absolute;
             top: -40px;
             left: -80px;
-            // @include mini-mobile {
-            //   top: 40px;
-            //   left: -15px;
-            // }
 
             &::before {
               content: "";
@@ -196,7 +192,7 @@
 
             span {
               transition: 0.2s;
-              color: transparent;
+              color: #fff; // transparent
               font-size: 1em;
               @include mobile {
                 font-size: 0.9em;
@@ -223,6 +219,17 @@
       .point2 {
         top: 38%;
         left: 50%;
+
+        .point_a {
+          .point_wrap {
+            top: -30px;
+            left: -170px;
+            @include mobile {
+              top: -20px;
+              left: -140px;
+            }
+          }
+        }
       }
       .point3 {
         top: 35%;

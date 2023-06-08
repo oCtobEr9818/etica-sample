@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import { imgHandler } from "../Components/imgHandler";
 import { Layout } from "../Components/Layout";
@@ -14,6 +16,12 @@ const data = {
   },
 };
 
+Aos.init({
+  offset: 100,
+  delay: 50,
+  once: true,
+});
+
 const MaintenanceManagement = () => {
   const { t } = useTranslation();
 
@@ -24,7 +32,7 @@ const MaintenanceManagement = () => {
       </div>
 
       <div className="maintenance-management-content">
-        <div className="subTitle">
+        <div className="subTitle" data-aos="fade-up" data-aos-duraction="500">
           <h2 id={"O&M"}>{t("維運管理")}</h2>
           <p>
             {t(
@@ -41,6 +49,8 @@ const MaintenanceManagement = () => {
         <img
           src={imgHandler(data.maintenance_management_content.img)}
           alt={data.maintenance_management_content.alt}
+          data-aos="fade-up"
+          data-aos-duraction="500"
         />
       </div>
     </Layout>
