@@ -53,9 +53,9 @@ const data = {
   ],
   news: [
     {
-      url: "https://money.udn.com/money/story/5735/6128448?from=edn_related_storybottom",
-      title: "明曜異業結盟展企圖心 今年營收上看10億",
-      date: "2022/03/01",
+      url: "",
+      title: "",
+      date: "",
     },
   ],
 };
@@ -159,7 +159,7 @@ const Home = () => {
           <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          <div className="news" data-aos="fade-right" data-aos-duration="500">
+          {/* <div className="news" data-aos="fade-right" data-aos-duration="500">
             {data.news.map((newsItem) => (
               <div className="news-wrap" key={v4()}>
                 <i className="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -169,7 +169,7 @@ const Home = () => {
                 <span>{newsItem.date}</span>
               </div>
             ))}
-          </div>
+          </div> */}
           <h2 className={changeLetterSpacing}>{t("相新")}</h2>
           <h2 className={changeLetterSpacing}>{t("關聞")}</h2>
         </div>

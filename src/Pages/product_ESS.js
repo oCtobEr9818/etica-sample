@@ -17,19 +17,19 @@ const data = {
     },
     etica_o: {
       img: "/img/etica-o.png",
-      alt: "etica+o",
+      alt: "Etica+o",
     },
     etica_r1: {
       img: "/img/etica-r1.png",
-      alt: "etica+r1",
+      alt: "Etica+R1",
+    },
+    etica_r2: {
+      img: "/img/etica-r2.png",
+      alt: "Etica+R2",
     },
     etica_r3: {
       img: "/img/etica-r3.png",
-      alt: "etica+r3",
-    },
-    water: {
-      img: "/img/etica-r4.png",
-      alt: "etica+r4",
+      alt: "Etica+R3",
     },
   },
 };
@@ -290,7 +290,7 @@ const ProductESS = () => {
         </table>
       </div>
 
-      {/* Etica+R3 */}
+      {/* Etica+R2 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <div
@@ -298,8 +298,8 @@ const ProductESS = () => {
             data-aos="fade-right"
             data-aos-duraction="500"
           >
-            <h2 id="Etica+R3">
-              Etica <sup>+</sup>R3
+            <h2 id="Etica+R2">
+              Etica <sup>+</sup>R2
             </h2>
             <ul>
               <li>{t("家用儲能系統")}</li>
@@ -385,12 +385,12 @@ const ProductESS = () => {
         </table>
       </div>
 
-      {/* Etica+R4 */}
+      {/* Etica+R3 */}
       <div className="product-ESS-content">
         <div className="contentWrap">
           <img
-            src={imgHandler(data.product2_content.water.img)}
-            alt={data.product2_content.water.alt}
+            src={imgHandler(data.product2_content.etica_r3.img)}
+            alt={data.product2_content.etica_r3.alt}
             data-aos="fade-right"
             data-aos-duraction="500"
           />
@@ -399,8 +399,8 @@ const ProductESS = () => {
             data-aos="fade-left"
             data-aos-duraction="500"
           >
-            <h2 id="Etica+R4">
-              Etica <sup>+</sup>R4
+            <h2 id="Etica+R3">
+              Etica <sup>+</sup>R3
             </h2>
             <ul>
               <li>{t("工業用儲能系統")}</li>

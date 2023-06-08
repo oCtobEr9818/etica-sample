@@ -24,7 +24,7 @@ const data = {
       alt: "淺藍色為底的圖片，一本書和一支筆",
     },
     milestone: {
-      image: imgHandler("/img/milestone.jpg"),
+      image: imgHandler("/img/milestone.png"),
       alt: `2002 - ETICA Battery INC. was founded
             2022 - UL Certification
             2003 - ISO 9001 Certification
