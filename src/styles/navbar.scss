@@ -233,6 +233,18 @@
 
     li {
       position: relative;
+      &:hover {
+        &::before {
+          width: 70%;
+          margin: 0 auto;
+          content: "";
+          border-bottom: 5px solid rgb(110, 110, 189);
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -1rem;
+        }
+      }
 
       a,
       button {
@@ -303,7 +315,7 @@
           border-radius: 20px;
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
           position: absolute;
-          top: 2rem;
+          top: 3.5rem;
           left: -0.4rem;
           transition: 0.3s;
           &::before {
@@ -428,6 +440,20 @@
         } // subNavbar
       } // dropdown
     } // li
+
+    // 目前頁面的底線
+    .active {
+      &::before {
+        width: 70%;
+        margin: 0 auto;
+        content: "";
+        border-bottom: 5px solid rgb(110, 110, 189);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1rem;
+      }
+    }
   } // navbar-option
 
   .lang-menu {
