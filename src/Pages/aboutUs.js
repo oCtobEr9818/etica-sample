@@ -18,7 +18,6 @@ const data = {
   history: {
     title: "企業沿革",
     id: "history",
-    content: "",
     book: {
       image: imgHandler("/img/book.png"),
       alt: "淺藍色為底的圖片，一本書和一支筆",
@@ -82,7 +81,6 @@ const AboutUs = () => {
         altL={data.history.book.alt}
         imageR={data.history.milestone.image}
         altR={data.history.milestone.alt}
-        content={data.history.content}
       />
 
       {/* 經營理念 */}

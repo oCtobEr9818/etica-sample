@@ -114,6 +114,7 @@
         height: 100px;
         padding: 10px 0 10px 5px;
         font-size: 1.2em;
+        resize: none;
         @include mini-pad {
           padding: 0;
         }

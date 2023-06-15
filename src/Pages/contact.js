@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import GoogleMapReact from "google-map-react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
+
 import { useTranslation } from "react-i18next";
 
 import mapKey from "../Components/key";
@@ -43,28 +44,49 @@ const Contact = () => {
     onBlurValue: onBlurContent,
   } = useFormValidate(isNotEmpty);
 
+  // POST資料的狀態
+  const [postData, setPostData] = useState({});
+
   // 發送email
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!nameIsValid || !emailIsValid || !subjectIsValid || !contentIsValid) {
+    if (!nameIsValid) {
+      alert("姓名尚未填寫！");
+      return;
+    } else if (!emailIsValid) {
+      alert("電子信箱尚未填寫或格式錯誤！");
+      return;
+    } else if (!subjectIsValid) {
+      alert("主旨尚未填寫！");
+      return;
+    } else if (!contentIsValid) {
+      alert("內容尚未填寫！");
       return;
     }
 
-    emailjs
-      .sendForm(
-        "test123456",
-        "template_112nvyd",
-        form.current,
-        "sCK8COnh4d-o6DHKh"
-      )
-      .then((e) => {
-        if (e) {
-          alert("已送出信件！");
-        }
+    const formData = new FormData(form.current);
+    const requestBody = Object.fromEntries(formData.entries());
+
+    fetch("https://etica-inc.com/api/mail", {
+      method: "POST",
+      body: JSON.stringify(requestBody),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPostData(data);
+        console.log(data);
+        alert("郵件已發送！");
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error("發生錯誤:", error);
+        alert("發生錯誤，無法發送郵件！");
       });
-    form.current.reset();
   };
 
   const nameInputClasses = nameError ? "invalid" : "";
@@ -103,6 +125,8 @@ const Contact = () => {
       </div>
     </div>
   );
+
+  console.log(postData);
 
   return (
     <Layout>
@@ -159,7 +183,7 @@ const Contact = () => {
           <input
             type="email"
             name="email"
-            placeholder={t("請輸入常用的電子信箱")}
+            placeholder={t("請輸入常用的信箱")}
             onChange={onChangeEmail}
             onBlur={onBlurEmail}
             className={emailInputClasses}

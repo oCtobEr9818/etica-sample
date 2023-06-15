@@ -311,8 +311,8 @@ const ProductESS = () => {
             </ul>
           </div>
           <img
-            src={imgHandler(data.product2_content.etica_r3.img)}
-            alt={data.product2_content.etica_r3.alt}
+            src={imgHandler(data.product2_content.etica_r2.img)}
+            alt={data.product2_content.etica_r2.alt}
             data-aos="fade-left"
             data-aos-duraction="500"
           />

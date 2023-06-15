@@ -2,11 +2,7 @@
 <html lang="tw">
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/public//img/etica-logo.png"
-    />
+    <link rel="shortcut icon" type="image/png" href="./img/etica-logo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
@@ -116,6 +112,21 @@
           }
         }
       })(window.location);
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfo89cZAAAAAHVMzgnIl6pPrF0pHz6dtIP4MR0U"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6Lfo89cZAAAAAHVMzgnIl6pPrF0pHz6dtIP4MR0U", {
+            action: "homepage",
+          })
+          .then(function (token) {
+            var recaptchaResponse =
+              document.getElementById("recaptchaResponse");
+            recaptchaResponse.value = token;
+          });
+      });
     </script>
   </body>
 </html>

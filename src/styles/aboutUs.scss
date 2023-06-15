@@ -70,27 +70,23 @@
     }
     // 關於我們右圖
     .contentRight-img {
-      height: 22rem;
-      margin-left: 4rem;
+      max-width: 100%;
+      height: 18rem;
 
       @include desktop {
         height: 16rem;
-        margin-left: 2.8rem;
       }
       @include pad {
-        height: 21rem;
-        margin: 0 2.5rem;
+        height: 14rem;
       }
       @include mini-pad {
-        height: 16rem;
-        margin: 0 2rem;
+        height: 11rem;
       }
       @include mobile {
-        height: 9.5rem;
+        height: 8rem;
       }
       @include mini-mobile {
-        height: 8rem;
-        margin: 0 1rem;
+        height: 5rem;
       }
     }
 
@@ -100,28 +96,15 @@
 
       p {
         width: auto;
-        margin: 0 0 1rem;
+        margin: 0 1.5rem 1rem;
         font-size: 1.2em;
         text-align: left;
-
+        line-height: 2;
         @include desktop {
           font-size: 1em;
-          width: 30rem;
-        }
-        @include pad {
-          width: 35rem;
         }
         @include mini-pad {
-          width: 23rem;
-        }
-        @include mobile {
-          width: 18rem;
-          font-size: 0.9em;
-          margin-right: 1.8rem;
-        }
-        @include mini-mobile {
-          width: 15rem;
-          margin-right: 1.5rem;
+          font-size: 0.8em;
         }
       }
     }
