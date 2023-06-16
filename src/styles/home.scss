@@ -34,11 +34,9 @@ $primary-color: #93cddd;
 
 .home {
   max-width: 100%;
-  // width: 66rem;
   margin: 3rem auto 0;
-
-  @include mini-pad {
-    margin-top: 8rem;
+  @include pad {
+    margin-top: 6rem;
   }
 
   .container-home {
@@ -518,20 +516,20 @@ $primary-color: #93cddd;
         &::after {
           content: "";
           width: 2px;
-          height: 28rem;
+          height: 26rem;
           display: inline-block;
           background: $primary-color;
           position: absolute;
           right: -1px;
           bottom: 0;
           @include mini-pad {
-            height: 29rem;
+            height: 27rem;
           }
           @include mobile {
-            height: 31rem;
+            height: 29rem;
           }
           @include mini-mobile {
-            height: 35rem;
+            height: 33rem;
           }
         }
         &::before {
