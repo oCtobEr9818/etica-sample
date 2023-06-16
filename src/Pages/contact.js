@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
-import GoogleMapReact from "google-map-react";
-// import emailjs from "@emailjs/browser";
-
+// import GoogleMapReact from "google-map-react";
 import { useTranslation } from "react-i18next";
 
-import mapKey from "../Components/key";
+// import mapKey from "../Components/key";
 import { useFormValidate } from "../Components/useFormValidate";
 import { Layout } from "../Components/Layout";
 
@@ -95,43 +93,43 @@ const Contact = () => {
   const contentInputClasses = emailError ? "invalid" : "";
 
   // google地圖標記點
-  const CustomMarker = ({ text }) => (
-    <div className="markPoint">
-      <div
-        className="point"
-        style={{
-          width: "50px",
-          color: "#f00",
-          fontSize: "3em",
-          position: "absolute",
-          top: "-40px",
-        }}
-      >
-        <i className="fa fa-map-marker" aria-hidden="true"></i>
-      </div>
-      <div
-        className="text"
-        style={{
-          width: "140px",
-          color: "#f00",
-          fontSize: "1.3em",
-          fontWeight: "600",
-          position: "absolute",
-          top: "-40px",
-          left: "20px",
-        }}
-      >
-        {text}
-      </div>
-    </div>
-  );
+  // const CustomMarker = ({ text }) => (
+  //   <div className="markPoint">
+  //     <div
+  //       className="point"
+  //       style={{
+  //         width: "50px",
+  //         color: "#f00",
+  //         fontSize: "3em",
+  //         position: "absolute",
+  //         top: "-40px",
+  //       }}
+  //     >
+  //       <i className="fa fa-map-marker" aria-hidden="true"></i>
+  //     </div>
+  //     <div
+  //       className="text"
+  //       style={{
+  //         width: "140px",
+  //         color: "#f00",
+  //         fontSize: "1.3em",
+  //         fontWeight: "600",
+  //         position: "absolute",
+  //         top: "-40px",
+  //         left: "20px",
+  //       }}
+  //     >
+  //       {text}
+  //     </div>
+  //   </div>
+  // );
 
   console.log(postData);
 
   return (
     <Layout>
       <div className="map">
-        <GoogleMapReact
+        {/* <GoogleMapReact
           bootstrapURLKeys={{ key: mapKey }}
           defaultCenter={{ lat: 24.998752, lng: 121.4247906 }}
           defaultZoom={11}
@@ -143,7 +141,7 @@ const Contact = () => {
             text="明曜科技總公司"
           />
           <CustomMarker lat={25.0480859} lng={121.469599} text="三重新廠" />
-        </GoogleMapReact>
+        </GoogleMapReact> */}
       </div>
 
       {/* 聯絡我們表單 */}
