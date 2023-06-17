@@ -119,7 +119,14 @@
         top: 6rem;
         opacity: 1;
 
-        li {
+        > li {
+          &:nth-child(2) {
+            margin-top: 30px;
+          }
+          &:nth-child(7) {
+            margin-top: 30px;
+          }
+
           a,
           button {
             height: 3.5rem;
@@ -247,6 +254,9 @@
           left: 0;
           right: 0;
           bottom: -1rem;
+          @include desktop {
+            width: 80%;
+          }
         }
       }
       &:last-child {
@@ -304,22 +314,25 @@
           transition: 0.3s;
         }
       }
-
       &:hover > .dropdown .subNavbar {
         height: auto;
         display: inline-block;
+        @include pad {
+          display: flex;
+        }
       }
 
       .dropdown {
         display: inline-block;
         z-index: 1;
         @include pad {
-          display: none;
+          height: 20px;
+          display: flex;
         }
 
         .subNavbar {
           width: 140px;
-          height: 0;
+          height: auto;
           display: none;
           text-align: center;
           background: #75c2d3;
@@ -342,15 +355,18 @@
             width: 120px;
             left: -1.2em;
           }
-          @include mini-pad {
+          @include pad {
             width: 100%;
-            height: auto;
-            border-radius: 0;
-            // display: flex;
-            // flex-direction: column;
+            display: flex;
             background: transparent;
             box-shadow: none;
+            border-radius: 0;
             left: 0;
+            transition: 0;
+
+            &::before {
+              content: none;
+            }
           }
 
           li {
@@ -358,12 +374,9 @@
             margin-bottom: 1rem;
             transform: translateY(0);
             transition: 0.3s;
-            @include mini-pad {
-              margin: 0;
-            }
             &:first-child {
               margin-top: 1rem;
-              @include mini-pad {
+              @include pad {
                 margin: 0;
               }
             }
@@ -371,7 +384,7 @@
               a {
                 h3 {
                   margin-top: 2rem;
-                  @include mini-pad {
+                  @include pad {
                     margin: 0;
                   }
                 }
@@ -379,7 +392,19 @@
             }
             &:hover {
               transform: translateY(-5px);
+              @include pad {
+                transform: none;
+              }
             }
+
+            @include pad {
+              margin: auto;
+              flex: 1;
+            }
+            @include mini-pad {
+              margin: 0;
+            }
+
             // 插頭線身
             &::before {
               content: "";
@@ -424,6 +449,9 @@
               color: #000;
               text-align: center;
               font-size: 1.1em;
+              @include pad {
+                line-height: 50px;
+              }
             }
 
             // 子選項
@@ -437,6 +465,9 @@
               color: #f7f7f7;
               position: relative;
               display: block;
+              @include pad {
+                line-height: 50px;
+              }
 
               // 插頭黃色前端
               &::before {
@@ -488,9 +519,10 @@
         left: 0;
         right: 0;
         bottom: -1rem;
-      }
-      @include pad {
-        &::before {
+        @include desktop {
+          width: 80%;
+        }
+        @include pad {
           width: 0;
           content: none;
         }
