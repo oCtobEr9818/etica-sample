@@ -92,7 +92,7 @@ const Home = () => {
         <div className="hexagon">
           <a href="#service">{t("服務項目")}</a>
           <a href="#international">{t("國際認證")}</a>
-          <a href="#client">{t("相關新聞")}</a>
+          <a href="#news">{t("相關新聞")}</a>
         </div>
         <h1>ETICA</h1>
         <div className="imgWrap">

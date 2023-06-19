@@ -260,6 +260,7 @@
         text-align: center;
         @include mini-pad {
           margin: 0 auto 2em;
+          font-size: 1.4em;
         }
       }
 
@@ -267,6 +268,9 @@
         width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
+        @include mini-pad {
+          font-size: 1.1em;
+        }
       }
 
       .commercial-facility-content {
@@ -287,6 +291,9 @@
             list-style: initial;
             text-align: left;
             font-size: 1.5em;
+            @include mini-pad {
+              font-size: 1.2em;
+            }
           }
         }
 
@@ -312,6 +319,7 @@
         text-align: center;
         @include mini-pad {
           margin: 0 auto 2em;
+          font-size: 1.4em;
         }
       }
 
@@ -319,6 +327,9 @@
         width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
+        @include mini-pad {
+          font-size: 1.1em;
+        }
       }
 
       .transportation-application-content {
@@ -356,6 +367,7 @@
         text-align: center;
         @include mini-pad {
           margin: 0 auto 2em;
+          font-size: 1.4em;
         }
       }
 
@@ -363,6 +375,9 @@
         width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
+        @include mini-pad {
+          font-size: 1.1em;
+        }
       }
 
       .public-house-content {
@@ -398,6 +413,7 @@
         text-align: center;
         @include mini-pad {
           margin: 0 auto 2em;
+          font-size: 1.4em;
         }
       }
 
@@ -405,6 +421,9 @@
         width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
+        @include mini-pad {
+          font-size: 1.1em;
+        }
       }
 
       .industry-application-content {
@@ -441,6 +460,7 @@
         text-align: center;
         @include mini-pad {
           margin: 0 auto 2em;
+          font-size: 1.4em;
         }
       }
 
@@ -448,6 +468,9 @@
         width: 80%;
         margin: 1rem 0;
         font-size: 1.7em;
+        @include mini-pad {
+          font-size: 1.1em;
+        }
       }
 
       .greenEnergy-industry-content {

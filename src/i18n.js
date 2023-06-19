@@ -14,9 +14,9 @@ i18n
       loadPath: "/Etica-sample/locales/{{lng}}/{{ns}}.json",
     },
     // 當目前的語言檔找不到對應的字詞時，會用 fallbackLng (en) 作為預設語言
-    fallbackLng: "tw",
+    fallbackLng: "zh-TW",
     // 預設語言
-    lng: "tw",
+    lng: "zh-TW",
     interpolation: {
       // 是否要讓字詞 escaped 來防止 xss 攻擊，這裡因為 React.js 已經做了，就設成 false即可
       escapeValue: false,

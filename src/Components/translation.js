@@ -12,7 +12,7 @@ export default function SwitchLanguage() {
         className="lang-menu"
         onChange={(e) => changeLanguage(e.target.value)}
       >
-        <option value="tw">中文</option>
+        <option value="zh-TW">zh-TW</option>
         <option value="en">English</option>
       </select>
     </>
