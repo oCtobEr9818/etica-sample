@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/etica-sample/static/css/main.e7080620.css",
-    "main.js": "/etica-sample/static/js/main.38b4cd54.js",
+    "main.css": "/etica-sample/static/css/main.47da8dfe.css",
+    "main.js": "/etica-sample/static/js/main.cdba7bea.js",
     "index.html": "/etica-sample/index.html",
     "static/media/getFetch.cjs": "/etica-sample/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.e7080620.css.map": "/etica-sample/static/css/main.e7080620.css.map",
-    "main.38b4cd54.js.map": "/etica-sample/static/js/main.38b4cd54.js.map"
+    "main.47da8dfe.css.map": "/etica-sample/static/css/main.47da8dfe.css.map",
+    "main.cdba7bea.js.map": "/etica-sample/static/js/main.cdba7bea.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7080620.css",
-    "static/js/main.38b4cd54.js"
+    "static/css/main.47da8dfe.css",
+    "static/js/main.cdba7bea.js"
   ]
 }
