@@ -1,0 +1,10 @@
+.processBar {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(110, 110, 189);
+  transform-origin: 0%;
+  z-index: 9999;
+}

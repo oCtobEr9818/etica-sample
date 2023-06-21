@@ -3,8 +3,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 import { HashLink as Link } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 import { imgHandler } from "../Components/imgHandler";
+import { motionVariants } from "../motionSettings";
 
 const data = {
   bannerImage: [
@@ -72,7 +74,14 @@ const Home = () => {
   const changeLetterSpacing = i18n.language === "en" ? "english" : "taiwanese";
 
   return (
-    <div className="home">
+    <motion.div
+      variants={motionVariants}
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      transition={{ duration: 0.3, type: "linear" }}
+      className="home"
+    >
       <div className="container-home">
         {/* 首頁大圖 */}
         <img src={imgHandler("/img/home/title-page.png")} alt="Etica形象圖" />
@@ -174,7 +183,7 @@ const Home = () => {
           <h2 className={changeLetterSpacing}>{t("關聞")}</h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

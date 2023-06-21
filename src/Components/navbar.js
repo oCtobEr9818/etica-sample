@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import SwitchLanguage from "../Components/translation";
+import { motion, useScroll, useSpring } from "framer-motion";
 
+import SwitchLanguage from "../Components/translation";
 import { imgHandler } from "./imgHandler";
 
 const navs = {
@@ -47,6 +48,14 @@ const navs = {
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [activePage, setActivePage] = useState("");
+
+  // 滾動進度條
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 30,
+    restDelta: 0.000001,
+  });
 
   const handleMenuExpanded = (page) => {
     setIsExpanded(false);
@@ -199,6 +208,12 @@ const Navbar = () => {
         </li>
       </ul>
       <SwitchLanguage />
+
+      {/* 滾動進度條 */}
+      <motion.div
+        className="processBar"
+        style={{ scaleX: scaleX }}
+      ></motion.div>
     </div>
   );
 };
