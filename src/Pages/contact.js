@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import GoogleMapReact from "google-map-react";
 import { useTranslation } from "react-i18next";
 
@@ -42,9 +42,6 @@ const Contact = () => {
     onBlurValue: onBlurContent,
   } = useFormValidate(isNotEmpty);
 
-  // POST資料的狀態
-  const [postData, setPostData] = useState({});
-
   // 發送email
   const form = useRef();
   const sendEmail = (e) => {
@@ -67,16 +64,15 @@ const Contact = () => {
     const formData = new FormData(form.current);
     const requestBody = Object.fromEntries(formData.entries());
 
-    fetch("https://etica-inc.com/api/mail", {
+    fetch("https://backend.etica-inc.com/api/mail", {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {
-        "Content-Type": "text/html; charset=utf-8",
+        "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
       .then((data) => {
-        setPostData(data);
         console.log(data);
         alert("郵件已發送！");
         form.current.reset();
@@ -123,8 +119,6 @@ const Contact = () => {
       </div>
     </div>
   );
-
-  console.log(postData);
 
   return (
     <Layout>
