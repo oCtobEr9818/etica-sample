@@ -3,8 +3,10 @@ import GoogleMapReact from "google-map-react";
 import { useTranslation } from "react-i18next";
 
 import mapKey from "../Components/key";
-import { useFormValidate } from "../Components/useFormValidate";
+// import { token } from "../Components/api/token";
+import { mailUrl } from "../Components/api/mail_url";
 import { Layout } from "../Components/Layout";
+import { useFormValidate } from "../Components/useFormValidate";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -42,11 +44,34 @@ const Contact = () => {
     onBlurValue: onBlurContent,
   } = useFormValidate(isNotEmpty);
 
-  // 發送email
+  // 取得 CSRF token
+  // useEffect(() => {
+  //   fetch(token)
+  //     .then((response) => response.text())
+  //     .then((csrfToken) => {
+  //       // 將 CSRF 令牌設置到 meta 標籤中
+  //       const metaTag = document.querySelector('meta[name="csrf-token"]');
+  //       if (metaTag) {
+  //         metaTag.setAttribute("content", csrfToken);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error("無法取得 CSRF 令牌:", error);
+  //     });
+  // }, []);
+
+  // 獲取CSRF令牌
+  // const csrfToken = document
+  //   .querySelector('meta[name="csrf-token"]')
+  //   .getAttribute("content");
+
   const form = useRef();
-  const sendEmail = (e) => {
+
+  // 發送email
+  async function sendEmail(e) {
     e.preventDefault();
 
+    // 檢查是否有未填寫的欄位
     if (!nameIsValid) {
       alert("姓名尚未填寫！");
       return;
@@ -61,27 +86,36 @@ const Contact = () => {
       return;
     }
 
-    const formData = new FormData(form.current);
-    const requestBody = Object.fromEntries(formData.entries());
+    try {
+      // 取得 token
+      // const response = await fetch(token);
+      // const _token = await response.text();
+      // console.log(_token);
 
-    fetch("https://backend.etica-inc.com/api/mail", {
-      method: "POST",
-      body: JSON.stringify(requestBody),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        alert("郵件已發送！");
-        form.current.reset();
+      // 構建郵件資料
+      const formData = new FormData(form.current);
+      const requestBody = Object.fromEntries(formData.entries());
+
+      // 發送郵件
+      await fetch(mailUrl, {
+        method: "POST",
+        body: JSON.stringify(requestBody),
+        headers: {
+          "Content-type": "application/json",
+          // "X-CSRF-TOKEN": csrfToken,
+        },
       })
-      .catch((error) => {
-        console.error("發生錯誤:", error);
-        alert("發生錯誤，無法發送郵件！");
-      });
-  };
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          alert("訊息已發送！");
+          form.current.reset();
+        });
+    } catch (error) {
+      console.error("發生錯誤:", error);
+      alert("發生錯誤，無法發送訊息！");
+    }
+  }
 
   const nameInputClasses = nameError ? "invalid" : "";
   const emailInputClasses = emailError ? "invalid" : "";
@@ -225,6 +259,8 @@ const Contact = () => {
             className={contentInputClasses}
           />
         </div>
+
+        {/* <input type="hidden" name="_token" value={csrfToken} /> */}
 
         <div className="form-wrap">
           <input

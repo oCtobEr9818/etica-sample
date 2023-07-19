@@ -207,7 +207,7 @@
     max-width: 1200px;
     height: auto;
     margin: auto;
-    padding-top: 2em;
+    padding: 2rem 2rem 0;
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: center;
@@ -223,7 +223,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include mini-pad {
+      @include mobile {
         flex-direction: column;
       }
 
@@ -231,9 +231,15 @@
         width: 400px;
         height: 400px;
         object-fit: contain;
-        margin: 1em 0;
-        @include mini-pad {
+        @include pad {
+          width: 350px;
+          height: 350px;
+        }
+        @include mobile {
+          width: 250px;
+          height: 250px;
           order: 1;
+          margin: 1rem 0;
         }
       }
 
@@ -241,13 +247,23 @@
         width: 600px;
         margin: auto;
         text-align: left;
-        @include mini-pad {
+        @include pad {
+          width: auto;
+          padding-left: 1.5rem;
+        }
+        @include mobile {
           order: 0;
         }
 
         h2 {
           font-size: 2em;
           display: block;
+          @include mini-pad {
+            font-size: 1.5em;
+          }
+          @include mobile {
+            font-size: 1.2em;
+          }
         }
 
         ul {
@@ -255,6 +271,12 @@
           margin-top: 1rem;
           font-size: 1.3em;
           line-height: 2.5;
+          @include mini-pad {
+            font-size: 1em;
+          }
+          @include mobile {
+            font-size: 0.7em;
+          }
 
           li {
             list-style: square;
@@ -318,17 +340,24 @@
             &:nth-child(2) {
               width: 70%;
             }
+            @include mobile {
+              font-size: 0.9em;
+            }
           }
         }
       }
     }
   }
+
   .product-ESS-txt {
     max-width: 1200px;
     margin: 0 auto 2rem;
 
     p {
       margin: auto;
+      @include mobile {
+        font-size: 0.5em;
+      }
     }
   }
 
@@ -356,7 +385,7 @@
 
         h2 {
           width: 100%;
-          margin-bottom: 3em;
+          margin-bottom: 3rem;
           display: block;
           text-align: center;
           font-size: 2em;
@@ -379,6 +408,13 @@
       img {
         max-width: 100%;
         margin-bottom: 7rem;
+        object-fit: contain;
+        &:first-of-type {
+          width: 70%;
+        }
+        @include mobile {
+          margin: 3rem auto;
+        }
       }
     }
   }
@@ -386,104 +422,112 @@
   // e-bike
   .product-ebike-content {
     width: 100%;
+    height: auto;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .subTitle {
-      width: 100%;
-      height: 50vh;
-      padding: 2rem 0;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      h2 {
-        text-align: center;
-        margin-bottom: 3rem;
-        font-size: 2em;
-        @include mini-pad {
-          margin-bottom: 2em;
-          font-size: 1.4em;
-        }
-      }
-
-      p {
-        width: 80%;
-        margin: 1rem auto;
-        font-size: 1.7em;
-        @include mini-pad {
-          font-size: 1.1em;
-        }
-      }
-    }
-
-    img {
-      max-width: 100%;
-      height: 100%;
-      object-fit: contain;
-      margin: 3rem auto;
-    }
 
     .contentWrap {
-      width: 100%;
-      margin: 5rem auto;
-      overflow-x: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-      table {
-        width: 1000px;
-        margin: 0 auto;
-        border-spacing: 0;
+      .subTitle {
+        width: 100%;
+        height: 50vh;
+        padding: 2rem 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        tbody {
-          tr {
-            &:first-child {
-              th {
-                &:first-child {
-                  font-size: 1em;
-                  border-radius: 10px 0 0 0;
-                }
-                &:last-child {
-                  border-radius: 0 10px 0 0;
+        h2 {
+          width: 100%;
+          margin-bottom: 3rem;
+          display: block;
+          text-align: center;
+          font-size: 2em;
+          @include mini-pad {
+            margin-bottom: 2em;
+            font-size: 1.4em;
+          }
+        }
+
+        p {
+          width: 80%;
+          margin: 1rem auto;
+          font-size: 1.7em;
+          @include mini-pad {
+            font-size: 1.1em;
+          }
+        }
+      }
+
+      img {
+        max-width: 100%;
+        margin: 7rem auto 0;
+        object-fit: contain;
+      }
+
+      .tableWrap {
+        width: 100%;
+        margin: 5rem auto;
+        overflow-x: auto;
+
+        table {
+          width: 1000px;
+          margin: 0 auto;
+          border-spacing: 0;
+
+          tbody {
+            tr {
+              &:first-child {
+                th {
+                  &:first-child {
+                    font-size: 1em;
+                    border-radius: 10px 0 0 0;
+                  }
+                  &:last-child {
+                    border-radius: 0 10px 0 0;
+                  }
                 }
               }
-            }
-            &:last-child {
-              th {
-                &:first-child {
-                  border-radius: 0 0 0 10px;
+              &:last-child {
+                th {
+                  &:first-child {
+                    border-radius: 0 0 0 10px;
+                  }
+                }
+                td {
+                  &:last-child {
+                    border-radius: 0 0 10px 0;
+                  }
                 }
               }
+
+              td,
+              th {
+                border: 1px solid #333;
+                text-align: center;
+                font-weight: normal;
+                padding: 15px;
+              }
+
               td {
-                &:last-child {
-                  border-radius: 0 0 10px 0;
+                transition: 0.2s;
+                &:hover {
+                  background: rgb(218, 214, 214);
                 }
               }
-            }
 
-            td,
-            th {
-              border: 1px solid #333;
-              text-align: center;
-              font-weight: normal;
-              padding: 15px;
-            }
-
-            td {
-              transition: 0.2s;
-              &:hover {
-                background: rgb(218, 214, 214);
+              th {
+                font-weight: bold;
+                font-size: 1.1em;
+                background: #93cddd;
+                @include mobile {
+                  font-size: 0.9em;
+                }
               }
-            }
-
-            th {
-              font-weight: bold;
-              font-size: 1.1em;
-              background: #93cddd;
             }
           }
         }

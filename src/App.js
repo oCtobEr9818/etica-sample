@@ -18,11 +18,12 @@ import "./styles/processBar.scss";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import ScrollToTopButton from "./Components/scrollToTopBtn";
+import Loading from "./Components/Loading";
 
 export default function App() {
   return (
     <BrowserRouter basename="/etica-sample">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Navbar />
 
         <AnimatedRoutes />

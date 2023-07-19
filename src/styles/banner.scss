@@ -33,13 +33,13 @@
 
   .banner {
     width: 100%;
-    height: 70vh;
-    margin-bottom: 15rem;
+    height: auto;
+    margin: 0 auto 15rem;
     display: flex;
     align-items: center;
     position: relative;
-    @include desktop {
-      margin: 0;
+    @include pad {
+      margin: 1rem auto 10rem;
     }
 
     img {
@@ -48,7 +48,6 @@
       height: 620px;
       z-index: -1;
       @include desktop {
-        padding: 0;
         height: auto;
       }
     }

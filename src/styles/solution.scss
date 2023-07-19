@@ -275,8 +275,8 @@
 
       .commercial-facility-content {
         width: 100%;
-        height: 70vh;
-        margin: 4em auto 0;
+        height: auto;
+        margin: 4rem auto 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -334,15 +334,11 @@
 
       .transportation-application-content {
         width: 100%;
-        height: 70vh;
-        margin: 4em auto;
+        height: auto;
+        margin: 4rem auto;
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        @include mini-pad {
-          height: auto;
-          flex-direction: column;
-        }
 
         img {
           max-width: 80%;
@@ -382,14 +378,11 @@
 
       .public-house-content {
         width: 100%;
-        height: 70vh;
+        height: auto;
         margin: 4em auto 0;
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        @include mini-pad {
-          height: auto;
-        }
 
         img {
           max-width: 80%;
@@ -428,15 +421,12 @@
 
       .industry-application-content {
         width: 100%;
-        height: 70vh;
+        height: auto;
         margin: 4em auto 0;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        @include mini-pad {
-          height: auto;
-        }
 
         img {
           max-width: 80%;

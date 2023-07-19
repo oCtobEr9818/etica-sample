@@ -113,20 +113,36 @@
     left: 0;
     opacity: 0;
 
-    // 選單顯示
+    // 平板以下裝置"子選單"顯示
     @include pad {
       &:checked ~ .navbar-option {
         top: 6rem;
         opacity: 1;
 
-        > li {
-          &:nth-child(2) {
-            margin-top: 30px;
-          }
-          &:nth-child(7) {
-            margin-top: 30px;
-          }
+        .active {
+          .subNavbar {
+            max-width: 20%;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: -40%;
 
+            li {
+              h3 {
+                font-size: 1em;
+              }
+
+              a {
+                height: 3rem;
+                margin: auto;
+                padding: 0;
+                border: 0.5px solid #ccc;
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+        li {
           a,
           button {
             height: 3.5rem;
@@ -257,6 +273,9 @@
           @include desktop {
             width: 80%;
           }
+          @include pad {
+            display: none;
+          }
         }
       }
       &:last-child {
@@ -318,16 +337,20 @@
         height: auto;
         display: inline-block;
         @include pad {
-          display: flex;
+          height: 0;
+          display: block;
         }
       }
 
       .dropdown {
         display: inline-block;
         z-index: 1;
+        // 平板裝置以下子選單控制
+        &.active {
+          display: block;
+        }
         @include pad {
-          height: 20px;
-          display: flex;
+          display: none;
         }
 
         .subNavbar {
@@ -342,6 +365,7 @@
           top: 3.2rem;
           left: -0.6rem;
           transition: 0.3s;
+
           &::before {
             content: "";
             display: inline-block;
@@ -357,13 +381,12 @@
           }
           @include pad {
             width: 100%;
-            display: flex;
-            background: transparent;
+            display: block;
             box-shadow: none;
             border-radius: 0;
             left: 0;
-            transition: 0;
-
+            transition: none;
+            z-index: 10;
             &::before {
               content: none;
             }
@@ -432,6 +455,10 @@
               right: 0;
               width: 70%;
               transition: 0.2s;
+              @include pad {
+                width: 0;
+                border: none;
+              }
             }
             // 插頭頭部
             &::after {
@@ -449,6 +476,9 @@
             &:hover::after {
               width: 6px;
               transition: 0.2s 0.2s;
+              @include pad {
+                width: 0;
+              }
             }
 
             // 儲能系統子標題
@@ -493,6 +523,9 @@
               &:hover::before {
                 width: 6px;
                 transition: 0.2s 0.4s;
+                @include pad {
+                  width: 0;
+                }
               }
               &::after {
                 content: "";
@@ -509,6 +542,9 @@
               &:hover::after {
                 width: 6px;
                 transition: 0.2s 0.4s;
+                @include pad {
+                  width: 0;
+                }
               }
             }
           } // li

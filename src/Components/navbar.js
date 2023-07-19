@@ -47,7 +47,24 @@ const navs = {
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isSubESSExpanded, setIsSubESSExpanded] = useState(false);
+  const [isSubAboutExpanded, setIsSubAboutExpanded] = useState(false);
   const [activePage, setActivePage] = useState("");
+
+  const handleMenuExpanded = (page) => {
+    setIsExpanded(false);
+    setIsSubESSExpanded(false);
+    setActivePage(page);
+  };
+
+  // 儲能系統子選單控制
+  const handleSubESSToggle = () => {
+    setIsSubESSExpanded(!isSubESSExpanded);
+  };
+  // 關於明曜子選單控制
+  const handleSubAboutToggle = () => {
+    setIsSubAboutExpanded(!isSubAboutExpanded);
+  };
 
   // 滾動進度條
   const { scrollYProgress } = useScroll();
@@ -57,10 +74,6 @@ const Navbar = () => {
     restDelta: 0.000001,
   });
 
-  const handleMenuExpanded = (page) => {
-    setIsExpanded(false);
-    setActivePage(page);
-  };
   const { t } = useTranslation();
 
   return (
@@ -75,7 +88,7 @@ const Navbar = () => {
       </NavLink>
 
       <div className="navbar-line"></div>
-      {/* 768px以下選控制 */}
+      {/* 768px以下選單控制 */}
       <div className="dropMenu">
         <label htmlFor="menu-control" className="menu-btn"></label>
       </div>
@@ -88,12 +101,11 @@ const Navbar = () => {
 
       <ul className={`navbar-option ${isExpanded ? "active" : ""}`}>
         {/* 儲能系統 */}
-        <li
-          onClick={() => handleMenuExpanded("儲能系統")}
-          className={activePage === "儲能系統" ? "active" : ""}
-        >
-          <button>{t(navs.energyStorageSystem.name)}</button>
-          <div className="dropdown">
+        <li>
+          <button onClick={handleSubESSToggle}>
+            {t(navs.energyStorageSystem.name)}
+          </button>
+          <div className={`dropdown ${isSubESSExpanded ? "active" : ""}`}>
             <ul className="subNavbar">
               <li onClick={() => handleMenuExpanded("儲能系統")}>
                 <Link to="/solution">
@@ -170,14 +182,9 @@ const Navbar = () => {
           </Link>
         </li>
         {/* 關於明曜 */}
-        <li className={activePage === "關於明曜" ? "active" : ""}>
-          <Link
-            to={navs.aboutus.path}
-            onClick={() => handleMenuExpanded("關於明曜")}
-          >
-            {t(navs.aboutus.name)}
-          </Link>
-          <div className="dropdown">
+        <li>
+          <button onClick={handleSubAboutToggle}>{t(navs.aboutus.name)}</button>
+          <div className={`dropdown ${isSubAboutExpanded ? "active" : ""}`}>
             <ul className="subNavbar">
               <li onClick={() => handleMenuExpanded("關於明曜")}>
                 <Link to="/aboutus#introduction">{t("公司簡介")}</Link>
