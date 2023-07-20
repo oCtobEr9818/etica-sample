@@ -63,7 +63,7 @@ const ProductESS = () => {
           />
 
           <div
-            className="subtitle"
+            className="subTitle"
             data-aos="fade-left"
             data-aos-duraction="500"
           >
@@ -140,7 +140,7 @@ const ProductESS = () => {
       <div className="product-ESS-content">
         <div className="contentWrap">
           <div
-            className="subtitle"
+            className="subTitle"
             data-aos="fade-right"
             data-aos-duraction="500"
           >
@@ -234,7 +234,7 @@ const ProductESS = () => {
             data-aos-duraction="500"
           />
           <div
-            className="subtitle"
+            className="subTitle"
             data-aos="fade-left"
             data-aos-duraction="500"
           >
@@ -294,7 +294,7 @@ const ProductESS = () => {
       <div className="product-ESS-content">
         <div className="contentWrap">
           <div
-            className="subtitle"
+            className="subTitle"
             data-aos="fade-right"
             data-aos-duraction="500"
           >
@@ -395,7 +395,7 @@ const ProductESS = () => {
             data-aos-duraction="500"
           />
           <div
-            className="subtitle"
+            className="subTitle"
             data-aos="fade-left"
             data-aos-duraction="500"
           >

@@ -29,24 +29,30 @@
 .container {
   // 研發
   .development-content {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: auto;
 
     h2 {
-      text-align: center;
+      width: 100%;
       margin-bottom: 3rem;
+      text-align: center;
       font-size: 2em;
       @include mini-pad {
         margin-bottom: 2em;
-        font-size: 1.6em;
+        font-size: 1.4em;
       }
     }
 
-    .content-wrap {
+    .contentWrap {
       width: 100%;
       padding: 5rem 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      @include pad {
+        padding: 0;
+      }
 
       img {
         margin: 2rem 0;

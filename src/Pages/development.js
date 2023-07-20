@@ -33,7 +33,7 @@ const Development = () => {
           技術研發
         </h2>
 
-        <div className="content-wrap">
+        <div className="contentWrap">
           {/* 水冷高壓 */}
           <img
             src={imgHandler("/img/WCHP.png")}
