@@ -54,6 +54,7 @@ const Navbar = () => {
   const handleMenuExpanded = (page) => {
     setIsExpanded(false);
     setIsSubESSExpanded(false);
+    setIsSubAboutExpanded(false);
     setActivePage(page);
   };
 
