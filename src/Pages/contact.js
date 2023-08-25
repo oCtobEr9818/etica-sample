@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import GoogleMapReact from "google-map-react";
 import { useTranslation } from "react-i18next";
+import _ from "lodash";
 
 import mapKey from "../Components/key";
 // import { token } from "../Components/api/token";
@@ -117,6 +118,8 @@ const Contact = () => {
     }
   }
 
+  const throttledSendEmail = _.throttle(sendEmail, 2000);
+
   const nameInputClasses = nameError ? "invalid" : "";
   const emailInputClasses = emailError ? "invalid" : "";
   const subjectInputClasses = emailError ? "invalid" : "";
@@ -173,7 +176,7 @@ const Contact = () => {
       </div>
 
       {/* 聯絡我們表單 */}
-      <form ref={form} onSubmit={sendEmail} className="contact-form">
+      <form ref={form} onSubmit={throttledSendEmail} className="contact-form">
         <div className="form-wrap">
           <label>
             {t("姓名")}{" "}

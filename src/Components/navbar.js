@@ -10,7 +10,6 @@ import { imgHandler } from "./imgHandler";
 const navs = {
   home: {
     path: "/",
-    name: "",
   },
   energyStorageSystem: {
     path: null,
