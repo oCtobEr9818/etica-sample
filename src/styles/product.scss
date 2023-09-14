@@ -409,10 +409,13 @@
         margin-bottom: 7rem;
         object-fit: contain;
         &:first-of-type {
-          width: 70%;
+          width: 30%;
         }
         @include mobile {
           margin: 3rem auto;
+          &:first-of-type {
+            width: 60%;
+          }
         }
       }
     }

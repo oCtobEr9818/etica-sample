@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tw">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BTP9WFHJXD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BTP9WFHJXD");
+    </script>
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="/img/etica-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <meta name="csrf-token" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="ETICA Battery INC." />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="" />
+    <meta property="og:url" content="https://etica-inc.com/" />
+    <meta property="og:site_name" content="ETICA BATTERY INC." />
+    <meta
+      property="og:description"
+      content="<p>Since its founding in 2002, ETICA BATTERY INC. has experienced incredible growth. 
+      With its customer base in the rapidly evolving notebook computer, 
+      cellular phone, and handheld device markets.</p>
+      <p>Etica has dedicated its considerable energies and resources to developing products 
+      in its current core markets, as well as new battery technologies for emerging applications 
+      such as automotive, ESS,and robot sector.</p>
+      "
+    />
+    <meta
+      name="description"
+      content="明曜科技,ETICA BATTERY,Etica Battery,ETICA,etica battery. 
+      <p>Since its founding in 2002, ETICA BATTERY INC. has experienced incredible growth. 
+      With its customer base in the rapidly evolving notebook computer, 
+      cellular phone, and handheld device markets.</p>
+      <p>Etica has dedicated its considerable energies and resources to developing products 
+      in its current core markets, as well as new battery technologies for emerging applications 
+      such as automotive, ESS,and robot sector.</p>
+      "
+    />
+    <title>ETICA Battery INC.</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        position: relative;
+        overflow: auto;
+      }
+
+      .scroll-to-top {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        color: #000;
+        border: 1px solid #aaa;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.2em;
+        z-index: 10;
+      }
+      .scroll-to-top:hover {
+        color: #f7f7f7;
+        background: rgb(78, 77, 77);
+        transition: 0.3s;
+      }
+
+      @media screen and (max-width: 768px) {
+        .scroll-to-top {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.esm.js";
+    </script>
+    <script type="text/babel">
+      var segmentCount = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + segmentCount)
+            .join("/") +
+          "/?p=/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(segmentCount)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&q=" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
+
+      // Single Page Apps for GitHub Pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfo89cZAAAAAHVMzgnIl6pPrF0pHz6dtIP4MR0U"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6Lfo89cZAAAAAHVMzgnIl6pPrF0pHz6dtIP4MR0U", {
+            action: "homepage",
+          })
+          .then(function (token) {
+            var recaptchaResponse =
+              document.getElementById("recaptchaResponse");
+            recaptchaResponse.value = token;
+          });
+      });
+    </script>
+  </body>
+</html>

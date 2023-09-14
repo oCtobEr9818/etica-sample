@@ -68,15 +68,17 @@
           }
         }
       }
-    }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-      margin-bottom: 7rem;
-      @include mobile {
-        margin: 0 auto 3rem;
+      img {
+        width: 80%;
+        object-fit: contain;
+        margin: 0 auto 7rem;
+        @include pad {
+          width: 100%;
+        }
+        @include mobile {
+          margin-bottom: 3rem;
+        }
       }
     }
   }

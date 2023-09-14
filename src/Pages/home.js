@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { v4 } from "uuid";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -7,6 +8,7 @@ import { motion } from "framer-motion";
 
 import { imgHandler } from "../Components/imgHandler";
 import { motionVariants } from "../motionSettings";
+import OverlayImage from "../Components/overlayImage";
 
 const data = {
   bannerImage: [
@@ -55,7 +57,8 @@ const data = {
   ],
   news: [
     {
-      url: "https://booth.e-taitra.com.tw/zh-tw/2023PV/map/ex/143478",
+      url: "/img/home/EnergyTaiwan.jpg", // https://booth.e-taitra.com.tw/zh-tw/2023PV/map/ex/143478,
+      alt: "展覽場地圖",
       title: "邀請您蒞臨2023年台灣國際智慧能源週",
       date: "2023/10/18~2023/10/20",
     },
@@ -70,6 +73,13 @@ Aos.init({
 
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [overlayImageUrl, setOverlayImageUrl] = useState("");
+
+  const handleNewsItemClick = (url) => {
+    setOverlayImageUrl(url);
+    setShowOverlay(true);
+  };
 
   const changeLetterSpacing = i18n.language === "en" ? "english" : "taiwanese";
 
@@ -172,9 +182,9 @@ const Home = () => {
             {data.news.map((newsItem) => (
               <div className="news-wrap" key={v4()}>
                 <i className="fa fa-newspaper-o" aria-hidden="true"></i>
-                <a href={newsItem.url} rel="noreferrer" target="_blank">
+                <button onClick={() => handleNewsItemClick(newsItem.url)}>
                   {t(newsItem.title)}
-                </a>
+                </button>
                 <span>{newsItem.date}</span>
               </div>
             ))}
@@ -182,6 +192,14 @@ const Home = () => {
           <h2 className={changeLetterSpacing}>{t("相新")}</h2>
           <h2 className={changeLetterSpacing}>{t("關聞")}</h2>
         </div>
+
+        {showOverlay && (
+          <OverlayImage
+            imageUrl={overlayImageUrl}
+            alt={data.news[0].alt}
+            onClose={() => setShowOverlay(false)}
+          />
+        )}
       </div>
     </motion.div>
   );

@@ -677,10 +677,17 @@ $primary-color: #93cddd;
             padding-right: 5px;
           }
 
-          a {
+          button {
             text-decoration: none;
             font-size: 1.2em;
             margin-right: 3rem;
+            border: none;
+            color: rgb(116, 4, 106);
+            background-color: transparent;
+            cursor: pointer;
+            &:hover {
+              color: #f44;
+            }
 
             @include pad {
               font-size: 1em;
@@ -753,6 +760,42 @@ $primary-color: #93cddd;
       }
       .taiwanese {
         letter-spacing: 1.9rem;
+      }
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: 80%;
+        object-fit: contain;
+      }
+
+      .close-btn {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        font-size: 20px;
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        cursor: pointer;
+        &:hover {
+          color: #f7f7f7;
+          background-color: #f00;
+          border-color: #f7f7f7;
+        }
       }
     }
   }

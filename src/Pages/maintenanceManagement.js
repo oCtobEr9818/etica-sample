@@ -46,14 +46,14 @@ const MaintenanceManagement = () => {
               )}
             </p>
           </div>
-        </div>
 
-        <img
-          src={imgHandler(data.maintenance_management_content.img)}
-          alt={data.maintenance_management_content.alt}
-          data-aos="fade-up"
-          data-aos-duraction="500"
-        />
+          <img
+            src={imgHandler(data.maintenance_management_content.img)}
+            alt={data.maintenance_management_content.alt}
+            data-aos="fade-up"
+            data-aos-duraction="500"
+          />
+        </div>
       </div>
     </Layout>
   );
