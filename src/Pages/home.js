@@ -55,9 +55,9 @@ const data = {
   ],
   news: [
     {
-      url: "",
-      title: "",
-      date: "",
+      url: "https://booth.e-taitra.com.tw/zh-tw/2023PV/map/ex/143478",
+      title: "邀請您蒞臨2023年台灣國際智慧能源週",
+      date: "2023/10/18~2023/10/20",
     },
   ],
 };
@@ -168,17 +168,17 @@ const Home = () => {
           <div className="topline" id="news"></div>
           <div className="trapezoid"></div>
           <div className="underline"></div>
-          {/* <div className="news" data-aos="fade-right" data-aos-duration="500">
+          <div className="news" data-aos="fade-right" data-aos-duration="500">
             {data.news.map((newsItem) => (
               <div className="news-wrap" key={v4()}>
                 <i className="fa fa-newspaper-o" aria-hidden="true"></i>
                 <a href={newsItem.url} rel="noreferrer" target="_blank">
-                  {newsItem.title}
+                  {t(newsItem.title)}
                 </a>
                 <span>{newsItem.date}</span>
               </div>
             ))}
-          </div> */}
+          </div>
           <h2 className={changeLetterSpacing}>{t("相新")}</h2>
           <h2 className={changeLetterSpacing}>{t("關聞")}</h2>
         </div>
