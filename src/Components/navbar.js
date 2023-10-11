@@ -138,7 +138,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li onClick={() => handleMenuExpanded("儲能系統")}>
-                <Link to="/product-ESS#Etica+C">
+                <Link to="/product-ESS">
                   <h3>{t("產品資訊")}</h3>
                 </Link>
               </li>
