@@ -23,7 +23,7 @@ const data = {
       alt: "淺藍色為底的圖片，一本書和一支筆",
     },
     milestone: {
-      image: imgHandler("/img/milestone.png"),
+      image: imgHandler("/img/milestone2.png"),
       alt: `2002 - ETICA Battery INC. was founded
             2022 - UL Certification
             2003 - ISO 9001 Certification
@@ -71,7 +71,7 @@ const AboutUs = () => {
       <Content
         imageL={data.introduction.image}
         altL={data.introduction.alt}
-        content={data.introduction.content}
+        firstParagraph={data.introduction.content}
       />
 
       {/* 企業沿革 */}
@@ -79,8 +79,7 @@ const AboutUs = () => {
       <Content
         imageL={data.history.book.image}
         altL={data.history.book.alt}
-        imageR={data.history.milestone.image}
-        altR={data.history.milestone.alt}
+        judge={true}
       />
 
       {/* 經營理念 */}
@@ -88,20 +87,18 @@ const AboutUs = () => {
       <Content
         imageL={data.business.image}
         altL={data.business.alt}
-        content={data.business.contentLine1}
-        content2={data.business.contentLine2}
-        content3={data.business.contentLine3}
+        firstParagraph={data.business.contentLine1}
+        secondParagraph={data.business.contentLine2}
+        thirdParagraph={data.business.contentLine3}
       />
       {/* 未來展望 */}
       <ContentTitle title={data.feature.title} id={data.feature.id} />
       <Content
         imageL={data.feature.image}
         altL={data.feature.alt}
-        imageR=""
-        altR=""
-        content={data.feature.contentLine1}
-        content2={data.feature.contentLine2}
-        content3={data.feature.contentLine3}
+        firstParagraph={data.feature.contentLine1}
+        secondParagraph={data.feature.contentLine2}
+        thirdParagraph={data.feature.contentLine3}
       />
     </Layout>
   );

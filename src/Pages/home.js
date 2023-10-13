@@ -165,7 +165,7 @@ const Home = () => {
             data-aos-duration="500"
           >
             <img
-              src={imgHandler("/img/Certification mark.jpg")}
+              src={imgHandler("/img/Certification mark.png")}
               alt="國際認證"
             />
           </div>

@@ -1,59 +1,59 @@
-import { useTranslation } from "react-i18next";
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import { useTranslation } from "react-i18next";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 
-import { imgHandler } from "../Components/imgHandler";
-import { Layout } from "../Components/Layout";
+// import { imgHandler } from "../Components/imgHandler";
+// import { Layout } from "../Components/Layout";
 
-const data = {
-  product_img: {
-    img: "/img/sub-product.png",
-    alt: "ESS Energy Storage System",
-  },
-  product2_content: {
-    etica_c: {
-      img: "/img/etica-c.png",
-      alt: "etica+c",
-    },
-    etica_o: {
-      img: "/img/etica-o.png",
-      alt: "Etica+o",
-    },
-    etica_r1: {
-      img: "/img/etica-r1.png",
-      alt: "Etica+R1",
-    },
-    etica_r2: {
-      img: "/img/etica-r2.png",
-      alt: "Etica+R2",
-    },
-    etica_r3: {
-      img: "/img/etica-r3.png",
-      alt: "Etica+R3",
-    },
-  },
-};
+// const data = {
+//   product_img: {
+//     img: "/img/sub-product.png",
+//     alt: "ESS Energy Storage System",
+//   },
+//   product2_content: {
+//     etica_c: {
+//       img: "/img/etica-c.png",
+//       alt: "etica+c",
+//     },
+//     etica_o: {
+//       img: "/img/etica-o.png",
+//       alt: "Etica+o",
+//     },
+//     etica_r1: {
+//       img: "/img/etica-r1.png",
+//       alt: "Etica+R1",
+//     },
+//     etica_r2: {
+//       img: "/img/etica-r2.png",
+//       alt: "Etica+R2",
+//     },
+//     etica_r3: {
+//       img: "/img/etica-r3.png",
+//       alt: "Etica+R3",
+//     },
+//   },
+// };
 
-Aos.init({
-  offset: 100,
-  delay: 50,
-  once: true,
-});
+// Aos.init({
+//   offset: 100,
+//   delay: 50,
+//   once: true,
+// });
 
 const ProductESS = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
-    <Layout>
-      <div className="banner">
+    <>
+      {/* <div className="banner">
         <img
           src={imgHandler(data.product_img.img)}
           alt={data.product_img.alt}
         />
-      </div>
+      </div> */}
 
       {/* Etica+C */}
-      <div className="product-ESS-content">
+      {/* <div className="product-ESS-content">
         <div className="contentWrap">
           <img
             src={imgHandler(data.product2_content.etica_c.img)}
@@ -134,10 +134,10 @@ const ProductESS = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       {/* Etica+O */}
-      <div className="product-ESS-content">
+      {/* <div className="product-ESS-content">
         <div className="contentWrap">
           <div
             className="subTitle"
@@ -222,10 +222,10 @@ const ProductESS = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       {/* Etica+R1 */}
-      <div className="product-ESS-content">
+      {/* <div className="product-ESS-content">
         <div className="contentWrap">
           <img
             src={imgHandler(data.product2_content.etica_r1.img)}
@@ -288,10 +288,10 @@ const ProductESS = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       {/* Etica+R2 */}
-      <div className="product-ESS-content">
+      {/* <div className="product-ESS-content">
         <div className="contentWrap">
           <div
             className="subTitle"
@@ -383,10 +383,10 @@ const ProductESS = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       {/* Etica+R3 */}
-      <div className="product-ESS-content">
+      {/* <div className="product-ESS-content">
         <div className="contentWrap">
           <img
             src={imgHandler(data.product2_content.etica_r3.img)}
@@ -477,17 +477,31 @@ const ProductESS = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
 
-      <div className="product-ESS-txt">
+      {/* <div className="product-ESS-txt">
         <p>
           {t(
             "*本公司對此產品規格任何遺漏、錯誤陳述或非事實陳述（不論明示或暗示）不承擔任何責任，索取進一步資訊請洽業務。"
           )}
         </p>
         <p>{t("*產品圖片僅供參考，實際產品可能有所不同。")}</p>
+      </div> */}
+
+      <div style={{ height: "800px", position: "relative" }}>
+        <iframe
+          title="eticaIframe"
+          id="eticaIframe"
+          src="https://service47082.wixsite.com/etica-battery/blank"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          style={{
+            zIndex: "20",
+          }}
+        ></iframe>
       </div>
-    </Layout>
+    </>
   );
 };
 

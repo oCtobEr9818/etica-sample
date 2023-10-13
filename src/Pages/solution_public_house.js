@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -49,6 +50,9 @@ const PublicHouse = () => {
               "明曜的家用儲能系統+R系列設計二種規格：10kWh及20kWh，可結合太陽能發電設施，在住家內建構一個完整創能、儲能、節能的微電網，實踐綠色新生活。"
             )}
           </p>
+          <div className="linkToESS" data-aos="fade-up">
+            <Link to="/product-ESS">{t("產品資訊")}</Link>
+          </div>
 
           <div className="public-house-content">
             <img

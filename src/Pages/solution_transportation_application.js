@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -49,6 +50,9 @@ const TransportationApplication = () => {
               "明曜的儲能系統具耐高壓與防延燒等設計，亦可依其需求再與其他rack並聯以提升其容量，搭配快速充電站可同時供應多台電動車充電，符合大型商場及停車場服務商使用需求。"
             )}
           </p>
+          <div className="linkToESS" data-aos="fade-up">
+            <Link to="/product-ESS">{t("產品資訊")}</Link>
+          </div>
 
           <div className="transportation-application-content">
             <img

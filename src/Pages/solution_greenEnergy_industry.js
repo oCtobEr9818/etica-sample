@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -50,6 +51,9 @@ const GreenEnergyIndustry = () => {
               "太陽能電板搭配儲能系統一併規劃已蔚為趨勢，明曜的儲能系統規格多元，且能與光電模組完美配合，與客戶共同建構完整的解決方案。"
             )}
           </p>
+          <div className="linkToESS" data-aos="fade-up">
+            <Link to="/product-ESS">{t("產品資訊")}</Link>
+          </div>
 
           <div className="greenEnergy-industry-content">
             <img

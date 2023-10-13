@@ -68,25 +68,59 @@
         height: 7rem;
       }
     }
-    // 關於我們右圖
-    .contentRight-img {
-      max-width: 100%;
-      height: 18rem;
 
-      @include desktop {
-        height: 16rem;
-      }
-      @include pad {
-        height: 14rem;
-      }
-      @include mini-pad {
-        height: 11rem;
-      }
-      @include mobile {
-        height: 8rem;
-      }
-      @include mini-mobile {
-        height: 6rem;
+    // 企業沿革表格
+    .milestone {
+      width: 100%;
+      margin: 0 1rem;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        margin: 0 auto;
+        border-spacing: 0;
+
+        tr {
+          &:first-child {
+            th {
+              border-radius: 10px 0 0 0;
+              border-top: 1px solid #444;
+            }
+            td {
+              border-radius: 0 10px 0 0;
+              border-top: 1px solid #444;
+            }
+          }
+          &:last-child {
+            th {
+              border-radius: 0 0 0 10px;
+            }
+            td {
+              border-radius: 0 0 10px 0;
+            }
+          }
+
+          td,
+          th {
+            padding: 10px;
+            border: 1px solid #444;
+            text-align: center;
+            font-weight: normal;
+          }
+
+          th {
+            background-color: #93cddd;
+            border-top: none;
+          }
+          td {
+            border-left: none;
+            border-top: none;
+            transition: 0.2s;
+            &:hover {
+              background: rgb(218, 214, 214);
+            }
+          }
+        }
       }
     }
 

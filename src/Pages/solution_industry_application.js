@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -49,6 +50,9 @@ const IndustryApplication = () => {
               "明曜的儲能系統產品線完整，可因應現場環境、客戶需求、法規限制提供適合的產品及整體規劃。"
             )}
           </p>
+          <div className="linkToESS" data-aos="fade-up">
+            <Link to="/product-ESS">{t("產品資訊")}</Link>
+          </div>
 
           <div className="industry-application-content">
             <img

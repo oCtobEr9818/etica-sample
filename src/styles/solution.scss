@@ -68,6 +68,15 @@
   -o-user-select: none;
   user-select: none;
 }
+@mixin linkToESS {
+  width: 80%;
+  text-align: left;
+  a {
+    &:hover {
+      color: #f00;
+    }
+  }
+}
 
 .container {
   .container-solution {
@@ -272,6 +281,9 @@
           font-size: 1.1em;
         }
       }
+      .linkToESS {
+        @include linkToESS;
+      }
 
       .commercial-facility-content {
         width: 100%;
@@ -332,6 +344,10 @@
         }
       }
 
+      .linkToESS {
+        @include linkToESS;
+      }
+
       .transportation-application-content {
         width: 100%;
         height: auto;
@@ -374,6 +390,10 @@
         @include mini-pad {
           font-size: 1.1em;
         }
+      }
+
+      .linkToESS {
+        @include linkToESS;
       }
 
       .public-house-content {
@@ -419,6 +439,10 @@
         }
       }
 
+      .linkToESS {
+        @include linkToESS;
+      }
+
       .industry-application-content {
         width: 100%;
         height: auto;
@@ -461,6 +485,10 @@
         @include mini-pad {
           font-size: 1.1em;
         }
+      }
+
+      .linkToESS {
+        @include linkToESS;
       }
 
       .greenEnergy-industry-content {

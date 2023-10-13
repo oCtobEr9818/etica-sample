@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -53,6 +54,9 @@ const CommercialFacility = () => {
               "明曜以獨家技術研發+C20呎貨櫃儲能系統，以一半面積達成傳統40呎儲能櫃的儲存容量；另有+O戶外型儲能獨立櫃，適合中小型案場規畫使用。二者均搭載先進冷卻及消防技術使其更安全。"
             )}
           </p>
+          <div className="linkToESS" data-aos="fade-up">
+            <Link to="/product-ESS">{t("產品資訊")}</Link>
+          </div>
 
           <div
             className="commercial-facility-content"
