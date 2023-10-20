@@ -11,9 +11,9 @@ i18n
   .init({
     backend: {
       //網頁載入時去下載語言檔的位置
-      loadPath: "/Etica-sample/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
-    // 當目前的語言檔找不到對應的字詞時，會用 fallbackLng (en) 作為預設語言
+    // 當目前的語言檔找不到對應的字詞時，會用 fallbackLng (zh-TW) 作為預設語言
     fallbackLng: "zh-TW",
     // 預設語言
     lng: "zh-TW",

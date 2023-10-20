@@ -2,15 +2,56 @@ import React, { useRef } from "react";
 import GoogleMapReact from "google-map-react";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 import mapKey from "../Components/key";
-// import { token } from "../Components/api/token";
 import { mailUrl } from "../Components/api/mail_url";
 import { Layout } from "../Components/Layout";
 import { useFormValidate } from "../Components/useFormValidate";
 
+// 比較漂亮的alert
+const ReactSwal = withReactContent(Swal);
+
 const Contact = () => {
   const { t } = useTranslation();
+
+  // 按下送出後的loading畫面
+  const loadingSwal = () => {
+    return ReactSwal.fire({
+      didOpen: () => {
+        ReactSwal.showLoading();
+      },
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+    });
+  };
+  // 顯示成功送出後的訊息
+  const sucessSwal = (text) => {
+    return ReactSwal.fire({
+      icon: "success",
+      title: `${text}`,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      timer: 1500,
+    });
+  };
+  // 顯示錯誤訊息
+  const errorSwal = (text) => {
+    return ReactSwal.fire({
+      icon: "error",
+      title: `${text}`,
+      didOpen: () => {
+        ReactSwal.hideLoading();
+      },
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      timer: 1000,
+    });
+  };
 
   const emailRule =
     /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
@@ -45,76 +86,73 @@ const Contact = () => {
     onBlurValue: onBlurContent,
   } = useFormValidate(isNotEmpty);
 
-  // 取得 CSRF token
-  // useEffect(() => {
-  //   fetch(token)
-  //     .then((response) => response.text())
-  //     .then((csrfToken) => {
-  //       // 將 CSRF 令牌設置到 meta 標籤中
-  //       const metaTag = document.querySelector('meta[name="csrf-token"]');
-  //       if (metaTag) {
-  //         metaTag.setAttribute("content", csrfToken);
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error("無法取得 CSRF 令牌:", error);
-  //     });
-  // }, []);
-
-  // 獲取CSRF令牌
-  // const csrfToken = document
-  //   .querySelector('meta[name="csrf-token"]')
-  //   .getAttribute("content");
-
   const form = useRef();
 
   // 發送email
   async function sendEmail(e) {
     e.preventDefault();
 
-    // 檢查是否有未填寫的欄位
-    if (!nameIsValid) {
-      alert("姓名尚未填寫！");
-      return;
-    } else if (!emailIsValid) {
-      alert("電子信箱尚未填寫或格式錯誤！");
-      return;
-    } else if (!subjectIsValid) {
-      alert("主旨尚未填寫！");
-      return;
-    } else if (!contentIsValid) {
-      alert("內容尚未填寫！");
-      return;
-    }
+    const submitButton = form.current.querySelector('input[type="submit"]');
+    submitButton.disabled = true;
 
-    try {
-      // 取得 token
-      // const response = await fetch(token);
-      // const _token = await response.text();
-      // console.log(_token);
+    const loadingModal = loadingSwal();
 
-      // 構建郵件資料
-      const formData = new FormData(form.current);
-      const requestBody = Object.fromEntries(formData.entries());
+    if (!nameIsValid || !emailIsValid || !subjectIsValid || !contentIsValid) {
+      loadingModal.close();
 
-      // 發送郵件
-      await fetch(mailUrl, {
-        method: "POST",
-        body: JSON.stringify(requestBody),
-        headers: {
-          "Content-type": "application/json",
-          // "X-CSRF-TOKEN": csrfToken,
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          alert("訊息已發送！");
-          form.current.reset();
+      submitButton.disabled = false;
+
+      // 檢查是否有未填寫的欄位
+      if (!nameIsValid) {
+        errorSwal("姓名尚未填寫！");
+        return;
+      } else if (!emailIsValid) {
+        errorSwal("電子信箱尚未填寫或格式錯誤！");
+        return;
+      } else if (!subjectIsValid) {
+        errorSwal("主旨尚未填寫！");
+        return;
+      } else if (!contentIsValid) {
+        errorSwal("內容尚未填寫！");
+        return;
+      }
+    } else {
+      try {
+        // 構建郵件資料
+        const formData = new FormData(form.current);
+        const requestBody = Object.fromEntries(formData.entries());
+
+        // 發送郵件
+        await fetch(mailUrl, {
+          method: "POST",
+          body: JSON.stringify(requestBody),
+          headers: {
+            "Content-type": "application/json",
+          },
+        }).then((response) => {
+          if (response.status === 200) {
+            loadingModal.close();
+            sucessSwal("訊息已發送！");
+            form.current.reset();
+          } else if (response.status === 422) {
+            loadingModal.close();
+            submitButton.disabled = false;
+          } else {
+            throw new Error("Server error");
+          }
         });
-    } catch (error) {
-      console.error("發生錯誤:", error);
-      alert("發生錯誤，無法發送訊息！");
+        // .then((response) => response.json())
+        // .then((data) => {
+        //   console.log(data);
+        //   loadingModal.close();
+        //   sucessSwal("訊息已發送！");
+        //   form.current.reset();
+        // });
+      } catch (error) {
+        loadingModal.close();
+        console.error("發生錯誤:", error);
+        errorSwal("發生錯誤，無法發送訊息！");
+      }
     }
   }
 
@@ -263,15 +301,8 @@ const Contact = () => {
           />
         </div>
 
-        {/* <input type="hidden" name="_token" value={csrfToken} /> */}
-
         <div className="form-wrap">
-          <input
-            type="submit"
-            value={t("送出")}
-            className="submit"
-            disabled={!nameIsValid || !emailIsValid}
-          />
+          <input type="submit" value={t("送出")} className="submit" />
         </div>
       </form>
     </Layout>

@@ -10,6 +10,9 @@ import PublicHouse from "../Pages/solution_public_house";
 import IndustryApplication from "../Pages/solution_industry_application";
 import GreenEnergyIndustry from "../Pages/solution_greenEnergy_industry";
 import ProductESS from "../Pages/product_ESS";
+import ProductC from "../Pages/product_C";
+import ProductO from "../Pages/product_O";
+import ProductR1 from "../Pages/product_R1";
 import ProductEbike from "../Pages/product_ebike";
 import ProductIndustrialBattery from "../Pages/product_industrial_battery";
 import Development from "../Pages/development";
@@ -47,6 +50,9 @@ export const AnimatedRoutes = () => {
           />
           {/* 產品資訊 */}
           <Route path="/product-ESS" element={<ProductESS />} />
+          <Route path="/product-ESS/product-C" element={<ProductC />} />
+          <Route path="/product-ESS/product-O" element={<ProductO />} />
+          <Route path="/product-ESS/product-R1" element={<ProductR1 />} />
           {/* 工控裝置 */}
           <Route
             path="/product-industrial-battery"
