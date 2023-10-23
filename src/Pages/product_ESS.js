@@ -1,60 +1,59 @@
 // import { useTranslation } from "react-i18next";
-import { HashLink as Link } from "react-router-hash-link";
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 
-import { imgHandler } from "../Components/imgHandler";
-import { Layout } from "../Components/Layout";
+// import { imgHandler } from "../Components/imgHandler";
+// import { Layout } from "../Components/Layout";
 
-const data = {
-  product_img: {
-    img: "/img/sub-product.png",
-    alt: "ESS Energy Storage System",
-  },
-  product2_content: {
-    etica_c: {
-      img: "/img/etica-c.png",
-      alt: "etica+c",
-    },
-    etica_o: {
-      img: "/img/etica-o.png",
-      alt: "Etica+o",
-    },
-    etica_r1: {
-      img: "/img/etica-r1.png",
-      alt: "Etica+R1",
-    },
-    etica_r2: {
-      img: "/img/etica-r2.png",
-      alt: "Etica+R2",
-    },
-    etica_r3: {
-      img: "/img/etica-r3.png",
-      alt: "Etica+R3",
-    },
-  },
-};
+// const data = {
+//   product_img: {
+//     img: "/img/sub-product.png",
+//     alt: "ESS Energy Storage System",
+//   },
+//   product2_content: {
+//     etica_c: {
+//       img: "/img/etica-c.png",
+//       alt: "etica+c",
+//     },
+//     etica_o: {
+//       img: "/img/etica-o.png",
+//       alt: "Etica+o",
+//     },
+//     etica_r1: {
+//       img: "/img/etica-r1.png",
+//       alt: "Etica+R1",
+//     },
+//     etica_r2: {
+//       img: "/img/etica-r2.png",
+//       alt: "Etica+R2",
+//     },
+//     etica_r3: {
+//       img: "/img/etica-r3.png",
+//       alt: "Etica+R3",
+//     },
+//   },
+// };
 
-Aos.init({
-  offset: 100,
-  delay: 50,
-  once: true,
-});
+// Aos.init({
+//   offset: 100,
+//   delay: 50,
+//   once: true,
+// });
 
 const ProductESS = () => {
   // const { t } = useTranslation();
 
   return (
-    <Layout>
-      <div className="banner">
+    <>
+      {/* <div className="banner">
         <img
           src={imgHandler(data.product_img.img)}
           alt={data.product_img.alt}
         />
-      </div>
+      </div> */}
 
       {/* Etica+C */}
-      <div className="product-ESS-content">
+      {/* <div className="product-ESS-content">
         <div className="contentWrap">
           <div className="subTitle" data-aos="fade-up" data-aos-duraction="500">
             <img
@@ -63,48 +62,18 @@ const ProductESS = () => {
               data-aos="fade-up"
               data-aos-duraction="500"
             />
-            <Link to="/product-ESS/product-C#Etica-C1">
-              <h2 id="Etica+C">
-                Etica <sup>+</sup>C
-              </h2>
-            </Link>
-            {/* <ul>
+            <h2 id="Etica+C">
+              Etica <sup>+</sup>C
+            </h2>
+            <ul>
               <li>{t("20呎貨櫃儲能系統")}</li>
               <li>{t("一體化設計，單櫃3.72MWh")}</li>
               <li>{t("獨立主動式消防系統")}</li>
               <li>{t("適用於D-reg、E-dreg、用電大戶表後儲能系統等")}</li>
-            </ul> */}
-          </div>
-
-          <div className="subTitle" data-aos="fade-up" data-aos-duraction="500">
-            <img
-              src={imgHandler(data.product2_content.etica_o.img)}
-              alt={data.product2_content.etica_o.alt}
-              data-aos="fade-up"
-              data-aos-duraction="500"
-            />
-            <Link to="/product-ESS/product-O#Etica-O1">
-              <h2 id="Etica+O">
-                Etica <sup>+</sup>O
-              </h2>
-            </Link>
-          </div>
-
-          <div className="subTitle" data-aos="fade-up" data-aos-duraction="500">
-            <img
-              src={imgHandler(data.product2_content.etica_r1.img)}
-              alt={data.product2_content.etica_r1.alt}
-              data-aos="fade-up"
-              data-aos-duraction="500"
-            />
-            <Link to="/product-ESS/product-R1#Etica-R11">
-              <h2 id="Etica+R1">
-                Etica <sup>+</sup>R1
-              </h2>
-            </Link>
+            </ul>
           </div>
         </div>
-        {/* <table>
+        <table>
           <tbody>
             <tr>
               <th>{t("項目")}</th>
@@ -159,8 +128,8 @@ const ProductESS = () => {
               <td>UL1973, UL9540, IEC 62619 (Under Process)</td>
             </tr>
           </tbody>
-        </table> */}
-      </div>
+        </table>
+      </div> */}
 
       {/* Etica+O */}
       {/* <div className="product-ESS-content">
@@ -514,7 +483,7 @@ const ProductESS = () => {
         <p>{t("*產品圖片僅供參考，實際產品可能有所不同。")}</p>
       </div> */}
 
-      {/* <div style={{ height: "800px", position: "relative" }}>
+      <div style={{ height: "800px", position: "relative" }}>
         <iframe
           title="eticaIframe"
           id="eticaIframe"
@@ -526,8 +495,8 @@ const ProductESS = () => {
             zIndex: "20",
           }}
         ></iframe>
-      </div> */}
-    </Layout>
+      </div>
+    </>
   );
 };
 

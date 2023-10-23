@@ -205,13 +205,14 @@
   // 產品資訊
   .product-ESS-content {
     max-width: 1200px;
-    margin: 0 auto 7rem;
+    height: auto;
+    margin: auto;
     padding: 2rem 2rem 0;
-    // border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    // flex-direction: column;
+    flex-direction: column;
     &:last-child {
       border: none;
     }
@@ -222,15 +223,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // flex-direction: column;
-      @include mini-pad {
+      @include mobile {
         flex-direction: column;
       }
 
       img {
-        width: 300px;
+        width: 400px;
         height: 400px;
-        margin: auto;
         object-fit: contain;
         @include pad {
           width: 350px;
@@ -239,7 +238,7 @@
         @include mobile {
           width: 250px;
           height: 250px;
-          // order: 1;
+          order: 1;
           margin: 1rem 0;
         }
       }
@@ -247,40 +246,23 @@
       .subTitle {
         width: 600px;
         margin: auto;
-        text-align: center;
+        text-align: left;
         @include pad {
           width: auto;
           padding-left: 1.5rem;
         }
-        @include mini-pad {
-          display: flex;
-          align-items: center;
-          margin: 2rem;
+        @include mobile {
+          order: 0;
         }
-        // @include mobile {
-        //   order: 0;
-        // }
 
-        a {
-          text-decoration: none;
-
-          h2 {
-            font-size: 2em;
-            display: block;
-            color: rgb(118, 118, 231);
-            &:hover {
-              color: rgb(71, 71, 238);
-            }
-            &:visited {
-              color: rgb(118, 118, 231);
-            }
-            @include mini-pad {
-              font-size: 1.5em;
-              margin-left: 1rem;
-            }
-            @include mobile {
-              font-size: 1.2em;
-            }
+        h2 {
+          font-size: 2em;
+          display: block;
+          @include mini-pad {
+            font-size: 1.5em;
+          }
+          @include mobile {
+            font-size: 1.2em;
           }
         }
 
@@ -364,17 +346,6 @@
           }
         }
       }
-    }
-  }
-
-  .product-C,
-  .product-O,
-  .product-R1 {
-    width: 100%;
-
-    img {
-      width: 100%;
-      object-fit: contain;
     }
   }
 
