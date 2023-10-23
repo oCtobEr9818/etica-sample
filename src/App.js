@@ -22,7 +22,7 @@ import Loading from "./Components/Loading";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/etica-sample">
       <Suspense fallback={<Loading />}>
         <Navbar />
 

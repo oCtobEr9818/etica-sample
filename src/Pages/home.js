@@ -195,7 +195,7 @@ const Home = () => {
 
         {showOverlay && (
           <OverlayImage
-            imageUrl={overlayImageUrl}
+            imageUrl={imgHandler(overlayImageUrl)}
             alt={data.news[0].alt}
             onClose={() => setShowOverlay(false)}
           />
